@@ -1,0 +1,939 @@
+focus_tree = {
+	id = german focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = GER
+		}
+	}
+
+	default = no
+
+	# Start point for the focus tree -> Weimar Crisis
+	focus = {
+		id = GER_weimar_crisis
+		icon = GFX_goal_generic_demand_territory
+		x = 10
+		y = 0
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.05
+		}
+	}
+
+	# Political Struggle Focus
+	focus {
+		id = GER_political_struggle
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = GER_weimar_crisis }
+		x = 10
+		y = 1
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+	}
+
+	# Democratic Path - Focus Tree
+	focus = {
+		id = GER_preserve_democracy
+		icon = GFX_goal_generic_election
+		prerequisite = { focus = GER_political_struggle }
+		mutually_exclusive = {
+			focus = GER_support_nsdap
+			focus = GER_commmunist_revolution
+		}
+		x = 6
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 8
+			modifier = {
+				factor = 0.5
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 0.3
+				has_war_support < 0.6
+			}
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+			add_popularity = {
+				ideology = democratic
+				popularity = 
+			}
+		}
+	}
+
+	# Continue Weimar Policies
+	focus = {
+		id = GER_continue_weimar
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = GER_preserve_democracy }
+		mutually_exclusive = { focus = GER_new_coalition}
+		x = 5
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			add_ideas = GER_weimar_stability
+		}
+	}
+
+	# New Democaratic Coalition
+	focus = {
+		id = GER_new_coalition
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = GER_preserve_democracy }
+		mutually_exclusive = { focus = GER_continue_weimar }
+		x = 7
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.10
+			add_ideas = GER_weimar_stability
+		}
+	}
+
+	# Bruning's Austerity
+	focus = {
+		id = GER_bruning_austerity
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = GER_continue_weimar }
+		x = 5
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = -25
+			add_stability = -0.05
+			add_ideas = GER_bruning_measures
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# SPD Economic Reforms
+	focus = {
+		id = GER_spd_reforms
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = GER_continue_coalition }
+		x = 7
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.05
+			add_ideas = GER_spd_reforms
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# Maintain Gold Standard
+	focus = {
+		id = GER_maintain_gold
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = GER_bruning_austerity }
+		x = 5
+		y = 5
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = 25
+			add_stability = -0.05
+			add_ideas = GER_gold_standard
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# Abandon Gold Standard
+	focus = {
+		id = GER_abandon_gold
+		icon = GFX_goal_generic_market_economy
+		prerequisite = { focus = GER_spd_reforms }
+		mutually_exclusive = { focus = GER_maintain_gold }
+		x = 7
+		y = 5
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			remove_ideas = great_depression
+			add_ideas = GER_economic_recovery
+		}
+	}
+
+	# Budget Constraints
+	focus = {
+		id = GER_budget_constraints
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = GER_maintain_gold }
+		x = 5
+		y = 6
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = 25
+			add_stability = -0.05
+			if = {
+				limit = { has_idea = great_depression }
+				swap_ideas = {
+					remove_idea = great_depression
+					add_idea = economic_recovery
+				}
+			}
+		}
+	}
+
+	# Public Works Programs
+	focus = {
+		id = GER_public_works
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = GER_abandon_gold }
+		x = 7
+		y = 6
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.05
+			if = {
+				limit = { has_idea = unemployment }
+				swap_ideas = {
+					remove_idea = unemployment
+					add_idea = reduced_unemployment
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { 
+					infrastructure < 7
+					is_core_of = ROOT 
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	# Limited Rearmament
+	focus = {
+		id = GER_limited_rearmament
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = GER_budget_constraints }
+		x = 5
+		y = 7
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_ideas = limited_rearmament
+			army_experience = 25
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	# Franco-German Cooperation
+	focus = {
+		id = GER_franco_german
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = GER_public_works }
+		x = 7
+		y = 7
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			FRA = {
+				add_opinion_modifier = {
+					target = GER
+					modifier = medium_increase
+				}
+			}
+			GER = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = medium_increase
+				}
+			}
+		}
+	}
+	
+	# Secret Military Development
+	focus = {
+		id = GER_secret_military
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = GER_limited_rearmament }
+		x = 5
+		y = 8
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			army_experience = 50
+			navy_experience = 25
+			air_experience = 25
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	# European Economic Unity
+	focus = {
+		id = GER_european_unity
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = GER_franco_german }
+		x = 7
+		y = 8
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			add_ideas = international_trade_agreements
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	# Democratic Germany Rebuilt
+	focus = {
+		id = GER_democracy_rebuilt
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = GER_secret_military }
+		prerequisite = { focus = GER_european_unity }
+		x = 6
+		y = 9
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.10
+			add_war_support = 0.05
+			remove_ideas = economic_recovery
+			add_ideas = GER_economic_miracle
+		}
+	}
+	
+	# FASCIST PATH
+	focus = {
+		id = GER_support_nsdap
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = GER_political_struggle }
+		mutually_exclusive = { 
+			focus = GER_preserve_democracy 
+			focus = GER_communist_revolution
+		}
+		x = 10
+		y = 2
+		cost = 10
+		ai_will_do = { 
+			factor = 10
+			modifier = {
+				factor = 0.1
+				has_stability > 0.70
+			}
+		}
+		completion_reward = {
+			add_stability = -0.05
+			add_war_support = 0.10
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.10
+			}
+		}
+	}
+	
+	# The Enabling Act
+	focus = {
+		id = GER_enabling_act
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = GER_support_nsdap }
+		mutually_exclusive = { focus = GER_eliminate_opposition }
+		x = 9
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = 120
+			add_stability = -0.05
+			add_ideas = GER_enabling_act
+		}
+	}
+	
+	# Eliminate Political Opposition
+	focus = {
+		id = GER_eliminate_opposition
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = GER_support_nsdap }
+		mutually_exclusive = { focus = GER_enabling_act }
+		x = 11
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.10
+			add_war_support = 0.10
+			add_ideas = political_crackdown
+		}
+	}
+	
+	# Four Year Plan
+	focus = {
+		id = GER_four_year_plan
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = GER_enabling_act }
+		x = 9
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			add_ideas = GER_four_year_plan
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	# Hitler Consolidates Power
+	focus = {
+		id = GER_hitler_power
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = GER_eliminate_opposition }
+		x = 11
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.10
+			set_politics = {
+				ruling_party = fascism
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.25
+			}
+		}
+	}
+	
+	# Autarky Economic Policy
+	focus = {
+		id = GER_autarky
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = GER_four_year_plan }
+		x = 9
+		y = 5
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_ideas = GER_autarky_idea
+			if = {
+				limit = { has_idea = great_depression }
+				swap_ideas = {
+					remove_idea = great_depression
+					add_idea = economic_recovery
+				}
+			}
+		}
+	}
+	
+	# Military Reorganization
+	focus = {
+		id = GER_military_reorganization
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = GER_hitler_power }
+		x = 11
+		y = 5
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			army_experience = 50
+			navy_experience = 25
+			air_experience = 25
+			add_ideas = GER_military_expansion
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	
+	# German Industry Revival
+	focus = {
+		id = GER_industry_revival
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = GER_autarky }
+		x = 9
+		y = 6
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_ideas = industrial_recovery_boost
+			if = {
+				limit = { has_idea = unemployment }
+				swap_ideas = {
+					remove_idea = unemployment
+					add_idea = reduced_unemployment
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	# Reintroduce Conscription
+	focus = {
+		id = GER_reintroduce_conscription
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = GER_military_reorganization }
+		x = 11
+		y = 6
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_ideas = service_by_requirement
+			add_manpower = 50000
+			add_equipment = {
+				infantry_equipment = 10000
+			}
+		}
+	}
+	
+	# Massive Public Projects
+	focus = {
+		id = GER_public_projects
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = GER_industry_revival }
+		x = 9
+		y = 7
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			remove_ideas = unemployment
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_ideas = GER_public_works
+			every_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					infrastructure < 7
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	# Rebuild the Wehrmacht
+	focus = {
+		id = GER_rebuild_wehrmacht
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = GER_reintroduce_conscription }
+		x = 11
+		y = 7
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_ideas = rearmament_program
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	# Anschluss with Austria
+	focus = {
+		id = GER_anschluss
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = GER_public_projects }
+		prerequisite = { focus = GER_rebuild_wehrmacht }
+		available = {
+			is_in_faction = no
+			AUS = { exists = yes }
+			NOT = { has_war_with = AUS }
+		}
+		x = 10
+		y = 8
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_political_power = 50
+			AUS = {
+				country_event = { id = germany.1 }
+			}
+		}
+	}
+	
+	# COMMUNIST PATH
+	focus = {
+		id = GER_communist_revolution
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = GER_political_struggle }
+		mutually_exclusive = { 
+			focus = GER_preserve_democracy 
+			focus = GER_support_nsdap
+		}
+		x = 14
+		y = 2
+		cost = 10
+		ai_will_do = { 
+			factor = 2
+			modifier = {
+				factor = 10
+				SOV = { has_government = communism }
+				has_stability < 0.4
+			}
+		}
+		completion_reward = {
+			add_political_power = -50
+			add_stability = -0.10
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
+		}
+	}
+	
+	# Worker's Revolution
+	focus = {
+		id = GER_workers_revolution
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = GER_communist_revolution }
+		mutually_exclusive = { focus = GER_red_berlin }
+		x = 13
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = -25
+			add_stability = -0.10
+			add_war_support = 0.10
+			set_politics = {
+				ruling_party = communism
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.25
+			}
+		}
+	}
+	
+	# Red Berlin
+	focus = {
+		id = GER_red_berlin
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = GER_communist_revolution }
+		mutually_exclusive = { focus = GER_workers_revolution }
+		x = 15
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			add_war_support = 0.05
+			64 = { # Berlin state
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	# Nationalize Industry
+	focus = {
+		id = GER_nationalize
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = GER_workers_revolution }
+		x = 13
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.05
+			add_ideas = GER_nationalized_industry
+			if = {
+				limit = { has_idea = great_depression }
+				swap_ideas = {
+					remove_idea = great_depression
+					add_idea = economic_recovery
+				}
+			}
+		}
+	}
+	
+	# Purge Reactionaries
+	focus = {
+		id = GER_purge
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = GER_red_berlin }
+		x = 15
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = 150
+			add_stability = -0.05
+			add_war_support = 0.05
+			add_ideas = political_crackdown
+		}
+	}
+	
+	# Five Year Plan
+	focus = {
+		id = GER_five_year
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = GER_nationalize }
+		x = 13
+		y = 5
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			add_timed_idea = { 
+				idea = GER_five_year_plan
+				days = 1825 # 5 years
+			}
+		}
+	}
+	
+	# Red Army Reforms
+	focus = {
+		id = GER_red_army
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = GER_purge }
+		x = 15
+		y = 5
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			army_experience = 50
+			navy_experience = 25
+			air_experience = 25
+			add_ideas = GER_red_army_idea
+		}
+	}
+	
+	# Heavy Industry Focus
+	focus = {
+		id = GER_heavy_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = GER_five_year }
+		x = 13
+		y = 6
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	# Soviet Military Advisors
+	focus = {
+		id = GER_soviet_advisors
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = GER_red_army }
+		x = 15
+		y = 6
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			SOV = {
+				add_opinion_modifier = {
+					target = GER
+					modifier = large_increase
+				}
+			}
+			GER = {
+				add_opinion_modifier = {
+					target = SOV
+					modifier = large_increase
+				}
+			}
+		}
+	}
+	
+	# Workers' Paradise
+	focus = {
+		id = GER_workers_paradise
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = GER_heavy_industry }
+		x = 13
+		y = 7
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.10
+			if = {
+				limit = { has_idea = unemployment }
+				swap_ideas = {
+					remove_idea = unemployment
+					add_idea = reduced_unemployment
+				}
+			}
+			add_ideas = forced_labor_projects
+		}
+	}
+	
+	# People's Defense Force
+	focus = {
+		id = GER_peoples_defense
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = GER_soviet_advisors }
+		x = 15
+		y = 7
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_ideas = GER_peoples_army
+			add_manpower = 50000
+			add_equipment = {
+				infantry_equipment = 10000
+			}
+		}
+	}
+	
+	# Germanic-Soviet Pact
+	focus = {
+		id = GER_soviet_pact
+		icon = GFX_goal_molotov_ribbentrop_pact
+		prerequisite = { focus = GER_workers_paradise }
+		prerequisite = { focus = GER_peoples_defense }
+		x = 14
+		y = 8
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			SOV = {
+				add_opinion_modifier = {
+					target = GER
+					modifier = large_increase
+				}
+				add_to_faction = GER
+			}
+		}
+	}
+}

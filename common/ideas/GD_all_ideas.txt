@@ -1,3 +1,5 @@
+# Core Depression Ideas
+
 ideas = {
     country = {
         # Core Depression Ideas
@@ -41,6 +43,48 @@ ideas = {
             }
         }
         
+        # Depression states (more severe variant)
+        severe_depression = {
+            picture = GFX_idea_generic_economic_crisis
+            allowed = { always = yes }
+            removal_cost = -1
+            
+            modifier = {
+                consumer_goods_factor = 0.50
+                industrial_capacity_factory = -0.35
+                production_speed_buildings_factor = -0.40
+                stability_factor = -0.15
+                political_power_gain = -0.25
+            }
+        }
+        
+        # Additional crisis ideas
+        trade_collapse = {
+            picture = GFX_idea_generic_foreign_trade
+            allowed = { always = yes }
+            removal_cost = -1
+            
+            modifier = {
+                trade_opinion_factor = -0.3
+                min_export = 0.1
+                industrial_capacity_factory = -0.10
+                political_power_gain = -0.05
+            }
+        }
+        
+        political_unrest = {
+            picture = GFX_idea_generic_political_discussion
+            allowed = { always = yes }
+            removal_cost = -1
+            
+            modifier = {
+                stability_factor = -0.15
+                political_power_gain = -0.20
+                war_support_factor = -0.10
+                drift_defence_factor = -0.3
+            }
+        }
+        
         # Recovery ideas
         reduced_unemployment = {
             picture = GFX_idea_generic_recruiting_propaganda
@@ -69,153 +113,15 @@ ideas = {
             }
         }
         
-        # Country-specific ideas
-        new_deal_programs = {
-            picture = GFX_idea_generic_constitutional_guarantee
-            allowed = {
-                original_tag = USA
-            }
-            removal_cost = -1
-            
-            modifier = {
-                consumer_goods_factor = 0.15
-                stability_factor = 0.10
-                political_power_gain = -0.10
-                production_speed_buildings_factor = 0.15
-                industrial_capacity_factory = 0.10
-            }
-        }
-        
-        free_market_recovery = {
-            picture = GFX_idea_generic_foreign_capital
-            allowed = {
-                original_tag = USA
-            }
-            removal_cost = -1
-            
-            modifier = {
-                consumer_goods_factor = -0.05
-                political_power_gain = 0.15
-                stability_factor = -0.05
-                industrial_capacity_factory = 0.05
-                production_speed_buildings_factor = 0.05
-            }
-        }
-        
-        # Bonus ideas
-        social_security_idea = {
-            picture = GFX_idea_generic_social_science
-            allowed = { always = yes }
-            removal_cost = -1
-            
-            modifier = {
-                stability_factor = 0.10
-                consumer_goods_factor = 0.05
-                monthly_population = 0.05
-                political_power_gain = -0.05
-            }
-        }
-        
-        private_industry_boost = {
-            picture = GFX_idea_generic_industrial_effort
-            allowed = { always = yes }
-            removal_cost = -1
-            
-            modifier = {
-                production_factory_max_efficiency_factor = 0.05
-                industrial_capacity_factory = 0.10
-                consumer_goods_factor = -0.05
-            }
-        }
-        
-        export_focus_idea = {
-            picture = GFX_idea_generic_foreign_trade
-            allowed = { always = yes }
-            removal_cost = -1
-            
-            modifier = {
-                trade_opinion_factor = 0.2
-                min_export = 0.25
-                industrial_capacity_factory = 0.05
-                production_speed_buildings_factor = 0.05
-            }
-        }
-        
-        # Depression states
-        severe_depression = {
-            picture = GFX_idea_generic_economic_crisis
-            allowed = { always = yes }
-            removal_cost = -1
-            
-            modifier = {
-                consumer_goods_factor = 0.50
-                industrial_capacity_factory = -0.35
-                production_speed_buildings_factor = -0.40
-                stability_factor = -0.15
-                political_power_gain = -0.25
-            }
-        }
-        
-        # Government approaches
-        state_economic_control = {
-            picture = GFX_idea_generic_central_planning
-            allowed = { always = yes }
-            removal_cost = -1
-            
-            modifier = {
-                consumer_goods_factor = -0.10
-                production_speed_buildings_factor = 0.15
-                stability_factor = -0.05
-                political_power_gain = 0.10
-                drift_defence_factor = 0.2
-            }
-        }
-        
-        forced_labor_projects = {
-            picture = GFX_idea_generic_forced_labor
-            allowed = { always = yes }
-            removal_cost = -1
-            
-            modifier = {
-                conscription = 0.01
-                production_speed_buildings_factor = 0.20
-                industrial_capacity_factory = 0.10
-                stability_factor = -0.10
-                war_support_factor = 0.05
-            }
-        }
-        
-        # Crisis ideas
-        trade_collapse = {
-            picture = GFX_idea_generic_foreign_trade
-            allowed = { always = yes }
-            removal_cost = -1
-            
-            modifier = {
-                trade_opinion_factor = -0.3
-                min_export = 0.1
-                industrial_capacity_factory = -0.10
-                political_power_gain = -0.05
-            }
-        }
-        
-        political_unrest = {
-            picture = GFX_idea_generic_political_discussion
-            allowed = { always = yes }
-            removal_cost = -1
-            
-            modifier = {
-                stability_factor = -0.15
-                political_power_gain = -0.20
-                war_support_factor = -0.10
-                drift_defence_factor = -0.3
-            }
-        }
-        
-        # Recovery paths
+        # Recovery paths - Democratic
         international_trade_agreements = {
             picture = GFX_idea_generic_foreign_trade
-            allowed = { always = yes }
+            allowed = { 
+                OR = {
+                    has_government = democratic
+                    has_government = neutrality
+                }
+            }
             removal_cost = -1
             
             modifier = {
@@ -226,6 +132,7 @@ ideas = {
             }
         }
         
+        # Recovery paths - Any ideology
         rearmament_program = {
             picture = GFX_idea_generic_war_preparation
             allowed = { always = yes }
@@ -240,7 +147,7 @@ ideas = {
             }
         }
         
-        # Recovery bonus ideas
+        # Recovery bonus ideas - Stages of recovery
         industrial_recovery_boost = {
             picture = GFX_idea_generic_production_bonus
             allowed = { always = yes }
@@ -265,7 +172,133 @@ ideas = {
             }
         }
         
-        # Added for political crackdown events
+        # USA specific recovery paths (mutually exclusive)
+        new_deal_programs = {
+            picture = GFX_idea_generic_constitutional_guarantee
+            allowed = {
+                original_tag = USA
+                has_government = democratic
+            }
+            removal_cost = -1
+            
+            modifier = {
+                consumer_goods_factor = 0.15
+                stability_factor = 0.10
+                political_power_gain = -0.10
+                production_speed_buildings_factor = 0.15
+                industrial_capacity_factory = 0.10
+            }
+        }
+        
+        free_market_recovery = {
+            picture = GFX_idea_generic_foreign_capital
+            allowed = {
+                original_tag = USA
+                OR = {
+                    has_government = democratic
+                    has_government = neutrality
+                }
+            }
+            removal_cost = -1
+            
+            modifier = {
+                consumer_goods_factor = -0.05
+                political_power_gain = 0.15
+                stability_factor = -0.05
+                industrial_capacity_factory = 0.05
+                production_speed_buildings_factor = 0.05
+            }
+        }
+        
+        social_security_idea = {
+            picture = GFX_idea_generic_social_science
+            allowed = { 
+                OR = {
+                    has_government = democratic
+                    has_government = communism
+                }
+            }
+            removal_cost = -1
+            
+            modifier = {
+                stability_factor = 0.10
+                consumer_goods_factor = 0.05
+                monthly_population = 0.05
+                political_power_gain = -0.05
+            }
+        }
+        
+        private_industry_boost = {
+            picture = GFX_idea_generic_industrial_effort
+            allowed = { 
+                OR = {
+                    has_government = democratic
+                    has_government = neutrality
+                    has_government = fascism
+                }
+            }
+            removal_cost = -1
+            
+            modifier = {
+                production_factory_max_efficiency_factor = 0.05
+                industrial_capacity_factory = 0.10
+                consumer_goods_factor = -0.05
+            }
+        }
+        
+        export_focus_idea = {
+            picture = GFX_idea_generic_foreign_trade
+            allowed = { always = yes }
+            removal_cost = -1
+            
+            modifier = {
+                trade_opinion_factor = 0.2
+                min_export = 0.25
+                industrial_capacity_factory = 0.05
+                production_speed_buildings_factor = 0.05
+            }
+        }
+        
+        # Authoritarianism ideas - For fascist/communist paths
+        state_economic_control = {
+            picture = GFX_idea_generic_central_planning
+            allowed = { 
+                OR = {
+                    has_government = fascism
+                    has_government = communism
+                }
+            }
+            removal_cost = -1
+            
+            modifier = {
+                consumer_goods_factor = -0.10
+                production_speed_buildings_factor = 0.15
+                stability_factor = -0.05
+                political_power_gain = 0.10
+                drift_defence_factor = 0.2
+            }
+        }
+        
+        forced_labor_projects = {
+            picture = GFX_idea_generic_forced_labor
+            allowed = { 
+                OR = {
+                    has_government = fascism
+                    has_government = communism
+                }
+            }
+            removal_cost = -1
+            
+            modifier = {
+                conscription = 0.01
+                production_speed_buildings_factor = 0.20
+                industrial_capacity_factory = 0.10
+                stability_factor = -0.10
+                war_support_factor = 0.05
+            }
+        }
+        
+        # Political control ideas
         political_crackdown = {
             picture = GFX_idea_generic_secret_police
             allowed = { always = yes }

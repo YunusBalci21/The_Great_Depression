@@ -1,27 +1,7 @@
+# File 3: 03_gd_recovery_bonus_ideas.txt - REPLACE WITH THIS
 ideas = {
     country = {
-        industrial_recovery_boost = {
-            picture = GFX_idea_generic_production_bonus
-            allowed = { always = yes }
-            removal_cost = -1
-            
-            modifier = {
-                industrial_capacity_factory = 0.15
-                production_factory_max_efficiency_factor = 0.05
-                production_speed_buildings_factor = 0.10
-            }
-        }
-        
-        consumer_confidence_boost = {
-            picture = GFX_idea_generic_consumer_goods
-            allowed = { always = yes }
-            removal_cost = -1
-            
-            modifier = {
-                consumer_goods_factor = -0.05
-                stability_factor = 0.05
-                political_power_gain = 0.10
-            }
-        }
+        # All ideas have been moved to GD_all_ideas.txt to prevent duplicates
+        # This file is kept for mod structure and compatibility
     }
 }

@@ -1,5 +1,4 @@
 -- Great Depression mod defines
--- Only modify what's needed, don't replace everything
 
 NDefines.NGame.START_DATE = "1929.10.24"
 NDefines.NGame.END_DATE = "1949.1.1"

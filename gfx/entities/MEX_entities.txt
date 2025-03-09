@@ -1,3 +1,6 @@
+# This file defines the Mexican infantry weapon entities
+# It uses German models as a base (common practice for minor nations)
+
 entity = {
 	name = "MEX_infantry_weapon_rifle_right_entity"
 	pdxmesh = "GER_infantry_weapon_rifle_right_entity"
@@ -11,4 +14,45 @@ entity = {
 entity = {
 	name = "MEX_infantry_weapon_rifle_long_idle_entity"
 	pdxmesh = "GER_infantry_weapon_rifle_long_idle_entity"
+}
+
+# Adding MEX infantry animation mappings to ensure proper linkage
+entity = {
+	name = "MEX_infantry_entity"
+	pdxmesh = "GER_infantry_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"				animation = "idle" }
+	state = { name = "move"				animation = "move" }
+	state = { name = "attack"			animation = "attack" }
+	state = { name = "retreat"			animation = "retreat" }
+	state = { name = "death"			animation = "death" }
+	state = { name = "defend"			animation = "defense" }
+	
+	attach = { 
+		Right_hand_node = "MEX_infantry_weapon_rifle_right_entity" 
+		Left_hand_node = "MEX_infantry_weapon_rifle_left_entity" 
+	}
+	
+	scale = 1.0
+}
+
+entity = {
+	name = "MEX_infantry_2_entity"
+	pdxmesh = "GER_infantry_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"				animation = "idle" }
+	state = { name = "move"				animation = "move" }
+	state = { name = "attack"			animation = "attack" }
+	state = { name = "retreat"			animation = "retreat" }
+	state = { name = "death"			animation = "death" }
+	state = { name = "defend"			animation = "defense" }
+	
+	attach = { 
+		Right_hand_node = "MEX_infantry_weapon_rifle_right_entity" 
+		Left_hand_node = "MEX_infantry_weapon_rifle_left_entity" 
+	}
+	
+	scale = 1.0
 }
