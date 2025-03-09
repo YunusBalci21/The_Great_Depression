@@ -1,4 +1,5 @@
-# This is the non-MTG version
+# File 1: history/units/USA_1929_naval.txt
+# This is the non-MTG version (lowercase 'n' in 'naval')
 
 # Atlantic Fleet
 fleet = {
