@@ -1,0 +1,26 @@
+ideas = {
+    country = {
+        reduced_unemployment = {
+            picture = GFX_idea_generic_recruiting_propaganda
+            
+            modifier = {
+                conscription = -0.01
+                production_speed_buildings_factor = -0.10
+                industrial_capacity_factory = -0.07
+                political_power_gain = -0.05
+                monthly_population = -0.05
+            }
+        }
+        
+        economic_recovery = {
+            picture = GFX_idea_generic_economic_deal
+            
+            modifier = {
+                consumer_goods_factor = 0.20
+                factory_output = -0.10
+                construction_speed_factor = -0.15
+                stability_factor = -0.05
+            }
+        }
+    }
+}

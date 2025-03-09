@@ -1,0 +1,32 @@
+l_english:
+ # Focus tree localization
+ USA_economic_crisis:0 "Economic Crisis of 1929"
+ USA_economic_crisis_desc:0 "The stock market crash of 1929 has thrown our nation into an economic crisis unlike anything we've seen before. We must take decisive action to address this catastrophe."
+ USA_new_deal:0 "The New Deal"
+ USA_new_deal_desc:0 "A comprehensive series of government programs to provide relief, recovery, and reform to our struggling economy. This interventionist approach will expand the role of government but may stabilize our society."
+ USA_laissez_faire:0 "Laissez-Faire Approach"
+ USA_laissez_faire_desc:0 "The market will correct itself if given the chance. By minimizing government intervention, we allow the natural economic forces to rebalance and eventually lead to recovery."
+
+ # Ideas localization
+ great_depression:0 "The Great Depression"
+ great_depression_desc:0 "The worst economic downturn in modern history, affecting every aspect of our economy and society."
+ unemployment:0 "Mass Unemployment"
+ unemployment_desc:0 "Millions of citizens are without work, causing societal strain and reducing our industrial capacity."
+ bank_runs:0 "Banking Crisis"
+ bank_runs_desc:0 "Financial institutions are failing as panicked customers withdraw their savings en masse."
+ new_deal_programs:0 "New Deal Programs"
+ new_deal_programs_desc:0 "Government-led programs providing relief, recovery, and reform to our struggling economy."
+ free_market_recovery:0 "Free Market Policies"
+ free_market_recovery_desc:0 "Allowing market forces to correct the economic downturn with minimal government intervention."
+ reduced_unemployment:0 "Declining Unemployment"
+ reduced_unemployment_desc:0 "Our policies have begun to reduce unemployment, though many citizens remain without work."
+ economic_recovery:0 "Economic Recovery"
+ economic_recovery_desc:0 "The worst of the Depression is behind us, but recovery remains slow and steady."
+
+ # Decision category
+ GD_economic_recovery:0 "Economic Recovery Measures"
+ GD_economic_recovery_desc:0 "Measures we can take to address the ongoing economic crisis."
+
+ # Decisions
+ public_works_projects:0 "Public Works Projects"
+ public_works_projects_desc:0 "Invest in infrastructure projects to provide employment and stimulate economic activity."

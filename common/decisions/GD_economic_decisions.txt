@@ -1,0 +1,45 @@
+GD_economic_recovery = {
+    public_works_projects = {
+        icon = generic_construction
+        
+        cost = 50
+        days_remove = 70
+        
+        visible = {
+            has_idea = great_depression
+        }
+        
+        modifier = {
+            consumer_goods_factor = 0.05
+            political_power_gain = -0.1
+        }
+        
+        remove_effect = {
+            if = {
+                limit = {
+                    has_idea = unemployment
+                }
+                swap_ideas = {
+                    remove_idea = unemployment
+                    add_idea = reduced_unemployment
+                }
+            }
+            random_owned_controlled_state = {
+                limit = { infrastructure < 7 }
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+        
+        ai_will_do = {
+            factor = 5
+            modifier = {
+                factor = 2
+                has_idea = unemployment
+            }
+        }
+    }
+}

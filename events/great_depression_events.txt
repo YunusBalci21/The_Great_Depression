@@ -1,0 +1,93 @@
+namespace = great_depression
+
+country_event = {
+    id = great_depression.1
+    title = "The Stock Market Crash of 1929"
+    desc = "On October 24, 1929, the New York Stock Exchange collapsed, triggering a financial crisis that would spread worldwide. Factories shut down, banks failed, and unemployment soared. The world now faces an uncertain future."
+    picture = GFX_event_stock_market_crash
+
+    trigger = {
+        date > 1929.10.24
+    }
+
+    immediate = {
+        every_major_country = {
+            add_idea = great_depression
+        }
+    }
+
+    option = {
+        name = "A dark day for the world."
+        ai_chance = { factor = 100 }
+    }
+}
+
+# Bank Failures Event
+country_event = {
+    id = great_depression.2
+    title = "Bank Failures Spreading"
+    desc = "As the economic crisis deepens, banks across the country are failing. Customers are panicking and withdrawing their savings, causing more banks to collapse. The banking system is on the verge of complete failure."
+    picture = GFX_event_generic_read_write
+    
+    trigger = {
+        has_idea = great_depression
+        date > 1930.2.1
+        NOT = { has_country_flag = bank_failure_event }
+    }
+    
+    mean_time_to_happen = {
+        days = 30
+    }
+    
+    immediate = {
+        set_country_flag = bank_failure_event
+    }
+    
+    option = {
+        name = "We must restore confidence in the banking system"
+        ai_chance = { factor = 100 }
+        add_stability = -0.05
+        add_political_power = -50
+        if = {
+            limit = {
+                NOT = { has_idea = bank_runs }
+            }
+            add_ideas = bank_runs
+        }
+    }
+}
+
+# Unemployment Crisis Event
+country_event = {
+    id = great_depression.3
+    title = "Unemployment Crisis"
+    desc = "With businesses failing nationwide, unemployment has reached unprecedented levels. Breadlines are forming in major cities, and public dissatisfaction is growing."
+    picture = GFX_event_generic_factory
+    
+    trigger = {
+        has_idea = great_depression
+        date > 1930.5.1
+        NOT = { has_country_flag = unemployment_crisis_event }
+    }
+    
+    mean_time_to_happen = {
+        days = 60
+    }
+    
+    immediate = {
+        set_country_flag = unemployment_crisis_event
+    }
+    
+    option = {
+        name = "A national crisis is unfolding"
+        ai_chance = { factor = 100 }
+        add_stability = -0.05
+        add_war_support = -0.05
+        if = {
+            limit = {
+                NOT = { has_idea = unemployment }
+            }
+            add_ideas = unemployment
+        }
+    }
+}

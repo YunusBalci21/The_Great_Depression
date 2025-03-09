@@ -1,0 +1,58 @@
+focus_tree = {
+    id = usa_focus
+    country = {
+        factor = 0
+        modifier = {
+            add = 10
+            tag = USA
+        }
+    }
+    
+    default = no
+    
+    focus = {
+        id = USA_economic_crisis
+        icon = GFX_goal_generic_demand_territory
+        x = 10
+        y = 0
+        cost = 10
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_political_power = 50
+        }
+    }
+    
+    # New Deal Path (Interventionist)
+    focus = {
+        id = USA_new_deal
+        icon = GFX_goal_generic_consumer_goods
+        prerequisite = { focus = USA_economic_crisis }
+        mutually_exclusive = { focus = USA_laissez_faire }
+        x = 8
+        y = 1
+        cost = 10
+        ai_will_do = { factor = 7 }
+        completion_reward = {
+            add_stability = 0.05
+            remove_ideas = { unemployment }
+            add_ideas = { new_deal_programs }
+            add_political_power = -50
+        }
+    }
+    
+    # Laissez-Faire Path (Free Market)
+    focus = {
+        id = USA_laissez_faire
+        icon = GFX_goal_generic_positive_trade_relations
+        prerequisite = { focus = USA_economic_crisis }
+        mutually_exclusive = { focus = USA_new_deal }
+        x = 12
+        y = 1
+        cost = 10
+        ai_will_do = { factor = 3 }
+        completion_reward = {
+            add_political_power = 100
+            add_ideas = { free_market_recovery }
+        }
+    }
+}

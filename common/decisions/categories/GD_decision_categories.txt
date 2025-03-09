@@ -1,0 +1,7 @@
+GD_economic_recovery = {
+    icon = generic_economy
+    
+    visible = {
+        has_idea = great_depression
+    }
+}
