@@ -1,0 +1,23 @@
+state={
+	id=1
+	name="STATE_CORSICA"
+	manpower = 322900
+	
+	state_category = town
+	
+	history={
+		owner = FRA
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 3
+			3838 = {  # Corsica coastal province 
+				naval_base = 3
+			}
+		}
+		add_core_of = FRA
+	}
+	provinces={
+		3838 9851 11804 
+	}
+}

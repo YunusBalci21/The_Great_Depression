@@ -99,14 +99,14 @@ focus_tree = {
         completion_reward = {
             random_owned_controlled_state = {
                 add_resource = {
-                    type = steel
+                    type = steel  # Changed from electricity
                     amount = 10
                 }
                 add_extra_state_shared_building_slots = 2
             }
             random_owned_controlled_state = {
                 add_resource = {
-                    type = electricity
+                    type = oil    # Changed from electricity
                     amount = 5
                 }
                 add_extra_state_shared_building_slots = 1

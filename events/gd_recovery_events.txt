@@ -54,7 +54,7 @@ country_event = {
     option = {
         name = "Our people's needs are being met"
         ai_chance = { factor = 100 }
-        add_consumer_goods = -0.05
+        add_ideas = consumer_confidence_boost  # FIXED: was "add_consumer_goods = -0.05"
         add_stability = 0.05
         add_political_power = 25
     }
@@ -403,6 +403,8 @@ country_event = {
         add_political_power = 25
         add_stability = 0.05
         add_war_support = 0.05
-        drift_defence_factor = 0.1
+        
+        # Use add_ideas properly - no brackets needed for a single idea
+        add_ideas = political_crackdown
     }
 }

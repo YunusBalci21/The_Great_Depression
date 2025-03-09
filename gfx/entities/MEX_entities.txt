@@ -1,0 +1,14 @@
+entity = {
+	name = "MEX_infantry_weapon_rifle_right_entity"
+	pdxmesh = "GER_infantry_weapon_rifle_right_entity"
+}
+
+entity = {
+	name = "MEX_infantry_weapon_rifle_left_entity"
+	pdxmesh = "GER_infantry_weapon_rifle_left_entity"
+}
+
+entity = {
+	name = "MEX_infantry_weapon_rifle_long_idle_entity"
+	pdxmesh = "GER_infantry_weapon_rifle_long_idle_entity"
+}
