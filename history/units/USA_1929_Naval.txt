@@ -1,0 +1,69 @@
+# USA 1929 Naval OOB
+
+# Atlantic Fleet
+fleet = {
+    name = "Atlantic Fleet"
+    naval_base = 6845 # Norfolk
+    
+    task_force = {
+        name = "Atlantic Battleship Division"
+        location = 6845
+        ship = { name = "USS New York" pride_of_the_fleet = yes definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = USA version_name = "New York Class" } } }
+        ship = { name = "USS Texas" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = USA version_name = "New York Class" } } }
+        ship = { name = "USS Nevada" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = USA version_name = "Nevada Class" } } }
+        ship = { name = "USS Oklahoma" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = USA version_name = "Nevada Class" } } }
+    }
+    
+    task_force = {
+        name = "Atlantic Cruiser Squadron"
+        location = 6845
+        ship = { name = "USS Richmond" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = USA version_name = "Omaha Class" } } }
+        ship = { name = "USS Concord" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = USA version_name = "Omaha Class" } } }
+        ship = { name = "USS Trenton" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = USA version_name = "Omaha Class" } } }
+    }
+    
+    task_force = {
+        name = "Atlantic Destroyer Squadron"
+        location = 6845
+        ship = { name = "USS Farragut" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "Clemson Class" } } }
+        ship = { name = "USS Dewey" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "Clemson Class" } } }
+        ship = { name = "USS Hull" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "Clemson Class" } } }
+    }
+}
+
+# Pacific Fleet
+fleet = {
+    name = "Pacific Fleet"
+    naval_base = 4328 # San Francisco
+    
+    task_force = {
+        name = "Pacific Battleship Division"
+        location = 4328
+        ship = { name = "USS Pennsylvania" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = USA version_name = "Pennsylvania Class" } } }
+        ship = { name = "USS Arizona" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = USA version_name = "Pennsylvania Class" } } }
+        ship = { name = "USS Tennessee" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = USA version_name = "Tennessee Class" } } }
+        ship = { name = "USS California" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = USA version_name = "Tennessee Class" } } }
+    }
+    
+    task_force = {
+        name = "Carrier Strike Group"
+        location = 4328
+        ship = { name = "USS Lexington" definition = carrier equipment = { ship_hull_carrier_1 = { amount = 1 owner = USA version_name = "Lexington Class" } } }
+        ship = { name = "USS Saratoga" definition = carrier equipment = { ship_hull_carrier_1 = { amount = 1 owner = USA version_name = "Lexington Class" } } }
+    }
+    
+    task_force = {
+        name = "Pacific Cruiser Squadron"
+        location = 4328
+        ship = { name = "USS Pensacola" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = USA version_name = "Pensacola Class" } } }
+        ship = { name = "USS Salt Lake City" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = USA version_name = "Pensacola Class" } } }
+    }
+    
+    task_force = {
+        name = "Pacific Destroyer Squadron"
+        location = 4328
+        ship = { name = "USS Porter" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "Clemson Class" } } }
+        ship = { name = "USS Clark" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "Clemson Class" } } }
+        ship = { name = "USS Cassin" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "Clemson Class" } } }
+    }
+}

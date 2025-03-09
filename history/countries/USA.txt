@@ -1,68 +1,72 @@
 # Starting situation for USA in 1929
 capital = 361
 
-oob = "USA_1929" # Using our custom 1929 OOB
+oob = "USA_1929"
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	naval_oob = "USA_1929_naval_mtg"
+	else = { naval_oob = "USA_1929_naval" }
+}
 
 # Starting tech (you can adjust these)
 set_research_slots = 3
 set_technology = {
-    infantry_weapons = 1
-    infantry_weapons1 = 1
-    basic_machine_tools = 1
-    improved_machine_tools = 1
-    basic_equipment = 1
-    tech_support = 1
-    interwar_artillery = 1
-    gw_artillery = 1
-    early_fighter = 1
-    cv_early_fighter = 1
-    early_bomber = 1
-    naval_bomber1 = 1
-    early_submarine = 1
-    basic_submarine = 1
-    early_destroyer = 1
-    basic_destroyer = 1
-    early_light_cruiser = 1
-    basic_light_cruiser = 1
-    early_heavy_cruiser = 1
-    basic_heavy_cruiser = 1
-    early_battleship = 1
-    early_battlecruiser = 1
-    early_carrier = 1
-    transport = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	basic_machine_tools = 1
+	improved_machine_tools = 1
+	tech_support = 1
+	interwar_artillery = 1
+	gw_artillery = 1
+	early_fighter = 1
+	cv_early_fighter = 1
+	early_bomber = 1
+	naval_bomber1 = 1
+	early_submarine = 1
+	basic_submarine = 1
+	early_destroyer = 1
+	basic_destroyer = 1
+	early_light_cruiser = 1
+	basic_light_cruiser = 1
+	early_heavy_cruiser = 1
+	basic_heavy_cruiser = 1
+	early_battleship = 1
+	early_battlecruiser = 1
+	early_carrier = 1
+	transport = 1
 }
 
 set_convoys = 200
 
 # Great Depression effects
 add_ideas = {
-    great_depression
-    unemployment
-    bank_runs
+	great_depression
+	unemployment
+	bank_runs
 }
 
 # Political setup
 set_politics = {
-    ruling_party = democratic
-    last_election = "1928.11.6"
-    election_frequency = 48
-    elections_allowed = yes
+	ruling_party = democratic
+	last_election = "1928.11.6"
+	election_frequency = 48
+	elections_allowed = yes
 }
 
 set_popularities = {
-    democratic = 85
-    fascism = 2
-    communism = 8
-    neutrality = 5
+	democratic = 85
+	fascism = 2
+	communism = 8
+	neutrality = 5
 }
 
 create_country_leader = {
-    name = "Herbert Hoover"
-    desc = "POLITICS_HERBERT_HOOVER_DESC"
-    picture = "gfx/leaders/USA/Portrait_USA_Herbert_Hoover.dds"
-    expire = "1964.1.1"
-    ideology = liberalism
-    traits = {
-        # Add traits if desired
-    }
+	name = "Herbert Hoover"
+	desc = "POLITICS_HERBERT_HOOVER_DESC"
+	picture = "gfx/leaders/USA/Portrait_USA_Herbert_Hoover.dds"
+	expire = "1964.1.1"
+	ideology = liberalism
+	traits = {
+		# Add traits if desired
+	}
 }
