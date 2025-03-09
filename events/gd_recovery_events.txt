@@ -1,0 +1,409 @@
+add_namespace = gd_recovery
+
+# Economic Recovery Event - First Signs
+country_event = {
+    id = gd_recovery.1
+    title = "First Signs of Economic Recovery"
+    desc = "After years of economic hardship, the first signs of recovery are beginning to appear. Industrial production is starting to increase, unemployment is slowly declining, and consumer confidence is gradually returning. While we are far from a full recovery, these positive indicators suggest that our economy may have finally turned a corner."
+    picture = GFX_report_event_generic_factory
+    
+    trigger = {
+        has_idea = economic_recovery
+        NOT = { has_country_flag = recovery_event_1 }
+        date > 1931.1.1
+    }
+    
+    mean_time_to_happen = {
+        days = 120
+    }
+    
+    immediate = {
+        set_country_flag = recovery_event_1
+    }
+    
+    option = {
+        name = "A light at the end of the tunnel"
+        ai_chance = { factor = 100 }
+        add_stability = 0.05
+        add_political_power = 25
+    }
+}
+
+# Consumer Goods Industry Recovery
+country_event = {
+    id = gd_recovery.10
+    title = "Consumer Goods Industry Revival"
+    desc = "As our economy continues to recover, the consumer goods industry is showing remarkable resilience. Factories that once stood idle are now producing everyday items, from textiles to household appliances, helping to restore normal economic life."
+
+# picture = GFX_report_event_generic_factory
+
+    trigger = {
+        has_idea = economic_recovery
+        has_country_flag = recovery_event_2
+        NOT = { has_country_flag = consumer_industry_revival }
+        date > 1933.6.1
+    }
+
+    mean_time_to_happen = {
+        days = 150
+    }
+
+    immediate = {
+        set_country_flag = consumer_industry_revival
+    }
+
+    option = {
+        name = "Our people's needs are being met"
+        ai_chance = { factor = 100 }
+        add_consumer_goods = -0.05
+        add_stability = 0.05
+        add_political_power = 25
+    }
+}
+
+# Economic Recovery Event - Industrial Growth
+country_event = {
+    id = gd_recovery.2
+    title = "Industrial Sector Begins Growing"
+    desc = "Our industrial sector is showing significant signs of revival, with factory output increasing and new positions opening. While still below pre-crash levels, this growth provides a solid foundation for broader economic recovery and offers hope for the unemployed."
+    picture = GFX_report_event_generic_industrial_complex
+    
+    trigger = {
+        has_idea = economic_recovery
+        has_country_flag = recovery_event_1
+        NOT = { has_country_flag = recovery_event_2 }
+        date > 1932.1.1
+    }
+    
+    mean_time_to_happen = {
+        days = 180
+    }
+    
+    immediate = {
+        set_country_flag = recovery_event_2
+    }
+    
+    option = {
+        name = "Our factories are humming again"
+        ai_chance = { factor = 100 }
+        add_timed_idea = { 
+            idea = industrial_recovery_boost 
+            days = 180
+        }
+        random_owned_controlled_state = {
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+}
+
+# Economic Recovery Event - Banking Stability
+country_event = {
+    id = gd_recovery.3
+    title = "Banking System Stabilizes"
+    desc = "After years of instability, our banking system has finally achieved a measure of stability. Depositors are no longer rushing to withdraw their savings, and banks are cautiously resuming lending operations. This financial stability is crucial for sustained economic recovery."
+    picture = GFX_report_event_generic_read_write
+    
+    trigger = {
+        has_idea = economic_recovery
+        has_country_flag = recovery_event_1
+        NOT = { has_country_flag = recovery_event_3 }
+        date > 1933.1.1
+    }
+    
+    mean_time_to_happen = {
+        days = 90
+    }
+    
+    immediate = {
+        set_country_flag = recovery_event_3
+    }
+    
+    option = {
+        name = "Confidence is returning to the financial sector"
+        ai_chance = { factor = 100 }
+        add_political_power = 50
+        add_stability = 0.05
+    }
+}
+
+# Economic Recovery Event - Consumer Spending
+country_event = {
+    id = gd_recovery.4
+    title = "Consumer Spending Increases"
+    desc = "For the first time since the crash, consumer spending is showing a consistent upward trend. Citizens are becoming more willing to purchase non-essential goods, and retail businesses are reporting improved sales. This increased consumer activity is vital for sustained economic growth."
+    picture = GFX_report_event_generic_factory
+    
+    trigger = {
+        has_idea = economic_recovery
+        has_country_flag = recovery_event_2
+        NOT = { has_country_flag = recovery_event_4 }
+        date > 1934.1.1
+    }
+    
+    mean_time_to_happen = {
+        days = 180
+    }
+    
+    immediate = {
+        set_country_flag = recovery_event_4
+    }
+    
+    option = {
+        name = "The wheels of commerce are turning again"
+        ai_chance = { factor = 100 }
+        add_timed_idea = { 
+            idea = consumer_confidence_boost 
+            days = 180
+        }
+        add_political_power = 25
+    }
+}
+
+# Economic Recovery Event - International Trade Revival
+country_event = {
+    id = gd_recovery.5
+    title = "International Trade Reviving"
+    desc = "After years of collapsed international markets, global trade is beginning to recover. Foreign demand for our goods is increasing, and import supplies are becoming more reliable. This revival of international commerce will help accelerate our economic recovery."
+    picture = GFX_report_event_merchant_ship
+    
+    trigger = {
+        has_idea = economic_recovery
+        has_country_flag = recovery_event_3
+        NOT = { has_country_flag = recovery_event_5 }
+        date > 1935.1.1
+    }
+    
+    mean_time_to_happen = {
+        days = 90
+    }
+    
+    immediate = {
+        set_country_flag = recovery_event_5
+    }
+    
+    option = {
+        name = "Global markets are opening once more"
+        ai_chance = { factor = 100 }
+        add_ideas = {
+            international_trade_agreements
+        }
+    }
+}
+
+# Economic Recovery Event - Full Recovery
+country_event = {
+    id = gd_recovery.6
+    title = "Economy Fully Recovered"
+    desc = "After years of struggle and hardship, our economy has finally recovered from the Great Depression. Employment has returned to pre-crash levels, industrial output is robust, and financial markets are stable. While there are still challenges ahead, the worst economic crisis in our history is officially behind us."
+    picture = GFX_report_event_generic_factory
+    
+    trigger = {
+        NOT = { has_idea = great_depression }
+        NOT = { has_idea = economic_recovery }
+        has_country_flag = recovery_event_4
+        has_country_flag = recovery_event_5
+        NOT = { has_country_flag = recovery_event_6 }
+        date > 1936.1.1
+    }
+    
+    mean_time_to_happen = {
+        days = 30
+    }
+    
+    immediate = {
+        set_country_flag = recovery_event_6
+    }
+    
+    option = {
+        name = "A new era of prosperity begins"
+        ai_chance = { factor = 100 }
+        add_stability = 0.10
+        add_war_support = 0.05
+        add_political_power = 100
+        random_owned_controlled_state = {
+            add_building_construction = {
+                type = industrial_complex
+                level = 2
+                instant_build = yes
+            }
+        }
+    }
+}
+
+# Event for nations that choose a more authoritarian path
+country_event = {
+    id = gd_recovery.7
+    title = "State-Directed Recovery"
+    desc = "Our more authoritarian approach to economic recovery is showing results. Through strict state control of industry and labor, we have managed to accelerate economic recovery at the cost of some personal freedoms. Factory output is increasing and infrastructure projects are moving forward rapidly."
+    picture = GFX_report_event_fascist_gathering
+    
+    trigger = {
+        OR = {
+            has_government = fascism
+            has_government = communism
+        }
+        has_idea = economic_recovery
+        NOT = { has_idea = state_economic_control }
+        NOT = { has_country_flag = authoritarian_recovery_event }
+        date > 1932.1.1
+    }
+    
+    mean_time_to_happen = {
+        days = 120
+    }
+    
+    immediate = {
+        set_country_flag = authoritarian_recovery_event
+    }
+    
+    option = {
+        name = "The state guides our recovery"
+        ai_chance = { factor = 100 }
+        add_political_power = 50
+        add_stability = -0.05
+        add_war_support = 0.10
+        add_ideas = {
+            state_economic_control
+        }
+    }
+    
+    option = {
+        name = "Further centralize economic control"
+        ai_chance = { 
+            factor = 75
+            modifier = {
+                factor = 2
+                has_government = fascism
+            }
+        }
+        add_political_power = 25
+        add_stability = -0.10
+        add_war_support = 0.15
+        add_ideas = {
+            forced_labor_projects
+        }
+    }
+}
+
+# Military Industrialization Event
+country_event = {
+    id = gd_recovery.8
+    title = "Military Industrialization"
+    desc = "With the economy showing signs of recovery, there are growing calls to invest in military industry as a way to further stimulate growth. By expanding arms production and military infrastructure, we could create jobs while strengthening our national defense capabilities."
+    picture = GFX_report_event_military_planning
+    
+    trigger = {
+        has_idea = economic_recovery
+        has_country_flag = recovery_event_2
+        NOT = { has_country_flag = military_industry_event }
+        date > 1933.1.1
+    }
+    
+    mean_time_to_happen = {
+        days = 180
+    }
+    
+    immediate = {
+        set_country_flag = military_industry_event
+    }
+    
+    option = {
+        name = "Prioritize military industry"
+        ai_chance = { 
+            factor = 50
+            modifier = {
+                factor = 2
+                OR = {
+                    has_government = fascism
+                    has_government = neutrality
+                }
+            }
+        }
+        add_ideas = {
+            rearmament_program
+        }
+        add_war_support = 0.10
+        add_stability = -0.05
+    }
+    
+    option = {
+        name = "Focus on civilian recovery first"
+        ai_chance = { 
+            factor = 50
+            modifier = {
+                factor = 2
+                has_government = democratic
+            }
+        }
+        add_political_power = 25
+        add_stability = 0.05
+        add_war_support = -0.05
+    }
+}
+
+# Political Instability Event
+country_event = {
+    id = gd_recovery.9
+    title = "Rising Political Extremism"
+    desc = "Despite economic improvements, years of hardship have fueled support for radical political movements. Both far-left and far-right groups are gaining popularity, promising more dramatic solutions to the nation's problems. This political instability threatens the fragile economic recovery."
+    picture = GFX_report_event_generic_riot
+    
+    trigger = {
+        has_idea = economic_recovery
+        has_country_flag = recovery_event_1
+        NOT = { has_country_flag = political_instability_event }
+        date > 1932.6.1
+    }
+    
+    mean_time_to_happen = {
+        days = 180
+    }
+    
+    immediate = {
+        set_country_flag = political_instability_event
+    }
+    
+    option = {
+        name = "Maintain democratic principles"
+        ai_chance = { 
+            factor = 60
+            modifier = {
+                factor = 3
+                has_government = democratic
+            }
+        }
+        add_political_power = -50
+        add_stability = -0.05
+        if = {
+            limit = {
+                NOT = { has_idea = political_unrest }
+            }
+            add_ideas = {
+                political_unrest
+            }
+        }
+    }
+    
+    option = {
+        name = "Crack down on extremist movements"
+        ai_chance = { 
+            factor = 40
+            modifier = {
+                factor = 2
+                OR = {
+                    has_government = fascism
+                    has_government = communism
+                    has_government = neutrality
+                }
+            }
+        }
+        add_political_power = 25
+        add_stability = 0.05
+        add_war_support = 0.05
+        drift_defence_factor = 0.1
+    }
+}

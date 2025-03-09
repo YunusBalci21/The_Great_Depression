@@ -1,0 +1,23 @@
+ideas = {
+    country = {
+        industrial_recovery_boost = {
+            picture = GFX_idea_generic_production_bonus
+            
+            modifier = {
+                industrial_capacity_factory = 0.15
+                production_factory_max_efficiency_factor = 0.05
+                production_speed_buildings_factor = 0.10
+            }
+        }
+        
+        consumer_confidence_boost = {
+            picture = GFX_idea_generic_consumer_goods
+            
+            modifier = {
+                consumer_goods_factor = -0.05
+                stability_factor = 0.05
+                political_power_gain = 0.10
+            }
+        }
+    }
+}

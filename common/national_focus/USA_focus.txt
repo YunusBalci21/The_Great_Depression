@@ -55,4 +55,318 @@ focus_tree = {
             add_ideas = { free_market_recovery }
         }
     }
+    
+    # New Deal Branch
+    
+    focus = {
+        id = USA_civilian_conservation_corps
+        icon = GFX_goal_generic_construct_civilian
+        prerequisite = { focus = USA_new_deal }
+        x = 6
+        y = 2
+        cost = 10
+        ai_will_do = { factor = 10 }
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = 25
+            random_owned_controlled_state = {
+                limit = { infrastructure < 7 }
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+                limit = { infrastructure < 7 }
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    
+    focus = {
+        id = USA_tennessee_valley_authority
+        icon = GFX_goal_generic_construction2
+        prerequisite = { focus = USA_civilian_conservation_corps }
+        x = 6
+        y = 3
+        cost = 10
+        ai_will_do = { factor = 10 }
+        completion_reward = {
+            random_owned_controlled_state = {
+                add_resource = {
+                    type = electricity
+                    amount = 10
+                }
+                add_extra_state_shared_building_slots = 2
+            }
+            random_owned_controlled_state = {
+                add_resource = {
+                    type = electricity
+                    amount = 5
+                }
+                add_extra_state_shared_building_slots = 1
+            }
+        }
+    }
+    
+    focus = {
+        id = USA_agricultural_adjustment_act
+        icon = GFX_goal_generic_national_unity
+        prerequisite = { focus = USA_new_deal }
+        x = 8
+        y = 2
+        cost = 10
+        ai_will_do = { factor = 10 }
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = 25
+            random_owned_controlled_state = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    
+    focus = {
+        id = USA_wealth_tax_act
+        icon = GFX_goal_generic_forceful_treaty
+        prerequisite = { focus = USA_agricultural_adjustment_act }
+        x = 8
+        y = 3
+        cost = 10
+        ai_will_do = { factor = 10 }
+        completion_reward = {
+            add_stability = -0.03
+            add_war_support = -0.05
+            add_political_power = -25
+            if = {
+                limit = {
+                    has_idea = great_depression
+                }
+                swap_ideas = {
+                    remove_idea = great_depression
+                    add_idea = economic_recovery
+                }
+            }
+        }
+    }
+    
+    focus = {
+        id = USA_federal_housing_administration
+        icon = GFX_goal_generic_construct_infrastructure
+        prerequisite = { focus = USA_new_deal }
+        x = 10
+        y = 2
+        cost = 10
+        ai_will_do = { factor = 10 }
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = 50
+            every_owned_state = {
+                limit = {
+                    is_core_of = ROOT
+                }
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    
+    focus = {
+        id = USA_social_security_act
+        icon = GFX_goal_generic_improve_relations
+        prerequisite = { focus = USA_federal_housing_administration }
+        x = 10
+        y = 3
+        cost = 10
+        ai_will_do = { factor = 10 }
+        completion_reward = {
+            add_stability = 0.10
+            add_political_power = -50
+            add_ideas = social_security_idea
+        }
+    }
+    
+    # Military Recovery Focus
+    focus = {
+        id = USA_military_recovery
+        icon = GFX_goal_generic_build_tank
+        prerequisite = { 
+            focus = USA_social_security_act
+            focus = USA_wealth_tax_act
+            focus = USA_tennessee_valley_authority
+        }
+        x = 8
+        y = 4
+        cost = 10
+        ai_will_do = { factor = 5 }
+        completion_reward = {
+            army_experience = 25
+            navy_experience = 25
+            air_experience = 25
+            add_tech_bonus = {
+                name = industrial_bonus
+                bonus = 0.5
+                uses = 2
+                category = industry
+            }
+        }
+    }
+    
+    # Laissez-Faire Branch
+    
+    focus = {
+        id = USA_tax_cuts
+        icon = GFX_goal_generic_consumer_goods
+        prerequisite = { focus = USA_laissez_faire }
+        x = 12
+        y = 2
+        cost = 10
+        ai_will_do = { factor = 10 }
+        completion_reward = {
+            add_political_power = 50
+            random_owned_controlled_state = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    
+    focus = {
+        id = USA_deregulation
+        icon = GFX_goal_generic_neutrality_focus
+        prerequisite = { focus = USA_tax_cuts }
+        x = 12
+        y = 3
+        cost = 10
+        ai_will_do = { factor = 10 }
+        completion_reward = {
+            add_stability = -0.05
+            add_political_power = 75
+            if = {
+                limit = {
+                    has_idea = bank_runs
+                }
+                remove_ideas = bank_runs
+            }
+        }
+    }
+    
+    focus = {
+        id = USA_private_industry_expansion
+        icon = GFX_goal_generic_production
+        prerequisite = { focus = USA_laissez_faire }
+        x = 14
+        y = 2
+        cost = 10
+        ai_will_do = { factor = 10 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = industrial_bonus
+                bonus = 0.5
+                uses = 1
+                category = industry
+            }
+            add_ideas = private_industry_boost
+        }
+    }
+    
+    focus = {
+        id = USA_encourage_exporters
+        icon = GFX_goal_generic_trade
+        prerequisite = { focus = USA_private_industry_expansion }
+        x = 14
+        y = 3
+        cost = 10
+        ai_will_do = { factor = 10 }
+        completion_reward = {
+            add_ideas = export_focus_idea
+            if = {
+                limit = {
+                    has_idea = great_depression
+                }
+                swap_ideas = {
+                    remove_idea = great_depression
+                    add_idea = economic_recovery
+                }
+            }
+        }
+    }
+    
+    # Defense Industry Common Branch
+    
+    focus = {
+        id = USA_defense_industry_investment
+        icon = GFX_goal_generic_army_artillery
+        prerequisite = { 
+            focus = USA_deregulation
+            focus = USA_encourage_exporters
+        }
+        x = 13
+        y = 4
+        cost = 10
+        ai_will_do = { factor = 5 }
+        completion_reward = {
+            add_war_support = 0.05
+            add_tech_bonus = {
+                name = military_equipment_bonus
+                bonus = 0.5
+                uses = 2
+                category = infantry_weapons
+                category = artillery
+            }
+        }
+    }
+    
+    # Final Recovery Focus
+    focus = {
+        id = USA_full_recovery
+        icon = GFX_goal_generic_national_unity
+        prerequisite = { 
+            focus = USA_military_recovery
+            focus = USA_defense_industry_investment
+        }
+        x = 10
+        y = 5
+        cost = 10
+        ai_will_do = { factor = 10 }
+        available = {
+            if = {
+                limit = {
+                    has_idea = economic_recovery
+                }
+            }
+        }
+        completion_reward = {
+            if = {
+                limit = {
+                    has_idea = economic_recovery
+                }
+                remove_ideas = economic_recovery
+            }
+            if = {
+                limit = {
+                    has_idea = reduced_unemployment
+                }
+                remove_ideas = reduced_unemployment
+            }
+            add_stability = 0.10
+            add_war_support = 0.05
+            add_political_power = 150
+        }
+    }
 }
