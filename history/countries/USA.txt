@@ -3,9 +3,9 @@ capital = 361
 
 oob = "USA_1929"
 if = {
-	limit = { has_dlc = "Man the Guns" }
-	naval_oob = "USA_1929_naval_mtg"
-	else = { naval_oob = "USA_1929_naval" }
+    limit = { has_dlc = "Man the Guns" }
+    set_naval_oob = "USA_1929_naval_mtg"
+    else = { set_naval_oob = "USA_1929_naval" }
 }
 
 # Starting tech (you can adjust these)
