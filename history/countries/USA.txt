@@ -1,7 +1,7 @@
 # Starting situation for USA in 1929
 capital = 361
 
-oob = "USA_1936" # You'll need to create a custom OOB later
+oob = "USA_1929" # Using our custom 1929 OOB
 
 # Starting tech (you can adjust these)
 set_research_slots = 3

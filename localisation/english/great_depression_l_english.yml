@@ -70,60 +70,27 @@ l_english:
  rearmament_program:0 "Military Rearmament Program"
  rearmament_program_desc:0 "A large-scale program to modernize and expand our armed forces, providing industrial stimulus through military contracts while enhancing national security."
  
- # Focus tree localization
- USA_economic_crisis:0 "Economic Crisis of 1929"
- USA_economic_crisis_desc:0 "The stock market crash of 1929 has thrown our nation into an economic crisis unlike anything we've seen before. We must take decisive action to address this catastrophe."
+ # Recovery Bonus Ideas
+ industrial_recovery_boost:0 "Industrial Recovery"
+ industrial_recovery_boost_desc:0 "Our industrial sector is experiencing a significant resurgence, with factories reopening and production increasing."
  
- # Main Paths
- USA_new_deal:0 "The New Deal"
- USA_new_deal_desc:0 "A comprehensive series of government programs to provide relief, recovery, and reform to our struggling economy. This interventionist approach will expand the role of government but may stabilize our society."
- USA_laissez_faire:0 "Laissez-Faire Approach"
- USA_laissez_faire_desc:0 "The market will correct itself if given the chance. By minimizing government intervention, we allow the natural economic forces to rebalance and eventually lead to recovery."
- 
- # New Deal Branch
- USA_civilian_conservation_corps:0 "Civilian Conservation Corps"
- USA_civilian_conservation_corps_desc:0 "The CCC will provide employment for young men in conservation and development of natural resources, building infrastructure in our national parks and forests while providing income to struggling families."
- 
- USA_tennessee_valley_authority:0 "Tennessee Valley Authority"
- USA_tennessee_valley_authority_desc:0 "By developing the Tennessee River basin with hydroelectric dams, we can bring electricity to rural areas, control flooding, and create thousands of jobs in one of the poorest regions of the country."
- 
- USA_agricultural_adjustment_act:0 "Agricultural Adjustment Act"
- USA_agricultural_adjustment_act_desc:0 "To combat plummeting crop prices, we will pay farmers to reduce production and thus increase prices to sustainable levels. This will help stabilize the agricultural sector and rural communities."
- 
- USA_wealth_tax_act:0 "Revenue Act of 1935"
- USA_wealth_tax_act_desc:0 "By implementing progressive taxation on the wealthiest Americans, we can fund our recovery programs while addressing inequality. This 'soak the rich' tax will be controversial but necessary."
- 
- USA_federal_housing_administration:0 "Federal Housing Administration"
- USA_federal_housing_administration_desc:0 "By establishing the FHA, we can insure home loans, stimulate the construction industry, and make home ownership more accessible to average Americans, addressing both unemployment and housing needs."
- 
- USA_social_security_act:0 "Social Security Act"
- USA_social_security_act_desc:0 "This landmark legislation will create a safety net for our most vulnerable citizens - the elderly, unemployed, and dependent children - ensuring that economic hardship does not lead to destitution."
- 
- # Laissez-Faire Branch
- USA_tax_cuts:0 "Tax Relief for Businesses"
- USA_tax_cuts_desc:0 "By reducing the tax burden on businesses, we can increase profitability and encourage reinvestment. This may stimulate economic activity and lead to natural job creation."
- 
- USA_deregulation:0 "Financial Deregulation"
- USA_deregulation_desc:0 "Government regulations often stifle innovation and economic growth. By removing excessive constraints on businesses, we can allow market forces to operate more efficiently."
- 
- USA_private_industry_expansion:0 "Promote Industrial Growth"
- USA_private_industry_expansion_desc:0 "Rather than direct government intervention, we will create favorable conditions for private industry to flourish through policies that encourage expansion and modernization."
- 
- USA_encourage_exporters:0 "Export-Led Recovery"
- USA_encourage_exporters_desc:0 "By focusing on expanding our export markets, we can reinvigorate our industries and bring in foreign capital, driving recovery through international trade rather than domestic spending."
- 
- # Military Recovery
- USA_military_recovery:0 "Military-Industrial Revitalization"
- USA_military_recovery_desc:0 "As we emerge from the Depression, we must begin rebuilding our military capabilities. Government contracts for military equipment can help sustain our economic recovery while ensuring national security."
- 
- USA_defense_industry_investment:0 "Defense Industry Investment"
- USA_defense_industry_investment_desc:0 "By encouraging private investment in defense industries, we can modernize our military capabilities while minimizing government expenditure, creating jobs in high-technology sectors."
- 
- # Final Recovery
- USA_full_recovery:0 "Economic Resurgence"
- USA_full_recovery_desc:0 "Through our policies, the worst of the Great Depression is behind us. America stands poised for a new era of prosperity and strength as we fully recover from the economic catastrophe of 1929."
+ consumer_confidence_boost:0 "Consumer Confidence"
+ consumer_confidence_boost_desc:0 "Consumer confidence is returning, leading to increased spending and economic activity."
 
- # Economic Recovery Events
+ # Great Depression Events
+ great_depression.1.t:0 "The Stock Market Crash of 1929"
+ great_depression.1.d:0 "On October 24, 1929, the New York Stock Exchange collapsed, triggering a financial crisis that would spread worldwide. Factories shut down, banks failed, and unemployment soared. The world now faces an uncertain future."
+ great_depression.1.a:0 "A dark day for the world."
+ 
+ great_depression.2.t:0 "Bank Failures Spreading"
+ great_depression.2.d:0 "As the economic crisis deepens, banks across the country are failing. Customers are panicking and withdrawing their savings, causing more banks to collapse. The banking system is on the verge of complete failure."
+ great_depression.2.a:0 "We must restore confidence in the banking system"
+ 
+ great_depression.3.t:0 "Unemployment Crisis"
+ great_depression.3.d:0 "With businesses failing nationwide, unemployment has reached unprecedented levels. Breadlines are forming in major cities, and public dissatisfaction is growing."
+ great_depression.3.a:0 "A national crisis is unfolding"
+ 
+ # Recovery Events
  gd_recovery.1.t:0 "First Signs of Economic Recovery"
  gd_recovery.1.d:0 "After years of economic hardship, the first signs of recovery are beginning to appear. Industrial production is starting to increase, unemployment is slowly declining, and consumer confidence is gradually returning. While we are far from a full recovery, these positive indicators suggest that our economy may have finally turned a corner."
  gd_recovery.1.a:0 "A light at the end of the tunnel"
@@ -163,9 +130,6 @@ l_english:
  gd_recovery.9.a:0 "Maintain democratic principles"
  gd_recovery.9.b:0 "Crack down on extremist movements"
  
- # Recovery Bonus Ideas
- industrial_recovery_boost:0 "Industrial Recovery"
- industrial_recovery_boost_desc:0 "Our industrial sector is experiencing a significant resurgence, with factories reopening and production increasing."
- 
- consumer_confidence_boost:0 "Consumer Confidence"
- consumer_confidence_boost_desc:0 "Consumer confidence is returning, leading to increased spending and economic activity."
+ gd_recovery.10.t:0 "Consumer Goods Industry Revival"
+ gd_recovery.10.d:0 "As our economy continues to recover, the consumer goods industry is showing remarkable resilience. Factories that once stood idle are now producing everyday items, from textiles to household appliances, helping to restore normal economic life."
+ gd_recovery.10.a:0 "Our people's needs are being met"

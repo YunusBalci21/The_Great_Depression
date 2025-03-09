@@ -1,18 +1,27 @@
-namespace = great_depression
+add_namespace = great_depression
 
 country_event = {
     id = great_depression.1
     title = "The Stock Market Crash of 1929"
     desc = "On October 24, 1929, the New York Stock Exchange collapsed, triggering a financial crisis that would spread worldwide. Factories shut down, banks failed, and unemployment soared. The world now faces an uncertain future."
-    picture = GFX_event_stock_market_crash
+    picture = GFX_report_event_generic_read_write
 
     trigger = {
         date > 1929.10.24
+        NOT = { has_country_flag = received_market_crash_event }
+    }
+
+    mean_time_to_happen = {
+        days = 1
     }
 
     immediate = {
-        every_major_country = {
-            add_idea = great_depression
+        set_country_flag = received_market_crash_event
+        every_country = {
+            limit = {
+                NOT = { has_idea = great_depression }
+            }
+            add_ideas = great_depression
         }
     }
 
@@ -27,7 +36,7 @@ country_event = {
     id = great_depression.2
     title = "Bank Failures Spreading"
     desc = "As the economic crisis deepens, banks across the country are failing. Customers are panicking and withdrawing their savings, causing more banks to collapse. The banking system is on the verge of complete failure."
-    picture = GFX_event_generic_read_write
+    picture = GFX_report_event_generic_read_write
     
     trigger = {
         has_idea = great_depression
@@ -62,7 +71,7 @@ country_event = {
     id = great_depression.3
     title = "Unemployment Crisis"
     desc = "With businesses failing nationwide, unemployment has reached unprecedented levels. Breadlines are forming in major cities, and public dissatisfaction is growing."
-    picture = GFX_event_generic_factory
+    picture = GFX_report_event_generic_factory
     
     trigger = {
         has_idea = great_depression

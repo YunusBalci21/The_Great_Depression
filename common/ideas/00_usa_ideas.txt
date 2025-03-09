@@ -2,6 +2,10 @@ ideas = {
     country = {
         new_deal_programs = {
             picture = GFX_idea_generic_constitutional_guarantee
+            allowed = {
+                original_tag = USA
+            }
+            removal_cost = -1
             
             modifier = {
                 consumer_goods_factor = 0.15
@@ -14,6 +18,10 @@ ideas = {
         
         free_market_recovery = {
             picture = GFX_idea_generic_foreign_capital
+            allowed = {
+                original_tag = USA
+            }
+            removal_cost = -1
             
             modifier = {
                 consumer_goods_factor = -0.05

@@ -2,6 +2,8 @@ ideas = {
     country = {
         industrial_recovery_boost = {
             picture = GFX_idea_generic_production_bonus
+            allowed = { always = yes }
+            removal_cost = -1
             
             modifier = {
                 industrial_capacity_factory = 0.15
@@ -12,6 +14,8 @@ ideas = {
         
         consumer_confidence_boost = {
             picture = GFX_idea_generic_consumer_goods
+            allowed = { always = yes }
+            removal_cost = -1
             
             modifier = {
                 consumer_goods_factor = -0.05

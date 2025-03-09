@@ -1,0 +1,132 @@
+division_template = {
+	name = "Infantry Division"
+	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Cavalry Division"
+	
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+
+units = {
+	##### Army Units #####
+	division = {
+		name = "1st Infantry Division"
+		location = 3957 # Washington DC
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		name = "2nd Infantry Division"
+		location = 6710 # San Diego
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		name = "3rd Infantry Division"
+		location = 9671 # New York
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		name = "4th Infantry Division"
+		location = 10370 # Philadelphia
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		name = "1st Cavalry Division"
+		location = 12735 # San Antonio
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	
+	##### Naval Units #####
+	navy = {
+		name = "Atlantic Fleet"
+		base = 6845 # Norfolk
+		location = 6845
+		
+		ship = { name = "USS New York" pride_of_the_fleet = yes definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Texas" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Nevada" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Oklahoma" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+		# Light cruisers
+		ship = { name = "USS Richmond" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Concord" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Trenton" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }
+		# Destroyers
+		ship = { name = "USS Farragut" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Dewey" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Hull" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+	}
+	
+	navy = {
+		name = "Pacific Fleet"
+		base = 4328 # San Francisco
+		location = 4328
+		
+		ship = { name = "USS Pennsylvania" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Arizona" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Tennessee" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS California" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+		# Aircraft carriers
+		ship = { name = "USS Lexington" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Saratoga" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA } } }
+		# Heavy cruisers
+		ship = { name = "USS Pensacola" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Salt Lake City" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = USA } } }
+		# Destroyers
+		ship = { name = "USS Porter" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Clark" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Cassin" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_equipment_1
+		amount = 15000
+		producer = USA
+	}
+	add_equipment_to_stockpile = {
+		type = support_equipment_1
+		amount = 1000
+		producer = USA
+	}
+	add_equipment_to_stockpile = {
+		type = artillery_equipment_1
+		amount = 500
+		producer = USA
+	}
+}

@@ -34,8 +34,7 @@ country_event = {
     id = gd_recovery.10
     title = "Consumer Goods Industry Revival"
     desc = "As our economy continues to recover, the consumer goods industry is showing remarkable resilience. Factories that once stood idle are now producing everyday items, from textiles to household appliances, helping to restore normal economic life."
-
-# picture = GFX_report_event_generic_factory
+    picture = GFX_report_event_generic_factory
 
     trigger = {
         has_idea = economic_recovery
@@ -239,7 +238,7 @@ country_event = {
     id = gd_recovery.7
     title = "State-Directed Recovery"
     desc = "Our more authoritarian approach to economic recovery is showing results. Through strict state control of industry and labor, we have managed to accelerate economic recovery at the cost of some personal freedoms. Factory output is increasing and infrastructure projects are moving forward rapidly."
-    picture = GFX_report_event_fascist_gathering
+    picture = GFX_report_event_fascist_march
     
     trigger = {
         OR = {
