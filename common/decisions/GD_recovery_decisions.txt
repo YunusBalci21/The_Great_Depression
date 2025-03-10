@@ -1,0 +1,456 @@
+GD_economic_recovery_path = {
+    icon = generic_economy
+
+    # New Deal Style - Government Intervention
+    new_deal_stimulus = {
+        icon = generic_construction
+        cost = 75
+        days_remove = 90
+        fire_only_once = yes
+        
+        visible = {
+            NOT = { has_country_flag = GD_recovery_path_chosen }
+            OR = {
+                has_idea = GD_stage_collapse
+                has_idea = GD_stage_crisis
+                has_idea = GD_stage_depression
+                has_idea = GD_stage_recovery
+                has_idea = GD_stage_late_recovery
+            }
+        }
+        
+        available = {
+            has_political_power > 74
+        }
+        
+        modifier = {
+            consumer_goods_factor = 0.05
+            stability_weekly = 0.002
+            political_power_gain = -0.1
+        }
+        
+        ai_will_do = {
+            factor = 5
+            modifier = {
+                factor = 2
+                has_government = democratic
+            }
+        }
+        
+        complete_effect = {
+            set_country_flag = GD_recovery_path_chosen
+            set_country_flag = GD_path_interventionist
+            add_political_power = -25
+            
+            custom_effect_tooltip = GD_interventionist_path_chosen_tt
+            hidden_effect = {
+                news_event = { id = gd_recovery_news.1 days = 1 }
+            }
+        }
+        
+        remove_effect = {
+            add_stability = 0.05
+            add_political_power = 25
+        }
+    }
+    
+    # Free Market Path - Laissez-faire
+    free_market_recovery = {
+        icon = generic_political_discourse
+        cost = 75
+        days_remove = 90
+        fire_only_once = yes
+        
+        visible = {
+            NOT = { has_country_flag = GD_recovery_path_chosen }
+            OR = {
+                has_idea = GD_stage_collapse
+                has_idea = GD_stage_crisis
+                has_idea = GD_stage_depression
+                has_idea = GD_stage_recovery
+                has_idea = GD_stage_late_recovery
+            }
+        }
+        
+        available = {
+            has_political_power > 74
+        }
+        
+        modifier = {
+            industrial_capacity_factory = -0.05
+            consumer_goods_factor = -0.05
+            stability_weekly = -0.001
+            political_power_gain = 0.05
+        }
+        
+        ai_will_do = {
+            factor = 5
+            modifier = {
+                factor = 3
+                OR = {
+                    has_government = democratic
+                    has_government = neutrality
+                }
+            }
+        }
+        
+        complete_effect = {
+            set_country_flag = GD_recovery_path_chosen
+            set_country_flag = GD_path_market
+            add_political_power = -25
+            
+            custom_effect_tooltip = GD_free_market_path_chosen_tt
+            hidden_effect = {
+                news_event = { id = gd_recovery_news.2 days = 1 }
+            }
+        }
+        
+        remove_effect = {
+            add_political_power = 25
+            add_stability = -0.05
+            add_ideas = free_market_recovery
+        }
+    }
+    
+    # State Control Path - Authoritarian
+    state_economic_control = {
+        icon = generic_nationalism
+        cost = 75
+        days_remove = 90
+        fire_only_once = yes
+        
+        visible = {
+            NOT = { has_country_flag = GD_recovery_path_chosen }
+            OR = {
+                has_idea = GD_stage_collapse
+                has_idea = GD_stage_crisis
+                has_idea = GD_stage_depression
+                has_idea = GD_stage_recovery
+                has_idea = GD_stage_late_recovery
+            }
+            OR = {
+                has_government = fascism
+                has_government = communism
+                has_government = neutrality
+            }
+        }
+        
+        available = {
+            has_political_power > 74
+        }
+        
+        modifier = {
+            stability_weekly = -0.002
+            political_power_gain = 0.15
+            industrial_capacity_factory = 0.10
+            consumer_goods_factor = -0.05
+        }
+        
+        ai_will_do = {
+            factor = 5
+            modifier = {
+                factor = 3
+                OR = {
+                    has_government = fascism
+                    has_government = communism
+                }
+            }
+        }
+        
+        complete_effect = {
+            set_country_flag = GD_recovery_path_chosen
+            set_country_flag = GD_path_state_control
+            add_political_power = -25
+            
+            custom_effect_tooltip = GD_state_control_path_chosen_tt
+            hidden_effect = {
+                news_event = { id = gd_recovery_news.3 days = 1 }
+            }
+        }
+        
+        remove_effect = {
+            add_political_power = 25
+            add_stability = -0.10
+            add_war_support = 0.05
+            add_ideas = state_economic_control
+        }
+    }
+    
+    # Recovery Stage Progression Decisions
+    
+    stimulus_package = {
+        icon = generic_economic_deals
+        cost = 150
+        days_remove = 120
+        
+        visible = {
+            has_country_flag = GD_path_interventionist
+            OR = {
+                has_idea = GD_stage_collapse
+                has_idea = GD_stage_crisis
+                has_idea = GD_stage_depression
+                has_idea = GD_stage_recovery
+            }
+        }
+        
+        available = {
+            has_political_power > 149
+        }
+        
+        modifier = {
+            consumer_goods_factor = 0.10
+            stability_weekly = 0.005
+            political_power_gain = -0.15
+        }
+        
+        ai_will_do = {
+            factor = 5
+            modifier = {
+                factor = 2
+                has_government = democratic
+            }
+        }
+        
+        complete_effect = {
+            add_political_power = -50
+        }
+        
+        remove_effect = {
+            add_stability = 0.05
+            
+            if = {
+                limit = { has_idea = GD_stage_collapse }
+                swap_ideas = {
+                    remove_idea = GD_stage_collapse
+                    add_idea = GD_stage_crisis
+                }
+                country_event = { id = gd_economic_recovery.1 days = 1 }
+            }
+            else_if = {
+                limit = { has_idea = GD_stage_crisis }
+                swap_ideas = {
+                    remove_idea = GD_stage_crisis
+                    add_idea = GD_stage_depression
+                }
+                country_event = { id = gd_economic_recovery.2 days = 1 }
+            }
+            else_if = {
+                limit = { has_idea = GD_stage_depression }
+                swap_ideas = {
+                    remove_idea = GD_stage_depression
+                    add_idea = GD_stage_recovery
+                }
+                country_event = { id = gd_economic_recovery.3 days = 1 }
+            }
+            else_if = {
+                limit = { has_idea = GD_stage_recovery }
+                swap_ideas = {
+                    remove_idea = GD_stage_recovery
+                    add_idea = GD_stage_late_recovery
+                }
+                country_event = { id = gd_economic_recovery.4 days = 1 }
+            }
+        }
+    }
+    
+    deregulation_policy = {
+        icon = generic_political_discourse
+        cost = 150
+        days_remove = 120
+        
+        visible = {
+            has_country_flag = GD_path_market
+            OR = {
+                has_idea = GD_stage_collapse
+                has_idea = GD_stage_crisis
+                has_idea = GD_stage_depression
+                has_idea = GD_stage_recovery
+            }
+        }
+        
+        available = {
+            has_political_power > 149
+        }
+        
+        modifier = {
+            industrial_capacity_factory = 0.05
+            consumer_goods_factor = -0.05
+            stability_weekly = -0.002
+            political_power_gain = 0.05
+        }
+        
+        ai_will_do = {
+            factor = 5
+            modifier = {
+                factor = 2
+                OR = {
+                    has_government = democratic
+                    has_government = neutrality
+                }
+            }
+        }
+        
+        complete_effect = {
+            add_political_power = -25
+        }
+        
+        remove_effect = {
+            add_political_power = 25
+            
+            if = {
+                limit = { has_idea = GD_stage_collapse }
+                swap_ideas = {
+                    remove_idea = GD_stage_collapse
+                    add_idea = GD_stage_crisis
+                }
+                country_event = { id = gd_economic_recovery.1 days = 1 }
+            }
+            else_if = {
+                limit = { has_idea = GD_stage_crisis }
+                swap_ideas = {
+                    remove_idea = GD_stage_crisis
+                    add_idea = GD_stage_depression
+                }
+                country_event = { id = gd_economic_recovery.2 days = 1 }
+            }
+            else_if = {
+                limit = { has_idea = GD_stage_depression }
+                swap_ideas = {
+                    remove_idea = GD_stage_depression
+                    add_idea = GD_stage_recovery
+                }
+                country_event = { id = gd_economic_recovery.3 days = 1 }
+            }
+            else_if = {
+                limit = { has_idea = GD_stage_recovery }
+                swap_ideas = {
+                    remove_idea = GD_stage_recovery
+                    add_idea = GD_stage_late_recovery
+                }
+                country_event = { id = gd_economic_recovery.4 days = 1 }
+            }
+        }
+    }
+    
+    mobilize_economy = {
+        icon = generic_industry
+        cost = 150
+        days_remove = 120
+        
+        visible = {
+            has_country_flag = GD_path_state_control
+            OR = {
+                has_idea = GD_stage_collapse
+                has_idea = GD_stage_crisis
+                has_idea = GD_stage_depression
+                has_idea = GD_stage_recovery
+            }
+        }
+        
+        available = {
+            has_political_power > 149
+        }
+        
+        modifier = {
+            industrial_capacity_factory = 0.10
+            consumer_goods_factor = -0.05
+            stability_weekly = -0.003
+            political_power_gain = 0.10
+            local_resources_factor = 0.05
+        }
+        
+        ai_will_do = {
+            factor = 5
+            modifier = {
+                factor = 2
+                OR = {
+                    has_government = fascism
+                    has_government = communism
+                }
+            }
+        }
+        
+        complete_effect = {
+            add_political_power = -25
+        }
+        
+        remove_effect = {
+            add_political_power = 25
+            add_war_support = 0.05
+            
+            if = {
+                limit = { has_idea = GD_stage_collapse }
+                swap_ideas = {
+                    remove_idea = GD_stage_collapse
+                    add_idea = GD_stage_crisis
+                }
+                country_event = { id = gd_economic_recovery.1 days = 1 }
+            }
+            else_if = {
+                limit = { has_idea = GD_stage_crisis }
+                swap_ideas = {
+                    remove_idea = GD_stage_crisis
+                    add_idea = GD_stage_depression
+                }
+                country_event = { id = gd_economic_recovery.2 days = 1 }
+            }
+            else_if = {
+                limit = { has_idea = GD_stage_depression }
+                swap_ideas = {
+                    remove_idea = GD_stage_depression
+                    add_idea = GD_stage_recovery
+                }
+                country_event = { id = gd_economic_recovery.3 days = 1 }
+            }
+            else_if = {
+                limit = { has_idea = GD_stage_recovery }
+                swap_ideas = {
+                    remove_idea = GD_stage_recovery
+                    add_idea = GD_stage_late_recovery
+                }
+                country_event = { id = gd_economic_recovery.4 days = 1 }
+            }
+        }
+    }
+    
+    # Final Recovery Decision
+    economic_prosperity = {
+        icon = generic_economic_deals
+        cost = 200
+        days_remove = 180
+        fire_only_once = yes
+        
+        visible = {
+            has_idea = GD_stage_late_recovery
+            has_country_flag = GD_recovery_path_chosen
+        }
+        
+        available = {
+            has_political_power > 199
+            has_stability > 0.5
+        }
+        
+        ai_will_do = {
+            factor = 10
+        }
+        
+        complete_effect = {
+            add_political_power = -50
+            add_stability = -0.05
+        }
+        
+        remove_effect = {
+            add_political_power = 100
+            add_stability = 0.10
+            swap_ideas = {
+                remove_idea = GD_stage_late_recovery
+                add_idea = GD_stage_prosperity
+            }
+            country_event = { id = gd_economic_recovery.5 days = 1 }
+            
+            hidden_effect = {
+                news_event = { id = gd_recovery_news.4 days = 1 }
+            }
+        }
+    }
+}

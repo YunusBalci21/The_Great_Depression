@@ -1,0 +1,100 @@
+﻿l_english:
+ # Economic Recovery System
+ GD_interventionist_path_chosen_tt:0 "We have chosen the §YInterventionist Path§! to recovery"
+ GD_free_market_path_chosen_tt:0 "We have chosen the §YFree Market Path§! to recovery"
+ GD_state_control_path_chosen_tt:0 "We have chosen the §YState Control Path§! to recovery"
+ 
+ # National Spirit Stages
+ GD_stage_collapse:0 "Economic Collapse"
+ GD_stage_collapse_desc:0 "Our economy is in a state of complete collapse. Industrial production has plummeted, unemployment has skyrocketed, and consumer confidence has vanished. Swift action is needed to prevent total economic ruin."
+ 
+ GD_stage_crisis:0 "Economic Crisis"
+ GD_stage_crisis_desc:0 "While the worst of the initial collapse has been weathered, our economy remains in a state of severe crisis. Recovery efforts must be sustained to prevent a return to complete collapse."
+ 
+ GD_stage_depression:0 "Economic Depression"
+ GD_stage_depression_desc:0 "Our economy has stabilized somewhat but remains in a state of depression. Industrial output and employment remain well below pre-crash levels, but signs of improvement are beginning to appear."
+ 
+ GD_stage_recovery:0 "Early Recovery"
+ GD_stage_recovery_desc:0 "Our economy is showing definite signs of recovery. While still below pre-crash levels, industrial production is increasing, unemployment is declining, and consumer confidence is returning."
+ 
+ GD_stage_late_recovery:0 "Advanced Recovery"
+ GD_stage_late_recovery_desc:0 "Our economy has largely recovered from the Great Depression. Industrial output is approaching pre-crash levels, unemployment has significantly decreased, and consumer confidence is strong."
+ 
+ GD_stage_prosperity:0 "Economic Prosperity"
+ GD_stage_prosperity_desc:0 "Our economy has fully recovered from the Great Depression and is now entering a new era of prosperity. Industrial output has surpassed pre-crash levels, unemployment is low, and consumer confidence is high."
+ 
+ # Decision Category
+ GD_economic_recovery_path:0 "Economic Recovery Path"
+ GD_economic_recovery_path_desc:0 "The Great Depression has devastated our economy. We must choose a path to recovery and implement policies to restore prosperity."
+ 
+ # Recovery Paths
+ new_deal_stimulus:0 "Government Interventionist Approach"
+ new_deal_stimulus_desc:0 "Following the model of Roosevelt's New Deal, we will implement a comprehensive program of government intervention to stimulate the economy, create jobs, and provide relief to those suffering from the Depression."
+ 
+ free_market_recovery:0 "Free Market Approach"
+ free_market_recovery_desc:0 "We will rely on the self-correcting mechanisms of the free market to lead recovery. By reducing government interference, lowering taxes, and promoting business confidence, we will allow the natural forces of the market to restore prosperity."
+ 
+ state_economic_control:0 "State Control Approach"
+ state_economic_control_desc:0 "We will take direct control of key economic sectors to guide recovery according to state priorities. Through centralized planning and mobilization of resources, we will rebuild the economy to serve national objectives."
+ 
+ # Recovery Decisions
+ stimulus_package:0 "Government Stimulus Package"
+ stimulus_package_desc:0 "We will implement a comprehensive stimulus package featuring public works projects, direct relief payments, and regulatory reforms to stimulate economic activity and create jobs."
+ 
+ deregulation_policy:0 "Economic Deregulation Policy"
+ deregulation_policy_desc:0 "By removing government restrictions on business activities, reducing taxes, and promoting entrepreneurship, we will create conditions for private sector-led recovery."
+ 
+ mobilize_economy:0 "Forced Economic Mobilization"
+ mobilize_economy_desc:0 "Through state directives, resource allocation, and industrial planning, we will mobilize the economy according to national priorities, focusing on strategic industries and infrastructure."
+ 
+ economic_prosperity:0 "Declare Economic Prosperity"
+ economic_prosperity_desc:0 "Our recovery efforts have been successful. It is time to declare an end to the Great Depression and celebrate our nation's return to prosperity."
+ 
+ # Events
+ gd_economic_recovery.1.t:0 "First Signs of Recovery"
+ gd_economic_recovery.1.d:0 "After implementing our economic recovery policies, the first tentative signs of improvement are beginning to appear. Industrial production has stopped declining and is showing modest growth in some sectors. While unemployment remains high, the rate of job losses has slowed. Financial markets have stabilized somewhat, and business confidence is cautiously improving. While we still have a long way to go, these early indicators suggest that our approach is having a positive effect."
+ gd_economic_recovery.1.a:0 "A glimmer of hope at last"
+ 
+ gd_economic_recovery.2.t:0 "Economic Recovery Gaining Momentum"
+ gd_economic_recovery.2.d:0 "Our economic recovery is gaining momentum. Industrial production is now showing consistent growth across multiple sectors, and unemployment has begun to meaningfully decline. Consumer spending is increasing, and business investment is starting to pick up. The banking sector has stabilized, and credit is becoming more available for businesses and consumers. While still below pre-crash levels, the economy is now on a clear path to recovery."
+ gd_economic_recovery.2.a:0 "Our policies are working"
+ 
+ gd_economic_recovery.3.t:0 "Substantial Economic Improvement"
+ gd_economic_recovery.3.d:0 "Our economy has shown substantial improvement over the past months. Industrial production has recovered to approximately two-thirds of pre-crash levels, and unemployment has fallen significantly. Consumer confidence is strong, and retail sales are approaching normal levels. Housing construction has resumed, and new businesses are opening at an encouraging rate. The worst of the Depression appears to be behind us, though full recovery will require continued effort."
+ gd_economic_recovery.3.a:0 "The light grows stronger"
+ 
+ gd_economic_recovery.4.t:0 "Recovery Nearly Complete"
+ gd_economic_recovery.4.d:0 "Our economic recovery is now nearly complete. Industrial production is approaching pre-crash levels, and unemployment has fallen to manageable levels. Consumer spending has fully recovered, and business investment is robust. The stock market has regained much of its lost value, and bank lending is at healthy levels. Our nation has weathered the Great Depression and emerged stronger, though the experience has left lasting changes in our economic and social fabric."
+ gd_economic_recovery.4.a:0 "We've weathered the storm"
+ 
+ gd_economic_recovery.5.t:0 "Economic Prosperity Restored"
+ gd_economic_recovery.5.d:0 "Our nation has fully recovered from the Great Depression. Economic activity now exceeds pre-crash levels, unemployment is low, and growth is robust across all sectors. The stock market is thriving, and business confidence is high. Consumer spending is strong, and new industries are emerging. While the memory of the Depression will linger for generations, our nation has emerged from this trial stronger and more resilient than before. A new era of prosperity has begun."
+ gd_economic_recovery.5.a:0 "Prosperity returns to our nation"
+ 
+ # News Events
+ gd_recovery_news.1.t:0 "[From.GetName] Chooses Government Intervention"
+ gd_recovery_news.1.d:0 "The government of [From.GetName] has announced a comprehensive program of economic intervention to combat the Great Depression. Drawing inspiration from Roosevelt's New Deal in the United States, the plan features extensive public works projects, financial sector reforms, social welfare programs, and industrial regulations. Government officials claim this approach will stimulate economic activity, create jobs, and provide relief to those hardest hit by the Depression. Critics argue that such intervention represents dangerous overreach and will hamper natural economic recovery, while supporters see it as a necessary response to market failure."
+ gd_recovery_news.1.a:0 "A bold new approach for our nation"
+ gd_recovery_news.1.b:0 "An interesting experiment in economic policy"
+ gd_recovery_news.1.c:0 "Government meddling will only make things worse"
+ 
+ gd_recovery_news.2.t:0 "[From.GetName] Embraces Free Market Recovery"
+ gd_recovery_news.2.d:0 "The government of [From.GetName] has announced it will pursue a free market approach to economic recovery. Rather than extensive government intervention, they will focus on reducing regulations, lowering taxes, and creating favorable conditions for business. Officials argue that natural market mechanisms will correct the economic imbalances more efficiently than government programs, and that restoring business confidence is key to ending the Depression. Critics contend that this approach ignores the suffering of ordinary citizens and allows the same market forces that caused the crash to remain unchecked."
+ gd_recovery_news.2.a:0 "The free market will lead us to recovery"
+ gd_recovery_news.2.b:0 "A sensible approach to economic management"
+ gd_recovery_news.2.c:0 "They abandon their people to capitalist exploitation"
+ 
+ gd_recovery_news.3.t:0 "[From.GetName] Imposes State Control of Economy"
+ gd_recovery_news.3.d:0 "The government of [From.GetName] has announced sweeping measures to bring the national economy under state control. Key industries are being nationalized, economic planning boards are being established, and resources are being mobilized according to centralized directives. Government officials claim this approach will ensure rapid recovery and align economic activity with national priorities. Foreign observers are divided, with some seeing this as a necessary response to crisis and others warning of a dangerous slide toward authoritarianism and economic inefficiency."
+ gd_recovery_news.3.a:0 "The state will guide our national recovery"
+ gd_recovery_news.3.b:0 "A comrade nation embraces planned economy"
+ gd_recovery_news.3.c:0 "Concerning signs of growing authoritarianism"
+ 
+ gd_recovery_news.4.t:0 "[From.GetName] Declares End to Depression"
+ gd_recovery_news.4.d:0 "In a triumphant announcement, the government of [From.GetName] has declared an official end to the Great Depression in their country. Economic indicators show that industrial production, employment, and consumer spending have all returned to or exceeded pre-crash levels. The government is celebrating this as a vindication of their economic policies, while citizens welcome the return to prosperity after years of hardship. As [From.GetName] recovers, attention is turning to the international situation and the question of how this renewed economic strength will be directed in the coming years."
+ gd_recovery_news.4.a:0 "A great achievement for our nation"
+ gd_recovery_news.4.b:0 "Interesting developments in [From.GetName]"
+ 
+ # Additional Ideas
+ GD_forced_industrialization:0 "Forced Industrialization"
+ GD_forced_industrialization_desc:0 "Through state direction and mobilization of resources, we are rapidly expanding our industrial capacity, though at significant human cost."

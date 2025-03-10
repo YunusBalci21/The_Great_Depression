@@ -1,14 +1,178 @@
-# Simple leader traits to avoid errors
-
 leader_traits = {
-	# Most basic cavalry leader trait possible
+	# Cavalry leader trait (basic military trait)
 	cavalry_leader = {
-		allowed = {
-			has_unit_leader_flag = is_field_marshal
-			has_unit_leader_flag = is_general
-		}
+		type = land
+		trait_type = personality_trait
 		
 		modifier = {
+			cavalry_attack_factor = 0.05
+			cavalry_defence_factor = 0.05
+			cavalry_movement = 0.05
+		}
+		
+		new_commander_weight = {
+			factor = 0
 		}
 	}
 }
+	
+	# Great Depression Economic Recovery Traits
+	great_depression_reformer = {
+		type = country_leader
+		random = no
+		
+		modifier = {
+			political_power_gain = 0.1
+			consumer_goods_factor = -0.05
+			stability_factor = 0.05
+			industrial_capacity_factory = 0.05
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	conservative_economist = {
+		type = country_leader
+		random = no
+		
+		modifier = {
+			political_power_gain = 0.05
+			trade_laws_cost_factor = -0.1
+			economy_cost_factor = -0.1
+			consumer_goods_factor = -0.03
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	industrial_mobilizer = {
+		type = country_leader
+		random = no
+		
+		modifier = {
+			industrial_capacity_factory = 0.1
+			production_speed_industrial_complex_factor = 0.1
+			production_speed_arms_factory_factor = 0.05
+			production_speed_buildings_factor = 0.05
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	monetary_reformer = {
+		type = country_leader
+		random = no
+		
+		modifier = {
+			stability_factor = 0.05
+			consumer_goods_factor = -0.03
+			political_power_gain = 0.05
+			war_support_factor = 0.05
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	agricultural_advocate = {
+		type = country_leader
+		random = no
+		
+		modifier = {
+			local_resources_factor = 0.1
+			political_power_gain = 0.05
+			stability_factor = 0.05
+			conscription_factor = 0.05
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	social_welfare_proponent = {
+		type = country_leader
+		random = no
+		
+		modifier = {
+			stability_factor = 0.1
+			consumer_goods_factor = 0.05
+			political_power_gain = 0.05
+			mobilization_laws_cost_factor = -0.1
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	economic_nationalist = {
+		type = country_leader
+		random = no
+		
+		modifier = {
+			min_export = -0.05
+			industrial_capacity_factory = 0.05
+			consumer_goods_factor = -0.03
+			political_power_gain = 0.05
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	global_trade_advocate = {
+		type = country_leader
+		random = no
+		
+		modifier = {
+			trade_opinion_factor = 0.2
+			min_export = 0.05
+			industrial_capacity_factory = 0.05
+			consumer_goods_factor = -0.05
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	military_industrial_reformer = {
+		type = country_leader
+		random = no
+		
+		modifier = {
+			production_speed_arms_factory_factor = 0.1
+			production_speed_dockyard_factor = 0.1
+			industrial_capacity_factory = 0.05
+			industrial_capacity_dockyard = 0.05
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	crisis_manager = {
+		type = country_leader
+		random = no
+		
+		modifier = {
+			stability_factor = 0.1
+			political_power_gain = 0.1
+			drift_defence_factor = 0.1
+			war_support_factor = 0.05
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}

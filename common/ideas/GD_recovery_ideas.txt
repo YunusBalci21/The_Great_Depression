@@ -1,0 +1,18 @@
+ideas = {
+	country = {
+		GD_forced_industrialization = {
+			picture = GFX_idea_generic_production_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.20
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				consumer_goods_factor = 0.05
+				stability_factor = -0.05
+				war_support_factor = 0.10
+			}
+		}
+	}
+}

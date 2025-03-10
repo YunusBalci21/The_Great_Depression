@@ -1,0 +1,315 @@
+add_namespace = gd_economic_recovery
+
+# First Stage of Recovery Event
+country_event = {
+    id = gd_economic_recovery.1
+    title = gd_economic_recovery.1.t
+    desc = gd_economic_recovery.1.d
+    picture = GFX_report_event_generic_factory
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = gd_economic_recovery.1.a
+        ai_chance = { factor = 100 }
+        
+        add_stability = 0.05
+        add_political_power = 25
+        
+        if = {
+            limit = { has_idea = unemployment }
+            swap_ideas = {
+                remove_idea = unemployment
+                add_idea = reduced_unemployment
+            }
+        }
+    }
+}
+
+# Second Stage of Recovery Event
+country_event = {
+    id = gd_economic_recovery.2
+    title = gd_economic_recovery.2.t
+    desc = gd_economic_recovery.2.d
+    picture = GFX_report_event_generic_industrial_complex
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = gd_economic_recovery.2.a
+        ai_chance = { factor = 100 }
+        
+        add_stability = 0.05
+        add_political_power = 25
+        
+        if = {
+            limit = { has_idea = bank_runs }
+            remove_ideas = bank_runs
+        }
+        
+        random_owned_controlled_state = {
+            limit = { is_core_of = ROOT }
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+}
+
+# Third Stage of Recovery Event
+country_event = {
+    id = gd_economic_recovery.3
+    title = gd_economic_recovery.3.t
+    desc = gd_economic_recovery.3.d
+    picture = GFX_report_event_generic_read_write
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = gd_economic_recovery.3.a
+        ai_chance = { factor = 100 }
+        
+        add_stability = 0.05
+        add_political_power = 50
+        
+        random_owned_controlled_state = {
+            limit = { infrastructure < 7 }
+            add_building_construction = {
+                type = infrastructure
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+}
+
+# Fourth Stage of Recovery Event
+country_event = {
+    id = gd_economic_recovery.4
+    title = gd_economic_recovery.4.t
+    desc = gd_economic_recovery.4.d
+    picture = GFX_report_event_generic_goods
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = gd_economic_recovery.4.a
+        ai_chance = { factor = 100 }
+        
+        add_stability = 0.05
+        add_war_support = 0.05
+        add_political_power = 50
+        
+        if = {
+            limit = { has_idea = reduced_unemployment }
+            remove_ideas = reduced_unemployment
+        }
+        
+        if = {
+            limit = { 
+                has_country_flag = GD_path_interventionist
+                NOT = { has_idea = new_deal_programs }
+            }
+            add_ideas = new_deal_programs
+        }
+        
+        if = {
+            limit = {
+                has_country_flag = GD_path_state_control
+                NOT = { has_idea = rearmament_program }
+            }
+            add_ideas = rearmament_program
+        }
+    }
+}
+
+# Final Recovery Event
+country_event = {
+    id = gd_economic_recovery.5
+    title = gd_economic_recovery.5.t
+    desc = gd_economic_recovery.5.d
+    picture = GFX_report_event_generic_factory
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = gd_economic_recovery.5.a
+        ai_chance = { factor = 100 }
+        
+        add_stability = 0.10
+        add_war_support = 0.05
+        add_political_power = 100
+        
+        if = {
+            limit = { has_country_flag = GD_path_interventionist }
+            add_timed_idea = { 
+                idea = industrial_recovery_boost 
+                days = 360
+            }
+        }
+        
+        if = {
+            limit = { has_country_flag = GD_path_market }
+            add_timed_idea = { 
+                idea = consumer_confidence_boost 
+                days = 360
+            }
+        }
+        
+        if = {
+            limit = { has_country_flag = GD_path_state_control }
+            add_timed_idea = { 
+                idea = GD_forced_industrialization
+                days = 360
+            }
+        }
+        
+        random_owned_controlled_state = {
+            limit = { is_core_of = ROOT }
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                type = industrial_complex
+                level = 2
+                instant_build = yes
+            }
+        }
+    }
+}
+
+# News Events for Recovery Paths
+add_namespace = gd_recovery_news
+
+# Interventionist Path News
+news_event = {
+    id = gd_recovery_news.1
+    title = gd_recovery_news.1.t
+    desc = gd_recovery_news.1.d
+    picture = GFX_news_event_generic_sign_treaty1
+    
+    major = yes
+    is_triggered_only = yes
+    
+    option = {
+        name = gd_recovery_news.1.a
+        trigger = { tag = FROM }
+    }
+    
+    option = {
+        name = gd_recovery_news.1.b
+        trigger = { 
+            NOT = { tag = FROM }
+            has_government = democratic
+        }
+    }
+    
+    option = {
+        name = gd_recovery_news.1.c
+        trigger = { 
+            NOT = { tag = FROM }
+            OR = {
+                has_government = fascism
+                has_government = communism
+                has_government = neutrality
+            }
+        }
+    }
+}
+
+# Free Market Path News
+news_event = {
+    id = gd_recovery_news.2
+    title = gd_recovery_news.2.t
+    desc = gd_recovery_news.2.d
+    picture = GFX_news_event_generic_read_write
+    
+    major = yes
+    is_triggered_only = yes
+    
+    option = {
+        name = gd_recovery_news.2.a
+        trigger = { tag = FROM }
+    }
+    
+    option = {
+        name = gd_recovery_news.2.b
+        trigger = { 
+            NOT = { tag = FROM }
+            OR = {
+                has_government = democratic
+                has_government = neutrality
+            }
+        }
+    }
+    
+    option = {
+        name = gd_recovery_news.2.c
+        trigger = { 
+            NOT = { tag = FROM }
+            OR = {
+                has_government = fascism
+                has_government = communism
+            }
+        }
+    }
+}
+
+# State Control Path News
+news_event = {
+    id = gd_recovery_news.3
+    title = gd_recovery_news.3.t
+    desc = gd_recovery_news.3.d
+    picture = GFX_news_event_generic_rally_3
+    
+    major = yes
+    is_triggered_only = yes
+    
+    option = {
+        name = gd_recovery_news.3.a
+        trigger = { tag = FROM }
+    }
+    
+    option = {
+        name = gd_recovery_news.3.b
+        trigger = { 
+            NOT = { tag = FROM }
+            OR = {
+                has_government = fascism
+                has_government = communism
+            }
+        }
+    }
+    
+    option = {
+        name = gd_recovery_news.3.c
+        trigger = { 
+            NOT = { tag = FROM }
+            OR = {
+                has_government = democratic
+                has_government = neutrality
+            }
+        }
+    }
+}
+
+# Full Recovery News
+news_event = {
+    id = gd_recovery_news.4
+    title = gd_recovery_news.4.t
+    desc = gd_recovery_news.4.d
+    picture = GFX_news_event_generic_factory
+    
+    major = yes
+    is_triggered_only = yes
+    
+    option = {
+        name = gd_recovery_news.4.a
+        trigger = { tag = FROM }
+    }
+    
+    option = {
+        name = gd_recovery_news.4.b
+        trigger = { NOT = { tag = FROM } }
+    }
+}

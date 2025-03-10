@@ -185,7 +185,7 @@ focus_tree = {
 	# Abandon Gold Standard
 	focus = {
 		id = GER_abandon_gold
-		icon = GFX_goal_generic_market_economy
+		icon = GFX_goal_support_democracy
 		prerequisite = { focus = GER_spd_reforms }
 		mutually_exclusive = { focus = GER_maintain_gold }
 		x = 7
