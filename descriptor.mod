@@ -1,3 +1,6 @@
+name="The Great Depression: 1929-1939"
+path="mod/The Great Depression"
+picture="thumbnail.png"
 version="0.1"
 tags={
 	"Events"

@@ -1,0 +1,66 @@
+bookmarks = {
+	bookmark = {
+		name = "GREAT_DEPRESSION_NAME"
+		desc = "GREAT_DEPRESSION_DESC"
+		date = 1929.10.24.1
+		picture = "GFX_select_date_1936"  # Use vanilla icon until you create your own
+		default = yes  # Make this the default bookmark instead of 1936
+		default_country = "USA"
+		
+		"USA" = {
+			history = "USA_GREAT_DEPRESSION_DESC"
+			ideology = democratic
+			ideas = {
+				great_depression
+				USA_gold_standard
+			}
+			focuses = {
+				USA_agricultural_adjustment_act
+			}
+		}
+		"GER" = {
+			history = "GER_GREAT_DEPRESSION_DESC"
+			ideology = democratic  # Weimar Republic
+			ideas = {
+				great_depression
+			}
+		}
+		"ENG" = {
+			history = "ENG_GREAT_DEPRESSION_DESC"
+			ideology = democratic
+			ideas = {
+				great_depression
+			}
+		}
+		"FRA" = {
+			history = "FRA_GREAT_DEPRESSION_DESC"
+			ideology = democratic
+			ideas = {
+				great_depression
+			}
+		}
+		"ITA" = {
+			history = "ITA_GREAT_DEPRESSION_DESC"
+			ideology = fascism
+			ideas = {
+				great_depression
+			}
+		}
+		"SOV" = {
+			history = "SOV_GREAT_DEPRESSION_DESC"
+			ideology = communism
+		}
+		"JAP" = {
+			history = "JAP_GREAT_DEPRESSION_DESC"
+			ideology = neutrality
+			ideas = {
+				great_depression
+			}
+		}
+
+		# Weather effects
+		effect = {
+			randomize_weather = 12345
+		}
+	}
+}

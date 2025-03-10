@@ -1,51 +1,41 @@
-# Starting situation for USA in 1929
-capital = 361
+capital = 361 # Washington DC
 
-oob = "USA_1929"
-if = {
-	limit = { has_dlc = "Man the Guns" }
-	set_naval_oob = "USA_1929_naval_mtg"
-	else = { set_naval_oob = "USA_1929_naval" }
-}
+oob = "USA_1929"  # Create this file for 1929 Order of Battle
 
-# Starting tech (you can adjust these)
-set_research_slots = 3
+set_research_slots = 4
+set_stability = 0.75 # Pre-crash stability
+set_war_support = 0.20
+
+# Starting tech for 1929
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	basic_machine_tools = 1
-	improved_machine_tools = 1
-	tech_support = 1
-	interwar_artillery = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
 	gw_artillery = 1
 	early_fighter = 1
-	cv_early_fighter = 1
-	early_bomber = 1
 	naval_bomber1 = 1
-	early_submarine = 1
-	basic_submarine = 1
+	early_bomber = 1
 	early_destroyer = 1
-	basic_destroyer = 1
 	early_light_cruiser = 1
-	basic_light_cruiser = 1
 	early_heavy_cruiser = 1
-	basic_heavy_cruiser = 1
 	early_battleship = 1
-	early_battlecruiser = 1
-	early_carrier = 1
+	early_submarine = 1
 	transport = 1
+	basic_train = 1
 }
 
-set_convoys = 200
-
-# Great Depression effects
 add_ideas = {
-	great_depression
-	unemployment
-	bank_runs
+	USA_gold_standard
+	free_trade
+	civilian_economy
+	limited_conscription
+	# Changed from isolationism to a valid law
+	isolation
 }
 
-# Political setup
+# Starting political setup - Hoover Administration
 set_politics = {
 	ruling_party = democratic
 	last_election = "1928.11.6"
@@ -54,159 +44,126 @@ set_politics = {
 }
 
 set_popularities = {
-	democratic = 85
-	fascism = 2
-	communism = 8
-	neutrality = 5
+	democratic = 80
+	fascism = 1
+	communism = 1
+	neutrality = 18
 }
 
+# HOOVER PRESIDENCY 1929-1933
 create_country_leader = {
 	name = "Herbert Hoover"
 	desc = "POLITICS_HERBERT_HOOVER_DESC"
-	picture = "gfx/leaders/USA/Portrait_USA_Herbert_Hoover.dds"
-	expire = "1964.1.1"
+	# Using a generic portrait until you create the custom one
+	picture = "Portrait_USA_Generic_1.dds"
+	expire = "1964.10.20"
 	ideology = liberalism
 	traits = {
-		# Add traits if desired
+		conservative_economist
 	}
 }
 
-# Set up character for FDR to appear later
-if = {
-	limit = { has_dlc = "Man the Guns" }
-	create_character = {
-		name = "Franklin D. Roosevelt"
-		portraits = {
-			civilian = {
-				large = "gfx/leaders/USA/Portrait_USA_Franklin_Roosevelt.dds"
-			}
-		}
-		country_leader = {
-			ideology = liberalism
-			traits = { great_depression_reformer }
-			expire = "1945.4.12"
-		}
-	}
-	else = {
-		create_country_leader = {
-			name = "Franklin D. Roosevelt"
-			desc = "POLITICS_FRANKLIN_ROOSEVELT_DESC"
-			picture = "gfx/leaders/USA/Portrait_USA_Franklin_Roosevelt.dds"
-			expire = "1945.4.12"
-			ideology = liberalism
-			traits = {
-				great_depression_reformer
-			}
-		}
-	}
+# Navy Leaders - changed to use generic portraits
+create_navy_leader = {
+	name = "William D. Leahy"
+	# Fixed duplicate path issue
+	picture = "Portrait_USA_Generic_navy_1.dds"
+	traits = { naval_lineage spotter }
+	skill = 4
+	id = 2001  # Added unique ID
 }
 
-# Set up a few military leaders
+create_navy_leader = {
+	name = "Ernest J. King"
+	picture = "Portrait_USA_Generic_navy_2.dds"
+	traits = { naval_lineage blockade_runner }
+	skill = 4
+	id = 2002  # Added unique ID
+}
+
+create_navy_leader = {
+	name = "Chester W. Nimitz"
+	picture = "Portrait_USA_Generic_navy_3.dds"
+	traits = { blockade_runner naval_lineage }
+	skill = 4
+	id = 2003  # Added unique ID
+}
+
+create_navy_leader = {
+	name = "William Halsey Jr."
+	picture = "Portrait_USA_Generic_navy_4.dds"
+	traits = { bold }
+	skill = 4
+	id = 2004  # Added unique ID
+}
+
+# Army Commanders - using unique IDs to avoid duplicates
 create_field_marshal = {
 	name = "Douglas MacArthur"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Douglas_MacArthur.dds"
+	picture = "Portrait_USA_Douglas_MacArthur.dds"
 	traits = { offensive_doctrine }
 	skill = 4
 	attack_skill = 4
 	defense_skill = 3
 	planning_skill = 4
 	logistics_skill = 3
+	id = 1001  # Added unique ID
 }
 
-create_corps_commander = {
+create_field_marshal = {
 	name = "Dwight D. Eisenhower"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Dwight_D_Eisenhower.dds"
-	traits = { politically_connected career_officer }
-	skill = 3
+	picture = "Portrait_USA_Generic_land_2.dds"
+	traits = { defensive_doctrine }
+	skill = 4
 	attack_skill = 3
-	defense_skill = 2
+	defense_skill = 4
 	planning_skill = 4
-	logistics_skill = 3
+	logistics_skill = 4
+	id = 1002  # Added unique ID
 }
 
 create_corps_commander = {
 	name = "George S. Patton"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_George_S_Patton.dds"
-	traits = { trickster cavalryman }
-	skill = 3
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-# Navy leaders
-create_navy_leader = {
-	name = "William D. Leahy"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_William_D_Leahy.dds"
-	traits = { navy_career_officer }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	maneuvering_skill = 3
-	coordination_skill = 4
-}
-
-create_navy_leader = {
-	name = "Ernest J. King"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Ernest_King.dds"
-	traits = { navy_career_officer naval_lineage }
+	picture = "Portrait_USA_Generic_land_3.dds"
+	traits = { cavalry_leader }
 	skill = 4
+	attack_skill = 5
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+	id = 1003  # Added unique ID
+}
+
+create_corps_commander = {
+	name = "Omar Bradley"
+	picture = "Portrait_USA_Generic_land_4.dds"
+	traits = { defensive_doctrine }
+	skill = 3
 	attack_skill = 3
-	defense_skill = 3
-	maneuvering_skill = 4
-	coordination_skill = 4
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3
+	id = 1004  # Added unique ID
 }
 
-# Set starting technology
-if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	set_technology = {
-		early_destroyer = 1
-		early_light_cruiser = 1
-		early_heavy_cruiser = 1
-		early_battleship = 1
-		early_battlecruiser = 1
-		early_carrier = 1
-		basic_battleship = 1
-		transport = 1
+# FDR PRESIDENCY 1933-1945 - Added via event
+1933.3.4 = {
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1932.11.8"
+		election_frequency = 48
+		elections_allowed = yes
 	}
-}
-if = {
-	limit = { has_dlc = "Man the Guns" }
-	set_technology = {
-		early_ship_hull_light = 1
-		basic_ship_hull_light = 1
-		early_ship_hull_cruiser = 1
-		basic_ship_hull_cruiser = 1
-		early_ship_hull_heavy = 1
-		basic_ship_hull_heavy = 1
-		early_ship_hull_carrier = 1
-		basic_ship_hull_carrier = 1
-		basic_battery = 1
-		basic_light_battery = 1
-		basic_secondary_battery = 1
-		basic_torpedo = 1
-		basic_depth_charge = 1
-		mtg_transport = 1
+	set_popularities = {
+		democratic = 85
+		fascism = 2
+		communism = 3
+		neutrality = 10
 	}
-}
-
-# Focus tree
-if = {
-	limit = { has_dlc = "Waking the Tiger" }
-	set_country_flag = USA_waking_the_tiger_flag
-}
-
-1929.11.1 = {
-	set_country_flag = black_monday_occurred
-}
-
-1932.11.8 = {
-	# The 1932 election - Roosevelt wins
+	
 	create_country_leader = {
 		name = "Franklin D. Roosevelt"
-		desc = "POLITICS_FRANKLIN_ROOSEVELT_DESC"
+		desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
 		picture = "gfx/leaders/USA/Portrait_USA_Franklin_Roosevelt.dds"
 		expire = "1945.4.12"
 		ideology = liberalism
@@ -214,4 +171,7 @@ if = {
 			great_depression_reformer
 		}
 	}
+	
+	add_ideas = new_deal_programs
+	remove_ideas = USA_gold_standard
 }

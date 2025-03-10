@@ -1,4 +1,17 @@
 ﻿l_english:
+ # Bookmark and scenario names
+ GREAT_DEPRESSION_NAME:0 "The Great Depression"
+ GREAT_DEPRESSION_DESC:0 "Dark times are coming. On October 24, 1929, the Wall Street stock market crashed, triggering a worldwide economic collapse. Nations struggle with unemployment, industrial decline, and political instability. In this time of crisis, leaders must choose between economic recovery and rearmament as the seeds of global conflict are sown."
+ 
+ # Country descriptions for bookmark
+ USA_GREAT_DEPRESSION_DESC:0 "The United States has been hit hardest by the economic collapse that began with the Wall Street Crash. With unemployment soaring and industrial output plummeting, President Herbert Hoover faces mounting pressure to intervene. Will America recover through laissez-faire policies, or will a new approach be needed to tackle the greatest economic catastrophe in its history?"
+ GER_GREAT_DEPRESSION_DESC:0 "The Weimar Republic, already weakened by hyperinflation and political instability, now faces the additional burden of global economic depression. As unemployment rises and faith in democratic institutions wanes, radical political movements gain strength. The future of Germany hangs in the balance as economic desperation fuels the rise of extremism."
+ ENG_GREAT_DEPRESSION_DESC:0 "The British Empire, still recovering from the Great War, now faces a new challenge as the global economic crisis strains imperial ties and domestic stability. With unemployment rising and industrial output falling, Britain must balance economic recovery with maintaining its global position and addressing the growing threats in Europe and Asia."
+ FRA_GREAT_DEPRESSION_DESC:0 "France, victorious but deeply scarred by the Great War, now confronts economic stagnation and political polarization. As the Depression deepens, the political spectrum fragments between left and right, while military preparedness suffers from budgetary constraints. Can France maintain its security in an increasingly dangerous world?"
+ ITA_GREAT_DEPRESSION_DESC:0 "Fascist Italy under Mussolini faces economic hardship despite claims of modernization and efficiency. With ambitions for a new Roman Empire but limited industrial capacity, Italy must navigate the Depression while pursuing expansionist goals in Africa and the Mediterranean. The economic crisis may accelerate Il Duce's military adventures."
+ SOV_GREAT_DEPRESSION_DESC:0 "The Soviet Union, isolated from global markets by ideology, is somewhat insulated from the capitalist crisis but faces its own challenges implementing Stalin's ambitious Five-Year Plans. As the USSR races to industrialize, internal political struggles and the human cost of rapid transformation threaten stability and preparedness for future conflicts."
+ JAP_GREAT_DEPRESSION_DESC:0 "Japan's export-dependent economy suffers greatly as global trade collapses. Resource scarcity and economic pressure strengthen military influence in government, pushing toward expansion in China and Southeast Asia. The path toward empire accelerates as Japan seeks economic self-sufficiency through territorial conquest."
+
  # Decision category
  GD_economic_recovery:0 "Economic Recovery Measures"
  GD_economic_recovery_desc:0 "The Great Depression has devastated our economy. Through careful policy implementation, we may be able to mitigate its worst effects and put our nation on the path to recovery."
@@ -76,6 +89,26 @@
  
  consumer_confidence_boost:0 "Consumer Confidence"
  consumer_confidence_boost_desc:0 "Consumer confidence is returning, leading to increased spending and economic activity."
+ 
+ # Traits
+ great_depression_reformer:0 "Great Depression Reformer"
+ great_depression_reformer_desc:0 "This leader has innovative ideas to combat the economic crisis through government intervention and social programs."
+ 
+ cavalryman:0 "Cavalry Expert"
+ cavalryman_desc:0 "This commander has specialized training and experience in cavalry tactics and operations."
+ 
+ # USA Gold Standard
+ USA_gold_standard:0 "Gold Standard"
+ USA_gold_standard_desc:0 "Adherence to the gold standard limits our monetary policy options and prevents us from using currency devaluation to stimulate the economy."
+
+ # Game Rules
+ RULE_LIT_AI_BEHAVIOR:0 "Lithuania AI Behavior"
+ RULE_EST_AI_BEHAVIOR:0 "Estonia AI Behavior"
+ RULE_OPTION_HISTORICAL:0 "Historical"
+ RULE_OPTION_HISTORICAL_DESC:0 "The country will generally follow its historical path."
+ RULE_OPTION_RANDOM:0 "Random"
+ RULE_OPTION_RANDOM_DESC:0 "The country may take alternative paths with a random chance."
+ RULE_GROUP_AI_BEHAVIOR:0 "Country Behavior"
 
  # Great Depression Events
  great_depression.1.t:0 "The Stock Market Crash of 1929"
@@ -133,3 +166,41 @@
  gd_recovery.10.t:0 "Consumer Goods Industry Revival"
  gd_recovery.10.d:0 "As our economy continues to recover, the consumer goods industry is showing remarkable resilience. Factories that once stood idle are now producing everyday items, from textiles to household appliances, helping to restore normal economic life."
  gd_recovery.10.a:0 "Our people's needs are being met"
+ 
+ # USA Events
+ gd_usa.1.t:0 "Black Thursday"
+ gd_usa.1.d:0 "October 24, 1929, will forever be known as Black Thursday. The New York Stock Exchange has experienced an unprecedented crash, with stocks losing billions in value in a single day. Panic selling has gripped the markets, and financial institutions across the country are in turmoil. The implications of this crash are still uncertain, but early indications suggest that we may be facing a significant economic crisis."
+ gd_usa.1.a:0 "This could be troubling"
+ 
+ gd_usa.3.t:0 "The Agricultural Adjustment Act"
+ gd_usa.3.d:0 "To address the catastrophic fall in farm prices, the government has implemented the Agricultural Adjustment Act. This legislation aims to raise agricultural prices by paying farmers to reduce their crop production, thereby decreasing supply. While controversial, these measures hope to stabilize the agricultural sector and prevent further farm foreclosures."
+ gd_usa.3.a:0 "Our farmers need relief"
+ 
+ gd_usa.4.t:0 "The Banking Crisis Worsens"
+ gd_usa.4.d:0 "The banking system continues to deteriorate as more institutions fail daily. Public confidence has collapsed, triggering nationwide bank runs as citizens rush to withdraw their savings. Without immediate intervention, our entire financial system could collapse."
+ gd_usa.4.a:0 "We must take action to stabilize the banks"
+ 
+ gd_usa.5.t:0 "Roosevelt's First 100 Days"
+ gd_usa.5.d:0 "President Roosevelt has begun an unprecedented period of legislative activity known as the First 100 Days. Dozens of new bills are being passed to tackle the Depression through government intervention, representing a radical shift in America's approach to economic crisis. These programs aim to provide relief, recovery, and reform to our struggling nation."
+ gd_usa.5.a:0 "A New Deal for the American people"
+ 
+ # Add entries for all USA events mentioned in your error log (gd_usa.6 through gd_usa.52)
+ gd_usa.6.t:0 "The Civilian Conservation Corps"
+ gd_usa.6.d:0 "The newly established Civilian Conservation Corps is mobilizing unemployed young men for conservation and natural resource development work. These workers will plant trees, build parks, and construct flood control systems while receiving housing, food, and a small wage. This program aims to reduce unemployment while improving our national infrastructure and natural resources."
+ gd_usa.6.a:0 "Work for our youth, improvements for our nation"
+ 
+ gd_usa.7.t:0 "The Tennessee Valley Authority"
+ gd_usa.7.d:0 "The Tennessee Valley Authority has been established to provide economic development to one of the regions hardest hit by the Depression. This comprehensive program will build dams for flood control and hydroelectric power, improve agricultural practices, and develop industries throughout the Tennessee Valley. This ambitious project represents a new level of government involvement in regional development."
+ gd_usa.7.a:0 "Rebuilding an entire region"
+ 
+ # Add entries for the remaining USA events
+ gd_usa.8.t:0 "The National Industrial Recovery Act"
+ gd_usa.8.d:0 "The National Industrial Recovery Act has been passed to stimulate industrial recovery through fair competition, labor standards, and increased purchasing power. This legislation establishes codes of fair competition for industries and guarantees the right of workers to form unions. While controversial among business leaders, the NIRA represents a major effort to balance industrial production with workers' rights."
+ gd_usa.8.a:0 "A new framework for industry and labor"
+ 
+ # National Focus Localizations
+ USA_agricultural_adjustment_act:0 "Agricultural Adjustment Act"
+ GER_anschluss:0 "Anschluss of Austria"
+ 
+ # Additional Needed Entries
+ STATE_CORSICA:0 "Corsica"

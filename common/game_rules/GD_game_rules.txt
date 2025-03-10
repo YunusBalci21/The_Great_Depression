@@ -1,0 +1,124 @@
+# Game rules for The Great Depression
+
+# Baltic Rules
+LIT_ai_behavior = {
+	name = "RULE_LIT_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	icon = "GFX_rule_generic"
+	
+	option = {
+		name = LIT_AI_HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_DESC"
+		allow_achievements = yes
+	}
+	
+	option = {
+		name = LIT_AI_RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_DESC"
+		allow_achievements = yes
+	}
+}
+
+EST_ai_behavior = {
+	name = "RULE_EST_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	icon = "GFX_rule_generic"
+	
+	option = {
+		name = EST_AI_HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_DESC"
+		allow_achievements = yes
+	}
+	
+	option = {
+		name = EST_AI_RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_DESC"
+		allow_achievements = yes
+	}
+}
+
+# Depression-specific game rules
+great_depression_intensity = {
+	name = "RULE_GREAT_DEPRESSION_INTENSITY"
+	group = "RULE_GROUP_GAMEPLAY"
+	icon = "GFX_rule_generic"
+	
+	option = {
+		name = GD_INTENSITY_HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_GREAT_DEPRESSION_HISTORICAL_DESC"
+		allow_achievements = yes
+	}
+	
+	option = {
+		name = GD_INTENSITY_SEVERE
+		text = "RULE_OPTION_SEVERE"
+		desc = "RULE_GREAT_DEPRESSION_SEVERE_DESC"
+		allow_achievements = no
+	}
+	
+	option = {
+		name = GD_INTENSITY_MILD
+		text = "RULE_OPTION_MILD"
+		desc = "RULE_GREAT_DEPRESSION_MILD_DESC"
+		allow_achievements = no
+	}
+}
+
+recovery_speed = {
+	name = "RULE_RECOVERY_SPEED"
+	group = "RULE_GROUP_GAMEPLAY"
+	icon = "GFX_rule_generic"
+	
+	option = {
+		name = RECOVERY_HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_RECOVERY_HISTORICAL_DESC"
+		allow_achievements = yes
+	}
+	
+	option = {
+		name = RECOVERY_FAST
+		text = "RULE_OPTION_FAST"
+		desc = "RULE_RECOVERY_FAST_DESC"
+		allow_achievements = no
+	}
+	
+	option = {
+		name = RECOVERY_SLOW
+		text = "RULE_OPTION_SLOW"
+		desc = "RULE_RECOVERY_SLOW_DESC"
+		allow_achievements = no
+	}
+}
+
+political_radicalization = {
+	name = "RULE_POLITICAL_RADICALIZATION"
+	group = "RULE_GROUP_GAMEPLAY"
+	icon = "GFX_rule_generic"
+	
+	option = {
+		name = RADICALIZATION_HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_RADICALIZATION_HISTORICAL_DESC"
+		allow_achievements = yes
+	}
+	
+	option = {
+		name = RADICALIZATION_HIGH
+		text = "RULE_OPTION_HIGH"
+		desc = "RULE_RADICALIZATION_HIGH_DESC"
+		allow_achievements = no
+	}
+	
+	option = {
+		name = RADICALIZATION_LOW
+		text = "RULE_OPTION_LOW"
+		desc = "RULE_RADICALIZATION_LOW_DESC"
+		allow_achievements = no
+	}
+}

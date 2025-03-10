@@ -1,3 +1,49 @@
+##### United States Army 1929 OOB #####
+
+##### Land Units #####
+units = {
+	# Infantry Divisions
+	division = {
+		name = "1st Infantry Division"
+		location = 3957 # Fort Riley, Kansas
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Infantry Division"
+		location = 10337 # Fort Sam Houston, Texas
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3rd Infantry Division"
+		location = 7552 # Fort Lewis, Washington
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Hawaiian Division"
+		location = 4180 # Hawaii
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Philippine Division"
+		location = 10265 # Philippines
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	
+	# Cavalry Units
+	division = {
+		name = "1st Cavalry Division"
+		location = 10840 # Fort Bliss, Texas
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.3
+	}
+}
+
+# Division Templates
 division_template = {
 	name = "Infantry Division"
 	
@@ -12,6 +58,7 @@ division_template = {
 		infantry = { x = 2 y = 1 }
 		infantry = { x = 2 y = 2 }
 	}
+	
 	support = {
 		artillery = { x = 0 y = 0 }
 		engineer = { x = 0 y = 1 }
@@ -29,63 +76,114 @@ division_template = {
 		cavalry = { x = 1 y = 1 }
 		cavalry = { x = 1 y = 2 }
 	}
+	
 	support = {
 		recon = { x = 0 y = 0 }
 	}
 }
 
-units = {
-	division = {
-		name = "1st Infantry Division"
-		location = 3957 # Washington DC
-		division_template = "Infantry Division"
-		start_experience_factor = 0.3
-	}
-	
-	division = {
-		name = "2nd Infantry Division"
-		location = 6710 # San Diego
-		division_template = "Infantry Division"
-		start_experience_factor = 0.3
-	}
-	
-	division = {
-		name = "3rd Infantry Division"
-		location = 9671 # New York
-		division_template = "Infantry Division"
-		start_experience_factor = 0.3
-	}
-	
-	division = {
-		name = "4th Infantry Division"
-		location = 10370 # Philadelphia
-		division_template = "Infantry Division"
-		start_experience_factor = 0.3
-	}
-	
-	division = {
-		name = "1st Cavalry Division"
-		location = 12735 # San Antonio
-		division_template = "Cavalry Division"
-		start_experience_factor = 0.3
-	}
-}
-
-# Equipment stockpile
+# Starting Production
 instant_effect = {
 	add_equipment_to_stockpile = {
 		type = infantry_equipment_1
-		amount = 15000
+		amount = 40000
 		producer = USA
 	}
 	add_equipment_to_stockpile = {
 		type = support_equipment_1
-		amount = 1000
+		amount = 2000
 		producer = USA
 	}
 	add_equipment_to_stockpile = {
 		type = artillery_equipment_1
-		amount = 500
+		amount = 800
 		producer = USA
+	}
+	
+	# Peacetime production
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "USA"
+		}
+		requested_factories = 2
+		progress = 0.5
+		efficiency = 50
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "USA"
+		}
+		requested_factories = 1
+		progress = 0.5
+		efficiency = 50
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "USA"
+		}
+		requested_factories = 1
+		progress = 0.5
+		efficiency = 50
+	}
+}
+
+##### Naval Units #####
+# Simplified naval OOB for 1929
+# Full naval OOB will be added in future updates
+fleet = {
+	name = "United States Fleet"
+	naval_base = 4860 # Hampton Roads, Virginia
+	task_force = {
+		name = "Battle Fleet"
+		location = 4860 # Hampton Roads, Virginia
+		ship = { name = "USS Pennsylvania" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Arizona" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS New York" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Texas" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Arkansas" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Nevada" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Oklahoma" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+	}
+	task_force = {
+		name = "Scouting Fleet"
+		location = 4860 # Hampton Roads, Virginia
+		ship = { name = "USS Lexington" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Saratoga" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Salt Lake City" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Pensacola" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = USA } } }
+	}
+	task_force = {
+		name = "Pacific Fleet"
+		location = 12251 # San Diego, California
+		ship = { name = "USS California" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Tennessee" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Colorado" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS West Virginia" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Maryland" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+	}
+}
+
+# Naval Production
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "USA"
+		}
+		requested_factories = 1
+		progress = 0.35
+		amount = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_1
+			creator = "USA"
+		}
+		requested_factories = 1
+		progress = 0.25
+		amount = 1
 	}
 }

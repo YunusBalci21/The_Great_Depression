@@ -1,7 +1,0 @@
-# File 3: 03_gd_recovery_bonus_ideas.txt - REPLACE WITH THIS
-ideas = {
-    country = {
-        # All ideas have been moved to GD_all_ideas.txt to prevent duplicates
-        # This file is kept for mod structure and compatibility
-    }
-}
