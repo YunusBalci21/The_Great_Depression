@@ -1,0 +1,605 @@
+focus_tree = {
+	id = british_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ENG
+		}
+	}
+	
+	default = no
+	
+	# Starting Focus - The Great Depression
+	focus = {
+		id = ENG_depression_crisis
+		icon = GFX_goal_generic_demand_territory
+		x = 10
+		y = 0
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.05
+		}
+	}
+	
+	# Economic Branches
+	focus = {
+		id = ENG_economic_response
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = ENG_depression_crisis }
+		x = 10
+		y = 1
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+	
+	# Conservative Path - Austerity
+	focus = {
+		id = ENG_national_government
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = ENG_economic_response }
+		mutually_exclusive = { focus = ENG_labour_solutions }
+		x = 6
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 8
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 25
+			add_ideas = ENG_national_government_idea
+		}
+	}
+	
+	# Labour Path - Interventionist
+	focus = {
+		id = ENG_labour_solutions
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = ENG_economic_response }
+		mutually_exclusive = { focus = ENG_national_government }
+		x = 14
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 4
+				has_stability < 0.4
+			}
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = -25
+			add_ideas = ENG_labour_reforms
+		}
+	}
+	
+	# Conservative Economic Branch
+	focus = {
+		id = ENG_maintain_gold_standard
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = ENG_national_government }
+		x = 4
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_ideas = ENG_gold_standard
+		}
+	}
+	
+	focus = {
+		id = ENG_imperial_preference
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = ENG_maintain_gold_standard }
+		x = 4
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_ideas = ENG_imperial_preference_idea
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {
+		id = ENG_balanced_budget
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = ENG_national_government }
+		x = 6
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = 25
+			add_timed_idea = {
+				idea = ENG_austerity_measures
+				days = 365
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_reduce_unemployment_benefits
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = ENG_balanced_budget }
+		x = 6
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_stability = -0.10
+			add_war_support = -0.05
+			add_political_power = 50
+			if = {
+				limit = {
+					has_idea = great_depression
+				}
+				swap_ideas = {
+					remove_idea = great_depression
+					add_idea = economic_recovery
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_special_areas_act
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = ENG_national_government }
+		prerequisite = { focus = ENG_imperial_preference focus = ENG_reduce_unemployment_benefits }
+		x = 5
+		y = 5
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_stability = 0.05
+			random_owned_controlled_state = {
+				limit = { infrastructure < 7 }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	# Labour Economic Branch
+	focus = {
+		id = ENG_abandon_gold_standard
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = ENG_labour_solutions }
+		x = 14
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			remove_ideas = ENG_gold_standard
+			add_political_power = 25
+		}
+	}
+	
+	focus = {
+		id = ENG_keynesian_economics
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = ENG_abandon_gold_standard }
+		x = 14
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_ideas = ENG_keynesian_policy
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {
+		id = ENG_public_works_programme
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = ENG_labour_solutions }
+		x = 16
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_ideas = ENG_public_works
+			add_political_power = -25
+		}
+	}
+	
+	focus = {
+		id = ENG_expand_social_services
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = ENG_public_works_programme }
+		x = 16
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_stability = 0.10
+			add_political_power = -25
+			if = {
+				limit = {
+					has_idea = great_depression
+				}
+				swap_ideas = {
+					remove_idea = great_depression
+					add_idea = economic_recovery
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_nationalization_programme
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = ENG_keynesian_economics focus = ENG_expand_social_services }
+		x = 15
+		y = 5
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = -25
+			add_stability = -0.05
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	# Imperial Management Branch
+	focus = {
+		id = ENG_imperial_management
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = ENG_depression_crisis }
+		x = 3
+		y = 2
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+	
+	focus = {
+		id = ENG_imperial_conference
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = ENG_imperial_management }
+		x = 3
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.05
+			custom_effect_tooltip = ENG_dominion_relations_improved
+		}
+	}
+	
+	focus = {
+		id = ENG_statute_of_westminster
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = ENG_imperial_conference }
+		x = 3
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			add_ideas = ENG_statute_of_westminster_idea
+		}
+	}
+	
+	focus = {
+		id = ENG_colonial_development
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = ENG_imperial_management }
+		x = 1
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = -25
+			add_stability = 0.05
+			# Add some building construction in colonial states
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					NOT = {
+						is_on_continent = europe
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_colonial_resources
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = ENG_colonial_development }
+		x = 1
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_resource = {
+				type = rubber
+				amount = 8
+				state = 333 # Malaya
+			}
+			add_resource = {
+				type = oil
+				amount = 4
+				state = 291 # Baghdad
+			}
+			add_ideas = ENG_colonial_resources_idea
+		}
+	}
+	
+	focus = {
+		id = ENG_imperial_trade_network
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = ENG_statute_of_westminster }
+		prerequisite = { focus = ENG_colonial_resources }
+		x = 2
+		y = 5
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_ideas = ENG_imperial_trade_network_idea
+			add_political_power = 25
+		}
+	}
+	
+	# Rearmament Branch
+	focus = {
+		id = ENG_rearmament_debate
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = ENG_special_areas_act focus = ENG_nationalization_programme }
+		x = 10
+		y = 6
+		cost = 10
+		ai_will_do = { factor = 5 }
+		completion_reward = {
+			add_political_power = 25
+			add_war_support = 0.05
+		}
+	}
+	
+	focus = {
+		id = ENG_limited_rearmament
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = ENG_rearmament_debate }
+		mutually_exclusive = { focus = ENG_disarmament_talks }
+		x = 8
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			add_ideas = ENG_limited_rearmament_idea
+			add_war_support = 0.05
+			add_political_power = 25
+		}
+	}
+	
+	focus = {
+		id = ENG_disarmament_talks
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = ENG_rearmament_debate }
+		mutually_exclusive = { focus = ENG_limited_rearmament }
+		x = 12
+		y = 7
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			add_war_support = -0.05
+			add_ideas = ENG_disarmament_negotiations
+		}
+	}
+	
+	focus = {
+		id = ENG_shadow_factories
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = ENG_limited_rearmament }
+		x = 7
+		y = 8
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_naval_expansion
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = ENG_limited_rearmament }
+		x = 9
+		y = 8
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = naval_bonus
+				bonus = 0.5
+				uses = 2
+				category = naval_equipment
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_london_naval_treaty
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = ENG_disarmament_talks }
+		x = 11
+		y = 8
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = 25
+			navy_experience = 50
+			add_war_support = -0.05
+		}
+	}
+	
+	focus = {
+		id = ENG_appeasement_policy
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = ENG_disarmament_talks }
+		x = 13
+		y = 8
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = 25
+			add_war_support = -0.10
+			add_ideas = ENG_appeasement_policy_idea
+		}
+	}
+	
+	focus = {
+		id = ENG_RAF_expansion
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = ENG_shadow_factories focus = ENG_naval_expansion }
+		x = 8
+		y = 9
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			air_experience = 25
+			add_tech_bonus = {
+				name = air_bonus
+				bonus = 0.5
+				uses = 2
+				category = air_equipment
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_strengthen_empire
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = ENG_london_naval_treaty focus = ENG_appeasement_policy }
+		prerequisite = { focus = ENG_imperial_trade_network }
+		x = 11
+		y = 9
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_ideas = ENG_imperial_defense_idea
+			add_political_power = 25
+			add_stability = 0.05
+		}
+	}
+	
+	# Crisis Response Branch
+	focus = {
+		id = ENG_abdication_crisis
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = ENG_RAF_expansion focus = ENG_strengthen_empire }
+		available = {
+			date > 1936.1.1
+		}
+		x = 10
+		y = 10
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			country_event = { id = gd_britain.5 days = 1 }
+		}
+	}
+	
+	focus = {
+		id = ENG_weather_the_storm
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = ENG_abdication_crisis }
+		x = 10
+		y = 11
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_stability = 0.10
+			add_war_support = 0.05
+			add_political_power = 100
+			remove_ideas = economic_recovery
+		}
+	}
+}

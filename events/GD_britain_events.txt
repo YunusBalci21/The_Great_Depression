@@ -1,0 +1,353 @@
+add_namespace = gd_britain
+
+# Initial Great Depression Impact
+country_event = {
+	id = gd_britain.1
+	title = gd_britain.1.t
+	desc = gd_britain.1.d
+	picture = GFX_report_event_generic_read_write
+	
+	trigger = {
+		tag = ENG
+		date > 1929.10.29
+		date < 1929.11.15
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = gd_britain.1.a # Stand firm against the crisis
+		add_political_power = -50
+		add_stability = -0.10
+		add_ideas = {
+			great_depression
+			ENG_gold_standard
+		}
+	}
+}
+
+# 1931 Financial Crisis
+country_event = {
+	id = gd_britain.2
+	title = gd_britain.2.t
+	desc = gd_britain.2.d
+	picture = GFX_report_event_generic_read_write
+	
+	trigger = {
+		tag = ENG
+		has_idea = great_depression
+		date > 1931.8.1
+		date < 1931.8.31
+	}
+	
+	fire_only_once = yes
+	
+	# Form National Government
+	option = {
+		name = gd_britain.2.a
+		add_political_power = 25
+		add_stability = 0.05
+		add_timed_idea = {
+			idea = ENG_national_government_idea
+			days = 365
+		}
+	}
+	
+	# Maintain Labour Government
+	option = {
+		name = gd_britain.2.b
+		add_political_power = -25
+		add_stability = -0.05
+		add_war_support = -0.05
+	}
+}
+
+# Ottawa Imperial Conference
+country_event = {
+	id = gd_britain.3
+	title = gd_britain.3.t
+	desc = gd_britain.3.d
+	picture = GFX_report_event_generic_read_write
+	
+	trigger = {
+		tag = ENG
+		has_completed_focus = ENG_imperial_conference
+		date > 1932.7.1
+		date < 1932.8.31
+	}
+	
+	fire_only_once = yes
+	
+	# Push for Imperial Preference
+	option = {
+		name = gd_britain.3.a
+		add_political_power = 25
+		add_stability = 0.05
+		add_timed_idea = {
+			idea = ENG_imperial_preference_idea
+			days = 365
+		}
+	}
+	
+	# Focus on International Trade
+	option = {
+		name = gd_britain.3.b
+		add_political_power = 25
+		add_ideas = international_trade_agreements
+	}
+}
+
+# Abandoning the Gold Standard
+country_event = {
+	id = gd_britain.4
+	title = gd_britain.4.t
+	desc = gd_britain.4.d
+	picture = GFX_report_event_generic_read_write
+	
+	trigger = {
+		tag = ENG
+		has_completed_focus = ENG_abandon_gold_standard
+	}
+	
+	fire_only_once = yes
+	
+	# Abandon the Gold Standard
+	option = {
+		name = gd_britain.4.a
+		remove_ideas = ENG_gold_standard
+		add_political_power = 25
+		add_stability = 0.05
+	}
+}
+
+# Abdication Crisis
+country_event = {
+	id = gd_britain.5
+	title = gd_britain.5.t
+	desc = gd_britain.5.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	# Accept Abdication
+	option = {
+		name = gd_britain.5.a
+		add_political_power = -50
+		add_stability = -0.10
+		news_event = { id = gd_britain.6 days = 1 }
+	}
+}
+
+# News Event: Abdication of Edward VIII
+news_event = {
+	id = gd_britain.6
+	title = gd_britain.6.t
+	desc = gd_britain.6.d
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	major = yes
+	is_triggered_only = yes
+	
+	# Britain's Perspective
+	option = {
+		name = gd_britain.6.a
+		trigger = { tag = ENG }
+		ai_chance = { factor = 100 }
+		add_political_power = 25
+		add_stability = 0.05
+	}
+	
+	# Dominion Perspective
+	option = {
+		name = gd_britain.6.b
+		trigger = { 
+			OR = {
+				tag = CAN
+				tag = AST
+				tag = NZL
+				tag = SAF
+			}
+		}
+		ai_chance = { factor = 100 }
+	}
+	
+	# Other Nations
+	option = {
+		name = gd_britain.6.c
+		trigger = { 
+			NOT = { tag = ENG }
+			NOT = { tag = CAN }
+			NOT = { tag = AST }
+			NOT = { tag = NZL }
+			NOT = { tag = SAF }
+		}
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Colonial Crisis: India
+country_event = {
+	id = gd_britain.10
+	title = gd_britain.10.t
+	desc = gd_britain.10.d
+	picture = GFX_report_event_generic_rally
+	
+	trigger = {
+		tag = ENG
+		has_idea = great_depression
+		date > 1930.3.12
+		date < 1930.4.12
+	}
+	
+	fire_only_once = yes
+	
+	# Crack Down
+	option = {
+		name = gd_britain.10.a
+		add_political_power = -25
+		add_stability = -0.05
+		add_war_support = 0.05
+	}
+	
+	# Negotiate
+	option = {
+		name = gd_britain.10.b
+		add_political_power = 25
+		add_stability = 0.05
+		add_war_support = -0.05
+		custom_effect_tooltip = ENG_india_autonomy_increased
+	}
+}
+
+# Colonial Crisis: Middle East
+country_event = {
+	id = gd_britain.11
+	title = gd_britain.11.t
+	desc = gd_britain.11.d
+	picture = GFX_report_event_generic_ruins
+	
+	trigger = {
+		tag = ENG
+		has_idea = great_depression
+		date > 1931.5.1
+		date < 1931.6.1
+	}
+	
+	fire_only_once = yes
+	
+	# Maintain Control
+	option = {
+		name = gd_britain.11.a
+		add_political_power = -25
+		add_stability = -0.05
+		add_war_support = 0.05
+	}
+	
+	# Concessions
+	option = {
+		name = gd_britain.11.b
+		add_political_power = 25
+		add_stability = 0.05
+		custom_effect_tooltip = ENG_middle_east_autonomy_increased
+	}
+}
+
+# Anglo-German Naval Agreement
+country_event = {
+	id = gd_britain.20
+	title = gd_britain.20.t
+	desc = gd_britain.20.d
+	picture = GFX_report_event_generic_naval_treaty
+	
+	trigger = {
+		tag = ENG
+		has_completed_focus = ENG_london_naval_treaty
+		date > 1935.6.1
+		date < 1935.7.1
+	}
+	
+	fire_only_once = yes
+	
+	# Accept Agreement
+	option = {
+		name = gd_britain.20.a
+		add_political_power = 25
+		add_war_support = -0.05
+		GER = {
+			country_event = { id = gd_britain.21 }
+		}
+	}
+	
+	# Reject Agreement
+	option = {
+		name = gd_britain.20.b
+		add_political_power = -25
+		add_war_support = 0.05
+		GER = {
+			country_event = { id = gd_britain.22 }
+		}
+	}
+}
+
+# German Response to Naval Agreement (Accepted)
+country_event = {
+	id = gd_britain.21
+	title = gd_britain.21.t
+	desc = gd_britain.21.d
+	picture = GFX_report_event_generic_naval_treaty
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = gd_britain.21.a
+		add_political_power = 25
+		navy_experience = 50
+		add_opinion_modifier = {
+			target = ENG
+			modifier = medium_increase
+		}
+	}
+}
+
+# German Response to Naval Agreement (Rejected)
+country_event = {
+	id = gd_britain.22
+	title = gd_britain.22.t
+	desc = gd_britain.22.d
+	picture = GFX_report_event_generic_naval_treaty
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = gd_britain.22.a
+		add_political_power = -25
+		add_opinion_modifier = {
+			target = ENG
+			modifier = medium_decrease
+		}
+	}
+}
+
+# Economic Recovery
+country_event = {
+	id = gd_britain.30
+	title = gd_britain.30.t
+	desc = gd_britain.30.d
+	picture = GFX_report_event_generic_factory
+	
+	trigger = {
+		tag = ENG
+		has_idea = economic_recovery
+		has_completed_focus = ENG_weather_the_storm
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = gd_britain.30.a
+		remove_ideas = economic_recovery
+		add_political_power = 50
+		add_stability = 0.10
+		add_war_support = 0.05
+	}
+}

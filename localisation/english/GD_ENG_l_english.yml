@@ -1,0 +1,217 @@
+﻿l_english:
+ # Focus Tree
+ ENG_depression_crisis:0 "The Great Depression"
+ ENG_depression_crisis_desc:0 "The Wall Street Crash of 1929 has sent shockwaves through the British economy. As a global financial center, London is particularly vulnerable to international economic turmoil. We must respond swiftly and decisively to prevent long-term damage to our economy and preserve Britain's global standing."
+ 
+ ENG_economic_response:0 "Economic Response"
+ ENG_economic_response_desc:0 "The economic crisis demands a coherent policy response. Should we follow conservative principles of balanced budgets and fiscal restraint, or embrace newer economic theories advocating government intervention and deficit spending? Our choice will shape Britain's recovery from the Depression."
+ 
+ # Conservative Path
+ ENG_national_government:0 "Form a National Government"
+ ENG_national_government_desc:0 "The severity of the economic crisis requires political unity. By forming a National Government representing all major parties, we can implement difficult but necessary measures with broader support and prevent radical political movements from exploiting economic discontent."
+ 
+ ENG_maintain_gold_standard:0 "Maintain the Gold Standard"
+ ENG_maintain_gold_standard_desc:0 "Despite increasing pressure, maintaining the Gold Standard is essential for international confidence in sterling. By keeping our currency pegged to gold, we demonstrate fiscal discipline and maintain London's position as a global financial center, even if this limits our monetary policy options."
+ 
+ ENG_imperial_preference:0 "Imperial Preference System"
+ ENG_imperial_preference_desc:0 "By establishing preferential trade agreements within the Empire, we can insulate ourselves from the collapse in international trade. This system of imperial preference will create a protected economic zone, benefiting both Britain and its Dominions while reducing dependence on unstable foreign markets."
+ 
+ ENG_balanced_budget:0 "Balanced Budget Measures"
+ ENG_balanced_budget_desc:0 "Restoring confidence in government finances requires strict fiscal discipline. We must implement spending cuts, even in sensitive areas like unemployment benefits and public services, to balance the budget and demonstrate our commitment to sound financial management."
+ 
+ ENG_reduce_unemployment_benefits:0 "Means-Test Unemployment Benefits"
+ ENG_reduce_unemployment_benefits_desc:0 "The growing cost of unemployment benefits threatens our fiscal stability. By implementing a means test, we can ensure assistance goes only to those truly in need, reducing government expenditure while maintaining a basic safety net for the most vulnerable."
+ 
+ ENG_special_areas_act:0 "Special Areas Act"
+ ENG_special_areas_act_desc:0 "Certain regions have been particularly devastated by the Depression. The Special Areas Act will target government assistance to the most depressed areas, stimulating recovery through infrastructure projects and industrial development while maintaining overall fiscal discipline."
+ 
+ # Labour Path
+ ENG_labour_solutions:0 "Labour Economic Solutions"
+ ENG_labour_solutions_desc:0 "The Labour Party advocates more interventionist approaches to economic recovery, inspired by emerging Keynesian economic theories. By increasing government spending and intervention, we can stimulate demand, create jobs, and address the social consequences of the Depression more directly."
+ 
+ ENG_abandon_gold_standard:0 "Abandon the Gold Standard"
+ ENG_abandon_gold_standard_desc:0 "The Gold Standard has become an economic straitjacket, limiting our ability to respond to the Depression. By abandoning it, we can devalue sterling, boost exports, and gain the freedom to pursue more expansionary monetary policies that will accelerate economic recovery."
+ 
+ ENG_keynesian_economics:0 "Embrace Keynesian Economics"
+ ENG_keynesian_economics_desc:0 "John Maynard Keynes's revolutionary economic theories suggest that during downturns, government should increase spending to stimulate demand, even if this means running budget deficits. By embracing these principles, we can break the cycle of economic decline and accelerate recovery."
+ 
+ ENG_public_works_programme:0 "National Public Works Program"
+ ENG_public_works_programme_desc:0 "A comprehensive program of public works will provide employment while improving national infrastructure. From road construction to housing projects, these initiatives will put people back to work, increase purchasing power, and create assets of lasting value to the nation."
+ 
+ ENG_expand_social_services:0 "Expand Social Services"
+ ENG_expand_social_services_desc:0 "The Depression has exposed the inadequacies in our social safety net. By expanding unemployment insurance, health services, and housing programs, we can alleviate immediate suffering while creating a more robust system of social protection for the future."
+ 
+ ENG_nationalization_programme:0 "Strategic Nationalization"
+ ENG_nationalization_programme_desc:0 "Certain key industries are too important to be left to faltering private enterprise during this crisis. By nationalizing utilities, transportation, and other critical sectors, we can ensure their continued operation, protect jobs, and direct investment where it is most needed for national recovery."
+ 
+ # Imperial Management Branch
+ ENG_imperial_management:0 "Imperial Crisis Management"
+ ENG_imperial_management_desc:0 "The Depression threatens not only Britain but our entire Empire. We must strengthen imperial economic and political ties to weather this global storm together, while addressing growing tensions in certain colonies where economic hardship has intensified nationalist sentiments."
+ 
+ ENG_imperial_conference:0 "Call Imperial Conference"
+ ENG_imperial_conference_desc:0 "An Imperial Conference will bring together representatives from across the Empire to coordinate our response to the Depression. By working together, we can develop mutual support mechanisms and strengthen the economic ties that bind our global community of nations."
+ 
+ ENG_statute_of_westminster:0 "Statute of Westminster"
+ ENG_statute_of_westminster_desc:0 "The Statute of Westminster will formalize the constitutional relationship between Britain and the Dominions, recognizing their autonomy while maintaining the unity of the Empire. This balanced approach will strengthen imperial bonds during this time of economic crisis."
+ 
+ ENG_colonial_development:0 "Colonial Development Program"
+ ENG_colonial_development_desc:0 "Our colonies require investment to develop their economies and improve living standards. Through the Colonial Development Fund, we can finance infrastructure projects that will boost colonial production, create markets for British goods, and maintain stability in these vital territories."
+ 
+ ENG_colonial_resources:0 "Develop Colonial Resources"
+ ENG_colonial_resources_desc:0 "Our colonies contain vast untapped resources that could support imperial recovery. By investing in resource extraction and development projects in Africa, Asia, and the Middle East, we can secure vital raw materials for British industry while creating economic opportunities in colonial territories."
+ 
+ ENG_imperial_trade_network:0 "Imperial Trade Network"
+ ENG_imperial_trade_network_desc:0 "A comprehensive system of imperial trade, combining preferential tariffs with improved transportation links, will create a resilient economic network spanning the globe. This Imperial Trade Network will protect all members from external economic shocks while maximizing mutual prosperity."
+ 
+ # Rearmament Branch
+ ENG_rearmament_debate:0 "The Rearmament Debate"
+ ENG_rearmament_debate_desc:0 "As international tensions rise, Britain faces difficult choices about military preparedness. The economic burden of rearmament must be weighed against growing threats, while public opinion remains divided between those advocating peace through strength and those supporting international disarmament efforts."
+ 
+ ENG_limited_rearmament:0 "Limited Rearmament Program"
+ ENG_limited_rearmament_desc:0 "While avoiding provocative militarization, a carefully calibrated rearmament program will address critical deficiencies in our defenses. This measured approach balances security needs with economic constraints, focusing on modernization rather than expansion of our armed forces."
+ 
+ ENG_disarmament_talks:0 "Lead Disarmament Talks"
+ ENG_disarmament_talks_desc:0 "Britain should champion international disarmament as the path to security and peace. By leading multilateral negotiations for arms limitation, we can reduce the risk of conflict while avoiding the economic burden of an arms race, allowing resources to be directed towards recovery from the Depression."
+ 
+ ENG_shadow_factories:0 "Shadow Factories Scheme"
+ ENG_shadow_factories_desc:0 "The Shadow Factories scheme will create dual-purpose industrial facilities that operate as civilian manufacturers in peacetime but can rapidly convert to military production if needed. This innovative approach enhances our war potential without placing immediate strain on the recovering economy."
+ 
+ ENG_naval_expansion:0 "Naval Rearmament Program"
+ ENG_naval_expansion_desc:0 "Britain's security depends on naval supremacy. A comprehensive naval rearmament program will modernize our fleet, addressing the challenges posed by new technologies and potential adversaries while maintaining our traditional dominance of the seas."
+ 
+ ENG_london_naval_treaty:0 "London Naval Treaty"
+ ENG_london_naval_treaty_desc:0 "The London Naval Treaty will establish limits on naval construction among the major powers, preventing a costly arms race. By negotiating balanced restrictions, we can maintain relative naval strength while avoiding unnecessary expenditure during this time of economic constraint."
+ 
+ ENG_appeasement_policy:0 "Appeasement Policy"
+ ENG_appeasement_policy_desc:0 "A policy of appeasement towards potential aggressors offers the best hope for avoiding conflict. By making reasonable concessions and addressing legitimate grievances, we can preserve peace while continuing to focus on economic recovery and imperial consolidation."
+ 
+ ENG_RAF_expansion:0 "RAF Expansion Scheme"
+ ENG_RAF_expansion_desc:0 "The rapid development of air power requires a significant expansion of the Royal Air Force. The RAF Expansion Scheme will increase our fighter and bomber forces, enhance air defenses, and develop the industrial capacity needed to maintain aerial superiority in any future conflict."
+ 
+ ENG_strengthen_empire:0 "Strengthen Imperial Defenses"
+ ENG_strengthen_empire_desc:0 "The security of our far-flung Empire requires enhanced defensive capabilities across multiple continents. By strengthening key naval bases, improving garrison forces, and developing colonial military units, we can protect imperial interests worldwide without overextending our resources."
+ 
+ ENG_abdication_crisis:0 "The Abdication Crisis"
+ ENG_abdication_crisis_desc:0 "King Edward VIII's desire to marry American divorcée Wallis Simpson has precipitated a constitutional crisis. The monarch's personal wishes conflict with his role as head of the Church of England, forcing a difficult choice that will test the stability of Britain's institutions during an already challenging period."
+ 
+ ENG_weather_the_storm:0 "Weather the Storm"
+ ENG_weather_the_storm_desc:0 "Britain has endured some of its most challenging years since the Great War. Through careful management, political stability, and the resilience of our people, we have weathered the storm of the Great Depression and emerged ready to face the uncertain future with renewed strength and determination."
+ 
+ # Ideas Localization
+ ENG_gold_standard:0 "Gold Standard"
+ ENG_gold_standard_desc:0 "Britain's adherence to the Gold Standard maintains international confidence in sterling but limits our ability to use monetary policy to combat the Depression."
+ 
+ ENG_national_government_idea:0 "National Government"
+ ENG_national_government_idea_desc:0 "A coalition government representing all major parties provides political stability during the economic crisis but may struggle to implement bold reforms."
+ 
+ ENG_labour_reforms:0 "Labour Economic Reforms"
+ ENG_labour_reforms_desc:0 "Progressive economic policies focused on government intervention, social welfare, and increased public spending to stimulate recovery from the Depression."
+ 
+ ENG_austerity_measures:0 "Austerity Measures"
+ ENG_austerity_measures_desc:0 "Severe cuts to government spending and public services intended to balance the budget and restore financial confidence, despite their unpopularity and social impact."
+ 
+ ENG_imperial_preference_idea:0 "Imperial Preference System"
+ ENG_imperial_preference_idea_desc:0 "A system of preferential trade agreements within the Empire, creating a protected economic zone that reduces dependence on international markets affected by the Depression."
+ 
+ ENG_public_works:0 "Public Works Program"
+ ENG_public_works_desc:0 "A comprehensive program of government-funded infrastructure projects providing employment while improving roads, housing, and public facilities across the nation."
+ 
+ ENG_keynesian_policy:0 "Keynesian Economic Policy"
+ ENG_keynesian_policy_desc:0 "Economic policies based on John Maynard Keynes's theories, using government spending to stimulate demand and accepting budget deficits during economic downturns."
+ 
+ ENG_statute_of_westminster_idea:0 "Statute of Westminster"
+ ENG_statute_of_westminster_idea_desc:0 "Constitutional legislation formalizing the autonomy of the Dominions while maintaining the unity of the Empire under the British Crown."
+ 
+ ENG_colonial_resources_idea:0 "Colonial Resource Development"
+ ENG_colonial_resources_idea_desc:0 "Intensive development of resource extraction in colonial territories, securing vital raw materials for British industry while creating limited economic opportunities in the colonies."
+ 
+ ENG_imperial_trade_network_idea:0 "Imperial Trade Network"
+ ENG_imperial_trade_network_idea_desc:0 "A comprehensive system of imperial trade integrating the economies of Britain and its Empire through preferential tariffs, shipping subsidies, and coordinated economic policies."
+ 
+ ENG_limited_rearmament_idea:0 "Limited Rearmament Program"
+ ENG_limited_rearmament_idea_desc:0 "A measured program of military modernization addressing critical deficiencies while avoiding the economic strain of full rearmament or the diplomatic implications of obvious militarization."
+ 
+ ENG_disarmament_negotiations:0 "Disarmament Negotiations"
+ ENG_disarmament_negotiations_desc:0 "British leadership in international disarmament talks, seeking to prevent an arms race through negotiated limitations on military forces among the major powers."
+ 
+ ENG_appeasement_policy_idea:0 "Appeasement Policy"
+ ENG_appeasement_policy_idea_desc:0 "A foreign policy based on avoiding conflict through conciliation and negotiation with potential aggressors, prioritizing peace and economic recovery over confrontation."
+ 
+ ENG_imperial_defense_idea:0 "Imperial Defense Strategy"
+ ENG_imperial_defense_idea_desc:0 "A coordinated approach to defending the Empire through strategically placed naval bases, garrison forces, and local defense units across multiple continents."
+ 
+ # Political Advisor Traits
+ keynesian_economist:0 "Keynesian Economist"
+ keynesian_economist_desc:0 "An advocate of government intervention and deficit spending to combat economic depression."
+ 
+ fiscal_conservative:0 "Fiscal Conservative"
+ fiscal_conservative_desc:0 "A proponent of balanced budgets, limited government spending, and free market solutions to economic problems."
+ 
+ imperial_advocate:0 "Imperial Advocate"
+ imperial_advocate_desc:0 "A champion of the British Empire who promotes stronger economic and political ties between Britain and its overseas territories."
+ 
+ # Event Localization
+ gd_britain.1.t:0 "The Wall Street Crash Reaches Britain"
+ gd_britain.1.d:0 "The financial crash that began on Wall Street has rapidly spread to the London markets. Share prices are plummeting, and panic is spreading through the City. As a major international financial center and trading nation, Britain is particularly vulnerable to this global economic disruption. Initial reports indicate severe impacts on export industries, while financial institutions struggle to maintain stability amid growing uncertainty. The government faces difficult decisions as the full extent of the crisis becomes apparent."
+ gd_britain.1.a:0 "Britain must weather this storm"
+ 
+ gd_britain.2.t:0 "The 1931 Financial Crisis"
+ gd_britain.2.d:0 "Britain's adherence to the Gold Standard has become unsustainable as international investors withdraw gold from London, threatening the pound sterling. The Labour government under Ramsay MacDonald is deeply divided over proposed austerity measures, including cuts to unemployment benefits. This political paralysis has worsened the financial crisis, leading to calls for a National Government that would unite all major parties behind a program of economic stabilization."
+ gd_britain.2.a:0 "Form a National Government under MacDonald"
+ gd_britain.2.b:0 "Maintain the Labour Government despite the risks"
+ 
+ gd_britain.3.t:0 "The Ottawa Imperial Conference"
+ gd_britain.3.d:0 "Representatives from across the British Empire have gathered in Ottawa to discuss economic cooperation in response to the Depression. The conference presents an opportunity to establish a system of Imperial Preference, creating a protected economic zone through preferential tariffs within the Empire. However, some delegates argue for maintaining Britain's traditional commitment to international free trade, suggesting the Empire should lead efforts to reduce global trade barriers rather than create its own economic bloc."
+ gd_britain.3.a:0 "Implement Imperial Preference"
+ gd_britain.3.b:0 "Focus on international trade agreements"
+ 
+ gd_britain.4.t:0 "Britain Abandons the Gold Standard"
+ gd_britain.4.d:0 "After months of financial pressure, Britain has officially abandoned the Gold Standard, ending the fixed exchange rate between sterling and gold. This momentous decision, seen as inevitable by many economists, frees the government to pursue more flexible monetary policies. The immediate effect has been a significant devaluation of the pound, which should boost British exports but increases the cost of imports. Financial markets have responded with cautious optimism to this long-awaited policy shift."
+ gd_britain.4.a:0 "A necessary step for recovery"
+ 
+ gd_britain.5.t:0 "The Abdication Crisis"
+ gd_britain.5.d:0 "King Edward VIII's determination to marry American divorcée Wallis Simpson has triggered a constitutional crisis. As Supreme Governor of the Church of England, which opposes remarriage after divorce, Edward cannot marry Mrs. Simpson and remain king. Prime Minister Baldwin has made it clear that the government would resign if the King persisted with the marriage. After weeks of tension, Edward appears ready to make his choice between the crown and Mrs. Simpson, with profound implications for the monarchy and the nation."
+ gd_britain.5.a:0 "The King chooses to abdicate"
+ 
+ gd_britain.6.t:0 "Edward VIII Abdicates the Throne"
+ gd_britain.6.d:0 "In an unprecedented move, King Edward VIII has abdicated the British throne after less than a year as monarch. In a radio broadcast to the nation, Edward explained that he found it impossible to carry out his duties 'without the help and support of the woman I love.' His brother, the Duke of York, will now become King George VI. The abdication has sent shockwaves through the Empire, though many politicians privately express relief at the resolution of the crisis. The new King, though less charismatic than his brother, is widely respected for his sense of duty."
+ gd_britain.6.a:0 "A difficult but necessary transition"
+ gd_britain.6.b:0 "The Empire remains united under the Crown"
+ gd_britain.6.c:0 "An interesting development in Britain"
+ 
+ gd_britain.10.t:0 "Salt March in India"
+ gd_britain.10.d:0 "Mahatma Gandhi has begun a mass protest against the British salt monopoly in India, leading followers on a 240-mile march to the sea to produce salt illegally. This 'Salt March' has captured attention worldwide and sparked widespread civil disobedience across India. The economic hardship of the Depression has intensified Indian resentment of colonial policies, making this a particularly dangerous moment for British rule in the subcontinent. The government must decide whether to crack down on the protesters or seek negotiations with Indian nationalist leaders."
+ gd_britain.10.a:0 "Maintain order through firm measures"
+ gd_britain.10.b:0 "Begin cautious negotiations with moderate leaders"
+ 
+ gd_britain.11.t:0 "Unrest in the Middle East"
+ gd_britain.11.d:0 "British mandates in the Middle East are experiencing growing nationalist unrest as the economic effects of the Depression intensify local grievances. In Iraq, there are increasing demands for full independence, while in Palestine, tensions between Arab and Jewish communities threaten stability. The cost of maintaining imperial control is becoming increasingly burdensome during this time of economic constraint, prompting debate about whether to strengthen British presence or grant greater autonomy to reduce costs and resistance."
+ gd_britain.11.a:0 "Reinforce British authority in the region"
+ gd_britain.11.b:0 "Grant limited autonomy to reduce tensions"
+ 
+ gd_britain.20.t:0 "Anglo-German Naval Agreement"
+ gd_britain.20.d:0 "Germany has proposed a naval agreement that would allow them to build up to 35% of the size of the Royal Navy's surface fleet and 45% of its submarine force. This would effectively legitimize German rearmament in violation of the Versailles Treaty but would maintain British naval superiority and potentially avoid an unrestricted naval race. The Admiralty sees potential advantages in regulating German naval expansion, but critics argue this undermines the Versailles Treaty and alienates France, our key continental ally."
+ gd_britain.20.a:0 "Accept the agreement"
+ gd_britain.20.b:0 "Reject the German proposal"
+ 
+ gd_britain.21.t:0 "Britain Accepts Naval Agreement"
+ gd_britain.21.d:0 "The British government has accepted our proposed naval agreement, allowing Germany to build up to 35% of the size of the Royal Navy. This represents a significant diplomatic victory, effectively ending one of the major military restrictions imposed by the Versailles Treaty. The agreement acknowledges Germany's status as a major European power while avoiding a potentially costly naval arms race with Britain. Our naval construction program can now proceed with international recognition, though we must be careful not to exceed the agreed limits and risk British opposition."
+ gd_britain.21.a:0 "A triumph for German diplomacy"
+ 
+ gd_britain.22.t:0 "Britain Rejects Naval Agreement"
+ gd_britain.22.d:0 "The British government has rejected our proposed naval agreement, refusing to recognize Germany's right to rebuild its fleet beyond the severe limitations imposed by the Versailles Treaty. This diplomatic setback reinforces our international isolation and suggests Britain remains committed to the post-war system that keeps Germany in a subordinate position. We must now reconsider our naval strategy, either proceeding with rearmament regardless of British opposition or seeking alternative diplomatic approaches to revise the Versailles restrictions."
+ gd_britain.22.a:0 "We will remember this rejection"
+ 
+ gd_britain.30.t:0 "Britain Recovers from the Depression"
+ gd_britain.30.d:0 "After years of economic hardship, Britain has finally emerged from the Great Depression. Industrial production has returned to pre-crash levels, unemployment has significantly decreased, and financial markets have stabilized. The economic policies implemented during the crisis years have borne fruit, though the experience has left lasting changes in Britain's economic structure and social fabric. With recovery secured, attention is increasingly turning to the deteriorating international situation and the challenges that may lie ahead."
+ gd_britain.30.a:0 "Britain stands strong once more"
+ 
+ # Tool Tips
+ ENG_dominion_relations_improved:0 "§GRelations with the Dominions will improve§!"
+ ENG_middle_east_autonomy_increased:0 "§GLocal autonomy in Middle Eastern territories will increase§!"
+ ENG_india_autonomy_increased:0 "§GIndian autonomy will gradually increase§!"
+
+ # Political Advisor Names
+ ENG_john_maynard_keynes:0 "John Maynard Keynes"
+ ENG_neville_chamberlain:0 "Neville Chamberlain"
+ ENG_leopold_amery:0 "Leopold Amery"
