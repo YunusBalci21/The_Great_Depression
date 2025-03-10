@@ -1,0 +1,137 @@
+﻿l_english:
+ # Hyperinflation Memory
+ germany.1.t:0 "Memory of Hyperinflation"
+ germany.1.d:0 "The stock market crash in America has triggered fears of a repeat of the 1923 hyperinflation, which devastated the German middle class and eroded faith in the Weimar Republic. Though our current economic situation is different, the psychological impact of those memories cannot be underestimated. Many Germans are hoarding gold and foreign currency, further destabilizing our financial system."
+ germany.1.a:0 "The scars run deep"
+ 
+ # Young Plan
+ germany.2.t:0 "The Young Plan"
+ germany.2.d:0 "The Young Plan, negotiated before the economic crisis, was intended to reduce Germany's reparation burden. However, in the current climate, even these reduced payments seem unsustainable. Nationalist groups are using the plan as proof that foreign powers seek to keep Germany subjugated forever, while moderates argue that rejecting the plan would destroy any goodwill with the Allies."
+ germany.2.a:0 "Accept the plan despite the difficulties"
+ germany.2.b:0 "Protest the continuing burden"
+ 
+ # German Banking Crisis
+ germany.3.t:0 "German Banking Crisis"
+ germany.3.d:0 "The failure of Creditanstalt, Austria's largest bank, has triggered a banking crisis that has spread to Germany. The Danatbank, one of our largest financial institutions, has collapsed, and others are teetering on the brink. Panicked depositors are withdrawing funds en masse, threatening the entire financial system. Without immediate intervention, the German banking system could completely collapse."
+ germany.3.a:0 "This threatens the entire economy"
+ 
+ # Brüning's Emergency Decrees
+ germany.4.t:0 "Brüning's Emergency Decrees"
+ germany.4.d:0 "Chancellor Heinrich Brüning, faced with economic collapse and a deadlocked Reichstag, has proposed a series of emergency decrees using Article 48 of the constitution. These measures include wage and price reductions, tax increases, and spending cuts. While potentially necessary to stabilize the economy, these austerity measures will undoubtedly increase public suffering and political unrest."
+ germany.4.a:0 "Implement the emergency decrees"
+ germany.4.b:0 "Seek alternative solutions"
+ 
+ # Rise of the NSDAP
+ germany.5.t:0 "Rise of the NSDAP"
+ germany.5.d:0 "The economic crisis and political instability have fueled the rise of extremist parties, with the National Socialist German Workers' Party (NSDAP) making dramatic gains in recent elections. Led by Adolf Hitler, the party blames the Weimar Republic, the Treaty of Versailles, Jews, and communists for Germany's problems, promising national renewal through radical action. Their brownshirted SA paramilitaries have become an intimidating presence on German streets."
+ germany.5.a:0 "A concerning development"
+ 
+ # Von Papen Government
+ germany.6.t:0 "Von Papen Forms Government"
+ germany.6.d:0 "Following Brüning's resignation, President Hindenburg has appointed Franz von Papen as Chancellor. Von Papen, a conservative aristocrat with minimal popular support, heads a 'cabinet of barons' comprised mainly of noblemen and industrialists. With little backing in the Reichstag, this government will rely heavily on presidential emergency decrees to govern, further weakening Germany's democratic institutions."
+ germany.6.a:0 "A government without popular support"
+ 
+ # Presidential Election
+ germany.7.t:0 "Presidential Election"
+ germany.7.d:0 "The Presidential election has concluded with the aging Field Marshal Paul von Hindenburg defeating Adolf Hitler. Despite Hitler's energetic campaign and the NSDAP's growing popularity, many Germans still trust the 84-year-old war hero to provide stability in these troubled times. However, with over 13 million votes for Hitler, the NSDAP has demonstrated its considerable popular support."
+ germany.7.a:0 "Hindenburg remains President"
+ 
+ # Hitler Appointed Chancellor
+ germany.8.t:0 "Hitler Appointed Chancellor"
+ germany.8.d:0 "President Hindenburg has appointed Adolf Hitler as Chancellor of Germany, with Franz von Papen as Vice-Chancellor. Conservative politicians believed they could control Hitler by surrounding him with traditional conservative ministers. Hitler's appointment comes after months of political intrigue and backroom deals. NSDAP supporters are celebrating in the streets, while others fear what this development means for German democracy."
+ germany.8.a:0 "A new chapter in German history begins"
+ 
+ # Reichstag Fire
+ germany.9.t:0 "The Reichstag Fire"
+ germany.9.d:0 "Last night, the Reichstag building was devastated by fire. The police have arrested Marinus van der Lubbe, a Dutch communist, at the scene. Nazi leaders immediately claimed the fire was part of a communist plot to overthrow the government. This incident provides an opportunity to implement emergency measures against the communist threat, though some suspect the Nazis themselves may have been involved."
+ germany.9.a:0 "Use this to crush communist opposition"
+ 
+ # Enabling Act
+ germany.10.t:0 "The Enabling Act"
+ germany.10.d:0 "Following the Reichstag fire, the government has proposed the 'Law to Remedy the Distress of People and Reich,' commonly known as the Enabling Act. This law would allow the Chancellor to enact laws without the approval of the Reichstag for a period of four years. With the Communist deputies arrested and the SA intimidating remaining opposition, the law is expected to pass, effectively ending German democracy."
+ germany.10.a:0 "Democracy gives way to dictatorship"
+ 
+ # Communist Uprising
+ germany.11.t:0 "Communist Uprising"
+ germany.11.d:0 "Communist revolutionaries, led by the KPD (Communist Party of Germany), have launched an uprising in major cities across Germany. Red flags fly over government buildings in some areas, and street fighting has broken out between communist militias, police, and right-wing paramilitaries. The German state, already weakened by economic crisis, now faces an existential threat from within."
+ germany.11.a:0 "The revolution has begun!"
+ 
+ # Communist Victory
+ germany.12.t:0 "Communist Victory"
+ germany.12.d:0 "After weeks of intense fighting, the communist revolutionaries have emerged victorious. A Soviet-style workers' republic has been proclaimed in Berlin, with other major cities falling under communist control. The old government has collapsed, and the KPD is now establishing a new political order based on Marxist-Leninist principles. The Soviet Union has sent congratulations and offers of assistance to the new German workers' state."
+ germany.12.a:0 "Germany becomes a workers' paradise"
+ 
+ # Democratic Stabilization
+ germany.13.t:0 "Democratic Forces Prevail"
+ germany.13.d:0 "Despite immense pressure from both the far-right and far-left, democratic forces have managed to stabilize the situation. A broad coalition of democratic parties has formed a government committed to preserving the Weimar Republic while implementing necessary reforms. Though significant challenges remain, this represents a triumph for democratic governance in the face of extremism."
+ germany.13.a:0 "Democracy will endure"
+ 
+ # Economic Recovery Beginning
+ germany.14.t:0 "First Signs of Recovery"
+ germany.14.d:0 "After years of economic hardship, the first signs of recovery are appearing across Germany. Factory production is increasing, unemployment is beginning to decrease, and consumer spending is cautiously rising. While far from a complete recovery, these positive indicators suggest that the worst of the depression may be behind us. The government's economic policies appear to be bearing fruit."
+ germany.14.a:0 "At last, signs of improvement"
+ 
+ # German Remilitarization of the Rhineland
+ germany.15.t:0 "Remilitarize the Rhineland?"
+ germany.15.d:0 "The Treaty of Versailles demilitarized the Rhineland, forbidding German military forces from entering this strategically important region bordering France. This restriction has long been seen as a national humiliation. With our military strength growing and international attention focused elsewhere, we now have the opportunity to reclaim full sovereignty over all German territory by sending troops into the Rhineland."
+ germany.15.a:0 "Send in the troops"
+ germany.15.b:0 "The time is not yet right"
+ 
+ # French Response to Rhineland
+ germany.16.t:0 "Germany Remilitarizes the Rhineland"
+ germany.16.d:0 "German troops have entered the demilitarized Rhineland in direct violation of the Treaty of Versailles. This provocative action threatens France's security and challenges the post-war order. Our military advisors suggest that the German force is small and would likely retreat if challenged, but any military response risks escalation into open conflict."
+ germany.16.a:0 "We must avoid another war at all costs"
+ germany.16.b:0 "This violation cannot stand"
+ 
+ # French Accept Remilitarization
+ germany.17.t:0 "France Accepts Rhineland Remilitarization"
+ germany.17.d:0 "France has chosen not to respond militarily to our remilitarization of the Rhineland. This significant diplomatic victory restores German sovereignty over all our territory and demonstrates the weakness of the Versailles system. Our successful gamble has increased national prestige and strengthened the government's position both domestically and internationally."
+ germany.17.a:0 "A triumph for German sovereignty"
+ 
+ # French Oppose Remilitarization
+ germany.18.t:0 "France Opposes Rhineland Remilitarization"
+ germany.18.d:0 "France has strongly condemned our remilitarization of the Rhineland and is threatening military action. Our forces in the region are limited and would be quickly overwhelmed in case of a French offensive. We must decide whether to stand firm and risk war, or withdraw our forces and suffer a major diplomatic humiliation."
+ germany.18.a:0 "We will not back down"
+ germany.18.b:0 "We must withdraw to avoid war"
+ 
+ # Anschluss with Austria
+ germany.20.t:0 "Anschluss with Austria"
+ germany.20.d:0 "With our growing strength and confidence, the time has come to fulfill the dream of uniting all Germans in a single Reich. Austria, our German-speaking neighbor, is a natural candidate for incorporation into Greater Germany. While there may be some international opposition, the principle of national self-determination supports our claim that Germans should be united under one government."
+ germany.20.a:0 "Demand union with Austria"
+ 
+ # Austria's Response to Anschluss
+ germany.21.t:0 "Germany Demands Anschluss"
+ germany.21.d:0 "Germany has formally demanded the unification of Austria with the German Reich. They claim this 'Anschluss' would fulfill the principle of national self-determination by uniting the German people. Our military is no match for theirs, and international support appears limited. We must decide whether to accept this demand or attempt to maintain our independence despite the overwhelming odds."
+ germany.21.a:0 "We have no choice but to accept"
+ germany.21.b:0 "Austria will remain independent!"
+ 
+ # Anschluss Completed
+ germany.22.t:0 "Anschluss Completed"
+ germany.22.d:0 "The Anschluss with Austria has been completed peacefully. German troops were greeted by cheering crowds as they entered Vienna and other Austrian cities. The incorporation of Austria adds 6 million Germans to the Reich and provides strategic depth as well as additional resources and industry. This historic achievement fulfills a longstanding nationalist dream of a Greater German Reich."
+ germany.22.a:0 "A historic day for the German people"
+ 
+ # Austria Resists
+ germany.23.t:0 "Austria Resists Anschluss"
+ germany.23.d:0 "Contrary to expectations, the Austrian government has rejected our demand for Anschluss and is mobilizing its forces to resist. While their military is no match for ours, this defiance is an embarrassment and will necessitate the use of force to achieve our objectives. International opinion may also turn against us if we are forced to invade."
+ germany.23.a:0 "They leave us no choice but war"
+ 
+ # German-Soviet Pact
+ germany.30.t:0 "German-Soviet Pact"
+ germany.30.d:0 "Negotiations with the Soviet Union have culminated in a comprehensive alliance between our two socialist states. This pact unites the two largest revolutionary powers in Europe against the capitalist nations. With Soviet resources and industrial might combined with German technology and geographic position, we form a formidable bloc that can challenge the established imperialist powers."
+ germany.30.a:0 "A historic alliance of revolutionary states"
+ 
+ # Soviet Perspective on Pact
+ germany.31.t:0 "Alliance with Communist Germany"
+ germany.31.d:0 "Following the communist revolution in Germany, our two nations have formed a powerful alliance. This historic development unites the two largest socialist states in the world and significantly alters the balance of power in Europe. With the industrial capacity of Germany combined with our vast resources and manpower, the world revolution now has unprecedented momentum."
+ germany.31.a:0 "The world revolution advances!"
+ 
+ # Franco-German Cooperation
+ germany.40.t:0 "Franco-German Cooperation"
+ germany.40.d:0 "Years of diplomatic effort have culminated in a historic agreement with France to pursue closer economic and political cooperation. This rapprochement between traditional enemies represents a significant step toward European stability and prosperity. By working together rather than against each other, both nations can better address economic challenges and secure a peaceful future."
+ germany.40.a:0 "A new era in Franco-German relations"
+ 
+ # French Perspective on Cooperation
+ germany.41.t:0 "Cooperation with Democratic Germany"
+ germany.41.d:0 "The German government has proposed a comprehensive agreement for economic and political cooperation between our nations. This represents a dramatic shift from the antagonism that has defined Franco-German relations for generations. While some remain skeptical, others see this as an historic opportunity to build a more stable and prosperous Europe through cooperation rather than competition."
+ germany.41.a:0 "Embrace this historic opportunity"
+ germany.41.b:0 "Proceed with caution"

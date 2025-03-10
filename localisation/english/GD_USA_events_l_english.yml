@@ -1,0 +1,230 @@
+﻿l_english:
+ # Stock Market Crash
+ usa.1.t:0 "Black Thursday: The Stock Market Crash"
+ usa.1.d:0 "On October 24, 1929, the New York Stock Exchange experienced an unprecedented collapse in share values. Panic selling caused the market to lose over 11% of its value in a single day. While some financial experts are attempting to calm fears, the crash has wiped out billions in paper wealth and threatens the stability of the entire financial system. President Hoover has called for calm, but it remains to be seen whether this is merely a temporary correction or the beginning of a more serious economic downturn."
+ usa.1.a:0 "This is just a temporary setback"
+ 
+ # Hoover's Initial Response
+ usa.2.t:0 "Hoover's Initial Response"
+ usa.2.d:0 "President Hoover has responded to the economic downturn by calling meetings with major industrial leaders, urging them to maintain wage levels and continue planned construction projects. He believes that voluntary cooperation among business leaders, rather than direct government intervention, is the best way to weather this financial storm. Hoover is confident that American business ingenuity and resilience will overcome these temporary difficulties without requiring significant federal action."
+ usa.2.a:0 "Voluntary cooperation will solve this"
+ usa.2.b:0 "We need to consider direct intervention"
+ 
+ # Banking Crisis Intensifies
+ usa.3.t:0 "Banking Crisis Intensifies"
+ usa.3.d:0 "As the economic situation deteriorates, America's banking system is showing signs of severe stress. Bank failures are accelerating across the country, with over 1,300 banks having closed this year alone. Depositors, fearing for their savings, are withdrawing funds en masse, creating a self-reinforcing cycle of bank runs and failures. Without decisive action, the entire financial infrastructure of the nation is at risk of collapse."
+ usa.3.a:0 "We must stabilize the banking system"
+ 
+ # Unemployment Crisis
+ usa.4.t:0 "Unemployment Crisis"
+ usa.4.d:0 "The economic downturn has now spread throughout the entire economy, resulting in massive layoffs across all sectors. Unemployment has reached unprecedented levels, with some estimates suggesting as many as 15 million Americans - nearly 25% of the workforce - are now without jobs. Breadlines and shanty towns are appearing in major cities, and the social fabric of the nation is under tremendous strain as families struggle to survive."
+ usa.4.a:0 "A national tragedy"
+ 
+ # Agricultural Collapse
+ usa.5.t:0 "Agricultural Collapse"
+ usa.5.d:0 "The American agricultural sector, already struggling throughout the 1920s, has now entered a full-blown crisis. Farm prices have collapsed, with wheat, cotton, and corn selling for a fraction of their pre-crash values. Many farmers, unable to meet mortgage payments, are facing foreclosure. Rural banks, heavily invested in agricultural loans, are failing at an alarming rate, further exacerbating the situation in America's heartland."
+ usa.5.a:0 "The heartland is suffering"
+ 
+ # Dust Bowl
+ usa.6.t:0 "The Dust Bowl"
+ usa.6.d:0 "Severe drought conditions combined with decades of poor farming practices have created an environmental catastrophe in the Great Plains. Massive dust storms are stripping away topsoil, destroying crops, and making life virtually impossible for farmers in affected regions. Thousands of farm families, having lost everything, are abandoning their land and migrating westward in search of work. This 'Dust Bowl' is exacerbating the already dire economic situation in rural America."
+ usa.6.a:0 "A man-made disaster"
+ 
+ # Bonus Army March
+ usa.7.t:0 "The Bonus Army Marches on Washington"
+ usa.7.d:0 "Thousands of World War I veterans and their families have established a makeshift camp in Washington, D.C., demanding immediate payment of service bonuses scheduled for 1945. Calling themselves the 'Bonus Expeditionary Force,' these veterans and their families are living in shacks and tents along the Anacostia River. Their presence is increasingly concerning to government officials, and President Hoover must decide how to respond to this unprecedented demonstration."
+ usa.7.a:0 "Evict them by force"
+ usa.7.b:0 "Negotiate with the veterans"
+ 
+ # 1932 Election
+ usa.8.t:0 "1932 Presidential Election"
+ usa.8.d:0 "In a decisive rejection of Herbert Hoover's handling of the economic crisis, the American electorate has overwhelmingly chosen Franklin D. Roosevelt as the next President. Roosevelt's campaign promised a 'New Deal' for the American people, though the specifics remain unclear. What is clear is that Americans have voted for change and expect the new administration to take more direct action to address the Depression than Hoover's largely hands-off approach."
+ usa.8.a:0 "Roosevelt wins in a landslide"
+ 
+ # Roosevelt Inauguration
+ usa.9.t:0 "Roosevelt's Inauguration"
+ usa.9.d:0 "Franklin D. Roosevelt has been inaugurated as the 32nd President of the United States amid the worst economic crisis in American history. In his inaugural address, Roosevelt sought to inspire confidence, famously declaring that 'the only thing we have to fear is fear itself.' He promised 'action, and action now,' indicating that his administration would take a much more active approach to fighting the Depression than his predecessor."
+ usa.9.a:0 "'The only thing we have to fear is fear itself'"
+ 
+ # Bank Holiday
+ usa.10.t:0 "Roosevelt Declares Bank Holiday"
+ usa.10.d:0 "In his first major act as President, Franklin D. Roosevelt has declared a nationwide banking holiday, closing all banks to prevent further runs and failures. This drastic measure aims to restore confidence in the financial system by giving the government time to inspect banks and authorize the reopening of only those deemed sound. The President has also called a special session of Congress to address the banking crisis through emergency legislation."
+ usa.10.a:0 "Declare a national banking holiday"
+ 
+ # Emergency Banking Act
+ usa.11.t:0 "Emergency Banking Act"
+ usa.11.d:0 "Congress has passed the Emergency Banking Act with remarkable speed, granting the President broad powers to regulate banking transactions and foreign exchange. The Act also provides for the reopening of banks under Treasury supervision and authorizes the Federal Reserve to issue additional currency. In a fireside chat, Roosevelt explained these measures to the American people, helping to restore public confidence in the banking system."
+ usa.11.a:0 "Restore confidence in the banking system"
+ 
+ # Civilian Conservation Corps
+ usa.12.t:0 "Civilian Conservation Corps Established"
+ usa.12.d:0 "The Roosevelt administration has established the Civilian Conservation Corps (CCC), a public work relief program that will employ young, unmarried men in conservation projects across the country. CCC workers will plant trees, build parks, roads, and bridges, and engage in soil erosion control in exchange for $30 per month, most of which will be sent directly to their families. The program aims to provide employment while improving America's natural resources."
+ usa.12.a:0 "Put young men to work"
+ 
+ # Agricultural Adjustment Act
+ usa.13.t:0 "Agricultural Adjustment Act"
+ usa.13.d:0 "Congress has passed the Agricultural Adjustment Act, a key piece of New Deal legislation aimed at raising farm prices by reducing agricultural surpluses. The Act provides for paying farmers to limit production, thereby increasing scarcity and driving up prices. While critics argue that destroying crops during a time of hunger is unconscionable, supporters maintain that restoring farm profitability is essential for economic recovery."
+ usa.13.a:0 "Help American farmers"
+ 
+ # Tennessee Valley Authority
+ usa.14.t:0 "Tennessee Valley Authority Established"
+ usa.14.d:0 "The Tennessee Valley Authority (TVA) has been established as a federally owned corporation to provide navigation, flood control, electricity generation, and economic development in the Tennessee Valley region, one of the areas hardest hit by the Depression. This ambitious project includes the construction of dams, hydroelectric power plants, and other infrastructure that will create jobs, control floods, and bring affordable electricity to a largely rural region."
+ usa.14.a:0 "Harness the power of the Tennessee River"
+ 
+ # National Industrial Recovery Act
+ usa.15.t:0 "National Industrial Recovery Act"
+ usa.15.d:0 "Congress has passed the National Industrial Recovery Act, establishing the National Recovery Administration (NRA) to combat the Depression through business-government cooperation. The NRA will work with industries to establish codes of fair competition, setting minimum wages, maximum hours, and prohibiting child labor. The Act also provides for public works projects through the Public Works Administration, aiming to create employment and stimulate the economy."
+ usa.15.a:0 "Establish fair competition codes"
+ 
+ # Social Security Act
+ usa.16.t:0 "Social Security Act"
+ usa.16.d:0 "The Social Security Act, one of the most significant pieces of New Deal legislation, has been signed into law. The Act establishes a system of old-age benefits, unemployment insurance, aid to dependent children, and grants to states for medical care. This landmark legislation creates America's first comprehensive social safety net, providing protection against what Roosevelt called the hazards of 'unemployment and old age.'"
+ usa.16.a:0 "Provide security for the elderly and unemployed"
+ 
+ # Wagner Act
+ usa.17.t:0 "National Labor Relations Act"
+ usa.17.d:0 "Congress has passed the National Labor Relations Act, commonly known as the Wagner Act, guaranteeing workers' rights to form unions and engage in collective bargaining. The Act prohibits unfair labor practices by employers and establishes the National Labor Relations Board to enforce these protections. This legislation represents a significant shift in government policy toward organized labor, providing legal protections for union activities previously opposed by both government and business."
+ usa.17.a:0 "Guarantee workers' right to organize"
+ 
+ # Fair Labor Standards Act
+ usa.18.t:0 "Fair Labor Standards Act"
+ usa.18.d:0 "Congress has passed the Fair Labor Standards Act, establishing a minimum wage, maximum work week, and prohibiting child labor in industries engaged in interstate commerce. The Act sets the minimum wage at 25 cents per hour and the maximum work week at 44 hours, to be reduced to 40 hours within three years. This legislation represents the culmination of decades of effort to establish basic labor standards at the federal level."
+ usa.18.a:0 "Establish minimum wage and ban child labor"
+ 
+ # Supreme Court Fight
+ usa.19.t:0 "Roosevelt's Supreme Court Plan"
+ usa.19.d:0 "President Roosevelt, frustrated by Supreme Court decisions striking down key New Deal legislation, has proposed a controversial plan to add up to six new justices to the Court. The President claims this 'court-packing' plan is necessary to improve the Court's efficiency, but critics see it as an attempt to undermine judicial independence. The proposal has sparked intense debate and threatens to divide the Democratic Party and the nation."
+ usa.19.a:0 "Push for Court reform"
+ usa.19.b:0 "Accept the Court's authority"
+ 
+ # Tax Cuts
+ usa.20.t:0 "Tax Reduction Plan"
+ usa.20.d:0 "The administration has implemented a series of tax cuts aimed at stimulating economic activity by leaving more money in the hands of businesses and individuals. Proponents argue that these reductions will encourage investment and consumption, helping to restart the stalled economy. Critics contend that reduced government revenue will limit the federal government's ability to provide necessary relief and recovery programs during this time of crisis."
+ usa.20.a:0 "Stimulate the economy through tax reduction"
+ 
+ # Private Industry Expansion
+ usa.21.t:0 "Private Industry Expansion Initiative"
+ usa.21.d:0 "The government has launched an initiative to encourage private sector growth through deregulation, tax incentives, and other business-friendly policies. This approach emphasizes the role of private enterprise rather than government spending in driving economic recovery. Supporters believe unleashing the creative potential of American business is the fastest path to recovery, while critics question whether this approach can address the immediate suffering of millions of unemployed Americans."
+ usa.21.a:0 "Let business lead the recovery"
+ 
+ # Balanced Budget Initiative
+ usa.22.t:0 "Balanced Budget Initiative"
+ usa.22.d:0 "The administration has committed to a policy of fiscal conservatism, focusing on balancing the federal budget despite the economic downturn. This approach emphasizes reduced government spending, limited intervention in the economy, and maintenance of sound money policies. Proponents argue that fiscal discipline will restore business confidence and lead to sustainable recovery, while critics contend that austerity will deepen and prolong the Depression."
+ usa.22.a:0 "Fiscal responsibility above all"
+ 
+ # Gold Standard Maintained
+ usa.23.t:0 "Gold Standard Maintained"
+ usa.23.d:0 "The administration has committed to maintaining the gold standard, keeping the dollar's value fixed to gold despite pressures to devalue the currency. This decision aims to preserve international confidence in the dollar and uphold traditional monetary principles. Proponents argue that sound money is essential for long-term economic stability, while critics contend that monetary flexibility is necessary to combat the deflationary forces driving the Depression deeper."
+ usa.23.a:0 "Maintain the gold standard"
+ 
+ # Free Trade Promotion
+ usa.24.t:0 "Free Trade Promotion"
+ usa.24.d:0 "The administration has launched an initiative to promote free trade by reducing tariffs and other trade barriers. This approach aims to expand export markets for American goods while reducing prices for consumers through increased imports. Proponents argue that international trade will help lift all economies out of depression, while critics fear that American industries and workers will be unable to compete with foreign imports during this time of economic vulnerability."
+ usa.24.a:0 "Lower trade barriers"
+ 
+ # First Signs of Recovery
+ usa.30.t:0 "First Signs of Economic Recovery"
+ usa.30.d:0 "After years of economic contraction, the first signs of recovery are beginning to appear in the American economy. Industrial production is increasing, unemployment is starting to decline, and consumer spending is cautiously rising. While still far below pre-crash levels, these positive indicators suggest that the worst of the Depression may be over and that the government's policies are beginning to bear fruit."
+ usa.30.a:0 "Light at the end of the tunnel"
+ 
+ # 1937 Recession
+ usa.31.t:0 "The Recession of 1937"
+ usa.31.d:0 "Just as recovery seemed to be gaining momentum, the economy has suddenly contracted again. Industrial production is falling, unemployment is rising, and the stock market has experienced another significant decline. This unexpected setback is attributed to various factors, including cuts in federal spending, tightening of monetary policy, and reduced business confidence. This 'recession within a depression' threatens to undermine the progress made over the past four years."
+ usa.31.a:0 "A setback to our recovery"
+ 
+ # Recovery Continues
+ usa.32.t:0 "Recovery Continues"
+ usa.32.d:0 "The economic contraction that began in 1937 appears to be ending, with key indicators once again showing improvement. Industrial production is rising, unemployment is declining, and business investment is cautiously increasing. This return to recovery suggests that the fundamental improvements in the economy since 1933 were substantial enough to withstand the recent setback, and that the long climb out of the Depression can continue."
+ usa.32.a:0 "We're back on track"
+ 
+ # Full Employment Act
+ usa.33.t:0 "Full Employment Policy"
+ usa.33.d:0 "The government has committed to a policy of full employment as the cornerstone of its economic strategy. This approach recognizes the government's responsibility to ensure job opportunities for all able and willing to work, using fiscal and monetary tools to maintain high levels of employment. While the immediate catalyst for increased employment is likely to be war production, this policy establishes an important principle for post-war economic management."
+ usa.33.a:0 "Jobs for all Americans"
+ 
+ # Military Recovery Program
+ usa.40.t:0 "Military Recovery Program"
+ usa.40.d:0 "The administration has launched a program to modernize and expand America's military forces, with the dual goals of improving national security and stimulating economic recovery. This initiative will direct significant resources to the development and production of aircraft, ships, vehicles, and weapons, creating jobs in the process. While ostensibly focused on defense, this program effectively serves as an economic stimulus through government spending."
+ usa.40.a:0 "Preparing for an uncertain future"
+ 
+ # Defense Industry Investment
+ usa.41.t:0 "Defense Industry Investment"
+ usa.41.d:0 "Substantial investments are being made to expand America's defense industrial capacity. New factories are being built, existing plants converted to military production, and research accelerated into new weapons technologies. This buildup is creating thousands of jobs and stimulating economic activity across the country. The shift toward defense production is rapidly becoming a major driver of the nation's economic recovery."
+ usa.41.a:0 "Building America's arsenal"
+ 
+ # Neutrality Acts
+ usa.42.t:0 "Neutrality Acts"
+ usa.42.d:0 "Congress has passed a series of Neutrality Acts aimed at preventing American involvement in foreign conflicts. These laws prohibit arms sales to belligerent nations, ban Americans from traveling on belligerent ships, and forbid American vessels from carrying arms to belligerents. The legislation reflects a strong isolationist sentiment among the American public, determined to avoid being drawn into another European war as happened in 1917."
+ usa.42.a:0 "America must stay out of foreign wars"
+ usa.42.b:0 "Maintain flexibility in foreign policy"
+ 
+ # Selective Training and Service Act
+ usa.43.t:0 "Selective Training and Service Act"
+ usa.43.d:0 "Congress has passed the Selective Training and Service Act, establishing America's first peacetime military draft. The act requires all men between the ages of 21 and 36 to register for military service, with draftees to serve for one year. This unprecedented measure reflects growing concern about international tensions and recognition that voluntary enlistment cannot provide the manpower needed for America's expanding armed forces."
+ usa.43.a:0 "Implement peacetime conscription"
+ usa.43.b:0 "Maintain a volunteer military"
+ 
+ # Bonus Army Resolution
+ usa.50.t:0 "Bonus Army Resolution"
+ usa.50.d:0 "The administration has decided to address the long-standing grievances of World War I veterans by approving early payment of the service bonuses originally scheduled for 1945. This decision represents a significant shift from the previous administration's approach, which culminated in the violent eviction of the Bonus Army from Washington in 1932. The early payment will provide financial relief to many veterans struggling during the Depression while healing a political wound."
+ usa.50.a:0 "Grant early payment to veterans"
+ 
+ # Labor Unrest
+ usa.51.t:0 "Labor Unrest"
+ usa.51.d:0 "A wave of strikes and labor unrest has swept across the nation as workers demand better wages, hours, and recognition of their unions. Violent confrontations have occurred between strikers and law enforcement in several cities. While some see these actions as justified responses to years of exploitation and hardship, others view them as threats to economic recovery and public order. The administration must decide how to respond to this growing labor militancy."
+ usa.51.a:0 "Use force to break the strikes"
+ usa.51.b:0 "Negotiate with the unions"
+ 
+ # Huey Long's Share Our Wealth
+ usa.52.t:0 "Huey Long's Share Our Wealth"
+ usa.52.d:0 "Louisiana Senator Huey Long has launched his 'Share Our Wealth' movement, advocating for radical wealth redistribution through heavy taxation of the rich and direct payments to poor families. Long's fiery rhetoric and simple solutions to complex problems have attracted millions of followers, especially among those dissatisfied with the pace of recovery. His growing popularity represents a significant political challenge, potentially drawing support away from the administration's more moderate approach."
+ usa.52.a:0 "A dangerous demagogue"
+ 
+ # USA Ideas
+ USA_voluntary_cooperation:0 "Voluntary Cooperation"
+ USA_voluntary_cooperation_desc:0 "The administration is relying on voluntary cooperation from business leaders rather than direct government intervention to address the economic crisis."
+ 
+ USA_banking_reforms:0 "Banking Reforms"
+ USA_banking_reforms_desc:0 "Comprehensive reforms to strengthen the banking system and prevent future collapse through regulation and deposit insurance."
+ 
+ USA_bank_holiday:0 "National Bank Holiday"
+ USA_bank_holiday_desc:0 "All banks have been temporarily closed to prevent further panic withdrawals and allow for inspection of their financial stability."
+ 
+ USA_ccc:0 "Civilian Conservation Corps"
+ USA_ccc_desc:0 "A public work relief program employing young men in conservation projects, providing employment while improving natural resources."
+ 
+ USA_aaa:0 "Agricultural Adjustment Act"
+ USA_aaa_desc:0 "Agricultural price support and production control measures aimed at increasing farm income during the Depression."
+ 
+ USA_nira:0 "National Recovery Administration"
+ USA_nira_desc:0 "A system of industrial codes establishing fair competition standards, including minimum wages, maximum hours, and collective bargaining rights."
+ 
+ USA_wagner_act:0 "Wagner Act"
+ USA_wagner_act_desc:0 "Legislation guaranteeing workers' rights to form unions and engage in collective bargaining, with legal protections against employer interference."
+ 
+ USA_flsa:0 "Fair Labor Standards Act"
+ USA_flsa_desc:0 "Federal regulations establishing minimum wage, maximum work week, and prohibiting child labor in industries engaged in interstate commerce."
+ 
+ USA_tax_cuts_idea:0 "Tax Reduction"
+ USA_tax_cuts_idea_desc:0 "Reduced taxation aimed at stimulating economic activity by leaving more money in the hands of businesses and individuals."
+ 
+ USA_balanced_budget_idea:0 "Balanced Budget Policy"
+ USA_balanced_budget_idea_desc:0 "A policy of fiscal conservatism focused on balancing the federal budget despite the economic downturn."
+ 
+ USA_gold_standard:0 "Gold Standard"
+ USA_gold_standard_desc:0 "Maintenance of the gold standard, keeping the dollar's value fixed to gold despite pressures to devalue the currency."
+ 
+ USA_recession:0 "Recession of 1937"
+ USA_recession_desc:0 "An economic contraction occurring during the broader Depression, attributed to premature reduction of stimulus measures."
+ 
+ USA_full_employment_idea:0 "Full Employment"
+ USA_full_employment_idea_desc:0 "A policy commitment to ensuring job opportunities for all able and willing to work, using fiscal and monetary tools to maintain high employment levels."
+ 
+ USA_military_recovery_idea:0 "Military Recovery Program"
+ USA_military_recovery_idea_desc:0 "A program to modernize and expand military forces, serving the dual purposes of national security and economic stimulus."
+ 
+ USA_neutrality_acts:0 "Neutrality Acts"
+ USA_neutrality_acts_desc:0 "Legislation aimed at preventing American involvement in foreign conflicts through restrictions on trade, travel, and loans to belligerent nations."
+ 
+ USA_labor_compromise:0 "Labor Compromise"
+ USA_labor_compromise_desc:0 "A policy of negotiation and compromise with organized labor, recognizing workers' rights to organize while maintaining industrial peace."

@@ -1,0 +1,231 @@
+ideas = {
+    country = {
+        # Initial Depression Response Ideas
+        USA_voluntary_cooperation = {
+            picture = GFX_idea_generic_political_support
+            allowed = { original_tag = USA }
+            removal_cost = -1
+            
+            modifier = {
+                political_power_gain = 0.05
+                industrial_capacity_factory = -0.10
+                production_speed_buildings_factor = -0.10
+                stability_factor = -0.05
+            }
+        }
+        
+        USA_bank_holiday = {
+            picture = GFX_idea_generic_foreign_capital
+            allowed = { original_tag = USA }
+            removal_cost = -1
+            
+            modifier = {
+                consumer_goods_factor = 0.05
+                industrial_capacity_factory = -0.15
+                production_speed_buildings_factor = -0.15
+                political_power_gain = -0.10
+            }
+        }
+        
+        USA_banking_reforms = {
+            picture = GFX_idea_generic_bank_deal
+            allowed = { original_tag = USA }
+            removal_cost = -1
+            
+            modifier = {
+                political_power_gain = 0.05
+                stability_factor = 0.05
+                consumer_goods_factor = -0.05
+            }
+        }
+        
+        # New Deal Ideas
+        USA_ccc = {
+            picture = GFX_idea_generic_build_infrastructure
+            allowed = { original_tag = USA }
+            removal_cost = -1
+            
+            modifier = {
+                production_speed_infrastructure_factor = 0.15
+                production_speed_buildings_factor = 0.10
+                stability_factor = 0.05
+                conscription = -0.01
+            }
+        }
+        
+        USA_aaa = {
+            picture = GFX_idea_generic_agrarian_reform
+            allowed = { original_tag = USA }
+            removal_cost = -1
+            
+            modifier = {
+                local_resources_factor = 0.05
+                monthly_population = 0.05
+                stability_factor = 0.05
+                consumer_goods_factor = -0.05
+            }
+        }
+        
+        USA_nira = {
+            picture = GFX_idea_generic_production_bonus
+            allowed = { original_tag = USA }
+            removal_cost = -1
+            
+            modifier = {
+                industrial_capacity_factory = 0.10
+                production_speed_buildings_factor = 0.10
+                stability_factor = 0.05
+            }
+        }
+        
+        USA_wagner_act = {
+            picture = GFX_idea_generic_factory_workers
+            allowed = { original_tag = USA }
+            removal_cost = -1
+            
+            modifier = {
+                industrial_capacity_factory = 0.05
+                stability_factor = 0.10
+                democratic_drift = 0.05
+            }
+        }
+        
+        USA_flsa = {
+            picture = GFX_idea_generic_social_science
+            allowed = { original_tag = USA }
+            removal_cost = -1
+            
+            modifier = {
+                stability_factor = 0.05
+                political_power_gain = 0.05
+                monthly_population = 0.05
+            }
+        }
+        
+        # Laissez-Faire Ideas
+        USA_tax_cuts_idea = {
+            picture = GFX_idea_generic_economic_deal
+            allowed = { original_tag = USA }
+            removal_cost = -1
+            
+            modifier = {
+                consumer_goods_factor = -0.05
+                political_power_gain = 0.10
+                stability_factor = -0.05
+                industrial_capacity_factory = 0.05
+            }
+        }
+        
+        USA_balanced_budget_idea = {
+            picture = GFX_idea_generic_treasury
+            allowed = { original_tag = USA }
+            removal_cost = -1
+            
+            modifier = {
+                consumer_goods_factor = -0.10
+                production_speed_buildings_factor = -0.10
+                stability_factor = -0.05
+                political_power_gain = 0.05
+            }
+        }
+        
+        USA_gold_standard = {
+            picture = GFX_idea_generic_foreign_capital
+            allowed = { original_tag = USA }
+            removal_cost = -1
+            
+            modifier = {
+                trade_opinion_factor = 0.10
+                min_export = 0.15
+                consumer_goods_factor = -0.05
+                stability_weekly = 0.002
+            }
+        }
+        
+        # Recovery Ideas
+        USA_recession = {
+            picture = GFX_idea_generic_economic_crisis
+            allowed = { original_tag = USA }
+            removal_cost = -1
+            
+            modifier = {
+                industrial_capacity_factory = -0.10
+                production_speed_buildings_factor = -0.10
+                stability_factor = -0.05
+                political_power_gain = -0.05
+            }
+        }
+        
+        USA_full_employment_idea = {
+            picture = GFX_idea_generic_recruiting_propaganda
+            allowed = { original_tag = USA }
+            removal_cost = -1
+            
+            modifier = {
+                industrial_capacity_factory = 0.15
+                production_speed_buildings_factor = 0.15
+                stability_factor = 0.10
+                political_power_gain = 0.10
+                conscription = 0.01
+            }
+        }
+        
+        # Military Recovery Ideas
+        USA_military_recovery_idea = {
+            picture = GFX_idea_generic_war_preparation
+            allowed = { original_tag = USA }
+            removal_cost = -1
+            
+            modifier = {
+                production_speed_arms_factory_factor = 0.10
+                production_speed_dockyard_factor = 0.10
+                industrial_capacity_factory = 0.05
+                war_support_factor = 0.05
+            }
+        }
+        
+        USA_neutrality_acts = {
+            picture = GFX_idea_generic_neutrality
+            allowed = { original_tag = USA }
+            removal_cost = -1
+            
+            modifier = {
+                trade_laws_cost_factor = 0.25
+                join_faction_tension = 0.20
+                send_volunteers_tension = 0.20
+                guarantee_tension = 0.20
+                war_support_factor = -0.10
+            }
+        }
+        
+        # Political and Social Ideas
+        USA_labor_compromise = {
+            picture = GFX_idea_generic_factory_workers
+            allowed = { original_tag = USA }
+            removal_cost = -1
+            
+            modifier = {
+                industrial_capacity_factory = 0.05
+                stability_factor = 0.05
+                political_power_gain = -0.05
+            }
+        }
+        
+        # FDR Trait
+        great_depression_reformer = {
+            type = character
+            
+            trait_type = personality_trait
+            
+            allowed = {
+                original_tag = USA
+            }
+            
+            modifier = {
+                political_power_gain = 0.10
+                stability_factor = 0.10
+                drift_defence_factor = 0.10
+            }
+        }
+    }
+}

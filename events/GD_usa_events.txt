@@ -1,0 +1,1113 @@
+add_namespace = usa
+
+# INITIAL DEPRESSION EVENTS
+
+# Stock Market Crash
+country_event = {
+    id = usa.1
+    title = usa.1.t
+    desc = usa.1.d
+    picture = GFX_report_event_generic_stock_market_crash
+    
+    trigger = {
+        tag = USA
+        date > 1929.10.24
+        date < 1929.11.1
+        NOT = { has_country_flag = usa_stock_market_crash }
+    }
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    immediate = {
+        set_country_flag = usa_stock_market_crash
+    }
+    
+    option = {
+        name = usa.1.a # This is just a temporary setback
+        add_political_power = -50
+        add_stability = -0.10
+        hidden_effect = {
+            country_event = { id = usa.2 days = 30 }
+        }
+    }
+}
+
+# Hoover's Initial Response
+country_event = {
+    id = usa.2
+    title = usa.2.t
+    desc = usa.2.d
+    picture = GFX_report_event_generic_read_write
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = usa.2.a # Voluntary cooperation will solve this
+        add_political_power = 25
+        add_stability = 0.05
+        add_ideas = USA_voluntary_cooperation
+        hidden_effect = {
+            country_event = { id = usa.3 days = 90 }
+        }
+    }
+    
+    option = {
+        name = usa.2.b # We need to consider direct intervention
+        add_political_power = -25
+        add_stability = -0.05
+        hidden_effect = {
+            country_event = { id = usa.3 days = 60 }
+        }
+    }
+}
+
+# Banking Crisis Intensifies
+country_event = {
+    id = usa.3
+    title = usa.3.t
+    desc = usa.3.d
+    picture = GFX_report_event_generic_bank_run
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = usa.3.a # We must stabilize the banking system
+        add_political_power = -50
+        add_stability = -0.10
+        add_ideas = bank_runs
+        hidden_effect = {
+            country_event = { id = usa.4 days = 180 }
+        }
+    }
+}
+
+# Unemployment Crisis
+country_event = {
+    id = usa.4
+    title = usa.4.t
+    desc = usa.4.d
+    picture = GFX_report_event_generic_unemployment
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = usa.4.a # A national tragedy
+        add_political_power = -50
+        add_stability = -0.10
+        add_ideas = unemployment
+    }
+}
+
+# Agricultural Collapse
+country_event = {
+    id = usa.5
+    title = usa.5.t
+    desc = usa.5.d
+    picture = GFX_report_event_generic_dust_bowl
+    
+    trigger = {
+        tag = USA
+        date > 1931.2.1
+        has_idea = great_depression
+        NOT = { has_country_flag = usa_agricultural_collapse }
+    }
+    
+    mean_time_to_happen = {
+        days = 60
+    }
+    
+    immediate = {
+        set_country_flag = usa_agricultural_collapse
+    }
+    
+    option = {
+        name = usa.5.a # The heartland is suffering
+        add_political_power = -25
+        add_stability = -0.05
+    }
+}
+
+# Dust Bowl
+country_event = {
+    id = usa.6
+    title = usa.6.t
+    desc = usa.6.d
+    picture = GFX_report_event_generic_dust_bowl
+    
+    trigger = {
+        tag = USA
+        date > 1932.5.1
+        has_country_flag = usa_agricultural_collapse
+        NOT = { has_country_flag = usa_dust_bowl }
+    }
+    
+    mean_time_to_happen = {
+        days = 180
+    }
+    
+    immediate = {
+        set_country_flag = usa_dust_bowl
+    }
+    
+    option = {
+        name = usa.6.a # A man-made disaster
+        add_political_power = -25
+        add_stability = -0.05
+        36 = { # Oklahoma
+            add_building_construction = {
+                type = infrastructure
+                level = -1
+                instant_build = yes
+            }
+        }
+        380 = { # Kansas
+            add_building_construction = {
+                type = infrastructure
+                level = -1
+                instant_build = yes
+            }
+        }
+    }
+}
+
+# Bonus Army March
+country_event = {
+    id = usa.7
+    title = usa.7.t
+    desc = usa.7.d
+    picture = GFX_report_event_generic_riot
+    
+    trigger = {
+        tag = USA
+        date > 1932.6.1
+        date < 1932.8.1
+        has_idea = unemployment
+        NOT = { has_country_flag = usa_bonus_army }
+    }
+    
+    mean_time_to_happen = {
+        days = 15
+    }
+    
+    immediate = {
+        set_country_flag = usa_bonus_army
+    }
+    
+    option = {
+        name = usa.7.a # Evict them by force
+        add_political_power = 25
+        add_stability = -0.10
+        add_war_support = 0.05
+    }
+    
+    option = {
+        name = usa.7.b # Negotiate with the veterans
+        add_political_power = -25
+        add_stability = 0.05
+        add_war_support = -0.05
+    }
+}
+
+# 1932 Election
+country_event = {
+    id = usa.8
+    title = usa.8.t
+    desc = usa.8.d
+    picture = GFX_report_event_generic_election
+    
+    trigger = {
+        tag = USA
+        date > 1932.11.1
+        date < 1932.11.15
+        NOT = { has_country_flag = usa_1932_election }
+    }
+    
+    mean_time_to_happen = {
+        days = 7
+    }
+    
+    immediate = {
+        set_country_flag = usa_1932_election
+    }
+    
+    option = {
+        name = usa.8.a # Roosevelt wins in a landslide
+        add_political_power = 100
+        add_stability = 0.10
+        create_country_leader = {
+            name = "Franklin D. Roosevelt"
+            desc = "POLITICS_FRANKLIN_ROOSEVELT_DESC"
+            picture = "gfx/leaders/USA/Portrait_USA_Franklin_Roosevelt.dds"
+            expire = "1945.4.12"
+            ideology = liberalism
+            traits = {
+                great_depression_reformer
+            }
+        }
+        hidden_effect = {
+            country_event = { id = usa.9 days = 120 }
+        }
+    }
+}
+
+# ROOSEVELT & NEW DEAL EVENTS
+
+# Roosevelt Inauguration
+country_event = {
+    id = usa.9
+    title = usa.9.t
+    desc = usa.9.d
+    picture = GFX_report_event_generic_roosevelt
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = usa.9.a # "The only thing we have to fear is fear itself"
+        add_political_power = 50
+        add_stability = 0.05
+        hidden_effect = {
+            country_event = { id = usa.10 days = 10 }
+        }
+    }
+}
+
+# Bank Holiday
+country_event = {
+    id = usa.10
+    title = usa.10.t
+    desc = usa.10.d
+    picture = GFX_report_event_generic_bank
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = usa.10.a # Declare a national banking holiday
+        add_political_power = 25
+        add_stability = 0.05
+        remove_ideas = bank_runs
+        add_timed_idea = { 
+            idea = USA_bank_holiday 
+            days = 7
+        }
+        hidden_effect = {
+            country_event = { id = usa.11 days = 7 }
+        }
+    }
+}
+
+# Emergency Banking Act
+country_event = {
+    id = usa.11
+    title = usa.11.t
+    desc = usa.11.d
+    picture = GFX_report_event_generic_read_write
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = usa.11.a # Restore confidence in the banking system
+        add_political_power = 50
+        add_stability = 0.10
+        add_ideas = USA_banking_reforms
+    }
+}
+
+# Civilian Conservation Corps
+country_event = {
+    id = usa.12
+    title = usa.12.t
+    desc = usa.12.d
+    picture = GFX_report_event_generic_forest
+    
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_civilian_conservation_corps
+        NOT = { has_country_flag = usa_ccc_established }
+    }
+    
+    mean_time_to_happen = {
+        days = 10
+    }
+    
+    immediate = {
+        set_country_flag = usa_ccc_established
+    }
+    
+    option = {
+        name = usa.12.a # Put young men to work
+        add_political_power = 25
+        add_stability = 0.05
+        add_ideas = USA_ccc
+        random_owned_controlled_state = {
+            limit = { 
+                infrastructure < 7
+                is_core_of = ROOT 
+            }
+            add_building_construction = {
+                type = infrastructure
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+}
+
+# Agricultural Adjustment Act
+country_event = {
+    id = usa.13
+    title = usa.13.t
+    desc = usa.13.d
+    picture = GFX_report_event_generic_farm
+    
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_agricultural_adjustment_act
+        NOT = { has_country_flag = usa_aaa_established }
+    }
+    
+    mean_time_to_happen = {
+        days = 10
+    }
+    
+    immediate = {
+        set_country_flag = usa_aaa_established
+    }
+    
+    option = {
+        name = usa.13.a # Help American farmers
+        add_political_power = 25
+        add_stability = 0.05
+        add_ideas = USA_aaa
+    }
+}
+
+# Tennessee Valley Authority
+country_event = {
+    id = usa.14
+    title = usa.14.t
+    desc = usa.14.d
+    picture = GFX_report_event_generic_dam
+    
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_tennessee_valley_authority
+        NOT = { has_country_flag = usa_tva_established }
+    }
+    
+    mean_time_to_happen = {
+        days = 10
+    }
+    
+    immediate = {
+        set_country_flag = usa_tva_established
+    }
+    
+    option = {
+        name = usa.14.a # Harness the power of the Tennessee River
+        add_political_power = 25
+        add_stability = 0.05
+        365 = { # Tennessee
+            add_resource = {
+                type = aluminium
+                amount = 8
+            }
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+}
+
+# National Industrial Recovery Act
+country_event = {
+    id = usa.15
+    title = usa.15.t
+    desc = usa.15.d
+    picture = GFX_report_event_generic_factory
+    
+    trigger = {
+        tag = USA
+        date > 1933.6.1
+        has_completed_focus = USA_new_deal
+        NOT = { has_country_flag = usa_nira_established }
+    }
+    
+    mean_time_to_happen = {
+        days = 30
+    }
+    
+    immediate = {
+        set_country_flag = usa_nira_established
+    }
+    
+    option = {
+        name = usa.15.a # Establish fair competition codes
+        add_political_power = 25
+        add_stability = 0.05
+        add_ideas = USA_nira
+    }
+}
+
+# Social Security Act
+country_event = {
+    id = usa.16
+    title = usa.16.t
+    desc = usa.16.d
+    picture = GFX_report_event_generic_sign_treaty1
+    
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_social_security_act
+        NOT = { has_country_flag = usa_ssa_established }
+    }
+    
+    mean_time_to_happen = {
+        days = 10
+    }
+    
+    immediate = {
+        set_country_flag = usa_ssa_established
+    }
+    
+    option = {
+        name = usa.16.a # Provide security for the elderly and unemployed
+        add_political_power = 25
+        add_stability = 0.10
+        add_ideas = social_security_idea
+    }
+}
+
+# Wagner Act
+country_event = {
+    id = usa.17
+    title = usa.17.t
+    desc = usa.17.d
+    picture = GFX_report_event_generic_factory
+    
+    trigger = {
+        tag = USA
+        date > 1935.7.1
+        has_completed_focus = USA_new_deal
+        NOT = { has_country_flag = usa_wagner_act }
+    }
+    
+    mean_time_to_happen = {
+        days = 30
+    }
+    
+    immediate = {
+        set_country_flag = usa_wagner_act
+    }
+    
+    option = {
+        name = usa.17.a # Guarantee workers' right to organize
+        add_political_power = 25
+        add_stability = 0.05
+        add_ideas = USA_wagner_act
+    }
+}
+
+# Fair Labor Standards Act
+country_event = {
+    id = usa.18
+    title = usa.18.t
+    desc = usa.18.d
+    picture = GFX_report_event_generic_factory_workers
+    
+    trigger = {
+        tag = USA
+        date > 1938.6.1
+        has_completed_focus = USA_new_deal
+        NOT = { has_country_flag = usa_flsa }
+    }
+    
+    mean_time_to_happen = {
+        days = 30
+    }
+    
+    immediate = {
+        set_country_flag = usa_flsa
+    }
+    
+    option = {
+        name = usa.18.a # Establish minimum wage and ban child labor
+        add_political_power = 25
+        add_stability = 0.05
+        add_ideas = USA_flsa
+    }
+}
+
+# Supreme Court Fight
+country_event = {
+    id = usa.19
+    title = usa.19.t
+    desc = usa.19.d
+    picture = GFX_report_event_generic_courthouse
+    
+    trigger = {
+        tag = USA
+        date > 1937.2.1
+        has_completed_focus = USA_new_deal
+        NOT = { has_country_flag = usa_court_packing }
+    }
+    
+    mean_time_to_happen = {
+        days = 30
+    }
+    
+    immediate = {
+        set_country_flag = usa_court_packing
+    }
+    
+    option = {
+        name = usa.19.a # Push for Court reform
+        add_political_power = -50
+        add_stability = -0.05
+    }
+    
+    option = {
+        name = usa.19.b # Accept the Court's authority
+        add_political_power = 25
+        add_stability = 0.05
+    }
+}
+
+# LAISSEZ-FAIRE PATH EVENTS
+
+# Tax Cuts
+country_event = {
+    id = usa.20
+    title = usa.20.t
+    desc = usa.20.d
+    picture = GFX_report_event_generic_read_write
+    
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_tax_cuts
+        NOT = { has_country_flag = usa_tax_cuts }
+    }
+    
+    mean_time_to_happen = {
+        days = 10
+    }
+    
+    immediate = {
+        set_country_flag = usa_tax_cuts
+    }
+    
+    option = {
+        name = usa.20.a # Stimulate the economy through tax reduction
+        add_political_power = 50
+        add_stability = 0.05
+        add_ideas = USA_tax_cuts_idea
+    }
+}
+
+# Private Industry Expansion
+country_event = {
+    id = usa.21
+    title = usa.21.t
+    desc = usa.21.d
+    picture = GFX_report_event_generic_factory
+    
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_private_industry_expansion
+        NOT = { has_country_flag = usa_private_expansion }
+    }
+    
+    mean_time_to_happen = {
+        days = 10
+    }
+    
+    immediate = {
+        set_country_flag = usa_private_expansion
+    }
+    
+    option = {
+        name = usa.21.a # Let business lead the recovery
+        add_political_power = 25
+        add_stability = 0.05
+        add_ideas = private_industry_boost
+    }
+}
+
+# Balanced Budget Initiative
+country_event = {
+    id = usa.22
+    title = usa.22.t
+    desc = usa.22.d
+    picture = GFX_report_event_generic_read_write
+    
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_laissez_faire
+        date > 1934.1.1
+        NOT = { has_country_flag = usa_balanced_budget }
+    }
+    
+    mean_time_to_happen = {
+        days = 90
+    }
+    
+    immediate = {
+        set_country_flag = usa_balanced_budget
+    }
+    
+    option = {
+        name = usa.22.a # Fiscal responsibility above all
+        add_political_power = 25
+        add_stability = -0.05
+        add_ideas = USA_balanced_budget_idea
+    }
+}
+
+# Gold Standard Maintained
+country_event = {
+    id = usa.23
+    title = usa.23.t
+    desc = usa.23.d
+    picture = GFX_report_event_generic_read_write
+    
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_laissez_faire
+        date > 1933.4.1
+        NOT = { has_country_flag = usa_gold_standard }
+    }
+    
+    mean_time_to_happen = {
+        days = 30
+    }
+    
+    immediate = {
+        set_country_flag = usa_gold_standard
+    }
+    
+    option = {
+        name = usa.23.a # Maintain the gold standard
+        add_political_power = 25
+        add_stability = -0.05
+        add_ideas = USA_gold_standard
+    }
+}
+
+# Free Trade Promotion
+country_event = {
+    id = usa.24
+    title = usa.24.t
+    desc = usa.24.d
+    picture = GFX_report_event_generic_sign_treaty2
+    
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_encourage_exporters
+        NOT = { has_country_flag = usa_free_trade }
+    }
+    
+    mean_time_to_happen = {
+        days = 10
+    }
+    
+    immediate = {
+        set_country_flag = usa_free_trade
+    }
+    
+    option = {
+        name = usa.24.a # Lower trade barriers
+        add_political_power = 25
+        add_stability = 0.05
+        add_ideas = export_focus_idea
+    }
+}
+
+# RECOVERY EVENTS
+
+# First Signs of Recovery
+country_event = {
+    id = usa.30
+    title = usa.30.t
+    desc = usa.30.d
+    picture = GFX_report_event_generic_factory
+    
+    trigger = {
+        tag = USA
+        OR = {
+            has_completed_focus = USA_agricultural_adjustment_act
+            has_completed_focus = USA_private_industry_expansion
+        }
+        has_idea = great_depression
+        date > 1935.1.1
+        NOT = { has_country_flag = usa_recovery_signs }
+    }
+    
+    mean_time_to_happen = {
+        days = 90
+    }
+    
+    immediate = {
+        set_country_flag = usa_recovery_signs
+    }
+    
+    option = {
+        name = usa.30.a # Light at the end of the tunnel
+        add_political_power = 25
+        add_stability = 0.05
+        swap_ideas = {
+            remove_idea = great_depression
+            add_idea = economic_recovery
+        }
+    }
+}
+
+# 1937 Recession
+country_event = {
+    id = usa.31
+    title = usa.31.t
+    desc = usa.31.d
+    picture = GFX_report_event_generic_stock_market_crash
+    
+    trigger = {
+        tag = USA
+        date > 1937.8.1
+        date < 1938.1.1
+        has_idea = economic_recovery
+        NOT = { has_country_flag = usa_1937_recession }
+    }
+    
+    mean_time_to_happen = {
+        days = 30
+    }
+    
+    immediate = {
+        set_country_flag = usa_1937_recession
+    }
+    
+    option = {
+        name = usa.31.a # A setback to our recovery
+        add_political_power = -25
+        add_stability = -0.05
+        add_timed_idea = { 
+            idea = USA_recession 
+            days = 180
+        }
+    }
+}
+
+# Recovery Continues
+country_event = {
+    id = usa.32
+    title = usa.32.t
+    desc = usa.32.d
+    picture = GFX_report_event_generic_factory
+    
+    trigger = {
+        tag = USA
+        has_country_flag = usa_1937_recession
+        date > 1938.6.1
+        has_idea = economic_recovery
+        NOT = { has_country_flag = usa_recovery_continues }
+    }
+    
+    mean_time_to_happen = {
+        days = 30
+    }
+    
+    immediate = {
+        set_country_flag = usa_recovery_continues
+    }
+    
+    option = {
+        name = usa.32.a # We're back on track
+        add_political_power = 25
+        add_stability = 0.05
+        remove_ideas = USA_recession
+    }
+}
+
+# Full Employment Act
+country_event = {
+    id = usa.33
+    title = usa.33.t
+    desc = usa.33.d
+    picture = GFX_report_event_generic_sign_treaty1
+    
+    trigger = {
+        tag = USA
+        date > 1939.1.1
+        has_idea = economic_recovery
+        has_completed_focus = USA_full_recovery
+        NOT = { has_country_flag = usa_full_employment }
+    }
+    
+    mean_time_to_happen = {
+        days = 30
+    }
+    
+    immediate = {
+        set_country_flag = usa_full_employment
+    }
+    
+    option = {
+        name = usa.33.a # Jobs for all Americans
+        add_political_power = 50
+        add_stability = 0.10
+        remove_ideas = reduced_unemployment
+        remove_ideas = economic_recovery
+        add_ideas = USA_full_employment_idea
+    }
+}
+
+# DEFENSE INDUSTRY EVENTS
+
+# Military Recovery Program
+country_event = {
+    id = usa.40
+    title = usa.40.t
+    desc = usa.40.d
+    picture = GFX_report_event_generic_factory
+    
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_military_recovery
+        NOT = { has_country_flag = usa_military_recovery }
+    }
+    
+    mean_time_to_happen = {
+        days = 10
+    }
+    
+    immediate = {
+        set_country_flag = usa_military_recovery
+    }
+    
+    option = {
+        name = usa.40.a # Preparing for an uncertain future
+        add_political_power = 25
+        add_stability = 0.05
+        add_war_support = 0.05
+        add_ideas = USA_military_recovery_idea
+    }
+}
+
+# Defense Industry Investment
+country_event = {
+    id = usa.41
+    title = usa.41.t
+    desc = usa.41.d
+    picture = GFX_report_event_generic_factory
+    
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_defense_industry_investment
+        NOT = { has_country_flag = usa_defense_industry }
+    }
+    
+    mean_time_to_happen = {
+        days = 10
+    }
+    
+    immediate = {
+        set_country_flag = usa_defense_industry
+    }
+    
+    option = {
+        name = usa.41.a # Building America's arsenal
+        add_political_power = 25
+        add_stability = 0.05
+        add_war_support = 0.05
+        add_ideas = rearmament_program
+        random_owned_controlled_state = {
+            limit = { is_core_of = ROOT }
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                type = arms_factory
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+}
+
+# Neutrality Acts
+country_event = {
+    id = usa.42
+    title = usa.42.t
+    desc = usa.42.d
+    picture = GFX_report_event_generic_sign_treaty1
+    
+    trigger = {
+        tag = USA
+        date > 1935.8.1
+        NOT = { has_country_flag = usa_neutrality_acts }
+    }
+    
+    mean_time_to_happen = {
+        days = 30
+    }
+    
+    immediate = {
+        set_country_flag = usa_neutrality_acts
+    }
+    
+    option = {
+        name = usa.42.a # America must stay out of foreign wars
+        add_political_power = 25
+        add_stability = 0.05
+        add_war_support = -0.10
+        add_ideas = USA_neutrality_acts
+    }
+    
+    option = {
+        name = usa.42.b # Maintain flexibility in foreign policy
+        add_political_power = -25
+        add_stability = -0.05
+        add_war_support = 0.05
+    }
+}
+
+# Selective Training and Service Act
+country_event = {
+    id = usa.43
+    title = usa.43.t
+    desc = usa.43.d
+    picture = GFX_report_event_generic_military_planning
+    
+    trigger = {
+        tag = USA
+        date > 1940.9.1
+        NOT = { has_country_flag = usa_draft }
+    }
+    
+    mean_time_to_happen = {
+        days = 15
+    }
+    
+    immediate = {
+        set_country_flag = usa_draft
+    }
+    
+    option = {
+        name = usa.43.a # Implement peacetime conscription
+        add_political_power = 25
+        add_stability = -0.05
+        add_war_support = 0.10
+        add_ideas = limited_conscription
+    }
+    
+    option = {
+        name = usa.43.b # Maintain a volunteer military
+        add_political_power = -25
+        add_stability = 0.05
+        add_war_support = -0.05
+    }
+}
+
+# POLITICAL EVENTS
+
+# Bonus Army Resolution
+country_event = {
+    id = usa.50
+    title = usa.50.t
+    desc = usa.50.d
+    picture = GFX_report_event_generic_sign_treaty1
+    
+    trigger = {
+        tag = USA
+        has_country_flag = usa_bonus_army
+        has_completed_focus = USA_new_deal
+        NOT = { has_country_flag = usa_bonus_resolution }
+    }
+    
+    mean_time_to_happen = {
+        days = 30
+    }
+    
+    immediate = {
+        set_country_flag = usa_bonus_resolution
+    }
+    
+    option = {
+        name = usa.50.a # Grant early payment to veterans
+        add_political_power = 25
+        add_stability = 0.10
+        add_war_support = 0.05
+    }
+}
+
+# Labor Unrest
+country_event = {
+    id = usa.51
+    title = usa.51.t
+    desc = usa.51.d
+    picture = GFX_report_event_generic_strike
+    
+    trigger = {
+        tag = USA
+        date > 1934.5.1
+        has_idea = unemployment
+        NOT = { has_country_flag = usa_labor_unrest }
+    }
+    
+    mean_time_to_happen = {
+        days = 90
+    }
+    
+    immediate = {
+        set_country_flag = usa_labor_unrest
+    }
+    
+    option = {
+        name = usa.51.a # Use force to break the strikes
+        add_political_power = -25
+        add_stability = -0.10
+        add_war_support = 0.05
+    }
+    
+    option = {
+        name = usa.51.b # Negotiate with the unions
+        add_political_power = 25
+        add_stability = 0.05
+        add_ideas = USA_labor_compromise
+    }
+}
+
+# Huey Long's Share Our Wealth
+country_event = {
+    id = usa.52
+    title = usa.52.t
+    desc = usa.52.d
+    picture = GFX_report_event_generic_rally
+    
+    trigger = {
+        tag = USA
+        date > 1934.2.1
+        NOT = { has_country_flag = usa_huey_long }
+    }
+    
+    mean_time_to_happen = {
+        days = 90
+    }
+    
+    immediate = {
+        set_country_flag = usa_huey_long
+    }
+    
+    option = {
+        name = usa.52.a # A dangerous demagogue
+        add_political_power = -25
+        
+        if = {
+            limit = { has_completed_focus = USA_new_deal }
+            add_stability = -0.05
+        }
+        else = {
+            add_stability = -0.10
+        }
+    }
+}

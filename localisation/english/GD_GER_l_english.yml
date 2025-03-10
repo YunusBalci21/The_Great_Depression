@@ -1,0 +1,176 @@
+﻿l_english:
+ # Focus Tree
+ GER_weimar_crisis:0 "Weimar Crisis"
+ GER_weimar_crisis_desc:0 "The Wall Street Crash of 1929 has sent shockwaves throughout the global economy. Germany, heavily dependent on American loans since the Dawes Plan, now faces a severe economic crisis. The fragile Weimar Republic must navigate these troubled waters or risk collapse."
+ 
+ GER_political_struggle:0 "Political Struggle"
+ GER_political_struggle_desc:0 "As the economic crisis deepens, political extremism is on the rise. The NSDAP and KPD are gaining support while the democratic center struggles to maintain control. The future of Germany will be determined by which political force emerges victorious from this struggle."
+ 
+ # Democratic Path
+ GER_preserve_democracy:0 "Preserve Democracy"
+ GER_preserve_democracy_desc:0 "Despite the economic crisis and political extremism, we must fight to preserve the democratic system established by the Weimar Republic. Through careful reforms and prudent leadership, democracy can survive these troubled times."
+ 
+ GER_continue_weimar:0 "Continue Weimar Policies"
+ GER_continue_weimar_desc:0 "The existing democratic system, while imperfect, has the legal framework to address our current challenges. We will work within the established system to overcome the crisis."
+ 
+ GER_new_coalition:0 "New Democratic Coalition"
+ GER_new_coalition_desc:0 "A broad coalition of democratic parties could provide the stability needed to weather this storm. By bringing together moderate voices from across the political spectrum, we can present a united front against extremism."
+ 
+ GER_bruning_austerity:0 "Brüning's Austerity"
+ GER_bruning_austerity_desc:0 "Chancellor Heinrich Brüning advocates for strict austerity measures to combat the economic crisis. By cutting government spending and balancing the budget, we hope to restore international confidence in the German economy."
+ 
+ GER_spd_reforms:0 "SPD Economic Reforms"
+ GER_spd_reforms_desc:0 "The Social Democratic Party proposes a series of economic reforms focused on public works and social welfare. These policies aim to reduce unemployment and stimulate economic recovery through government intervention."
+ 
+ GER_maintain_gold:0 "Maintain Gold Standard"
+ GER_maintain_gold_desc:0 "Remaining on the gold standard will demonstrate our commitment to fiscal responsibility and help maintain international confidence in our currency."
+ 
+ GER_abandon_gold:0 "Abandon Gold Standard"
+ GER_abandon_gold_desc:0 "Following Britain's example, we should abandon the gold standard. This will give us greater flexibility in monetary policy and help stimulate economic recovery."
+ 
+ GER_budget_constraints:0 "Budget Constraints"
+ GER_budget_constraints_desc:0 "Strict adherence to balanced budgets is necessary to restore economic stability. While politically unpopular, these measures will help Germany recover from the Depression."
+ 
+ GER_public_works:0 "Public Works Programs"
+ GER_public_works_desc:0 "Launching extensive public works programs will provide employment for thousands and improve our national infrastructure. These projects will stimulate economic growth and reduce the suffering caused by the Depression."
+ 
+ GER_limited_rearmament:0 "Limited Rearmament"
+ GER_limited_rearmament_desc:0 "While respecting the spirit of the Versailles Treaty, we can begin cautiously rebuilding our defensive capabilities. A modest military modernization program will improve national security and create jobs."
+ 
+ GER_franco_german:0 "Franco-German Cooperation"
+ GER_franco_german_desc:0 "Improving relations with France is crucial for European stability and German economic recovery. Through diplomatic engagement and economic cooperation, we can build a foundation for lasting peace."
+ 
+ GER_secret_military:0 "Secret Military Development"
+ GER_secret_military_desc:0 "While maintaining a public commitment to treaty limitations, we can secretly develop new military technologies and doctrines. This will prepare Germany for an uncertain future without provoking our neighbors."
+ 
+ GER_european_unity:0 "European Economic Unity"
+ GER_european_unity_desc:0 "A vision of European cooperation and economic integration could provide lasting stability and prosperity. By working together with our neighbors, we can create a framework that prevents future conflicts."
+ 
+ GER_democracy_rebuilt:0 "Democratic Germany Rebuilt"
+ GER_democracy_rebuilt_desc:0 "Through our efforts, democracy has been preserved and the economy is recovering. Germany stands as proof that liberal democracy can withstand even the greatest challenges."
+ 
+ # Fascist Path
+ GER_support_nsdap:0 "Support the NSDAP"
+ GER_support_nsdap_desc:0 "The National Socialist German Workers' Party offers bold solutions to Germany's problems. Their message of national renewal and economic revival resonates with many citizens suffering from the Depression."
+ 
+ GER_enabling_act:0 "The Enabling Act"
+ GER_enabling_act_desc:0 "The Enabling Act would grant the Chancellor extraordinary powers to enact laws without parliamentary approval. This measure, justified by the national emergency, would allow for decisive action to address the crisis."
+ 
+ GER_eliminate_opposition:0 "Eliminate Political Opposition"
+ GER_eliminate_opposition_desc:0 "Political division weakens Germany at a time when unity is essential. By eliminating opposition parties and consolidating power, we can implement the necessary measures to save the nation."
+ 
+ GER_four_year_plan:0 "Four Year Plan"
+ GER_four_year_plan_desc:0 "A comprehensive economic plan aimed at making Germany self-sufficient and prepared for war within four years. This plan will focus on the development of domestic resources and military industries."
+ 
+ GER_hitler_power:0 "Hitler Consolidates Power"
+ GER_hitler_power_desc:0 "With opposition eliminated and emergency powers granted, Adolf Hitler can now consolidate his position as the undisputed leader of Germany. The Führer will lead the nation into a new era of strength and prosperity."
+ 
+ GER_autarky:0 "Autarky Economic Policy"
+ GER_autarky_desc:0 "Economic self-sufficiency is essential for national security. By reducing dependence on foreign trade and developing domestic resources, we can insulate Germany from international economic fluctuations."
+ 
+ GER_military_reorganization:0 "Military Reorganization"
+ GER_military_reorganization_desc:0 "The German military requires complete reorganization to meet modern challenges. By rebuilding our armed forces from the ground up, we can create a military worthy of the German nation."
+ 
+ GER_industry_revival:0 "German Industry Revival"
+ GER_industry_revival_desc:0 "German industry must be revitalized to support our goals of economic recovery and military strengthening. State direction and investment will accelerate this process."
+ 
+ GER_reintroduce_conscription:0 "Reintroduce Conscription"
+ GER_reintroduce_conscription_desc:0 "Universal military service will provide the manpower needed for our expanded armed forces. This measure, though in violation of Versailles, is essential for national security."
+ 
+ GER_public_projects:0 "Massive Public Projects"
+ GER_public_projects_desc:0 "Launching massive construction projects like the Autobahn will showcase German engineering excellence, provide employment, and create infrastructure vital for our future needs."
+ 
+ GER_rebuild_wehrmacht:0 "Rebuild the Wehrmacht"
+ GER_rebuild_wehrmacht_desc:0 "With the foundations laid, we can now openly rebuild the German armed forces. The Wehrmacht will become the most formidable military force in Europe, securing Germany's place in the world."
+ 
+ GER_anschluss:0 "Anschluss with Austria"
+ GER_anschluss_desc:0 "The unification of all Germanic peoples under one Reich is our historic mission. Beginning with the incorporation of Austria, we will unite all Germans in a single nation-state."
+ 
+ # Communist Path
+ GER_communist_revolution:0 "Communist Revolution"
+ GER_communist_revolution_desc:0 "The capitalist system has failed the German people. Only a communist revolution can bring about the fundamental changes needed to address the crisis and build a society that serves the working class."
+ 
+ GER_workers_revolution:0 "Worker's Revolution"
+ GER_workers_revolution_desc:0 "The working class must seize control of the means of production. Through revolutionary action, we will overthrow the bourgeois state and establish a dictatorship of the proletariat."
+ 
+ GER_red_berlin:0 "Red Berlin"
+ GER_red_berlin_desc:0 "Berlin, with its large industrial workforce, must become the center of our revolutionary movement. By securing control of the capital, we can extend communist influence throughout Germany."
+ 
+ GER_nationalize:0 "Nationalize Industry"
+ GER_nationalize_desc:0 "Private ownership of industry has led to exploitation and economic collapse. By nationalizing key industries, we can ensure that the economy serves the needs of the people rather than profit-seeking capitalists."
+ 
+ GER_purge:0 "Purge Reactionaries"
+ GER_purge_desc:0 "Counter-revolutionary elements threaten the success of our movement. A thorough purge of reactionaries from government, military, and society is necessary to secure the revolution."
+ 
+ GER_five_year:0 "Five Year Plan"
+ GER_five_year_desc:0 "Following the Soviet model, we will implement a comprehensive five-year economic plan. This will accelerate industrialization and transform Germany into a modern socialist state."
+ 
+ GER_red_army:0 "Red Army Reforms"
+ GER_red_army_desc:0 "The German military must be reorganized along Soviet lines. Political commissars will ensure ideological reliability, while new tactical doctrines will prepare our forces for the inevitable conflict with capitalist powers."
+ 
+ GER_heavy_industry:0 "Heavy Industry Focus"
+ GER_heavy_industry_desc:0 "The development of heavy industry is essential for building socialism. We will focus our resources on steel, machinery, and energy production to create the industrial base needed for a modern economy."
+ 
+ GER_soviet_advisors:0 "Soviet Military Advisors"
+ GER_soviet_advisors_desc:0 "The Soviet Union has valuable experience in building a revolutionary armed force. By inviting Soviet military advisors, we can benefit from their expertise and strengthen ties with our communist ally."
+ 
+ GER_workers_paradise:0 "Workers' Paradise"
+ GER_workers_paradise_desc:0 "Germany will become a workers' paradise, where exploitation is eliminated and the fruits of labor are shared by all. Our socialist policies will demonstrate the superiority of the communist system."
+ 
+ GER_peoples_defense:0 "People's Defense Force"
+ GER_peoples_defense_desc:0 "A people's army, built on mass mobilization and revolutionary fervor, will defend our socialist state against capitalist aggression. Every worker must be prepared to take up arms in defense of the revolution."
+ 
+ GER_soviet_pact:0 "Germanic-Soviet Pact"
+ GER_soviet_pact_desc:0 "An alliance with the Soviet Union will secure our revolution and create a powerful communist bloc in Europe. Together, we will stand against fascism and capitalism."
+ 
+ # German Ideas
+ GER_weimar_stability:0 "Weimar Stability"
+ GER_weimar_stability_desc:0 "The democratic institutions of the Weimar Republic, while under pressure, provide a framework for political stability and gradual recovery."
+ 
+ GER_democratic_coalition:0 "Democratic Coalition"
+ GER_democratic_coalition_desc:0 "A broad coalition of democratic parties working together to address the economic crisis and resist extremism."
+ 
+ GER_austerity_measures:0 "Austerity Measures"
+ GER_austerity_measures_desc:0 "Strict fiscal policies aimed at balancing the budget and restoring international confidence, despite their unpopularity with the public."
+ 
+ GER_spd_reforms:0 "SPD Economic Reforms"
+ GER_spd_reforms_desc:0 "Social Democratic economic policies focusing on public works, social welfare, and state intervention to address unemployment."
+ 
+ GER_gold_standard:0 "Gold Standard"
+ GER_gold_standard_desc:0 "Maintaining the gold standard provides monetary stability but limits flexibility in responding to the economic crisis."
+ 
+ GER_economic_recovery:0 "Economic Recovery"
+ GER_economic_recovery_desc:0 "The first signs of recovery from the Great Depression are appearing, though full prosperity remains distant."
+ 
+ limited_rearmament:0 "Limited Rearmament"
+ limited_rearmament_desc:0 "A cautious rebuilding of military capabilities, ostensibly within the constraints of existing treaties."
+ 
+ GER_economic_miracle:0 "Economic Miracle"
+ GER_economic_miracle_desc:0 "Germany has achieved remarkable economic recovery through democratic reforms and international cooperation."
+ 
+ GER_enabling_act:0 "Enabling Act"
+ GER_enabling_act_desc:0 "The Enabling Act grants the Chancellor extraordinary powers to enact laws without parliamentary approval, effectively ending democratic governance."
+ 
+ GER_four_year_plan:0 "Four Year Plan"
+ GER_four_year_plan_desc:0 "A comprehensive economic program aimed at making Germany self-sufficient and prepared for war within four years."
+ 
+ GER_autarky_idea:0 "Autarky"
+ GER_autarky_idea_desc:0 "Economic policies focused on self-sufficiency, reducing dependence on foreign trade and developing domestic resource production."
+ 
+ GER_military_expansion:0 "Military Expansion"
+ GER_military_expansion_desc:0 "A rapid expansion of military capabilities in violation of treaty limitations, preparing Germany for future conflicts."
+ 
+ GER_public_works:0 "Public Works Projects"
+ GER_public_works_desc:0 "Massive infrastructure projects like the Autobahn, providing employment and creating strategic transportation networks."
+ 
+ GER_nationalized_industry:0 "Nationalized Industry"
+ GER_nationalized_industry_desc:0 "Key industries have been brought under state control, ending private ownership and directing production according to the needs of the socialist state."
+ 
+ GER_five_year_plan:0 "Five Year Plan"
+ GER_five_year_plan_desc:0 "A comprehensive economic plan modeled after Soviet examples, directing all resources toward rapid industrialization."
+ 
+ GER_red_army_idea:0 "Red Army Principles"
+ GER_red_army_idea_desc:0 "Military organization based on Soviet doctrine, with political commissars ensuring ideological reliability and mass mobilization tactics."
+ 
+ GER_peoples_army:0 "People's Army"
+ GER_peoples_army_desc:0 "A revolutionary armed force built on mass conscription and political indoctrination, prepared to defend the socialist state against capitalist aggression."

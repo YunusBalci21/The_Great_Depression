@@ -1,0 +1,227 @@
+ideas = {
+	country = {
+		# Democratic Path Ideas
+		GER_weimar_stability = {
+			picture = GFX_idea_generic_constitutional_guarantee
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.10
+				drift_defence_factor = 0.20
+			}
+		}
+
+		GER_democratic_coalition = {
+			picture = GFX_idea_generic_political_support
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.10
+				drift_defence_factor = 0.15
+				democratic_drft = 0.05
+			}
+		}
+
+
+        GER_austerity_measures = {
+            picture = GFX_idea_generic_foreign_capital
+            allowed = { always = yes }
+            removal_cost = -1
+            
+            modifier = {
+                consumer_goods_factor = -0.05
+                production_speed_buildings_factor = -0.10
+                stability_factor = -0.05
+                political_power_gain = -0.10
+            }
+        }
+        
+        GER_spd_reforms = {
+            picture = GFX_idea_generic_social_science
+            allowed = { always = yes }
+            removal_cost = -1
+            
+            modifier = {
+                stability_factor = 0.05
+                consumer_goods_factor = 0.05
+                monthly_population = 0.05
+                production_speed_buildings_factor = 0.10
+            }
+        }
+        
+        GER_gold_standard = {
+            picture = GFX_idea_generic_foreign_capital
+            allowed = { always = yes }
+            removal_cost = -1
+            
+            modifier = {
+                consumer_goods_factor = -0.05
+                trade_opinion_factor = 0.15
+                min_export = 0.15
+                stability_weekly = 0.002
+            }
+        }
+        
+        GER_economic_recovery = {
+            picture = GFX_idea_generic_economic_deal
+            allowed = { always = yes }
+            removal_cost = -1
+            
+            modifier = {
+                consumer_goods_factor = 0.20
+                industrial_capacity_factory = -0.10
+                production_speed_buildings_factor = -0.10
+                stability_factor = 0.05
+            }
+        }
+        
+        limited_rearmament = {
+            picture = GFX_idea_generic_war_preparation
+            allowed = { always = yes }
+            removal_cost = -1
+            
+            modifier = {
+                production_speed_arms_factory_factor = 0.10
+                industrial_capacity_factory = 0.05
+                political_power_gain = -0.05
+                war_support_factor = 0.05
+            }
+        }
+        
+        GER_economic_miracle = {
+            picture = GFX_idea_generic_economic_deal
+            allowed = { always = yes }
+            removal_cost = -1
+            
+            modifier = {
+                consumer_goods_factor = -0.10
+                industrial_capacity_factory = 0.15
+                production_speed_buildings_factor = 0.15
+                stability_factor = 0.10
+                political_power_gain = 0.10
+            }
+        }
+        
+        # Fascist Path Ideas
+        GER_enabling_act = {
+            picture = GFX_idea_generic_fascism_drift_bonus
+            allowed = { always = yes }
+            removal_cost = -1
+            
+            modifier = {
+                fascism_drift = 0.10
+                political_power_gain = 0.25
+                stability_factor = -0.05
+                drift_defence_factor = 0.30
+            }
+        }
+        
+        GER_four_year_plan = {
+            picture = GFX_idea_generic_production_bonus
+            allowed = { always = yes }
+            removal_cost = -1
+            
+            modifier = {
+                production_speed_buildings_factor = 0.15
+                industrial_capacity_factory = 0.10
+                local_resources_factor = 0.10
+                conversion_cost_civ_to_mil_factor = -0.20
+            }
+        }
+        
+        GER_autarky_idea = {
+            picture = GFX_idea_generic_exploit_mines
+            allowed = { always = yes }
+            removal_cost = -1
+            
+            modifier = {
+                local_resources_factor = 0.20
+                consumer_goods_factor = -0.05
+                min_export = -0.10
+                production_speed_industrial_complex_factor = 0.10
+            }
+        }
+        
+        GER_military_expansion = {
+            picture = GFX_idea_generic_army_war_college
+            allowed = { always = yes }
+            removal_cost = -1
+            
+            modifier = {
+                army_org_factor = 0.05
+                training_time_army_factor = -0.10
+                army_morale_factor = 0.10
+                production_speed_arms_factory_factor = 0.10
+            }
+        }
+        
+        GER_public_works = {
+            picture = GFX_idea_generic_construction_bonus
+            allowed = { always = yes }
+            removal_cost = -1
+            
+            modifier = {
+                production_speed_infrastructure_factor = 0.25
+                production_speed_buildings_factor = 0.10
+                political_power_gain = 0.05
+                stability_factor = 0.05
+            }
+        }
+        
+        # Communist Path Ideas
+        GER_nationalized_industry = {
+            picture = GFX_idea_generic_state_control
+            allowed = { always = yes }
+            removal_cost = -1
+            
+            modifier = {
+                production_factory_max_efficiency_factor = 0.10
+                industrial_capacity_factory = 0.10
+                consumer_goods_factor = -0.05
+                communism_drift = 0.05
+            }
+        }
+        
+        GER_five_year_plan = {
+            picture = GFX_idea_generic_production_bonus
+            allowed = { always = yes }
+            removal_cost = -1
+            
+            modifier = {
+                production_speed_buildings_factor = 0.15
+                industrial_capacity_factory = 0.15
+                consumer_goods_factor = 0.10
+                local_resources_factor = 0.10
+            }
+        }
+        
+        GER_red_army_idea = {
+            picture = GFX_idea_generic_communist_army
+            allowed = { always = yes }
+            removal_cost = -1
+            
+            modifier = {
+                army_org_factor = 0.05
+                army_morale_factor = 0.10
+                planning_speed = 0.10
+                max_planning = 0.10
+            }
+        }
+        
+        GER_peoples_army = {
+            picture = GFX_idea_generic_national_army
+            allowed = { always = yes }
+            removal_cost = -1
+            
+            modifier = {
+                conscription = 0.02
+                training_time_army_factor = -0.10
+                war_support_factor = 0.10
+                stability_factor = 0.05
+            }
+        }
+    }
+}
