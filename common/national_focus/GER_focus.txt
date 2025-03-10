@@ -571,8 +571,10 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = service_by_requirement
 			add_manpower = 50000
-			add_equipment = {
-				infantry_equipment = 10000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 10000
+				producer = GER
 			}
 		}
 	}
@@ -910,8 +912,10 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = GER_peoples_army
 			add_manpower = 50000
-			add_equipment = {
-				infantry_equipment = 10000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 10000
+				producer = GER
 			}
 		}
 	}

@@ -1,10 +1,10 @@
-add_namespace = germany
+add_namespace = gd_germany
 
 # GREAT DEPRESSION EVENTS
 
 # Hyperinflation Memory
 country_event = {
-    id = germany.1
+    id = gd_germany.1
     title = germany.1.t
     desc = germany.1.d
     picture = GFX_report_event_generic_read_write
@@ -32,7 +32,7 @@ country_event = {
 
 # Young Plan
 country_event = {
-    id = germany.2
+    id = gd_germany.2
     title = germany.2.t
     desc = germany.2.d
     picture = GFX_report_event_generic_sign_treaty2
@@ -86,7 +86,7 @@ country_event = {
 
 # German Banking Crisis
 country_event = {
-    id = germany.3
+    id = gd_germany.3
     title = germany.3.t
     desc = germany.3.d
     picture = GFX_report_event_generic_stock_market_crash
@@ -115,7 +115,7 @@ country_event = {
 
 # Brüning's Emergency Decrees
 country_event = {
-    id = germany.4
+    id = gd_germany.4
     title = germany.4.t
     desc = germany.4.d
     picture = GFX_report_event_generic_read_write
@@ -163,7 +163,7 @@ country_event = {
 
 # Rise of the NSDAP
 country_event = {
-    id = germany.5
+    id = gd_germany.5
     title = germany.5.t
     desc = germany.5.d
     picture = GFX_report_event_fascist_march
@@ -196,7 +196,7 @@ country_event = {
 
 # Von Papen Government
 country_event = {
-    id = germany.6
+    id = gd_germany.6
     title = germany.6.t
     desc = germany.6.d
     picture = GFX_report_event_generic_rally
@@ -229,7 +229,7 @@ country_event = {
 
 # Presidential Election - Hindenburg vs Hitler
 country_event = {
-    id = germany.7
+    id = gd_germany.7
     title = germany.7.t
     desc = germany.7.d
     picture = GFX_report_event_generic_election
@@ -266,7 +266,7 @@ country_event = {
 
 # Hitler Appointed Chancellor
 country_event = {
-    id = germany.8
+    id = gd_germany.8
     title = germany.8.t
     desc = germany.8.d
     picture = GFX_report_event_hitler_speech
@@ -296,14 +296,14 @@ country_event = {
             popularity = 0.15
         }
         hidden_effect = {
-            country_event = { id = germany.9 days = 30 }
+            country_event = { id = gd_germany.9 days = 30 }
         }
     }
 }
 
 # Reichstag Fire
 country_event = {
-    id = germany.9
+    id = gd_germany.9
     title = germany.9.t
     desc = germany.9.d
     picture = GFX_report_event_burning_buildings
@@ -324,14 +324,14 @@ country_event = {
             popularity = -0.10
         }
         hidden_effect = {
-            country_event = { id = germany.10 days = 7 }
+            country_event = { id = gd_germany.10 days = 7 }
         }
     }
 }
 
 # Enabling Act Event
 country_event = {
-    id = germany.10
+    id = gd_germany.10
     title = germany.10.t
     desc = germany.10.d
     picture = GFX_report_event_generic_rally_3
@@ -356,7 +356,7 @@ country_event = {
 
 # Communist Uprising
 country_event = {
-    id = germany.11
+    id = gd_germany.11
     title = germany.11.t
     desc = germany.11.d
     picture = GFX_report_event_communist_rally
@@ -385,14 +385,14 @@ country_event = {
             popularity = 0.15
         }
         hidden_effect = {
-            country_event = { id = germany.12 days = 30 }
+            country_event = { id = gd_germany.12 days = 30 }
         }
     }
 }
 
 # Communist Victory
 country_event = {
-    id = germany.12
+    id = gd_germany.12
     title = germany.12.t
     desc = germany.12.d
     picture = GFX_report_event_worker_protests
@@ -422,7 +422,7 @@ country_event = {
 
 # Democratic Stabilization
 country_event = {
-    id = germany.13
+    id = gd_germany.13
     title = germany.13.t
     desc = germany.13.d
     picture = GFX_report_event_generic_sign_treaty1
@@ -455,7 +455,7 @@ country_event = {
 
 # Economic Recovery Beginning
 country_event = {
-    id = germany.14
+    id = gd_germany.14
     title = germany.14.t
     desc = germany.14.d
     picture = GFX_report_event_generic_factory
@@ -490,7 +490,7 @@ country_event = {
 
 # German Remilitarization of the Rhineland
 country_event = {
-    id = germany.15
+    id = gd_germany.15
     title = germany.15.t
     desc = germany.15.d
     picture = GFX_report_event_german_troops
@@ -520,7 +520,7 @@ country_event = {
         add_stability = 0.05
         add_war_support = 0.10
         
-        FRA = { country_event = { id = germany.16 days = 1 } }
+        FRA = { country_event = { id = gd_germany.16 days = 1 } }
     }
     
     option = {
@@ -535,7 +535,7 @@ country_event = {
 
 # French Response to Rhineland
 country_event = {
-    id = germany.16
+    id = gd_germany.16
     title = germany.16.t
     desc = germany.16.d
     picture = GFX_report_event_french_soldiers
@@ -548,7 +548,7 @@ country_event = {
         add_political_power = -50
         add_stability = -0.05
         add_war_support = -0.05
-        GER = { country_event = { id = germany.17 days = 1 } }
+        GER = { country_event = { id = gd_germany.17 days = 1 } }
     }
     
     option = {
@@ -561,13 +561,13 @@ country_event = {
             type = topple_government
             target = GER
         }
-        GER = { country_event = { id = germany.18 days = 1 } }
+        GER = { country_event = { id = gd_germany.18 days = 1 } }
     }
 }
 
 # French Accept Remilitarization
 country_event = {
-    id = germany.17
+    id = gd_germany.17
     title = germany.17.t
     desc = germany.17.d
     picture = GFX_report_event_german_speech
@@ -591,7 +591,7 @@ country_event = {
 
 # French Oppose Remilitarization
 country_event = {
-    id = germany.18
+    id = gd_germany.18
     title = germany.18.t
     desc = germany.18.d
     picture = GFX_report_event_german_military_planning
@@ -615,7 +615,7 @@ country_event = {
 
 # Anschluss with Austria Event
 country_event = {
-    id = germany.20
+    id = gd_germany.20
     title = germany.20.t
     desc = germany.20.d
     picture = GFX_report_event_german_speech
@@ -627,14 +627,14 @@ country_event = {
         add_political_power = 25
         add_stability = 0.05
         AUS = {
-            country_event = { id = germany.21 days = 1 }
+            country_event = { id = gd_germany.21 days = 1 }
         }
     }
 }
 
 # Austria's Response to Anschluss
 country_event = {
-    id = germany.21
+    id = gd_germany.21
     title = germany.21.t
     desc = germany.21.d
     picture = GFX_report_event_generic_sign_treaty1
@@ -646,7 +646,7 @@ country_event = {
         ai_chance = { factor = 90 }
         GER = { 
             annex_country = { target = AUS transfer_troops = yes }
-            country_event = { id = germany.22 days = 1 }
+            country_event = { id = gd_germany.22 days = 1 }
         }
     }
     
@@ -654,7 +654,7 @@ country_event = {
         name = germany.21.b # Austria will remain independent!
         ai_chance = { factor = 10 }
         GER = {
-            country_event = { id = germany.23 days = 1 }
+            country_event = { id = gd_germany.23 days = 1 }
             create_wargoal = {
                 type = annex_everything
                 target = AUS
@@ -668,7 +668,7 @@ country_event = {
 
 # Anschluss Completed
 country_event = {
-    id = germany.22
+    id = gd_germany.22
     title = germany.22.t
     desc = germany.22.d
     picture = GFX_report_event_hitler_crowds
@@ -685,7 +685,7 @@ country_event = {
 
 # Austria Resists
 country_event = {
-    id = germany.23
+    id = gd_germany.23
     title = germany.23.t
     desc = germany.23.d
     picture = GFX_report_event_german_military_planning
@@ -702,7 +702,7 @@ country_event = {
 
 # German-Soviet Pact
 country_event = {
-    id = germany.30
+    id = gd_germany.30
     title = germany.30.t
     desc = germany.30.d
     picture = GFX_report_event_molotov_ribbentrop_pact
@@ -727,14 +727,14 @@ country_event = {
         add_stability = 0.05
         add_war_support = 0.10
         SOV = {
-            country_event = { id = germany.31 days = 1 }
+            country_event = { id = gd_germany.31 days = 1 }
         }
     }
 }
 
 # Soviet Perspective on Pact
 country_event = {
-    id = germany.31
+    id = gd_germany.31
     title = germany.31.t
     desc = germany.31.d
     picture = GFX_report_event_soviet_german_alliance
@@ -752,7 +752,7 @@ country_event = {
 
 # Franco-German Cooperation
 country_event = {
-    id = germany.40
+    id = gd_germany.40
     title = germany.40.t
     desc = germany.40.d
     picture = GFX_report_event_generic_sign_treaty2
@@ -776,14 +776,14 @@ country_event = {
         add_political_power = 50
         add_stability = 0.05
         FRA = {
-            country_event = { id = germany.41 days = 1 }
+            country_event = { id = gd_germany.41 days = 1 }
         }
     }
 }
 
 # French Perspective on Cooperation
 country_event = {
-    id = germany.41
+    id = gd_germany.41
     title = germany.41.t
     desc = germany.41.d
     picture = GFX_report_event_french_german_handshake

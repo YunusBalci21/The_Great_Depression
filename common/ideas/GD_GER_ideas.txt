@@ -21,7 +21,7 @@ ideas = {
 			modifier = {
 				stability_factor = 0.10
 				drift_defence_factor = 0.15
-				democratic_drft = 0.05
+				democratic_drift = 0.05  # Fixed "democratic_drft" to "democratic_drift"
 			}
 		}
 

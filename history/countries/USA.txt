@@ -70,3 +70,148 @@ create_country_leader = {
 		# Add traits if desired
 	}
 }
+
+# Set up character for FDR to appear later
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	create_character = {
+		name = "Franklin D. Roosevelt"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_USA_Franklin_Roosevelt.dds"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			traits = { great_depression_reformer }
+			expire = "1945.4.12"
+		}
+	}
+	else = {
+		create_country_leader = {
+			name = "Franklin D. Roosevelt"
+			desc = "POLITICS_FRANKLIN_ROOSEVELT_DESC"
+			picture = "gfx/leaders/USA/Portrait_USA_Franklin_Roosevelt.dds"
+			expire = "1945.4.12"
+			ideology = liberalism
+			traits = {
+				great_depression_reformer
+			}
+		}
+	}
+}
+
+# Set up a few military leaders
+create_field_marshal = {
+	name = "Douglas MacArthur"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_Douglas_MacArthur.dds"
+	traits = { offensive_doctrine }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Dwight D. Eisenhower"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_Dwight_D_Eisenhower.dds"
+	traits = { politically_connected career_officer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "George S. Patton"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_George_S_Patton.dds"
+	traits = { trickster cavalryman }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+# Navy leaders
+create_navy_leader = {
+	name = "William D. Leahy"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_William_D_Leahy.dds"
+	traits = { navy_career_officer }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 3
+	coordination_skill = 4
+}
+
+create_navy_leader = {
+	name = "Ernest J. King"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_Ernest_King.dds"
+	traits = { navy_career_officer naval_lineage }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	maneuvering_skill = 4
+	coordination_skill = 4
+}
+
+# Set starting technology
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		early_carrier = 1
+		basic_battleship = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
+		basic_depth_charge = 1
+		mtg_transport = 1
+	}
+}
+
+# Focus tree
+if = {
+	limit = { has_dlc = "Waking the Tiger" }
+	set_country_flag = USA_waking_the_tiger_flag
+}
+
+1929.11.1 = {
+	set_country_flag = black_monday_occurred
+}
+
+1932.11.8 = {
+	# The 1932 election - Roosevelt wins
+	create_country_leader = {
+		name = "Franklin D. Roosevelt"
+		desc = "POLITICS_FRANKLIN_ROOSEVELT_DESC"
+		picture = "gfx/leaders/USA/Portrait_USA_Franklin_Roosevelt.dds"
+		expire = "1945.4.12"
+		ideology = liberalism
+		traits = {
+			great_depression_reformer
+		}
+	}
+}

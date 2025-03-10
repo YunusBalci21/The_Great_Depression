@@ -211,10 +211,9 @@ ideas = {
             }
         }
         
-        # FDR Trait
+        # FDR Trait - Fixed structure
         great_depression_reformer = {
             type = character
-            
             trait_type = personality_trait
             
             allowed = {

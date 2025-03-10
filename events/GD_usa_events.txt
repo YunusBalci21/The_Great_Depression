@@ -1,10 +1,10 @@
-add_namespace = usa
+add_namespace = gd_usa
 
 # INITIAL DEPRESSION EVENTS
 
 # Stock Market Crash
 country_event = {
-    id = usa.1
+    id = gd_usa.1
     title = usa.1.t
     desc = usa.1.d
     picture = GFX_report_event_generic_stock_market_crash
@@ -36,7 +36,7 @@ country_event = {
 
 # Hoover's Initial Response
 country_event = {
-    id = usa.2
+    id = gd_usa.2
     title = usa.2.t
     desc = usa.2.d
     picture = GFX_report_event_generic_read_write
