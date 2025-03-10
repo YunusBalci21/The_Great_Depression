@@ -1,6 +1,6 @@
 focus_tree = {
-	id = german focus
-
+	id = german_focus
+	
 	country = {
 		factor = 0
 		modifier = {
@@ -8,10 +8,10 @@ focus_tree = {
 			tag = GER
 		}
 	}
-
+	
 	default = no
-
-	# Start point for the focus tree -> Weimar Crisis
+	
+	# Starting Focus - Weimar Crisis
 	focus = {
 		id = GER_weimar_crisis
 		icon = GFX_goal_generic_demand_territory
@@ -24,9 +24,9 @@ focus_tree = {
 			add_stability = -0.05
 		}
 	}
-
+	
 	# Political Struggle Focus
-	focus {
+	focus = {
 		id = GER_political_struggle
 		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = GER_weimar_crisis }
@@ -37,23 +37,23 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			add_stability = -0.05
-			add_war_support = -0.05
+			add_war_support = 0.05
 		}
 	}
-
-	# Democratic Path - Focus Tree
+	
+	# DEMOCRATIC PATH
 	focus = {
 		id = GER_preserve_democracy
-		icon = GFX_goal_generic_election
+		icon = GFX_goal_support_democracy
 		prerequisite = { focus = GER_political_struggle }
-		mutually_exclusive = {
-			focus = GER_support_nsdap
-			focus = GER_commmunist_revolution
+		mutually_exclusive = { 
+			focus = GER_support_nsdap 
+			focus = GER_communist_revolution
 		}
 		x = 6
 		y = 2
 		cost = 10
-		ai_will_do = {
+		ai_will_do = { 
 			factor = 8
 			modifier = {
 				factor = 0.5
@@ -61,7 +61,7 @@ focus_tree = {
 			}
 			modifier = {
 				factor = 0.3
-				has_war_support < 0.6
+				has_war_support > 0.6
 			}
 		}
 		completion_reward = {
@@ -69,17 +69,17 @@ focus_tree = {
 			add_political_power = 50
 			add_popularity = {
 				ideology = democratic
-				popularity = 
+				popularity = 0.10
 			}
 		}
 	}
-
+	
 	# Continue Weimar Policies
 	focus = {
 		id = GER_continue_weimar
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = GER_preserve_democracy }
-		mutually_exclusive = { focus = GER_new_coalition}
+		mutually_exclusive = { focus = GER_new_coalition }
 		x = 5
 		y = 3
 		cost = 10
@@ -90,8 +90,8 @@ focus_tree = {
 			add_ideas = GER_weimar_stability
 		}
 	}
-
-	# New Democaratic Coalition
+	
+	# New Democratic Coalition
 	focus = {
 		id = GER_new_coalition
 		icon = GFX_goal_generic_improve_relations
@@ -104,10 +104,10 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			add_stability = 0.10
-			add_ideas = GER_weimar_stability
+			add_ideas = GER_democratic_coalition
 		}
 	}
-
+	
 	# Bruning's Austerity
 	focus = {
 		id = GER_bruning_austerity
@@ -120,9 +120,10 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = -25
 			add_stability = -0.05
-			add_ideas = GER_bruning_measures
+			add_ideas = GER_austerity_measures
 			random_owned_controlled_state = {
 				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -131,12 +132,12 @@ focus_tree = {
 			}
 		}
 	}
-
+	
 	# SPD Economic Reforms
 	focus = {
 		id = GER_spd_reforms
 		icon = GFX_goal_generic_consumer_goods
-		prerequisite = { focus = GER_continue_coalition }
+		prerequisite = { focus = GER_new_coalition }
 		x = 7
 		y = 4
 		cost = 10
@@ -155,12 +156,13 @@ focus_tree = {
 			}
 		}
 	}
-
+	
 	# Maintain Gold Standard
 	focus = {
 		id = GER_maintain_gold
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = GER_bruning_austerity }
+		mutually_exclusive = { focus = GER_abandon_gold }
 		x = 5
 		y = 5
 		cost = 10
@@ -179,7 +181,7 @@ focus_tree = {
 			}
 		}
 	}
-
+	
 	# Abandon Gold Standard
 	focus = {
 		id = GER_abandon_gold
@@ -197,7 +199,7 @@ focus_tree = {
 			add_ideas = GER_economic_recovery
 		}
 	}
-
+	
 	# Budget Constraints
 	focus = {
 		id = GER_budget_constraints
@@ -219,7 +221,7 @@ focus_tree = {
 			}
 		}
 	}
-
+	
 	# Public Works Programs
 	focus = {
 		id = GER_public_works
