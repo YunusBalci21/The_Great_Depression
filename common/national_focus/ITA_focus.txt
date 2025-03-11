@@ -90,14 +90,11 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = ITA_battle_for_grain
-			random_owned_state = {
-				limit = {
-					is_core_of = ROOT
-				}
-				add_resource = {
-					type = food
-					amount = 8
-				}
+			# Removed problematic resource addition that's causing errors
+			# Instead, give a production bonus which is more appropriate
+			add_timed_idea = { 
+				idea = agriculture_production_bonus
+				days = 365
 			}
 		}
 	}
@@ -189,7 +186,7 @@ focus_tree = {
 	# Economic Recovery
 	focus = {
 		id = ITA_economic_recovery
-		icon = GFX_goal_generic_economic_deal
+		icon = GFX_focus_research # Placeholder icon - GFX_focus_generic_economic_deal
 		prerequisite = { focus = ITA_economic_autarky }
 		prerequisite = { focus = ITA_industrial_expansion }
 		x = 3
@@ -573,17 +570,11 @@ focus_tree = {
 				add_building_construction = {
 					type = bunker
 					level = 2
-					province = {
-						all_provinces = yes
-					}
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = coastal_bunker
 					level = 2
-					province = {
-						limit_to_coastal = yes
-					}
 					instant_build = yes
 				}
 			}
@@ -591,9 +582,6 @@ focus_tree = {
 				add_building_construction = {
 					type = bunker
 					level = 2
-					province = {
-						all_provinces = yes
-					}
 					instant_build = yes
 				}
 			}
@@ -856,11 +844,12 @@ focus_tree = {
 			navy_experience = 25
 			add_war_support = 0.05
 			add_political_power = 25
+			# Using a tech category rather than a specific tech
 			add_tech_bonus = {
 				name = naval_bonus
 				bonus = 0.5
 				uses = 1
-				technology = battleship_2
+				category = naval_equipment
 			}
 		}
 	}
