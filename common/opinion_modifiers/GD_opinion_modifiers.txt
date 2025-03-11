@@ -1,0 +1,6 @@
+opinion_modifiers = {
+    puppet_relation = {
+        value = 100     # Strong positive opinion
+        decay = 1       # Slow decay rate
+    }
+}

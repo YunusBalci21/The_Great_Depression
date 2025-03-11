@@ -522,7 +522,7 @@ country_event = {
 		ALB = {
 			add_opinion_modifier = {
 				target = ITA
-				modifier = puppet_relation
+				modifier = large_increase
 			}
 		}
 	}
