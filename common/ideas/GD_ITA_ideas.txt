@@ -425,4 +425,132 @@ ideas = {
 			}
 		}
 	}
+
+	# New ideas for the Italian focus tree additions
+# Add these to your existing common/ideas/GD_ITA_ideas.txt file
+
+ITA_corporative_system_idea = {
+	allowed = {
+		original_tag = ITA
+	}
+	
+	removal_cost = -1
+	
+	picture = GFX_idea_generic_fascism_drift_bonus
+	
+	modifier = {
+		stability_factor = 0.05
+		industrial_capacity_factory = 0.05
+		consumer_goods_factor = -0.05
+		political_power_gain = 0.05
+	}
+}
+
+ITA_social_security_idea = {
+	allowed = {
+		original_tag = ITA
+	}
+	
+	removal_cost = -1
+	
+	picture = GFX_idea_generic_social_science
+	
+	modifier = {
+		stability_factor = 0.10
+		consumer_goods_factor = 0.05
+		monthly_population = 0.05
+		political_power_gain = -0.05
+	}
+}
+
+ITA_youth_organizations = {
+	allowed = {
+		original_tag = ITA
+	}
+	
+	removal_cost = -1
+	
+	picture = GFX_idea_generic_manpower_bonus
+	
+	modifier = {
+		conscription = 0.01
+		training_time_army_factor = -0.10
+		war_support_factor = 0.05
+		fascism_drift = 0.01
+	}
+}
+
+ITA_spanish_intervention_idea = {
+	allowed = {
+		original_tag = ITA
+	}
+	
+	removal_cost = -1
+	
+	picture = GFX_idea_generic_volunteer_expedition_bonus
+	
+	modifier = {
+		send_volunteer_size = 1
+		send_volunteer_divisions_required = -0.25
+		political_power_gain = -0.05
+		war_support_factor = 0.05
+	}
+}
+
+ITA_complete_autarky = {
+	allowed = {
+		original_tag = ITA
+	}
+	
+	removal_cost = -1
+	
+	picture = GFX_idea_generic_exploit_mines
+	
+	modifier = {
+		local_resources_factor = 0.20
+		min_export = -0.15
+		production_speed_synthetic_refinery_factor = 0.15
+		consumer_goods_factor = 0.05
+		industrial_capacity_factory = 0.05
+	}
+}
+
+ITA_trade_expansion = {
+	allowed = {
+		original_tag = ITA
+	}
+	
+	removal_cost = -1
+	
+	picture = GFX_idea_generic_foreign_trade
+	
+	modifier = {
+		trade_opinion_factor = 0.25
+		min_export = 0.10
+		global_import = -0.10
+		consumer_goods_factor = -0.05
+	}
+}
+
+ITA_war_preparation = {
+	allowed = {
+		original_tag = ITA
+	}
+	
+	removal_cost = -1
+	
+	picture = GFX_idea_generic_war_preparation
+	
+	modifier = {
+		production_speed_arms_factory_factor = 0.15
+		production_speed_dockyard_factor = 0.10
+		industrial_capacity_factory = 0.10
+		industrial_capacity_dockyard = 0.10
+		war_support_factor = 0.10
+	}
+}
+
+
+
+
 }

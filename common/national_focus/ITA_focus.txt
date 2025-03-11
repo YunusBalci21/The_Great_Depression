@@ -207,6 +207,115 @@ focus_tree = {
 		}
 	}
 	
+	# Social Policy Path
+	focus = {
+		id = ITA_corporative_system
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = ITA_economic_recovery }
+		x = 2
+		y = 6
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 25
+			add_ideas = ITA_corporative_system_idea
+		}
+	}
+
+	focus = {
+		id = ITA_social_security
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = ITA_corporative_system }
+		x = 1
+		y = 7
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.10
+			add_political_power = -25
+			add_ideas = ITA_social_security_idea
+		}
+	}
+
+	focus = {
+		id = ITA_cult_of_youth
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = ITA_corporative_system }
+		x = 3
+		y = 7
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_war_support = 0.10
+			add_stability = 0.05
+			add_ideas = ITA_youth_organizations
+		}
+	}
+	
+	# Autarky vs Trade Path
+	focus = {
+		id = ITA_economic_self_sufficiency
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = ITA_industrial_expansion focus = ITA_economic_autarky }
+		mutually_exclusive = { focus = ITA_international_trade }
+		x = 2
+		y = 8
+		cost = 10
+		ai_will_do = { 
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = fascism
+			}
+		}
+		completion_reward = {
+			add_ideas = ITA_complete_autarky
+			add_stability = -0.05
+			add_political_power = 25
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_international_trade
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = ITA_industrial_expansion focus = ITA_economic_autarky }
+		mutually_exclusive = { focus = ITA_economic_self_sufficiency }
+		x = 4
+		y = 8
+		cost = 10
+		ai_will_do = { 
+			factor = 5
+			modifier = {
+				factor = 0.5
+				has_government = fascism
+			}
+		}
+		completion_reward = {
+			add_ideas = ITA_trade_expansion
+			add_stability = 0.05
+			add_political_power = 25
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
 	#########################
 	### MILITARY BRANCH ###
 	#########################
@@ -516,6 +625,43 @@ focus_tree = {
 		}
 	}
 	
+	# Albanian Invasion Path
+	focus = {
+		id = ITA_albanian_question
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = ITA_ethiopian_war_preparation }
+		x = 13
+		y = 6
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+			add_war_support = 0.05
+			add_opinion_modifier = {
+				target = ALB
+				modifier = medium_decrease
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_albanian_conquest
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = ITA_albanian_question }
+		x = 13
+		y = 7
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ALB
+			}
+			add_war_support = 0.05
+			add_stability = 0.05
+		}
+	}
+	
 	#########################
 	### DIPLOMACY BRANCH ###
 	#########################
@@ -719,6 +865,67 @@ focus_tree = {
 		}
 	}
 	
+	# Spanish Civil War Path
+	focus = {
+		id = ITA_spanish_intervention
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = ITA_pact_of_steel focus = ITA_mediterranean_ambitions }
+		available = {
+			has_global_flag = spanish_civil_war_begun
+		}
+		x = 17
+		y = 6
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = -25
+			add_war_support = 0.10
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 5000
+				producer = ITA
+			}
+			add_ideas = ITA_spanish_intervention_idea
+		}
+	}
+
+	focus = {
+		id = ITA_spanish_legion
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = ITA_spanish_intervention }
+		x = 17
+		y = 7
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_manpower = -10000
+			add_war_support = 0.05
+			add_political_power = 25
+			army_experience = 50
+			air_experience = 25
+		}
+	}
+	
+	# Connect new paths to preparation for war
+	focus = {
+		id = ITA_preparation_for_war
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = ITA_economic_self_sufficiency focus = ITA_international_trade }
+		prerequisite = { focus = ITA_social_security focus = ITA_cult_of_youth }
+		prerequisite = { focus = ITA_albanian_conquest }
+		prerequisite = { focus = ITA_spanish_legion }
+		x = 10
+		y = 8
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_war_support = 0.15
+			add_stability = 0.05
+			add_ideas = ITA_war_preparation
+			add_political_power = 50
+		}
+	}
+	
 	#########################
 	### FINAL FOCUSES ###
 	#########################
@@ -731,8 +938,9 @@ focus_tree = {
 		prerequisite = { focus = ITA_military_industrial_complex }
 		prerequisite = { focus = ITA_ethiopian_war_preparation }
 		prerequisite = { focus = ITA_pact_of_steel focus = ITA_mediterranean_ambitions }
+		prerequisite = { focus = ITA_preparation_for_war }
 		x = 10
-		y = 6
+		y = 9
 		cost = 10
 		ai_will_do = { factor = 1 }
 		completion_reward = {

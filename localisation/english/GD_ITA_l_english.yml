@@ -1,0 +1,53 @@
+﻿l_english:
+ # New Focus Localizations
+ ITA_corporative_system:0 "The Corporative System"
+ ITA_corporative_system_desc:0 "The Fascist Corporative System will reorganize the Italian economy by creating state-sanctioned organizations of employers and workers that cooperate to set production goals and labor conditions. This 'third way' between capitalism and socialism will harness class cooperation for national objectives while subordinating economic interests to the state."
+ 
+ ITA_social_security:0 "Social Welfare Programs"
+ ITA_social_security_desc:0 "To maintain social stability during this economic crisis, we must establish welfare programs that provide a basic safety net for Italian citizens. These programs will demonstrate the regime's concern for the people's well-being, strengthen popular support, and prevent the kind of social unrest that could undermine our grand ambitions."
+ 
+ ITA_cult_of_youth:0 "Cult of Youth"
+ ITA_cult_of_youth_desc:0 "The future of Fascist Italy depends on molding the younger generation. Through organizations like the Opera Nazionale Balilla and Gioventù Italiana del Littorio, we will instill fascist values, militarism, and physical fitness in Italian youth, creating a new generation ready to serve the national cause and fight for a new Roman Empire."
+ 
+ ITA_albanian_question:0 "The Albanian Question"
+ ITA_albanian_question_desc:0 "Albania represents a strategic gateway to the Balkans and a natural extension of Italian influence across the Adriatic. With economic ties already binding Albania to Italy, the time has come to consider more direct control over this strategically important territory to secure our Adriatic flank and expand our sphere of influence."
+ 
+ ITA_albanian_conquest:0 "Conquest of Albania"
+ ITA_albanian_conquest_desc:0 "Albania must become part of the Italian sphere through direct military action. By incorporating this territory, we will secure the Adriatic Sea as an Italian lake, gain a foothold in the Balkans, and demonstrate Italian power to both the great powers and our potential subjects in the region."
+ 
+ ITA_spanish_intervention:0 "Intervention in Spain"
+ ITA_spanish_intervention_desc:0 "The civil war in Spain offers an opportunity to support ideological allies and gain a friendly regime on France's southern border. By providing military aid and volunteers to Nationalist forces, we can help establish another fascist state in Europe, gain valuable combat experience, and strengthen our position in the Western Mediterranean."
+ 
+ ITA_spanish_legion:0 "Italian Legion in Spain"
+ ITA_spanish_legion_desc:0 "We will send a substantial volunteer force to Spain to support Nationalist forces. The Corpo Truppe Volontarie will provide frontline troops, aircraft, tanks, and advisors, allowing us to test our military doctrines and equipment in real combat conditions while contributing to the Nationalist cause."
+ 
+ ITA_economic_self_sufficiency:0 "Complete Economic Autarky"
+ ITA_economic_self_sufficiency_desc:0 "Italy must become fully self-sufficient to withstand international pressure and potential blockades during wartime. By developing synthetic resource production, expanding domestic mining, and substituting imports with locally produced alternatives, we can reduce our dangerous dependence on foreign resources."
+ 
+ ITA_international_trade:0 "International Trade Expansion"
+ ITA_international_trade_desc:0 "While maintaining our core self-sufficiency, we can benefit from expanded international trade to acquire resources and technologies we cannot produce domestically. By developing trade relationships with neutral countries and potential allies, we can strengthen our economy while preserving our independence."
+ 
+ ITA_preparation_for_war:0 "Preparation for War"
+ ITA_preparation_for_war_desc:0 "The fulfillment of Italy's imperial ambitions will ultimately require military action. We must prepare our industry, military, and people for the coming conflicts that will establish Italy's place as a dominant Mediterranean power and restore the glory of Rome. Every aspect of the nation must be oriented toward the coming struggle."
+ 
+ # New Idea Localizations
+ ITA_corporative_system_idea:0 "Corporative System"
+ ITA_corporative_system_idea_desc:0 "A state-directed economic system organizing industries into corporations that include both employers and workers, aimed at eliminating class conflict and subordinating economic interests to national objectives."
+ 
+ ITA_social_security_idea:0 "Fascist Social Welfare"
+ ITA_social_security_idea_desc:0 "A system of welfare programs providing basic social security, healthcare, and family benefits to maintain social stability and demonstrate the regime's concern for the Italian people's well-being."
+ 
+ ITA_youth_organizations:0 "Fascist Youth Organizations"
+ ITA_youth_organizations_desc:0 "Comprehensive youth organizations that indoctrinate the younger generation with fascist ideals, physical fitness, and pre-military training, creating loyal supporters for the regime and future soldiers for the nation."
+ 
+ ITA_spanish_intervention_idea:0 "Intervention in Spain"
+ ITA_spanish_intervention_idea_desc:0 "Italian military support for Nationalist forces in the Spanish Civil War, including equipment, advisors, and volunteer troops fighting alongside Franco's forces."
+ 
+ ITA_complete_autarky:0 "Economic Self-Sufficiency"
+ ITA_complete_autarky_desc:0 "A comprehensive policy of economic self-sufficiency aimed at eliminating dependence on foreign resources through domestic production, synthetic alternatives, and reduced consumption of imported goods."
+ 
+ ITA_trade_expansion:0 "International Trade Framework"
+ ITA_trade_expansion_desc:0 "A strategic approach to international trade focused on securing essential resources and technologies while maintaining core economic independence and building favorable trade relationships with potential allies."
+ 
+ ITA_war_preparation:0 "War Economy Preparation"
+ ITA_war_preparation_desc:0 "The systematic preparation of Italy's economy, industry, and resources for upcoming military conflicts, prioritizing military production and strategic resource accumulation."
