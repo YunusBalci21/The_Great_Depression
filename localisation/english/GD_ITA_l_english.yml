@@ -51,3 +51,129 @@
  
  ITA_war_preparation:0 "War Economy Preparation"
  ITA_war_preparation_desc:0 "The systematic preparation of Italy's economy, industry, and resources for upcoming military conflicts, prioritizing military production and strategic resource accumulation."
+ # Leader Descriptions
+ POLITICS_BENITO_MUSSOLINI_DESC:0 "Benito Mussolini, Il Duce of Fascist Italy, has ruled the country since the March on Rome in 1922. A former socialist journalist turned nationalist after World War I, Mussolini has gradually transformed Italy into a one-party state. His bombastic oratory and grandiose promises have made him popular, but his regime rests on a precarious economic foundation. Mussolini dreams of restoring the glory of the Roman Empire through colonial expansion, but Italy lacks the industrial might of other European powers. As the Depression strikes, he faces the challenge of maintaining his grip on power while navigating economic turmoil. His response will blend theatrical posturing with pragmatic compromises, always seeking to project strength while hiding Italy's fundamental weaknesses."
+ 
+ POLITICS_VITTORIO_EMANUELE_III_DESC:0 "King Vittorio Emanuele III, monarch of the House of Savoy since 1900, has watched as his authority diminished under Mussolini's fascist regime. Though technically head of state, the diminutive king has largely acquiesced to Mussolini's leadership. Educated and reserved, he maintains his formal position but exercises little genuine power. His relationship with the fascist government is one of reluctant accommodation, hoping to preserve the monarchy amidst political turmoil. As the Great Depression hits Italy, the king remains a symbol of continuity but lacks the ability to shape policy."
+ 
+ POLITICS_ALCIDE_DE_GASPERI_DESC:0 "Alcide De Gasperi, a moderate Catholic politician, has maintained a cautious opposition to Mussolini's fascist government. As former leader of the Italian People's Party before its dissolution, De Gasperi has survived by working in the Vatican Library while maintaining contacts with anti-fascist circles. His democratic principles and pragmatic approach make him a potential alternative leader should the fascist regime collapse. Amidst the economic crisis, De Gasperi advocates for democratic reforms and responsible economic management rather than adventurism."
+ 
+ POLITICS_PALMIRO_TOGLIATTI_DESC:0 "Palmiro Togliatti, leader of the outlawed Italian Communist Party, operates primarily from exile in Moscow. A committed Marxist and close associate of Antonio Gramsci, Togliatti maintains clandestine connections to communist cells within Italy. As economic conditions deteriorate, he sees opportunity in the growing dissatisfaction with Mussolini's regime. From abroad, Togliatti coordinates with other anti-fascist forces while maintaining strict loyalty to Soviet guidance. Should political upheaval create an opening, he stands ready to return to Italy and capitalize on working-class discontent."
+ 
+ # Event Localization
+ 
+ italy_depression.1.t:0 "The Wall Street Crash Reaches Italy"
+ italy_depression.1.d:0 "News of the American stock market collapse has reached Rome, causing immediate concern among financial officials. Though initially viewed as an American problem, the growing global panic is now affecting Italian markets. Our fragile economy, still recovering from the post-war period, appears vulnerable to this international crisis. The fascist government faces its first major economic test since consolidating power.\n\nBenito Mussolini, presenting a confident facade, has gathered his economic advisors to formulate a response. Some advocate for stronger state controls and protectionist measures, arguing that fascist economic principles can insulate Italy from the worst effects. Others suggest that allowing market forces to correct themselves with minimal intervention might prevent damaging the already weak private sector. The Duce must now decide which path to take."
+ italy_depression.1.a:0 "Strengthen state control over the economy"
+ italy_depression.1.b:0 "Allow the markets to correct themselves"
+ 
+ italy_depression.2.t:0 "Economic Intervention Strategies"
+ italy_depression.2.d:0 "With the decision to increase state control over the economy, our ministers have presented two main approaches for Mussolini's consideration. The first, championed by agricultural ministers, is to intensify the 'Battle for Grain' campaign to achieve food self-sufficiency. This would reduce costly imports and provide employment in rural areas, though at the expense of industrial development.\n\nThe second approach advocates for a fully-realized corporate state system, organizing all economic activity through state-sanctioned corporations representing both employers and workers. This would give the regime greater control over industrial production and labor relations, potentially stabilizing the urban economy at the cost of economic efficiency."
+ italy_depression.2.a:0 "Launch the 'Battle for Grain' campaign"
+ italy_depression.2.b:0 "Implement the Corporate State system"
+ 
+ italy_depression.3.t:0 "Market Response Falters"
+ italy_depression.3.d:0 "Our decision to allow market forces to address the economic crisis has produced disappointing results. The banking sector remains unstable, unemployment continues to rise, and public confidence is wavering. Financial ministers warn that continued inaction could threaten both economic and political stability. Two alternative approaches have been suggested.\n\nSome advisors recommend implementing austerity measures to balance budgets and restore financial confidence. This would mean reducing government expenditures and tightening monetary policy, likely causing short-term hardship but potentially stabilizing the situation. Others advocate for a limited public works program to create employment and stimulate demand, though this would strain the treasury."
+ italy_depression.3.a:0 "Implement austerity measures"
+ italy_depression.3.b:0 "Launch public works projects"
+ 
+ italy_depression.4.t:0 "The Question of Autarky"
+ italy_depression.4.d:0 "Our agricultural self-sufficiency campaign has shown some early success, but advisors now debate whether to extend this approach to the entire economy. The concept of economic autarky - complete self-sufficiency - has gained traction among fascist ideologues who see it as both economically necessary during the crisis and symbolically powerful.\n\nProponents argue that reducing dependency on imports would protect Italy from international market fluctuations and prepare us for potential conflicts. Critics warn that complete autarky would be prohibitively expensive, technologically unfeasible, and would lower living standards. A more moderate approach of selective protectionism might balance these concerns."
+ italy_depression.4.a:0 "Pursue complete economic autarky"
+ italy_depression.4.b:0 "Implement selective protectionism"
+ 
+ italy_depression.5.t:0 "Organizing the Corporate State"
+ italy_depression.5.d:0 "The implementation of our corporate state system requires further refinement. Labor Minister Giuseppe Bottai has drafted a comprehensive Labor Charter defining the rights and responsibilities of workers and employers within the fascist system. This would formally subordinate both to state authority, eliminating independent labor organizations and regulating industrial relations.\n\nAlternatively, some industrialists support a more business-friendly approach, focusing on industrial expansion and modernization rather than labor controls. They argue that economic recovery requires industrial growth even at the expense of worker protections. Mussolini must decide which aspect of the corporate state to prioritize."
+ italy_depression.5.a:0 "Implement the Labor Charter"
+ italy_depression.5.b:0 "Focus on industrial expansion"
+ 
+ italy_depression.6.t:0 "Unrest Under Austerity"
+ italy_depression.6.d:0 "Our austerity policies have succeeded in stabilizing government finances, but at significant social cost. Unemployment has risen, wages have fallen, and public unrest is growing. Reports from the OVRA secret police indicate increasing activity among communist and socialist organizations exploiting economic discontent. Several strikes have already occurred despite the official ban on labor actions.\n\nSecurity officials recommend a harsh crackdown on dissident activity to restore order. Others suggest that limited economic concessions might defuse tensions more effectively. Mussolini must weigh the political risks of appearing weak against the dangers of provoking broader resistance."
+ italy_depression.6.a:0 "Suppress dissent firmly"
+ italy_depression.6.b:0 "Make limited economic concessions"
+ 
+ italy_depression.7.t:0 "Public Works Progress"
+ italy_depression.7.d:0 "Our public works program has made some progress in creating employment and improving infrastructure. New roads, public buildings, and land reclamation projects are underway across Italy. The regime has effectively publicized these achievements, boosting Mussolini's image as a leader who delivers concrete results despite the global crisis.\n\nAs the projects continue, debate has emerged about their future direction. Civil authorities advocate expanding civilian infrastructure development to further address unemployment. Military planners, however, suggest redirecting resources toward strategic infrastructure that would support future military operations, particularly naval facilities and transportation networks to potential war theaters."
+ italy_depression.7.a:0 "Continue civilian infrastructure projects"
+ italy_depression.7.b:0 "Shift toward military infrastructure"
+ 
+ italy_depression.8.t:0 "The Wal Wal Incident"
+ italy_depression.8.d:0 "A clash between Italian and Ethiopian forces at the Wal Wal oasis in the disputed border region between Italian Somaliland and Ethiopia has created a diplomatic crisis. Several Italian colonial troops were killed in the skirmish, and Mussolini is outraged by what he considers Ethiopian aggression.\n\nThis incident provides a potential pretext for military action against Ethiopia, a campaign long contemplated by colonial expansionists. A successful Ethiopian campaign could secure resources, provide territory for settlement, and demonstrate Italian power to the world. However, diplomatic representatives warn that such aggression would damage our international standing and potentially trigger sanctions. The Duce must decide whether to exploit this incident for war or seek a diplomatic resolution."
+ italy_depression.8.a:0 "Begin preparations for war with Ethiopia"
+ italy_depression.8.b:0 "Pursue diplomatic resolution"
+ 
+ italy_depression.9.t:0 "Ethiopian War Decision"
+ italy_depression.9.d:0 "Our military preparations for action against Ethiopia are nearing completion. Colonial troops have been reinforced, equipment stockpiled, and invasion plans finalized. The international situation appears favorable, with other powers distracted by their own concerns. Mussolini has summoned his senior ministers and generals to make the final decision.\n\nMilitary leaders express confidence in a swift victory, predicting that Ethiopian forces will be no match for modern Italian weaponry. Colonial administrators are already drafting plans for the future governance of conquered territories. A successful campaign would boost national pride and Mussolini's prestige. However, some advisors urge caution, noting potential diplomatic consequences and the financial strain of war during an economic crisis."
+ italy_depression.9.a:0 "Launch the invasion of Ethiopia"
+ italy_depression.9.b:0 "Delay military action for now"
+ 
+ italy_depression.10.t:0 "Diplomatic Settlement with Ethiopia"
+ italy_depression.10.d:0 "After intense negotiations, the border dispute with Ethiopia has been resolved without war. While some territory and economic concessions have been secured, this diplomatic approach has disappointed colonial expansionists and military leaders who were eager for conquest. Mussolini himself seems displeased with this peaceful outcome, though he publicly portrays it as a diplomatic victory.\n\nWith the Ethiopian question settled for now, the regime must determine a new focus for its foreign policy. Some advisors suggest concentrating on internal development to strengthen the economy before pursuing external ambitions. Others propose looking toward Albania, where Italian influence is already strong and expansion might face less international opposition."
+ italy_depression.10.a:0 "Focus on internal development"
+ italy_depression.10.b:0 "Turn attention to Albania"
+ 
+ italy_depression.11.t:0 "Pressure for Ethiopian Action"
+ italy_depression.11.d:0 "The decision to postpone military action against Ethiopia has generated significant discontent within fascist circles. Colonial administrators, military officers, and party hardliners have been openly critical of what they perceive as weakness. Mussolini's prestige has suffered, and he appears increasingly irritated by the situation.\n\nForeign Minister Galeazzo Ciano has suggested that military preparations should be renewed with greater determination, arguing that the regime's credibility requires decisive action. Others counter that Italy's interests might be better served by focusing on European politics, particularly as Germany grows increasingly assertive under Hitler's leadership. The Duce must decide whether to restore the Ethiopian war plans or redirect fascist ambitions."
+ italy_depression.11.a:0 "Renew war preparations against Ethiopia"
+ italy_depression.11.b:0 "Focus on European politics instead"
+ 
+ italy_depression.12.t:0 "The Albanian Question"
+ italy_depression.12.d:0 "Albania has been within Italy's sphere of influence since the 1920s, but King Zog has recently shown signs of asserting greater independence. Financial advisors note that Italy has invested heavily in Albania's economy, controlling its banking system and mineral resources. This economic domination could be leveraged to achieve complete political control without military action.\n\nSome ministers advocate formalizing Albania's status as an economic protectorate, maintaining the facade of independence while controlling its resources and foreign policy. More aggressive voices call for planning a full military occupation, arguing that Albania's strategic position on the Adriatic makes it too valuable to leave even nominally independent. The decision will set the tone for Italy's Balkan policy."
+ italy_depression.12.a:0 "Establish economic domination"
+ italy_depression.12.b:0 "Prepare for military occupation"
+ 
+ italy_depression.13.t:0 "Albanian Invasion Plans"
+ italy_depression.13.d:0 "Military plans for the occupation of Albania are complete. The operation would involve naval landings at key ports, supported by air power, followed by a rapid advance to secure the capital Tirana and other strategic points. Resistance is expected to be minimal given Albania's small military, though mountainous terrain could complicate operations.\n\nInternational reaction is expected to be muted, as other powers are focused on more pressing concerns in Central Europe. The annexation would secure Italy's position on the Adriatic and provide a base for potential future operations in the Balkans. However, some advisors caution that military action remains risky compared to continuing the current approach of economic and political domination."
+ italy_depression.13.a:0 "Order the invasion to proceed"
+ italy_depression.13.b:0 "Continue with the puppet state approach"
+ 
+ italy_depression.14.t:0 "The Spanish Civil War Erupts"
+ italy_depression.14.d:0 "Civil war has broken out in Spain between the Republican government and Nationalist forces led by General Francisco Franco. The conflict has quickly taken on international dimensions, with the Soviet Union supporting the Republicans while Germany has offered assistance to the Nationalists. This presents both an opportunity and a challenge for Italy.\n\nSupporting Franco's forces would align with our anti-communist stance and potentially secure a friendly regime in the western Mediterranean. Military advisors suggest that intervention would also provide valuable combat experience for our forces. However, such involvement would strain our resources and potentially deepen international tensions. Mussolini must decide whether to commit Italian support to the Spanish Nationalists."
+ italy_depression.14.a:0 "Send military aid to the Nationalists"
+ italy_depression.14.b:0 "Maintain neutrality in the conflict"
+ 
+ italy_depression.15.t:0 "The Spanish Campaign"
+ italy_depression.15.d:0 "Our intervention in the Spanish Civil War has been underway for several months, with mixed results. Italian 'volunteer' forces have participated in several operations, gaining combat experience but also suffering some setbacks. The conflict is proving more protracted than initially expected, with Republican resistance stronger than anticipated.\n\nMilitary commanders request additional resources to expand our commitment, arguing that a decisive victory for Franco would justify the investment. This would mean sending more troops, aircraft, and equipment at considerable expense. Alternatively, we could maintain our current level of support, which provides influence without excessive cost. Mussolini must balance strategic objectives against resource constraints."
+ italy_depression.15.a:0 "Expand our intervention"
+ italy_depression.15.b:0 "Maintain current commitment"
+ 
+ italy_depression.16.t:0 "The Pact of Steel"
+ italy_depression.16.d:0 "Germany has formally proposed a military alliance with Italy, to be known as the 'Pact of Steel.' This would transform the existing informal cooperation between our nations into a binding military agreement. Foreign Minister Ciano presents the proposed treaty to Mussolini with mixed recommendations.\n\nProponents argue that alliance with Germany's growing military power would secure Italy's position and open opportunities for coordinated expansion. Skeptics caution that Hitler's ambitions may exceed Italy's capabilities, potentially drawing us into conflicts for which we are unprepared. Signing the pact would significantly limit our diplomatic flexibility but would cement Italy's position as a major Axis power."
+ italy_depression.16.a:0 "Sign the Pact of Steel"
+ italy_depression.16.b:0 "Maintain independence from German commitments"
+ 
+ # Custom Effect Tooltips
+ 
+ ITA_depression_state_control:0 "Begin implementing stronger state economic controls"
+ ITA_depression_market_approach:0 "Allow market forces to address the crisis"
+ ITA_austrian_protection_tooltip:0 "Italy will oppose any German attempt to annex Austria"
+ ITA_empire_ascendant:0 "Italy will begin preparing for major territorial expansion"
+ 
+ # Idea Localization
+ 
+ ITA_austerity_measures:0 "Austerity Measures"
+ ITA_austerity_measures_desc:0 "Severe budget cuts and monetary tightening aimed at stabilizing government finances during the Depression. While improving fiscal stability, these measures have increased unemployment and reduced consumption."
+ 
+ ITA_suppressed_dissent:0 "Suppressed Dissent"
+ ITA_suppressed_dissent_desc:0 "A harsh crackdown on opposition groups, labor activists, and suspected subversives. Secret police activities have been expanded, political arrests increased, and penalties for anti-fascist activity made more severe."
+ 
+ ITA_economic_concessions:0 "Economic Concessions"
+ ITA_economic_concessions_desc:0 "Limited economic reforms and social welfare measures designed to reduce popular discontent. These include food subsidies, public employment programs, and modest wage guarantees for essential industries."
+ 
+ ITA_public_works_program:0 "Public Works Program"
+ ITA_public_works_program_desc:0 "An extensive program of infrastructure development projects designed to reduce unemployment and stimulate economic activity. Projects include roads, public buildings, land reclamation, and urban renewal initiatives."
+ 
+ ITA_selective_protectionism:0 "Selective Protectionism"
+ ITA_selective_protectionism_desc:0 "A targeted approach to trade protection focusing on strategic industries and essential resources. This balanced policy aims to reduce dependence on critical imports while maintaining some international trade relationships."
+ 
+ ITA_labor_charter:0 "Labor Charter"
+ ITA_labor_charter_desc:0 "The comprehensive labor code of the fascist corporate state, defining the rights and duties of workers and employers. It formalizes state control over industrial relations while abolishing independent labor organizations."
+ 
+ ITA_albanian_economic_control:0 "Albanian Economic Control"
+ ITA_albanian_economic_control_desc:0 "Comprehensive economic domination of Albania through control of its banking system, mineral resources, and foreign trade. While maintaining the facade of Albanian independence, Italy effectively dictates its economic policies."
+ 
+ ITA_european_focus:0 "European Diplomatic Focus"
+ ITA_european_focus_desc:0 "A shift in foreign policy emphasis from colonial expansion to European power politics. This approach prioritizes Italy's position in the shifting European order, particularly in relation to Germany's growing influence."
+ 
+ ITA_expanded_spanish_intervention:0 "Expanded Spanish Intervention"
+ ITA_expanded_spanish_intervention_desc:0 "An increased commitment of troops, equipment, and resources to support Nationalist forces in the Spanish Civil War. This larger intervention aims to secure a decisive fascist victory while providing combat experience for Italian forces."

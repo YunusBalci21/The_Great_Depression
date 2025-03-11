@@ -1,0 +1,687 @@
+add_namespace = italy_depression
+
+# Italy under the Great Depression - Initial Event
+country_event = {
+	id = italy_depression.1
+	title = italy_depression.1.t
+	desc = italy_depression.1.d
+	picture = GFX_report_event_fascist_parade
+	
+	trigger = {
+		tag = ITA
+		date > 1929.10.24 # Black Thursday
+		date < 1929.11.30
+	}
+	
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = italy_depression.1.a # Strengthen state control
+		ai_chance = {
+			factor = 70
+		}
+		add_political_power = -50
+		add_stability = -0.05
+		custom_effect_tooltip = ITA_depression_state_control
+		hidden_effect = {
+			country_event = { id = italy_depression.2 days = 30 }
+		}
+	}
+	
+	option = {
+		name = italy_depression.1.b # Let markets sort themselves out
+		ai_chance = {
+			factor = 30
+		}
+		add_political_power = 25
+		add_stability = -0.10
+		custom_effect_tooltip = ITA_depression_market_approach
+		hidden_effect = {
+			country_event = { id = italy_depression.3 days = 30 }
+		}
+	}
+}
+
+# Economic Policy Response - State Control Path
+country_event = {
+	id = italy_depression.2
+	title = italy_depression.2.t
+	desc = italy_depression.2.d
+	picture = GFX_report_event_generic_factory
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = italy_depression.2.a # Launch "Battle for Grain"
+		ai_chance = {
+			factor = 60
+		}
+		add_ideas = ITA_battle_for_grain
+		add_political_power = 25
+		country_event = { id = italy_depression.4 days = 60 }
+	}
+	
+	option = {
+		name = italy_depression.2.b # Corporate State approach
+		ai_chance = {
+			factor = 40
+		}
+		add_ideas = ITA_corporate_state
+		add_political_power = 25
+		country_event = { id = italy_depression.5 days = 60 }
+	}
+}
+
+# Economic Policy Response - Market Approach Path
+country_event = {
+	id = italy_depression.3
+	title = italy_depression.3.t
+	desc = italy_depression.3.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = italy_depression.3.a # Austerity measures
+		ai_chance = {
+			factor = 50
+		}
+		add_stability = -0.05
+		add_war_support = -0.05
+		add_political_power = -25
+		add_timed_idea = { 
+			idea = ITA_austerity_measures
+			days = 180
+		}
+		hidden_effect = {
+			country_event = { id = italy_depression.6 days = 90 }
+		}
+	}
+	
+	option = {
+		name = italy_depression.3.b # Public works projects
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = -50
+		add_stability = 0.05
+		random_owned_state = {
+			limit = { is_core_of = ROOT }
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		hidden_effect = {
+			country_event = { id = italy_depression.7 days = 90 }
+		}
+	}
+}
+
+# Autarky Path Question
+country_event = {
+	id = italy_depression.4
+	title = italy_depression.4.t
+	desc = italy_depression.4.d
+	picture = GFX_report_event_generic_factory
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = italy_depression.4.a # Full economic autarky
+		ai_chance = {
+			factor = 70
+		}
+		add_political_power = 25
+		add_stability = -0.05
+		add_ideas = ITA_economic_autarky
+	}
+	
+	option = {
+		name = italy_depression.4.b # Selective protectionism
+		ai_chance = {
+			factor = 30
+		}
+		add_political_power = -25
+		add_stability = 0.05
+		add_timed_idea = { 
+			idea = ITA_selective_protectionism
+			days = 365
+		}
+	}
+}
+
+# Corporate State Follow-up
+country_event = {
+	id = italy_depression.5
+	title = italy_depression.5.t
+	desc = italy_depression.5.d
+	picture = GFX_report_event_generic_rally
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = italy_depression.5.a # Labor controls
+		ai_chance = {
+			factor = 80
+		}
+		add_stability = 0.05
+		add_political_power = 25
+		add_ideas = ITA_labor_charter
+	}
+	
+	option = {
+		name = italy_depression.5.b # Industrial expansion
+		ai_chance = {
+			factor = 20
+		}
+		add_political_power = -25
+		random_owned_state = {
+			limit = { is_core_of = ROOT }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+# Austerity Consequences
+country_event = {
+	id = italy_depression.6
+	title = italy_depression.6.t
+	desc = italy_depression.6.d
+	picture = GFX_report_event_generic_riot
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = italy_depression.6.a # Suppress unrest
+		ai_chance = {
+			factor = 75
+		}
+		add_stability = -0.10
+		add_war_support = 0.05
+		add_political_power = -25
+		add_ideas = ITA_suppressed_dissent
+	}
+	
+	option = {
+		name = italy_depression.6.b # Economic concessions
+		ai_chance = {
+			factor = 25
+		}
+		add_stability = 0.05
+		add_political_power = -50
+		add_ideas = ITA_economic_concessions
+	}
+}
+
+# Public Works Results
+country_event = {
+	id = italy_depression.7
+	title = italy_depression.7.t
+	desc = italy_depression.7.d
+	picture = GFX_report_event_generic_construction
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = italy_depression.7.a # Continue infrastructure projects
+		ai_chance = {
+			factor = 60
+		}
+		add_political_power = -25
+		random_owned_state = {
+			limit = { is_core_of = ROOT }
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		add_ideas = ITA_public_works_program
+	}
+	
+	option = {
+		name = italy_depression.7.b # Shift to military infrastructure
+		ai_chance = {
+			factor = 40
+		}
+		add_political_power = 25
+		add_war_support = 0.05
+		random_owned_state = {
+			limit = { 
+				is_core_of = ROOT
+				is_coastal = yes 
+			}
+			add_building_construction = {
+				type = naval_base
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			limit = { is_core_of = ROOT }
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+# Ethiopian Border Crisis - 1934
+country_event = {
+	id = italy_depression.8
+	title = italy_depression.8.t
+	desc = italy_depression.8.d
+	picture = GFX_report_event_ethiopian_soldiers
+	
+	trigger = {
+		tag = ITA
+		date > 1934.12.1
+		date < 1935.1.30
+		ETH = { exists = yes }
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = italy_depression.8.a # Prepare for invasion
+		ai_chance = {
+			factor = 80
+		}
+		add_war_support = 0.10
+		add_political_power = 25
+		ETH = {
+			add_opinion_modifier = {
+				target = ITA
+				modifier = hostile_status
+			}
+		}
+		add_ideas = ITA_ethiopian_war_preparation
+		hidden_effect = {
+			country_event = { id = italy_depression.9 days = 180 random_days = 30 }
+		}
+	}
+	
+	option = {
+		name = italy_depression.8.b # Diplomatic resolution
+		ai_chance = {
+			factor = 20
+		}
+		add_political_power = -50
+		add_stability = -0.05
+		add_war_support = -0.05
+		hidden_effect = {
+			country_event = { id = italy_depression.10 days = 90 }
+		}
+	}
+}
+
+# Ethiopian War Decision
+country_event = {
+	id = italy_depression.9
+	title = italy_depression.9.t
+	desc = italy_depression.9.d
+	picture = GFX_report_event_italian_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = italy_depression.9.a # Launch the invasion
+		ai_chance = {
+			factor = 90
+		}
+		add_war_support = 0.15
+		create_wargoal = {
+			type = annex_everything
+			target = ETH
+		}
+	}
+	
+	option = {
+		name = italy_depression.9.b # Delay the war
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = -75
+		add_stability = -0.10
+		remove_ideas = ITA_ethiopian_war_preparation
+		hidden_effect = {
+			country_event = { id = italy_depression.11 days = 180 }
+		}
+	}
+}
+
+# Diplomatic Resolution Fallout
+country_event = {
+	id = italy_depression.10
+	title = italy_depression.10.t
+	desc = italy_depression.10.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = italy_depression.10.a # Focus on internal development
+		ai_chance = {
+			factor = 60
+		}
+		add_political_power = 25
+		add_stability = 0.05
+		random_owned_state = {
+			limit = { is_core_of = ROOT }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	
+	option = {
+		name = italy_depression.10.b # Look to Albania instead
+		ai_chance = {
+			factor = 40
+		}
+		add_political_power = 25
+		add_war_support = 0.05
+		ALB = {
+			add_opinion_modifier = {
+				target = ITA
+				modifier = medium_decrease
+			}
+		}
+		hidden_effect = {
+			country_event = { id = italy_depression.12 days = 180 }
+		}
+	}
+}
+
+# War Postponed, Internal Pressure
+country_event = {
+	id = italy_depression.11
+	title = italy_depression.11.t
+	desc = italy_depression.11.d
+	picture = GFX_report_event_fascist_gathering
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = italy_depression.11.a # Renew war preparations
+		ai_chance = {
+			factor = 75
+		}
+		add_political_power = 50
+		add_war_support = 0.10
+		add_ideas = ITA_ethiopian_war_preparation
+		hidden_effect = {
+			country_event = { id = italy_depression.9 days = 90 }
+		}
+	}
+	
+	option = {
+		name = italy_depression.11.b # Focus on European politics
+		ai_chance = {
+			factor = 25
+		}
+		add_political_power = 25
+		add_stability = -0.05
+		add_war_support = -0.05
+		add_ideas = ITA_european_focus
+	}
+}
+
+# Albanian Question
+country_event = {
+	id = italy_depression.12
+	title = italy_depression.12.t
+	desc = italy_depression.12.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = italy_depression.12.a # Economic domination
+		ai_chance = {
+			factor = 60
+		}
+		add_political_power = 25
+		ALB = {
+			add_opinion_modifier = {
+				target = ITA
+				modifier = medium_decrease
+			}
+		}
+		add_ideas = ITA_albanian_economic_control
+	}
+	
+	option = {
+		name = italy_depression.12.b # Prepare for invasion
+		ai_chance = {
+			factor = 40
+		}
+		add_political_power = -25
+		add_war_support = 0.10
+		ALB = {
+			add_opinion_modifier = {
+				target = ITA
+				modifier = large_decrease
+			}
+		}
+		hidden_effect = {
+			country_event = { id = italy_depression.13 days = 180 }
+		}
+	}
+}
+
+# Albanian Invasion Decision
+country_event = {
+	id = italy_depression.13
+	title = italy_depression.13.t
+	desc = italy_depression.13.d
+	picture = GFX_report_event_generic_cavalry
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = italy_depression.13.a # Launch the invasion
+		ai_chance = {
+			factor = 80
+		}
+		add_political_power = 50
+		add_war_support = 0.10
+		create_wargoal = {
+			type = annex_everything
+			target = ALB
+		}
+	}
+	
+	option = {
+		name = italy_depression.13.b # Continue with puppet state approach
+		ai_chance = {
+			factor = 20
+		}
+		add_political_power = 25
+		add_stability = 0.05
+		ALB = {
+			add_opinion_modifier = {
+				target = ITA
+				modifier = puppet_relation
+			}
+		}
+	}
+}
+
+# Spanish Civil War Intervention - 1936
+country_event = {
+	id = italy_depression.14
+	title = italy_depression.14.t
+	desc = italy_depression.14.d
+	picture = GFX_report_event_spanish_civil_war_soldiers
+	
+	trigger = {
+		tag = ITA
+		has_global_flag = spanish_civil_war_begun
+		NOT = { has_global_flag = ITA_spanish_intervention }
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = italy_depression.14.a # Support the Nationalists
+		ai_chance = {
+			factor = 85
+		}
+		add_political_power = -25
+		add_war_support = 0.10
+		add_ideas = ITA_spanish_intervention_idea
+		set_global_flag = ITA_spanish_intervention
+		hidden_effect = {
+			country_event = { id = italy_depression.15 days = 120 }
+		}
+	}
+	
+	option = {
+		name = italy_depression.14.b # Stay out of the conflict
+		ai_chance = {
+			factor = 15
+		}
+		add_political_power = 25
+		add_stability = 0.05
+		add_war_support = -0.05
+	}
+}
+
+# Spanish Intervention Results
+country_event = {
+	id = italy_depression.15
+	title = italy_depression.15.t
+	desc = italy_depression.15.d
+	picture = GFX_report_event_spanish_civil_war_bombing
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = italy_depression.15.a # Send more support
+		ai_chance = {
+			factor = 70
+		}
+		add_political_power = -50
+		add_manpower = -10000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = -5000
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment_1
+			amount = -200
+		}
+		add_ideas = ITA_expanded_spanish_intervention
+	}
+	
+	option = {
+		name = italy_depression.15.b # Maintain current commitment
+		ai_chance = {
+			factor = 30
+		}
+		add_political_power = 25
+		add_war_support = 0.05
+	}
+}
+
+# Pact of Steel Event - 1939
+country_event = {
+	id = italy_depression.16
+	title = italy_depression.16.t
+	desc = italy_depression.16.d
+	picture = GFX_report_event_german_italian_treaty
+	
+	trigger = {
+		tag = ITA
+		date > 1939.5.1
+		date < 1939.6.30
+		GER = { has_government = fascism }
+		NOT = { has_global_flag = pact_of_steel_signed }
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = italy_depression.16.a # Sign the Pact of Steel
+		ai_chance = {
+			factor = 75
+		}
+		add_political_power = 50
+		add_war_support = 0.15
+		GER = {
+			add_opinion_modifier = {
+				target = ITA
+				modifier = large_increase
+			}
+		}
+		if = {
+			limit = {
+				GER = {
+					is_in_faction = no
+				}
+				is_in_faction = no
+			}
+			GER = {
+				create_faction = "axis"
+				add_to_faction = ITA
+			}
+		}
+		if = {
+			limit = {
+				GER = {
+					is_in_faction = yes
+					is_faction_leader = yes
+				}
+				is_in_faction = no
+			}
+			GER = {
+				add_to_faction = ITA
+			}
+		}
+		set_global_flag = pact_of_steel_signed
+	}
+	
+	option = {
+		name = italy_depression.16.b # Maintain independence
+		ai_chance = {
+			factor = 25
+		}
+		add_political_power = -50
+		add_stability = -0.05
+		GER = {
+			add_opinion_modifier = {
+				target = ITA
+				modifier = large_decrease
+			}
+		}
+	}
+}

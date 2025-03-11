@@ -1,0 +1,450 @@
+characters = {
+	# COUNTRY LEADERS
+	
+	# Fascist Leader - Benito Mussolini
+	ITA_benito_mussolini = {
+		name = "Benito Mussolini"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_ITA_benito_mussolini"
+				small = "GFX_portrait_ITA_benito_mussolini_small"
+			}
+			army = {
+				large = "GFX_portrait_ITA_benito_mussolini_military"
+				small = "GFX_portrait_ITA_benito_mussolini_military_small"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			desc = "POLITICS_BENITO_MUSSOLINI_DESC"
+			expire = "1945.4.28"
+			id = -1
+			traits = {
+				dictator
+				great_war_veteran
+				political_dancer
+			}
+		}
+	}
+	
+	# Monarch - Vittorio Emanuele III
+	ITA_vittorio_emanuele = {
+		name = "Vittorio Emanuele III"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_ITA_vittorio_emanuele_III"
+				small = "GFX_portrait_ITA_vittorio_emanuele_III_small"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			desc = "POLITICS_VITTORIO_EMANUELE_III_DESC"
+			expire = "1947.1.1"
+			id = -1
+			traits = {
+				reluctant_monarch
+			}
+		}
+	}
+	
+	# Democratic Leader - Alcide De Gasperi
+	ITA_alcide_de_gasperi = {
+		name = "Alcide De Gasperi"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_ITA_alcide_de_gasperi"
+				small = "GFX_portrait_ITA_alcide_de_gasperi_small"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			desc = "POLITICS_ALCIDE_DE_GASPERI_DESC"
+			expire = "1965.1.1"
+			id = -1
+			traits = {
+				anti_communist
+				political_survivor
+			}
+		}
+	}
+	
+	# Communist Leader - Palmiro Togliatti
+	ITA_palmiro_togliatti = {
+		name = "Palmiro Togliatti"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_ITA_palmiro_togliatti"
+				small = "GFX_portrait_ITA_palmiro_togliatti_small"
+			}
+		}
+		country_leader = {
+			ideology = marxism
+			desc = "POLITICS_PALMIRO_TOGLIATTI_DESC"
+			expire = "1965.1.1"
+			id = -1
+			traits = {
+				staunch_stalinist
+				political_survivor
+			}
+		}
+	}
+	
+	# MILITARY LEADERS AND ADVISORS
+	
+	# Army Chief - Pietro Badoglio
+	ITA_pietro_badoglio = {
+		name = "Pietro Badoglio"
+		portraits = {
+			army = {
+				large = "GFX_portrait_ITA_pietro_badoglio"
+				small = "GFX_portrait_ITA_pietro_badoglio_small"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = ITA_pietro_badoglio
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				army_chief_morale_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+		
+		corps_commander = {
+			traits = {
+				career_officer
+				politically_connected
+				cautious
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+			id = 1001
+		}
+	}
+	
+	# Army Chief - Emilio De Bono
+	ITA_emilio_de_bono = {
+		name = "Emilio De Bono"
+		portraits = {
+			army = {
+				large = "GFX_portrait_ITA_emilio_de_bono"
+				small = "GFX_portrait_ITA_emilio_de_bono_small"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = ITA_emilio_de_bono
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				army_chief_organizational_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+		
+		corps_commander = {
+			traits = {
+				fascist_loyalist
+				old_guard
+				colonial_military_governor
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			id = 1002
+		}
+	}
+	
+	# Navy Chief - Domenico Cavagnari
+	ITA_domenico_cavagnari = {
+		name = "Domenico Cavagnari"
+		portraits = {
+			navy = {
+				large = "GFX_portrait_ITA_domenico_cavagnari"
+				small = "GFX_portrait_ITA_domenico_cavagnari_small"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = ITA_domenico_cavagnari
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+		
+		navy_leader = {
+			traits = {
+				battleship_adherent
+				naval_lineage
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			maneuvering_skill = 2
+			coordination_skill = 3
+			id = 1003
+		}
+	}
+	
+	# Air Chief - Giuseppe Valle
+	ITA_giuseppe_valle = {
+		name = "Giuseppe Valle"
+		portraits = {
+			army = {
+				large = "GFX_portrait_ITA_giuseppe_valle"
+				small = "GFX_portrait_ITA_giuseppe_valle_small"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = ITA_giuseppe_valle
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				air_chief_ground_support_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+	
+	# Air Theorist
+	ITA_air_theorist = {
+		name = "Italo Balbo"
+		portraits = {
+			army = {
+				small = "GFX_portrait_ITA_italo_balbo_small"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = ITA_air_theorist
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				air_warfare_theorist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+	
+	# Nationalist Supporter
+	ITA_nationalist_supporter = {
+		name = "Roberto Farinacci"
+		portraits = {
+			army = {
+				small = "GFX_portrait_ITA_roberto_farinacci_small"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ITA_nationalist_supporter
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				fascist_demagogue
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+	
+	# Colonial Minister
+	ITA_colonial_minister = {
+		name = "Alessandro Lessona"
+		portraits = {
+			army = {
+				small = "GFX_portrait_ITA_alessandro_lessona_small"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ITA_colonial_minister
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				ideological_crusader
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+	
+	# Economic Reformer
+	ITA_economic_reformer = {
+		name = "Giuseppe Volpi"
+		portraits = {
+			army = {
+				small = "GFX_portrait_ITA_giuseppe_volpi_small"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ITA_economic_reformer
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				captain_of_industry
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+	
+	# MILITARY COMMANDERS
+	
+	# Infantry General
+	ITA_mario_roatta = {
+		name = "Mario Roatta"
+		portraits = {
+			army = {
+				large = "GFX_portrait_ITA_mario_roatta"
+				small = "GFX_portrait_ITA_mario_roatta_small"
+			}
+		}
+		corps_commander = {
+			traits = {
+				infantry_leader
+				career_officer
+				secret_police_connections
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+			id = 1004
+		}
+	}
+	
+	# Alpine General
+	ITA_alfredo_guzzoni = {
+		name = "Alfredo Guzzoni"
+		portraits = {
+			army = {
+				large = "GFX_portrait_ITA_alfredo_guzzoni"
+				small = "GFX_portrait_ITA_alfredo_guzzoni_small"
+			}
+		}
+		corps_commander = {
+			traits = {
+				mountaineer
+				winter_specialist
+				career_officer
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+			id = 1005
+		}
+	}
+	
+	# Desert/Colonial General
+	ITA_rodolfo_graziani = {
+		name = "Rodolfo Graziani"
+		portraits = {
+			army = {
+				large = "GFX_portrait_ITA_rodolfo_graziani"
+				small = "GFX_portrait_ITA_rodolfo_graziani_small"
+			}
+		}
+		corps_commander = {
+			traits = {
+				desert_fox
+				colonial_military_governor
+				harsh_leader
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+			id = 1006
+		}
+	}
+	
+	# Naval Commander
+	ITA_angelo_iachino = {
+		name = "Angelo Iachino"
+		portraits = {
+			navy = {
+				large = "GFX_portrait_ITA_angelo_iachino"
+				small = "GFX_portrait_ITA_angelo_iachino_small"
+			}
+		}
+		navy_leader = {
+			traits = {
+				bold
+				navy_career_officer
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 2
+			id = 1007
+		}
+	}
+	
+	# Naval Commander
+	ITA_arturo_riccardi = {
+		name = "Arturo Riccardi"
+		portraits = {
+			navy = {
+				large = "GFX_portrait_ITA_arturo_riccardi"
+				small = "GFX_portrait_ITA_arturo_riccardi_small"
+			}
+		}
+		navy_leader = {
+			traits = {
+				old_guard_navy
+				blockade_runner
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 3
+			id = 1008
+		}
+	}
+}

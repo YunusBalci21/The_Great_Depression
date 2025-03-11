@@ -1,5 +1,9 @@
 leader_traits = {
 	
+	###########################
+	# Great Depression Economic Traits
+	###########################
+	
 	# Great Depression Reformer - for leaders like FDR who implement economic reforms
 	great_depression_reformer = {
 		random = no # This trait cannot be randomly assigned
@@ -134,6 +138,102 @@ leader_traits = {
 		political_power_gain = 0.1
 		drift_defence_factor = 0.1
 		war_support_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	###########################
+	# Italian Leader Traits
+	###########################
+	
+	# Mussolini traits
+	great_war_veteran = {
+		random = no
+		political_power_gain = 0.05
+		war_support_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	political_dancer = {
+		random = no
+		political_power_gain = 0.10
+		stability_factor = 0.05
+		foreign_subversive_activites = -0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# King Victor Emmanuel III trait
+	reluctant_monarch = {
+		random = no
+		political_power_factor = -0.05
+		stability_factor = 0.05
+		democratic_drift = 0.01
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	###########################
+	# Italian Military Leader Traits
+	###########################
+	
+	# Military Leader Traits for Italian generals
+	colonial_military_governor = {
+		random = no
+		supply_consumption_factor = -0.1
+		non_core_manpower = 0.1
+		army_morale_factor = 0.05
+		
+		trait_type = corps_commander
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	desert_fox = { 
+		random = no
+		desert = {
+			attack = 0.15
+			movement = 0.15
+		}
+		acclimatization_hot_climate_gain_factor = 0.1
+		
+		trait_type = corps_commander
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# Naval traits
+	battleship_adherent = {
+		random = no
+		naval_damage_factor = 0.1
+		critical_receive_chance = -0.1
+		
+		trait_type = naval
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	naval_lineage = {
+		random = no
+		navy_max_range_factor = 0.1
+		navy_leader_attack_skill = 1
+		
+		trait_type = naval
 		
 		ai_will_do = {
 			factor = 1

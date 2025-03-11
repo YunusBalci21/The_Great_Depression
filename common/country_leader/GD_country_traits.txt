@@ -1,4 +1,5 @@
 leader_traits = {
+	# Great Depression Economic Recovery Traits
 	great_depression_reformer = {
 		random = no
 		
@@ -123,6 +124,42 @@ leader_traits = {
 		political_power_gain = 0.1
 		drift_defence_factor = 0.1
 		war_support_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# Italian leader traits
+	great_war_veteran = {
+		random = no
+		
+		political_power_gain = 0.05
+		war_support_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	political_dancer = {
+		random = no
+		
+		political_power_gain = 0.10
+		stability_factor = 0.05
+		foreign_subversive_activites = -0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	reluctant_monarch = {
+		random = no
+		
+		political_power_factor = -0.05
+		stability_factor = 0.05
+		democratic_drift = 0.01
 		
 		ai_will_do = {
 			factor = 1

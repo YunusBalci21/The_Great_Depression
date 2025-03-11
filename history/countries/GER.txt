@@ -1,6 +1,6 @@
 capital = 64 # Berlin
 
-oob = "GER_1929"  # Create this file for 1929 Order of Battle
+oob = "GER_1929"  # 1929 Order of Battle
 
 set_research_slots = 4
 set_stability = 0.60 # Weimar instability

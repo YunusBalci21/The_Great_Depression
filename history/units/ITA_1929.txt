@@ -1,0 +1,232 @@
+##### Regio Esercito 1929 OOB #####
+
+##### Division Templates #####
+division_template = {
+	name = "Divisione di Fanteria"
+	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Divisione Alpina"
+	
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+	
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		recon = { x = 0 y = 2 }
+	}
+	
+	priority = 2
+}
+
+division_template = {
+	name = "Divisione CC.NN."
+	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Divisione Coloniale"
+	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+}
+
+##### Land Units #####
+units = {
+	# Infantry Divisions
+	division = {
+		name = "1a Divisione di Fanteria 'Cremona'"
+		location = 3780 # Turin
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2a Divisione di Fanteria 'Sforzesca'"
+		location = 6788 # Milan
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3a Divisione di Fanteria 'Ravenna'"
+		location = 772 # Bologna
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4a Divisione di Fanteria 'Livorno'"
+		location = 11721 # Florence
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "5a Divisione di Fanteria 'Cosseria'"
+		location = 11751 # Genoa
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "9a Divisione di Fanteria 'Pasubio'"
+		location = 2 # Rome
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "12a Divisione di Fanteria 'Sassari'"
+		location = 819 # Naples
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "16a Divisione di Fanteria 'Pistoia'"
+		location = 9784 # Palermo
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	
+	# Alpine Divisions
+	division = {
+		name = "1a Divisione Alpina 'Taurinense'"
+		location = 6780 # Aosta/Turin
+		division_template = "Divisione Alpina"
+		start_experience_factor = 0.4
+	}
+	division = {
+		name = "2a Divisione Alpina 'Tridentina'"
+		location = 9598 # Trento
+		division_template = "Divisione Alpina"
+		start_experience_factor = 0.4
+	}
+	
+	# Blackshirt Divisions
+	division = {
+		name = "1a Divisione CC.NN. '23 Marzo'"
+		location = 2 # Rome
+		division_template = "Divisione CC.NN."
+		start_experience_factor = 0.2
+	}
+	
+	# Colonial Divisions in Libya
+	division = {
+		name = "1a Divisione Coloniale 'Libia'"
+		location = 1130 # Tripoli
+		division_template = "Divisione Coloniale"
+		start_experience_factor = 0.2
+	}
+	
+	# Colonial Divisions in East Africa
+	division = {
+		name = "1a Divisione Coloniale 'Eritrea'"
+		location = 12766 # Asmara
+		division_template = "Divisione Coloniale"
+		start_experience_factor = 0.2
+	}
+}
+
+# Starting Production
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_equipment_1
+		amount = 15000
+		producer = ITA
+	}
+	add_equipment_to_stockpile = {
+		type = support_equipment_1
+		amount = 500
+		producer = ITA
+	}
+	add_equipment_to_stockpile = {
+		type = artillery_equipment_1
+		amount = 300
+		producer = ITA
+	}
+	add_equipment_to_stockpile = {
+		type = gw_tank_equipment
+		amount = 50
+		producer = ITA
+	}
+	
+	# Limited military production due to economic weakness
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "ITA"
+		}
+		requested_factories = 2
+		progress = 0.5
+		efficiency = 50
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "ITA"
+		}
+		requested_factories = 1
+		progress = 0.5
+		efficiency = 50
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "ITA"
+		}
+		requested_factories = 1
+		progress = 0.5
+		efficiency = 50
+	}
+	add_equipment_production = {
+		equipment = {
+			type = gw_tank_equipment
+			creator = "ITA"
+		}
+		requested_factories = 1
+		progress = 0.25
+		efficiency = 40
+	}
+}
