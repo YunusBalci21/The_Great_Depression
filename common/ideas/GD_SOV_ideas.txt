@@ -1,0 +1,115 @@
+# Great Depression Soviet Ideas for "The Great Depression: 1929-1939" mod
+# Path: common/ideas/GD_SOV_ideas.txt
+
+ideas = {
+	country = {
+		five_year_plan_idea = {
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_production_bonus
+			
+			modifier = {
+				industrial_capacity_factory = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.10
+				production_speed_buildings_factor = 0.15
+				consumer_goods_factor = 0.10
+				political_power_gain = -0.10
+				stability_factor = -0.05
+			}
+		}
+		
+		socialist_science_focus = {
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_research_bonus
+			
+			modifier = {
+				research_speed_factor = 0.05
+				industrial_capacity_factory = 0.05
+				stability_factor = 0.05
+			}
+		}
+		
+		political_commissars = {
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_political_support
+			
+			modifier = {
+				army_morale_factor = 0.10
+				training_time_army_factor = 0.10
+				conscription = 0.02
+				stability_factor = -0.05
+				drift_defence_factor = 0.50
+			}
+		}
+		
+		collectivized_agriculture = {
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_agrarian_reform
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				local_resources_factor = 0.10
+				monthly_population = -0.10
+				stability_factor = -0.10
+			}
+		}
+		
+		great_purge_idea = {
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_purge
+			
+			modifier = {
+				political_power_gain = 0.20
+				stability_factor = -0.15
+				war_support_factor = 0.05
+				army_org_factor = -0.15
+				planning_speed = -0.15
+				drift_defence_factor = 0.40
+			}
+		}
+		
+		soviet_industrialization = {
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_production_bonus
+			
+			modifier = {
+				industrial_capacity_factory = 0.20
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				consumer_goods_factor = 0.05
+				stability_factor = -0.05
+				war_support_factor = 0.10
+			}
+		}
+	}
+}

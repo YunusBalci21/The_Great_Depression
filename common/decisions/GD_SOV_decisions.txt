@@ -1,0 +1,488 @@
+# Soviet Union Decisions for "The Great Depression: 1929-1939" mod
+# Path: common/decisions/SOV_decisions.txt
+
+SOV_economic_recovery_category = {
+	
+	SOV_intensify_industrial_production = {
+		icon = generic_industry
+		
+		available = {
+			has_idea = SOV_economic_depression
+			has_political_power > 50
+		}
+		
+		visible = {
+			has_idea = SOV_economic_depression
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+		
+		days_remove = 70
+		
+		modifier = {
+			consumer_goods_factor = 0.05
+			stability_weekly = -0.01
+		}
+		
+		remove_effect = {
+			add_stability = -0.05
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = SOV
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	SOV_expand_state_industry = {
+		icon = generic_construction
+		
+		available = {
+			has_idea = SOV_economic_depression
+			has_political_power > 75
+			has_completed_focus = SOV_heavy_industrialization
+		}
+		
+		visible = {
+			has_idea = SOV_economic_depression
+			has_completed_focus = SOV_heavy_industrialization
+		}
+		
+		fire_only_once = yes
+		
+		cost = 75
+		
+		days_remove = 90
+		
+		modifier = {
+			production_speed_buildings_factor = -0.10
+			political_power_gain = -0.25
+		}
+		
+		remove_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = SOV
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = SOV
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	
+	SOV_forced_labor_projects = {
+		icon = generic_forced_labor
+		
+		available = {
+			has_political_power > 100
+			has_idea = SOV_nkvd_control
+		}
+		
+		visible = {
+			has_idea = SOV_nkvd_control
+		}
+		
+		cost = 100
+		
+		days_remove = 120
+		
+		modifier = {
+			stability_weekly = -0.01
+			war_support_weekly = 0.01
+		}
+		
+		remove_effect = {
+			add_stability = -0.10
+			add_war_support = 0.05
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = SOV
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = SOV
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				has_stability < 0.5
+			}
+		}
+	}
+}
+
+SOV_military_buildup_category = {
+	
+	SOV_increase_military_budget = {
+		icon = generic_army
+		
+		available = {
+			has_political_power > 50
+			has_war_support > 0.2
+		}
+		
+		cost = 50
+		
+		days_remove = 60
+		
+		modifier = {
+			consumer_goods_factor = 0.05
+			production_speed_arms_factory_factor = 0.10
+		}
+		
+		remove_effect = {
+			army_experience = 25
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2500
+				producer = SOV
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				has_war_support > 0.4
+			}
+		}
+	}
+	
+	SOV_expand_tank_production = {
+		icon = generic_tank
+		
+		available = {
+			has_political_power > 75
+			has_completed_focus = SOV_tank_production
+			has_tech = basic_medium_tank
+		}
+		
+		visible = {
+			has_completed_focus = SOV_tank_production
+		}
+		
+		cost = 75
+		
+		days_remove = 90
+		
+		modifier = {
+			production_speed_arms_factory_factor = -0.05
+			production_speed_tank_factor = 0.15
+		}
+		
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = light_tank_equipment_1
+				amount = 100
+				producer = SOV
+			}
+			if = {
+				limit = { has_tech = basic_medium_tank }
+				add_equipment_to_stockpile = {
+					type = medium_tank_equipment_1
+					amount = 50
+					producer = SOV
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_war_support > 0.5
+			}
+		}
+	}
+	
+	SOV_strengthen_fortifications = {
+		icon = generic_fortify_the_borders
+		
+		available = {
+			has_political_power > 75
+			has_war_support > 0.3
+			OR = {
+				has_completed_focus = SOV_border_fortifications
+				has_completed_focus = SOV_finnish_security
+				has_completed_focus = SOV_eastern_poland
+			}
+		}
+		
+		visible = {
+			OR = {
+				has_completed_focus = SOV_border_fortifications
+				has_completed_focus = SOV_finnish_security
+				has_completed_focus = SOV_eastern_poland
+			}
+		}
+		
+		cost = 75
+		
+		days_remove = 70
+		
+		modifier = {
+			production_speed_bunker_factor = 0.25
+			production_speed_coastal_bunker_factor = 0.25
+		}
+		
+		remove_effect = {
+			if = {
+				limit = { has_completed_focus = SOV_border_fortifications }
+				random_owned_state = {
+					limit = {
+						is_core_of = SOV
+						is_controlled_by = ROOT
+						is_on_continent = asia
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = { has_completed_focus = SOV_finnish_security }
+				random_owned_state = {
+					limit = {
+						is_core_of = SOV
+						is_controlled_by = ROOT
+						is_on_continent = europe
+						any_neighbor_state = {
+							is_owned_by = FIN
+						}
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = { has_completed_focus = SOV_eastern_poland }
+				random_owned_state = {
+					limit = {
+						is_core_of = SOV
+						is_controlled_by = ROOT
+						is_on_continent = europe
+						any_neighbor_state = {
+							is_owned_by = POL
+						}
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 3
+				any_neighbor_country = {
+					has_war_with = ROOT
+				}
+			}
+		}
+	}
+}
+
+SOV_political_repression_category = {
+	
+	SOV_suppress_kulak_resistance = {
+		icon = generic_political_discourse
+		
+		available = {
+			has_political_power > 25
+			has_idea = SOV_agricultural_collectivization
+		}
+		
+		visible = {
+			has_idea = SOV_agricultural_collectivization
+		}
+		
+		cost = 25
+		
+		days_remove = 30
+		
+		modifier = {
+			stability_weekly = -0.01
+			political_power_gain = -0.1
+		}
+		
+		remove_effect = {
+			add_stability = -0.02
+			add_war_support = 0.02
+			if = {
+				limit = { has_idea = SOV_agricultural_collectivization }
+				swap_ideas = {
+					remove_idea = SOV_agricultural_collectivization
+					add_idea = SOV_enforced_collectivization
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	SOV_expand_gulag_system = {
+		icon = generic_political_prison
+		
+		available = {
+			has_political_power > 50
+			has_idea = SOV_nkvd_control
+		}
+		
+		visible = {
+			has_idea = SOV_nkvd_control
+		}
+		
+		cost = 50
+		
+		days_remove = 45
+		
+		modifier = {
+			political_power_gain = 0.1
+			stability_weekly = -0.01
+		}
+		
+		remove_effect = {
+			add_stability = -0.05
+			add_timed_idea = {
+				idea = SOV_expanded_gulag_system
+				days = 180
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	
+	SOV_purge_military_leadership = {
+		icon = generic_army
+		
+		available = {
+			has_political_power > 100
+			has_completed_focus = SOV_purge_opposition
+			NOT = { has_completed_focus = SOV_great_purge }
+		}
+		
+		visible = {
+			has_completed_focus = SOV_purge_opposition
+			NOT = { has_completed_focus = SOV_great_purge }
+		}
+		
+		cost = 100
+		
+		days_remove = 60
+		
+		modifier = {
+			army_org_factor = -0.10
+			planning_speed = -0.10
+			political_power_gain = -0.25
+		}
+		
+		remove_effect = {
+			army_experience = -50
+			add_stability = -0.05
+			add_war_support = 0.05
+			add_timed_idea = {
+				idea = SOV_military_purge_effects
+				days = 180
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				has_stability > 0.6
+			}
+		}
+	}
+}

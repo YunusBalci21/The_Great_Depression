@@ -1,0 +1,49 @@
+# Soviet Union 1929 Air Order of Battle
+# Path: history/units/SOV_1929_air.txt
+
+air_wings = {
+	219 = { # Moscow
+		# Fighter Aircraft
+		fighter_equipment_0 = {  # Use base game equipment names
+			owner = "SOV" 
+			amount = 40
+			# Remove version_name which is causing the errors
+		}
+		
+		# Bomber Aircraft
+		tac_bomber_equipment_0 = {  # Use base game equipment names
+			owner = "SOV"
+			amount = 30
+		}
+	}
+	
+	195 = { # Leningrad
+		# Fighter Aircraft
+		fighter_equipment_0 = {
+			owner = "SOV"
+			amount = 30
+		}
+	}
+	
+	202 = { # Kiev
+		# Fighter Aircraft
+		fighter_equipment_0 = {
+			owner = "SOV"
+			amount = 20
+		}
+		
+		# Bomber Aircraft
+		tac_bomber_equipment_0 = {
+			owner = "SOV"
+			amount = 20
+		}
+	}
+	
+	408 = { # Vladivostok Region
+		# Fighter Aircraft
+		fighter_equipment_0 = {
+			owner = "SOV"
+			amount = 20
+		}
+	}
+}

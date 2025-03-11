@@ -1,0 +1,214 @@
+# Soviet Union 1929 Order of Battle
+# Path: history/units/SOV_1929.txt
+
+division_template = {
+	name = "Strelkovaya Diviziya"		# Rifle Division
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Kavaleriyskaya Diviziya"  	# Cavalry Division
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Tankovaya Brigada"			# Pre-war light tank brigade - BT tanks
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+	}
+}
+
+##### OOB #####
+
+units = {
+	# Moscow Military District
+	division = {
+		name = "1-ya Strelkovaya Diviziya"
+		location = 6380 # Moscow
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "2-ya Strelkovaya Diviziya"
+		location = 6380 # Moscow
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "3-ya Kavaleriyskaya Diviziya"
+		location = 6380 # Moscow
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	
+	# Leningrad Military District
+	division = {
+		name = "4-ya Strelkovaya Diviziya"
+		location = 3151 # Leningrad
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "5-ya Strelkovaya Diviziya"
+		location = 3151 # Leningrad
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+	}
+	
+	# Kiev Military District
+	division = {
+		name = "6-ya Strelkovaya Diviziya"
+		location = 525 # Kiev
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "7-ya Strelkovaya Diviziya"
+		location = 525 # Kiev
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "1-ya Kavaleriyskaya Diviziya"
+		location = 525 # Kiev
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	
+	# Belorussian Military District
+	division = {
+		name = "8-ya Strelkovaya Diviziya"
+		location = 11370 # Minsk
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "9-ya Strelkovaya Diviziya"
+		location = 11370 # Minsk
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+	}
+	
+	# Trans-Baikal Military District
+	division = {
+		name = "10-ya Strelkovaya Diviziya"
+		location = 12189 # Chita
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+	}
+	
+	# Far Eastern Military District
+	division = {
+		name = "11-ya Strelkovaya Diviziya"
+		location = 957 # Vladivostok
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "12-ya Strelkovaya Diviziya"
+		location = 12189 # Khabarovsk region
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "2-ya Kavaleriyskaya Diviziya"
+		location = 957 # Vladivostok
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	
+	# Experimental Tank Units (limited in 1929)
+	division = {
+		name = "1-ya Tankovaya Brigada"
+		location = 6380 # Moscow
+		division_template = "Tankovaya Brigada"
+		start_equipment_factor = 0.5
+		start_experience_factor = 0.2
+	}
+}
+
+# Baltic Fleet
+fleet = {
+	name = "Baltiyskiy Flot"
+	naval_base = 3151 # Leningrad
+	task_force = {
+		name = "Baltiyskiy Flot"
+		location = 3151 # Leningrad
+		# Cruisers
+		ship = { name = "Krasny Kavkaz" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Profintern" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SOV } } }
+		# Destroyers
+		ship = { name = "Karl Marx" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Lenin" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Voykov" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Rykov" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		# Submarines
+		ship = { name = "D-1" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "D-2" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }
+	}
+}
+
+# Black Sea Fleet
+fleet = {
+	name = "Chernomorskiy Flot"
+	naval_base = 3686 # Sevastopol
+	task_force = {
+		name = "Chernomorskiy Flot"
+		location = 3686 # Sevastopol
+		# Cruisers
+		ship = { name = "Chervona Ukraina" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SOV } } }
+		# Destroyers
+		ship = { name = "Frunze" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Kalinin" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Dzerzhinskiy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		# Submarines
+		ship = { name = "AG-21" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "AG-22" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "AG-23" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }
+	}
+}
+
+# Pacific Fleet
+fleet = {
+	name = "Tikhookeanskiy Flot"
+	naval_base = 957 # Vladivostok
+	task_force = {
+		name = "Tikhookeanskiy Flot"
+		location = 957 # Vladivostok
+		# Destroyers
+		ship = { name = "Silnyy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Smerch" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		# Submarines
+		ship = { name = "Shch-11" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Shch-12" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }
+	}
+}

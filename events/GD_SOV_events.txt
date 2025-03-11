@@ -1,0 +1,661 @@
+# Soviet Union Events for "The Great Depression: 1929-1939" mod
+# Path: events/sov_depression.txt
+
+add_namespace = sov_depression
+
+# First Five-Year Plan
+country_event = {
+	id = sov_depression.1
+	title = sov_depression.1.t
+	desc = sov_depression.1.d
+	picture = GFX_report_event_communist_leader_speaking
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sov_depression.1.a
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_idea = SOV_economic_depression } }
+				add_ideas = SOV_economic_depression
+			}
+		}
+	}
+}
+
+# Collectivization Crisis
+country_event = {
+	id = sov_depression.2
+	title = sov_depression.2.t
+	desc = sov_depression.2.d
+	picture = GFX_report_event_generic_factory
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sov_depression.2.a
+		ai_chance = { factor = 70 }
+		
+		add_political_power = -50
+		add_stability = -0.05
+		
+		# Fixed resource handling - using specific states and vanilla resources
+		219 = { # Moscow
+			add_resource = {
+				type = steel
+				amount = 8
+			}
+		}
+	}
+	
+	option = {
+		name = sov_depression.2.b
+		ai_chance = { factor = 30 }
+		
+		add_political_power = 50
+		add_stability = 0.05
+		add_war_support = -0.05
+		
+		# Fixed resource handling - using specific states and vanilla resources
+		219 = { # Moscow
+			add_resource = {
+				type = steel
+				amount = -4
+			}
+		}
+	}
+}
+
+# Political Purges Begin
+country_event = {
+	id = sov_depression.3
+	title = sov_depression.3.t
+	desc = sov_depression.3.d
+	picture = GFX_report_event_journalists_speech
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sov_depression.3.a
+		ai_chance = { factor = 80 }
+		
+		add_political_power = 50
+		add_stability = -0.05
+		add_war_support = 0.05
+		
+		hidden_effect = {
+			news_event = { id = news.sov_depression.1 days = 1 }
+		}
+	}
+	
+	option = {
+		name = sov_depression.3.b
+		ai_chance = { factor = 20 }
+		
+		add_political_power = -25
+		add_stability = 0.05
+		add_war_support = -0.05
+		
+		hidden_effect = {
+			country_event = { id = sov_depression.3b days = 30 }
+		}
+	}
+}
+
+# Limited Purges Aftermath
+country_event = {
+	id = sov_depression.3b
+	title = sov_depression.3b.t
+	desc = sov_depression.3b.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sov_depression.3b.a
+		
+		add_political_power = 25
+		add_stability = 0.05
+	}
+}
+
+# The Great Purge
+country_event = {
+	id = sov_depression.4
+	title = sov_depression.4.t
+	desc = sov_depression.4.d
+	picture = GFX_report_event_stalin_propaganda
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sov_depression.4.a
+		ai_chance = { factor = 80 }
+		
+		# Target the Military
+		add_stability = -0.05
+		add_war_support = 0.10
+		army_experience = -50
+		
+		# Removed trait references which were causing errors
+		remove_unit_leader = yes
+		
+		hidden_effect = {
+			news_event = { id = news.sov_depression.2 days = 1 }
+		}
+	}
+	
+	option = {
+		name = sov_depression.4.b
+		ai_chance = { factor = 20 }
+		
+		# Target the Political Opposition
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_political_power = -50
+		
+		hidden_effect = {
+			news_event = { id = news.sov_depression.2 days = 1 }
+		}
+	}
+}
+
+# Border Conflict with Japan - Event Chain
+country_event = {
+	id = sov_depression.5
+	title = sov_depression.5.t
+	desc = sov_depression.5.d
+	picture = GFX_report_event_japanese_soldiers
+	
+	trigger = {
+		tag = SOV
+		has_completed_focus = SOV_lessons_of_japan
+		date > 1932.6.1
+		JAP = {
+			exists = yes
+			has_government = fascism
+		}
+		NOT = { has_war_with = JAP }
+	}
+	
+	mean_time_to_happen = {
+		days = 180
+	}
+	
+	option = {
+		name = sov_depression.5.a
+		ai_chance = { factor = 60 }
+		
+		# Strengthen the border
+		add_political_power = -25
+		add_war_support = 0.05
+		
+		562 = { # Vladivostok
+			add_building_construction = {
+				type = bunker
+				level = 1
+				instant_build = yes
+			}
+		}
+		
+		hidden_effect = {
+			JAP = { country_event = { id = sov_depression.6 days = 7 } }
+		}
+	}
+	
+	option = {
+		name = sov_depression.5.b
+		ai_chance = { factor = 40 }
+		
+		# Aggressive stance
+		add_political_power = 25
+		add_war_support = 0.10
+		
+		hidden_effect = {
+			JAP = { country_event = { id = sov_depression.7 days = 7 } }
+		}
+	}
+}
+
+# Japan - Soviet Border Strengthened
+country_event = {
+	id = sov_depression.6
+	title = sov_depression.6.t
+	desc = sov_depression.6.d
+	picture = GFX_report_event_generic_rally
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sov_depression.6.a
+		ai_chance = { factor = 70 }
+		
+		# Back down
+		add_political_power = -25
+		add_war_support = -0.05
+		
+		hidden_effect = {
+			SOV = { country_event = { id = sov_depression.8 days = 7 } }
+		}
+	}
+	
+	option = {
+		name = sov_depression.6.b
+		ai_chance = { factor = 30 }
+		
+		# Send more troops
+		add_political_power = 25
+		add_war_support = 0.10
+		
+		hidden_effect = {
+			SOV = { country_event = { id = sov_depression.9 days = 7 } }
+		}
+	}
+}
+
+# Japan - Soviet Aggression
+country_event = {
+	id = sov_depression.7
+	title = sov_depression.7.t
+	desc = sov_depression.7.d
+	picture = GFX_report_event_generic_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sov_depression.7.a
+		ai_chance = { factor = 40 }
+		
+		# Back down
+		add_political_power = -50
+		add_war_support = -0.10
+		
+		hidden_effect = {
+			SOV = { country_event = { id = sov_depression.10 days = 7 } }
+		}
+	}
+	
+	option = {
+		name = sov_depression.7.b
+		ai_chance = { factor = 60 }
+		
+		# Military response
+		add_political_power = 25
+		add_war_support = 0.15
+		
+		hidden_effect = {
+			random_list = {
+				70 = { SOV = { country_event = { id = sov_depression.11 days = 7 } } }
+				30 = { 
+					SOV = { country_event = { id = sov_depression.12 days = 1 } }
+					declare_war_on = {
+						target = SOV
+						type = annex_everything
+					}
+				}
+			}
+		}
+	}
+}
+
+# Japanese Withdrawal
+country_event = {
+	id = sov_depression.8
+	title = sov_depression.8.t
+	desc = sov_depression.8.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sov_depression.8.a
+		
+		add_political_power = 25
+		add_war_support = -0.05
+		add_stability = 0.05
+	}
+}
+
+# Japanese Reinforcements
+country_event = {
+	id = sov_depression.9
+	title = sov_depression.9.t
+	desc = sov_depression.9.d
+	picture = GFX_report_event_generic_cavalry
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sov_depression.9.a
+		ai_chance = { factor = 70 }
+		
+		# Diplomatic solution
+		add_political_power = -25
+		add_stability = 0.05
+		add_war_support = -0.05
+	}
+	
+	option = {
+		name = sov_depression.9.b
+		ai_chance = { factor = 30 }
+		
+		# Military solution
+		add_political_power = 25
+		add_war_support = 0.10
+		
+		hidden_effect = {
+			random_list = {
+				70 = { JAP = { country_event = { id = sov_depression.11b days = 7 } } }
+				30 = { 
+					JAP = { country_event = { id = sov_depression.12b days = 1 } }
+					declare_war_on = {
+						target = JAP
+						type = annex_everything
+					}
+				}
+			}
+		}
+	}
+}
+
+# Japanese Submission
+country_event = {
+	id = sov_depression.10
+	title = sov_depression.10.t
+	desc = sov_depression.10.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sov_depression.10.a
+		
+		add_political_power = 50
+		add_war_support = 0.05
+		add_stability = 0.05
+	}
+}
+
+# Border Tensions Resolved
+country_event = {
+	id = sov_depression.11
+	title = sov_depression.11.t
+	desc = sov_depression.11.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sov_depression.11.a
+		
+		add_political_power = 25
+		add_stability = 0.05
+	}
+}
+
+# Border War with Japan
+country_event = {
+	id = sov_depression.12
+	title = sov_depression.12.t
+	desc = sov_depression.12.d
+	picture = GFX_report_event_soldiers_marching
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sov_depression.12.a
+		
+		add_war_support = 0.15
+		add_stability = -0.05
+		
+		hidden_effect = {
+			news_event = { id = news.sov_depression.3 hours = 6 }
+		}
+	}
+}
+
+# Border Tensions Resolved (Japanese Version)
+country_event = {
+	id = sov_depression.11b
+	title = sov_depression.11b.t
+	desc = sov_depression.11b.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sov_depression.11b.a
+		
+		add_political_power = -25
+		add_stability = 0.05
+	}
+}
+
+# Border War with Soviets
+country_event = {
+	id = sov_depression.12b
+	title = sov_depression.12b.t
+	desc = sov_depression.12b.d
+	picture = GFX_report_event_soldiers_marching
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sov_depression.12b.a
+		
+		add_war_support = 0.15
+		add_stability = -0.05
+		
+		hidden_effect = {
+			news_event = { id = news.sov_depression.3 hours = 6 }
+		}
+	}
+}
+
+# Hunger in Ukraine
+country_event = {
+	id = sov_depression.13
+	title = sov_depression.13.t
+	desc = sov_depression.13.d
+	picture = GFX_report_event_generic_factory
+	
+	trigger = {
+		tag = SOV
+		has_idea = SOV_agricultural_collectivization
+		date > 1932.6.1
+	}
+	
+	mean_time_to_happen = {
+		days = 90
+	}
+	
+	option = {
+		name = sov_depression.13.a
+		ai_chance = { factor = 70 }
+		
+		# Continue Collectivization
+		add_stability = -0.10
+		add_war_support = 0.05
+		
+		202 = { # Kiev
+			damage_building = {
+				type = infrastructure
+				damage = 0.3
+			}
+		}
+		
+		222 = { # Kharkov
+			damage_building = {
+				type = infrastructure
+				damage = 0.3
+			}
+		}
+		
+		hidden_effect = {
+			news_event = { id = news.sov_depression.4 days = 3 }
+		}
+	}
+	
+	option = {
+		name = sov_depression.13.b
+		ai_chance = { factor = 30 }
+		
+		# Relief Efforts
+		add_political_power = -50
+		add_stability = 0.05
+		
+		custom_effect_tooltip = SOV_temporary_collectivization_freeze
+		
+		hidden_effect = {
+			remove_ideas = SOV_agricultural_collectivization
+			country_event = { id = sov_depression.14 days = 180 }
+		}
+	}
+}
+
+# Resume Collectivization?
+country_event = {
+	id = sov_depression.14
+	title = sov_depression.14.t
+	desc = sov_depression.14.d
+	picture = GFX_report_event_generic_factory
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sov_depression.14.a
+		ai_chance = { factor = 80 }
+		
+		# Resume collectivization
+		add_political_power = 50
+		add_stability = -0.05
+		
+		add_ideas = SOV_agricultural_collectivization
+	}
+	
+	option = {
+		name = sov_depression.14.b
+		ai_chance = { factor = 20 }
+		
+		# Private agriculture allowed
+		add_political_power = -100
+		add_stability = 0.10
+		
+		add_ideas = SOV_enforced_collectivization
+	}
+}
+
+# World News Events
+news_event = {
+	id = news.sov_depression.1
+	title = news.sov_depression.1.t
+	desc = news.sov_depression.1.d
+	picture = GFX_news_event_generic_rally
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.sov_depression.1.a
+		
+		trigger = {
+			NOT = { tag = SOV }
+		}
+	}
+	
+	option = {
+		name = news.sov_depression.1.b
+		
+		trigger = {
+			tag = SOV
+		}
+	}
+}
+
+news_event = {
+	id = news.sov_depression.2
+	title = news.sov_depression.2.t
+	desc = news.sov_depression.2.d
+	picture = GFX_news_event_generic_rally
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.sov_depression.2.a
+		
+		trigger = {
+			NOT = { tag = SOV }
+		}
+	}
+	
+	option = {
+		name = news.sov_depression.2.b
+		
+		trigger = {
+			tag = SOV
+		}
+	}
+}
+
+news_event = {
+	id = news.sov_depression.3
+	title = news.sov_depression.3.t
+	desc = news.sov_depression.3.d
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.sov_depression.3.a
+		
+		trigger = {
+			NOT = { tag = SOV }
+			NOT = { tag = JAP }
+		}
+	}
+	
+	option = {
+		name = news.sov_depression.3.b
+		
+		trigger = {
+			OR = {
+				tag = SOV
+				tag = JAP
+			}
+		}
+	}
+}
+
+news_event = {
+	id = news.sov_depression.4
+	title = news.sov_depression.4.t
+	desc = news.sov_depression.4.d
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.sov_depression.4.a
+		
+		trigger = {
+			NOT = { tag = SOV }
+		}
+	}
+	
+	option = {
+		name = news.sov_depression.4.b
+		
+		trigger = {
+			tag = SOV
+		}
+	}
+}

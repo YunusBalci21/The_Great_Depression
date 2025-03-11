@@ -1,0 +1,19 @@
+# Custom Resources for "The Great Depression: 1929-1939" mod
+# Path: common/resources/GD_custom_resources.txt
+
+# Define grain as a resource
+grain = {
+	# Visual information
+	icon_frame = 8
+	
+	# Production cost factors
+	convoys = 0.05
+	
+	# State requirement - needed for validation
+	cic = {
+		cost = 0.2
+	}
+	
+	# This makes it available in the game
+	default = yes
+}

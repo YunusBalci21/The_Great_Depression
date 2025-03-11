@@ -1,0 +1,311 @@
+# Soviet Union National Ideas for "The Great Depression: 1929-1939" mod
+# Path: common/ideas/SOV_ideas.txt
+
+ideas = {
+	country = {
+		# Starting Ideas for Soviet Union in 1929
+		SOV_economic_depression = {
+			picture = generic_economic_crisis
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+				industrial_capacity_factory = -0.20
+				production_speed_buildings_factor = -0.15
+				research_speed_factor = -0.10
+				stability_factor = -0.10
+			}
+		}
+		
+		SOV_stalins_leadership = {
+			picture = generic_communist_revolutionary
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.15
+				communism_drift = 0.02
+				stability_factor = 0.05
+			}
+		}
+		
+		SOV_agricultural_collectivization = {
+			picture = generic_agrarian_reform
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.10
+				conscription_factor = 0.05
+				compliance_growth = -0.25
+				resistance_damage_to_garrison = 0.15
+				stability_factor = -0.10
+			}
+		}
+		
+		SOV_enforced_collectivization = {
+			picture = generic_agrarian_society
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				conscription_factor = 0.02
+				compliance_growth = -0.10
+				resistance_damage_to_garrison = 0.05
+				stability_factor = 0.05
+			}
+		}
+		
+		SOV_economic_recovery = {
+			picture = generic_production_bonus
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = 0.10
+				production_speed_buildings_factor = 0.10
+				research_speed_factor = 0.05
+			}
+		}
+		
+		SOV_nkvd_control = {
+			picture = generic_secret_police
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				encryption_factor = 0.10
+				decryption_factor = 0.10
+				foreign_subversive_activities = -0.25
+				stability_factor = 0.05
+				drift_defence_factor = 0.25
+			}
+		}
+		
+		SOV_great_purge_idea = {
+			picture = generic_purge
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.15
+				army_morale_factor = -0.10
+				political_power_gain = -0.50
+				stability_factor = -0.05
+				surrender_limit = 0.10
+			}
+		}
+		
+		SOV_socialist_realism_spirit = {
+			picture = generic_communist_propaganda
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				communism_drift = 0.01
+				drift_defence_factor = 0.15
+			}
+		}
+		
+		SOV_international_propaganda_idea = {
+			picture = generic_volunteer_expedition_bonus
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				send_volunteers_tension = -0.20
+				send_volunteer_divisions_required = -0.5
+				send_volunteer_size = 1
+				join_faction_tension = -0.20
+			}
+		}
+		
+		SOV_reorganized_military = {
+			picture = generic_manpower_bonus
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				training_time_army_factor = -0.10
+				army_org_factor = 0.05
+				planning_speed = 0.10
+				max_planning = 0.10
+			}
+		}
+		
+		SOV_preparing_for_great_war = {
+			picture = generic_prepare_civil_war
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.10
+				political_power_gain = 0.25
+				war_support_factor = 0.10
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+		
+		# Additional ideas
+		SOV_five_year_plan = {
+			picture = generic_production_bonus
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.10
+				production_speed_buildings_factor = 0.15
+				consumer_goods_factor = 0.10
+				political_power_gain = -0.10
+				stability_factor = -0.05
+			}
+		}
+		
+		SOV_socialist_science = {
+			picture = generic_research_bonus
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.05
+				industrial_capacity_factory = 0.05
+				stability_factor = 0.05
+			}
+		}
+		
+		SOV_political_commissars = {
+			picture = generic_political_support
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.10
+				training_time_army_factor = 0.10
+				conscription = 0.02
+				stability_factor = -0.05
+				drift_defence_factor = 0.50
+			}
+		}
+		
+		SOV_industrialization = {
+			picture = generic_production_bonus
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.20
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				consumer_goods_factor = 0.05
+				stability_factor = -0.05
+				war_support_factor = 0.10
+			}
+		}
+		
+		# Ideas needed for decisions
+		SOV_expanded_gulag_system = {
+			picture = generic_forced_labor
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.10
+				resistance_damage_to_garrison = -0.15
+				compliance_growth = 0.05
+				stability_factor = -0.05
+				drift_defence_factor = 0.15
+			}
+		}
+		
+		SOV_military_purge_effects = {
+			picture = generic_purge
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.10
+				planning_speed = -0.10
+				army_morale_factor = -0.10
+				war_support_factor = 0.05
+				political_power_gain = -0.15
+			}
+		}
+	}
+}
