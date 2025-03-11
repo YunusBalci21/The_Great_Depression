@@ -1,0 +1,820 @@
+focus_tree = {
+	id = french_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = FRA
+		}
+	}
+	
+	default = no
+	
+	# Starting Focus - The Great Depression
+	focus = {
+		id = FRA_depression_crisis
+		icon = GFX_goal_generic_demand_territory
+		x = 10
+		y = 0
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.05
+		}
+	}
+	
+	# Political Instability Branch
+	focus = {
+		id = FRA_third_republic_instability
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = FRA_depression_crisis }
+		x = 10
+		y = 1
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = -25
+			add_stability = -0.05
+			add_ideas = FRA_political_instability
+		}
+	}
+	
+	# Three Political Paths
+	
+	# Left Path - Popular Front
+	focus = {
+		id = FRA_popular_front
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = FRA_third_republic_instability }
+		mutually_exclusive = { 
+			focus = FRA_national_unity 
+			focus = FRA_democratic_status_quo
+		}
+		x = 6
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 2
+				has_stability < 0.4
+			}
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+		}
+	}
+	
+	# Center Path - Democratic Status Quo
+	focus = {
+		id = FRA_democratic_status_quo
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = FRA_third_republic_instability }
+		mutually_exclusive = { 
+			focus = FRA_popular_front
+			focus = FRA_national_unity
+		}
+		x = 10
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.10
+			}
+		}
+	}
+	
+	# Right Path - National Unity
+	focus = {
+		id = FRA_national_unity
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = FRA_third_republic_instability }
+		mutually_exclusive = { 
+			focus = FRA_popular_front 
+			focus = FRA_democratic_status_quo
+		}
+		x = 14
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_stability < 0.3
+			}
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+		}
+	}
+	
+	# Popular Front Path
+	
+	focus = {
+		id = FRA_nationalization_program
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = FRA_popular_front }
+		x = 5
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_ideas = FRA_nationalization_program
+			add_stability = -0.05
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_social_reforms
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = FRA_popular_front }
+		x = 7
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_ideas = FRA_social_reforms
+			add_stability = 0.10
+			add_political_power = -25
+		}
+	}
+	
+	focus = {
+		id = FRA_matignon_agreements
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = FRA_nationalization_program }
+		prerequisite = { focus = FRA_social_reforms }
+		x = 6
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_stability = 0.10
+			add_ideas = FRA_matignon_agreements
+			add_political_power = -25
+			if = {
+				limit = {
+					has_idea = great_depression
+				}
+				swap_ideas = {
+					remove_idea = great_depression
+					add_idea = economic_recovery
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_spanish_civil_war_intervention
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = FRA_matignon_agreements }
+		available = {
+			has_global_flag = spanish_civil_war_begun
+		}
+		x = 6
+		y = 5
+		cost = 10
+		ai_will_do = { factor = 5 }
+		completion_reward = {
+			add_political_power = -25
+			add_stability = -0.05
+			add_war_support = 0.05
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 5000
+				producer = FRA
+			}
+			SPR = {
+				add_opinion_modifier = { 
+					target = FRA 
+					modifier = large_increase 
+				}
+			}
+		}
+	}
+	
+	# Democratic Status Quo Path
+	
+	focus = {
+		id = FRA_economic_orthodoxy
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = FRA_democratic_status_quo }
+		x = 9
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_ideas = FRA_economic_orthodoxy
+			add_stability = 0.05
+			add_political_power = 25
+		}
+	}
+	
+	focus = {
+		id = FRA_preserve_gold_standard
+		icon = GFX_goal_unknown
+		prerequisite = { focus = FRA_democratic_status_quo }
+		x = 11
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_ideas = FRA_gold_standard
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = FRA_strengthen_status_quo
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = FRA_economic_orthodoxy }
+		prerequisite = { focus = FRA_preserve_gold_standard }
+		x = 10
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			remove_ideas = FRA_political_instability
+			add_stability = 0.10
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = FRA_spanish_civil_war_neutrality
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = FRA_strengthen_status_quo }
+		available = {
+			has_global_flag = spanish_civil_war_begun
+		}
+		x = 10
+		y = 5
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.05
+			add_war_support = -0.03
+		}
+	}
+	
+	# National Unity Path
+	
+	focus = {
+		id = FRA_deal_with_leagues
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = FRA_national_unity }
+		x = 13
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_ideas = FRA_nationalist_influence
+		}
+	}
+	
+	focus = {
+		id = FRA_business_interests
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = FRA_national_unity }
+		x = 15
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_ideas = FRA_business_leaders
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_national_redressment
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = FRA_deal_with_leagues }
+		prerequisite = { focus = FRA_business_interests }
+		x = 14
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_ideas = FRA_national_recovery
+			if = {
+				limit = {
+					has_idea = great_depression
+				}
+				swap_ideas = {
+					remove_idea = great_depression
+					add_idea = economic_recovery
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_spanish_civil_war_support_nationalists
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = FRA_national_redressment }
+		available = {
+			has_global_flag = spanish_civil_war_begun
+		}
+		x = 14
+		y = 5
+		cost = 10
+		ai_will_do = { factor = 5 }
+		completion_reward = {
+			add_political_power = -25
+			add_stability = -0.05
+			add_war_support = 0.05
+			add_ideas = FRA_covert_nationalist_support
+		}
+	}
+	
+	# Colonial Management Path
+	
+	focus = {
+		id = FRA_colonial_affairs
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = FRA_depression_crisis }
+		x = 3
+		y = 2
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {
+		id = FRA_colonial_exposition
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = FRA_colonial_affairs }
+		x = 2
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 25
+			add_ideas = FRA_colonial_exposition
+		}
+	}
+	
+	focus = {
+		id = FRA_colonial_resources
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = FRA_colonial_affairs }
+		x = 4
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_ideas = FRA_colonial_resources
+			random_owned_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+					is_controlled_by = ROOT
+				}
+				add_resource = {
+					type = rubber
+					amount = 8
+				}
+			}
+			random_owned_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+					is_controlled_by = ROOT
+				}
+				add_resource = {
+					type = oil
+					amount = 4
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_maintain_empire
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = FRA_colonial_exposition }
+		prerequisite = { focus = FRA_colonial_resources }
+		x = 3
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 25
+			add_ideas = FRA_imperial_centralization
+		}
+	}
+	
+	focus = {
+		id = FRA_colonial_troops
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = FRA_maintain_empire }
+		x = 3
+		y = 5
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_ideas = FRA_colonial_troops
+			add_manpower = 50000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 5000
+				producer = FRA
+			}
+		}
+	}
+	
+	# Military Branch
+	
+	focus = {
+		id = FRA_military_assessment
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { 
+			focus = FRA_spanish_civil_war_intervention
+			focus = FRA_spanish_civil_war_neutrality
+			focus = FRA_spanish_civil_war_support_nationalists
+		}
+		x = 10
+		y = 6
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			army_experience = 25
+			navy_experience = 25
+			air_experience = 25
+		}
+	}
+	
+	# Defensive Branch
+	focus = {
+		id = FRA_defensive_focus
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = FRA_military_assessment }
+		mutually_exclusive = { focus = FRA_offensive_focus }
+		x = 8
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+		completion_reward = {
+			add_ideas = FRA_defensive_focus
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_tech_bonus = {
+				name = defensive_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_extend_maginot
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = FRA_defensive_focus }
+		x = 7
+		y = 8
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			18 = { # Alsace
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+					}
+				}
+			}
+			16 = { # Lorraine
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_army_modernization
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = FRA_defensive_focus }
+		x = 9
+		y = 8
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	
+	# Offensive Branch
+	focus = {
+		id = FRA_offensive_focus
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = FRA_military_assessment }
+		mutually_exclusive = { focus = FRA_defensive_focus }
+		x = 12
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				OR = {
+					has_government = fascism
+					has_government = communism
+				}
+			}
+		}
+		completion_reward = {
+			add_ideas = FRA_offensive_focus
+			add_war_support = 0.10
+			add_tech_bonus = {
+				name = offensive_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_tank_development
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = FRA_offensive_focus }
+		x = 11
+		y = 8
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_air_modernization
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = FRA_offensive_focus }
+		x = 13
+		y = 8
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_bonus
+				bonus = 0.5
+				uses = 2
+				category = air_equipment
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	# Joint Military Paths
+	focus = {
+		id = FRA_metropolitan_defense
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = FRA_extend_maginot focus = FRA_army_modernization }
+		x = 8
+		y = 9
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			every_owned_state = {
+				limit = { is_core_of = ROOT }
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_battlefield_mobility
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = FRA_tank_development focus = FRA_air_modernization }
+		x = 12
+		y = 9
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 0.5
+				uses = 1
+				category = motorized_equipment
+			}
+			add_tech_bonus = {
+				name = mobile_warfare_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_mobile_warfare
+			}
+		}
+	}
+	
+	# Alliance Focus
+	focus = {
+		id = FRA_alliance_strategy
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = FRA_metropolitan_defense focus = FRA_battlefield_mobility }
+		x = 10
+		y = 10
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+	}
+	
+	focus = {
+		id = FRA_british_alliance
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = FRA_alliance_strategy }
+		mutually_exclusive = { focus = FRA_continental_strategy }
+		x = 8
+		y = 11
+		cost = 10
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.05
+			ENG = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = large_increase
+				}
+			}
+			FRA = {
+				add_opinion_modifier = {
+					target = ENG
+					modifier = large_increase
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_continental_strategy
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = FRA_alliance_strategy }
+		mutually_exclusive = { focus = FRA_british_alliance }
+		x = 12
+		y = 11
+		cost = 10
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				OR = {
+					has_government = fascism
+					has_government = communism
+					has_government = neutrality
+				}
+			}
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.05
+			add_war_support = 0.05
+			if = {
+				limit = {
+					is_in_faction = no
+				}
+				create_faction = "French-led European Alliance"
+			}
+		}
+	}
+	
+	# Recovery Focus
+	focus = {
+		id = FRA_economic_recovery
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = FRA_british_alliance focus = FRA_continental_strategy }
+		prerequisite = { focus = FRA_colonial_troops }
+		x = 10
+		y = 12
+		cost = 10
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_stability = 0.10
+			add_war_support = 0.05
+			add_political_power = 100
+			remove_ideas = economic_recovery
+			add_ideas = FRA_economic_revival
+		}
+	}
+}

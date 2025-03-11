@@ -1,0 +1,341 @@
+ideas = {
+	country = {
+		# Political Ideas
+		FRA_political_instability = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_political_discourse
+			
+			modifier = {
+				political_power_gain = -0.15
+				stability_factor = -0.10
+				war_support_factor = -0.05
+				political_advisor_cost_factor = 0.25
+			}
+		}
+		
+		# Popular Front Ideas
+		FRA_nationalization_program = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_production_bonus
+			
+			modifier = {
+				industrial_capacity_factory = 0.10
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.05
+				consumer_goods_factor = 0.05
+				political_power_gain = -0.05
+			}
+		}
+		
+		FRA_social_reforms = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				stability_factor = 0.10
+				consumer_goods_factor = 0.10
+				monthly_population = 0.05
+				political_power_gain = -0.10
+			}
+		}
+		
+		FRA_matignon_agreements = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_constitutional_guarantee
+			
+			modifier = {
+				stability_factor = 0.15
+				political_power_gain = -0.05
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		
+		# Democratic Status Quo Ideas
+		FRA_economic_orthodoxy = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_economic_crisis
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = -0.05
+				political_power_gain = 0.10
+				drift_defence_factor = 0.15
+			}
+		}
+		
+		FRA_gold_standard = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_foreign_capital
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				trade_opinion_factor = 0.15
+				stability_factor = 0.05
+				industrial_capacity_factory = -0.10
+			}
+		}
+		
+		# National Unity Ideas
+		FRA_nationalist_influence = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				fascism_drift = 0.01
+				neutrality_drift = 0.01
+				democratic_drift = -0.02
+				war_support_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+		
+		FRA_business_leaders = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_production_bonus
+			
+			modifier = {
+				industrial_capacity_factory = 0.10
+				production_speed_industrial_complex_factor = 0.10
+				consumer_goods_factor = -0.05
+				production_speed_arms_factory_factor = 0.05
+			}
+		}
+		
+		FRA_national_recovery = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_economic_deal
+			
+			modifier = {
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = 0.10
+				stability_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+		
+		FRA_covert_nationalist_support = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_volunteer_expedition_bonus
+			
+			modifier = {
+				send_volunteer_size = 1
+				send_volunteer_divisions_required = -0.25
+				political_power_gain = -0.05
+				stability_factor = -0.05
+			}
+		}
+		
+		# Colonial Ideas
+		FRA_colonial_exposition = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_victors_of_ww1
+			
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.05
+				consumer_goods_factor = 0.02
+			}
+		}
+		
+		FRA_colonial_resources = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_exploit_mines
+			
+			modifier = {
+				local_resources_factor = 0.10
+				production_speed_industrial_complex_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+		
+		FRA_imperial_centralization = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_colonial_return
+			
+			modifier = {
+				stability_factor = 0.05
+				non_core_manpower = 0.02
+				compliance_growth = 0.05
+				resistance_damage_to_garrison = -0.1
+			}
+		}
+		
+		FRA_colonial_troops = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				non_core_manpower = 0.05
+				training_time_army_factor = -0.10
+				army_morale_factor = 0.05
+			}
+		}
+		
+		# Military Ideas
+		FRA_defensive_focus = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_fortify_the_borders
+			
+			modifier = {
+				production_speed_bunker_factor = 0.20
+				fort_level_factor = 0.10
+				army_defense_factor = 0.10
+				max_dig_in = 1
+			}
+		}
+		
+		FRA_offensive_focus = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				army_attack_factor = 0.05
+				army_speed_factor = 0.05
+				training_time_army_factor = -0.10
+				production_speed_arms_factory_factor = 0.10
+			}
+		}
+		
+		# Economic Recovery
+		FRA_economic_revival = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_economic_deal
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = 0.15
+				stability_factor = 0.10
+				political_power_gain = 0.10
+			}
+		}
+	}
+	
+	# Political Advisors section
+	political_advisor = {
+		# Popular Front advisor
+		FRA_leon_blum = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			traits = { popular_front_champion }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		# Conservative advisor
+		FRA_pierre_laval = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			traits = { third_republic_conservative }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		# Colonial advisor
+		FRA_georges_mandel = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			traits = { colonial_administrator }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}
