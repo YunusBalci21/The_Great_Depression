@@ -1,0 +1,342 @@
+ideas = {
+	country = {
+		# Five-Year Plan Ideas
+		SOV_first_five_year_plan = { # CWTools expects sov_first_five_year_plan
+			picture = SOV_five_year_plan
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = 0.05
+				political_power_gain = -0.1
+				stability_factor = -0.05
+			}
+		}
+		
+		SOV_second_five_year_plan = { # CWTools expects sov_second_five_year_plan
+			picture = SOV_five_year_plan
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.05
+				consumer_goods_factor = 0.03
+				political_power_gain = -0.05
+			}
+		}
+		
+		# Agricultural Ideas
+		SOV_collectivization = { # CWTools expects sov_collectivization
+			picture = generic_agrarian_reform
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = -0.05
+				local_resources_factor = 0.05
+			}
+		}
+		
+		SOV_expanded_collective_farms = { # CWTools expects sov_expanded_collective_farms
+			picture = generic_agrarian_society
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.08
+				local_resources_factor = 0.1
+			}
+		}
+		
+		# Political Ideas
+		SOV_cult_of_personality = { # CWTools expects sov_cult_of_personality
+			picture = generic_political_support
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				political_power_gain = 0.1
+				drift_defence_factor = 0.3
+			}
+		}
+		
+		# Additional ideas needed for the focus tree and decisions
+		SOV_forced_industrialization = {
+			picture = generic_production_bonus
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = 0.15
+				consumer_goods_factor = 0.1
+				stability_factor = -0.1
+			}
+		}
+		
+		SOV_consumer_goods_neglect = {
+			picture = generic_goods_red_bonus
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.15
+				stability_factor = -0.05
+				war_support_factor = 0.05
+			}
+		}
+		
+		SOV_civilian_focus = {
+			picture = generic_consumer_goods_focus
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_factor = 0.1
+				war_support_factor = -0.05
+			}
+		}
+		
+		SOV_dekulakization = {
+			picture = generic_purge
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = 0.1
+				local_resources_factor = -0.05
+			}
+		}
+		
+		SOV_moderate_collectivization = {
+			picture = generic_agrarian_reform
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = -0.05
+				local_resources_factor = 0.05
+			}
+		}
+		
+		SOV_agricultural_recovery = {
+			picture = generic_agrarian_society
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				local_resources_factor = 0.15
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		SOV_great_purge = {
+			picture = generic_purge
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = 0.05
+				political_power_gain = 0.2
+				army_org_factor = -0.05
+			}
+		}
+		
+		SOV_military_purge = {
+			picture = generic_purge
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = -0.05
+				army_org_factor = -0.1
+				army_morale_factor = -0.1
+				experience_gain_army = -0.1
+			}
+		}
+		
+		SOV_limited_purges = {
+			picture = generic_spy_political
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.05
+				army_org_factor = -0.05
+			}
+		}
+		
+		SOV_military_industry_focus = {
+			picture = generic_war_production
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				production_speed_dockyard_factor = 0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+		
+		SOV_military_academies = {
+			picture = generic_research_bonus
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_army = 0.1
+				army_org_factor = 0.05
+				training_time_factor = -0.1
+			}
+		}
+		
+		SOV_modernized_army = {
+			picture = generic_army_experience
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_org_factor = 0.05
+				experience_gain_army = 0.05
+			}
+		}
+		
+		SOV_border_defense = {
+			picture = generic_fortify_the_borders
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_bunker_factor = 0.2
+				production_speed_coastal_bunker_factor = 0.2
+				army_core_defence_factor = 0.1
+			}
+		}
+		
+		SOV_industrial_giant = {
+			picture = generic_production_bonus
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.2
+				production_speed_buildings_factor = 0.2
+				global_building_slots_factor = 0.2
+				research_speed_factor = 0.1
+			}
+		}
+		
+		SOV_stakhanovite_movement = {
+			picture = generic_production_bonus
+			allowed = {
+				original_tag = SOV
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = 0.1
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+		
+		industrial_production_boost = {
+			picture = generic_production_bonus
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		
+		communist_pressure = {
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				communism_drift = 0.05
+				political_power_gain = -0.1
+			}
+		}
+	}
+}

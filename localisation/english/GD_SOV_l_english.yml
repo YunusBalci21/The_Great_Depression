@@ -1,0 +1,316 @@
+﻿l_english:
+ # Soviet Focus Tree
+ SOV_stalins_revolution:0 "Stalin's Revolution from Above"
+ SOV_stalins_revolution_desc:0 "Joseph Stalin has consolidated power and is implementing his vision of rapid transformation. Through collectivization and industrialization, he aims to transform the Soviet Union from a backward agricultural society into a modern industrial power."
+ 
+ SOV_first_five_year_plan:0 "First Five-Year Plan"
+ SOV_first_five_year_plan_desc:0 "The First Five-Year Plan sets ambitious targets for industrial growth and economic transformation. This comprehensive program of state-directed development will prioritize heavy industry, energy production, and transportation infrastructure."
+ 
+ SOV_heavy_industrialization:0 "Heavy Industrialization"
+ SOV_heavy_industrialization_desc:0 "The development of heavy industry - steel, coal, machinery, and energy - is essential for building socialism and defense capabilities. We will concentrate resources on creating a strong industrial base, even at the cost of consumer goods production."
+ 
+ SOV_rapid_industrialization:0 "Rapid Industrialization"
+ SOV_rapid_industrialization_desc:0 "The Soviet Union must compress decades of industrial development into just a few years. This acceleration will require tremendous sacrifice and effort from the Soviet people, but is necessary to overcome backwardness."
+ 
+ SOV_steel_production:0 "Expand Steel Production"
+ SOV_steel_production_desc:0 "Steel is the foundation of modern industry and warfare. New steel mills and expansion of existing facilities will dramatically increase our production capacity, providing the material basis for industrialization."
+ 
+ SOV_expand_magnitogorsk:0 "Magnitogorsk Steel Complex"
+ SOV_expand_magnitogorsk_desc:0 "The Magnitogorsk metallurgical complex will be the pride of Soviet industry, a massive steel production facility built from nothing in the Ural mountains. This industrial giant will be a symbol of socialist construction and a cornerstone of our industrial base."
+ 
+ SOV_consumer_goods_neglect:0 "Prioritize Heavy Industry"
+ SOV_consumer_goods_neglect_desc:0 "Consumer goods can wait - the immediate priority must be building up our industrial and defense capacity. By directing resources away from consumer sectors, we can accelerate development of heavy industry and infrastructure."
+ 
+ SOV_civilian_needs:0 "Address Civilian Needs"
+ SOV_civilian_needs_desc:0 "The hardships of rapid industrialization threaten popular support for the regime. By allocating more resources to housing, food, and basic consumer goods, we can improve living conditions and maintain social stability."
+ 
+ SOV_urbanization_program:0 "Urbanization Program"
+ SOV_urbanization_program_desc:0 "The industrialization drive requires a massive shift of population from rural to urban areas. New cities are being built around industrial complexes, while existing urban centers are expanding rapidly to accommodate new workers."
+ 
+ SOV_civilian_factories:0 "Consumer Goods Factories"
+ SOV_civilian_factories_desc:0 "While heavy industry remains the priority, some development of consumer goods production is necessary to maintain social stability and worker morale. These factories will produce essential items for Soviet citizens."
+ 
+ SOV_housing_construction:0 "Urban Housing Construction"
+ SOV_housing_construction_desc:0 "The rapid influx of workers into cities has created severe housing shortages. A program of standardized apartment construction will provide basic accommodation for industrial workers, though quality will be sacrificed for quantity."
+ 
+ SOV_second_five_year_plan:0 "Second Five-Year Plan"
+ SOV_second_five_year_plan_desc:0 "Building on the foundations laid by the First Five-Year Plan, this second phase of development will continue industrial expansion while addressing some of the social costs of rapid development."
+ 
+ SOV_expand_industrial_base:0 "Expand Industrial Base"
+ SOV_expand_industrial_base_desc:0 "With the basic industrial infrastructure established, we can now expand and diversify our industrial base. New factories will be built in previously undeveloped regions, spreading industrialization across the Soviet Union."
+ 
+ SOV_scientific_development:0 "Scientific Research Development"
+ SOV_scientific_development_desc:0 "Modern industry requires scientific and technical knowledge. By expanding research institutes and technical education, we can develop indigenous expertise and reduce dependence on foreign technology."
+ 
+ SOV_stakhanovite_movement:0 "Stakhanovite Movement"
+ SOV_stakhanovite_movement_desc:0 "Named after the coal miner Alexei Stakhanov, this movement encourages workers to dramatically exceed production quotas through innovation and dedication. Stakhanovites are celebrated as heroes of socialist labor, inspiring others to increase productivity."
+ 
+ SOV_agricultural_collectivization:0 "Agricultural Collectivization"
+ SOV_agricultural_collectivization_desc:0 "Individual peasant farming is inefficient and politically unreliable. By collectivizing agriculture, we can modernize farming methods, increase state control over agricultural production, and extract resources for industrial development."
+ 
+ SOV_liquidate_kulaks:0 "Liquidate the Kulaks"
+ SOV_liquidate_kulaks_desc:0 "The kulaks - wealthy peasants - represent the last vestiges of capitalism in the countryside and the main obstacle to collectivization. By eliminating them as a class through expropriation, deportation, and execution, we can overcome resistance to socialist agriculture."
+ 
+ SOV_gradual_collectivization:0 "Gradual Collectivization"
+ SOV_gradual_collectivization_desc:0 "While collectivization remains the goal, a more measured approach will reduce disruption to agricultural production. By proceeding more gradually and using economic incentives alongside coercion, we can achieve collectivization with less resistance."
+ 
+ SOV_agricultural_machinery:0 "Agricultural Machinery Production"
+ SOV_agricultural_machinery_desc:0 "Modern, collectivized agriculture requires mechanization. By producing tractors, harvesters, and other farm machinery, we can increase agricultural productivity while demonstrating the benefits of socialist industrialization to the peasantry."
+ 
+ SOV_expand_collective_farms:0 "Expand Collective Farms"
+ SOV_expand_collective_farms_desc:0 "With the initial phase of collectivization complete, we can now consolidate and expand the collective farm system. Larger, more efficient collective farms will increase production while strengthening state control over agriculture."
+ 
+ SOV_agricultural_recovery:0 "Agricultural Recovery Measures"
+ SOV_agricultural_recovery_desc:0 "After the disruptions caused by collectivization, measures are needed to stabilize and increase agricultural production. By allowing limited private plots for collective farmers and improving agricultural techniques, we can restore food production levels."
+ 
+ SOV_great_purge:0 "The Great Purge"
+ SOV_great_purge_desc:0 "The Soviet state is threatened by enemies within - Trotskyists, right deviationists, foreign spies, and saboteurs. A comprehensive purge of the Party, government, military, and society will eliminate these threats and ensure loyalty to Comrade Stalin's leadership."
+ 
+ SOV_purge_military:0 "Purge the Military Leadership"
+ SOV_purge_military_desc:0 "The military leadership cannot be exempted from scrutiny. Many senior commanders harbor bourgeois attitudes or maintain suspicious foreign contacts. By purging the officer corps, we can ensure absolute loyalty to the Party and eliminate potential threats to Stalin's leadership."
+ 
+ SOV_limited_purge:0 "Limited Targeted Purges"
+ SOV_limited_purge_desc:0 "While vigilance against enemies is essential, excessive purges could damage our military and administrative capabilities. A more targeted approach, focusing on genuinely suspicious individuals rather than wholesale elimination, will maintain security while preserving expertise."
+ 
+ SOV_stalins_cult_of_personality:0 "Stalin's Cult of Personality"
+ SOV_stalins_cult_of_personality_desc:0 "Comrade Stalin's genius leadership has guided the Soviet Union through industrialization and collectivization. By promoting reverence for Stalin as the embodiment of the Party and revolution, we can strengthen unity and discipline throughout Soviet society."
+ 
+ SOV_military_industrialization:0 "Military Industrialization"
+ SOV_military_industrialization_desc:0 "In a world of capitalist encirclement, building our defense industry is essential for survival. Significant resources will be directed to arms production, military research, and development of strategic industries."
+ 
+ SOV_military_academies:0 "Expand Military Academies"
+ SOV_military_academies_desc:0 "Modern warfare requires educated, professional officers. By expanding military academies and training programs, we can develop a skilled officer corps capable of mastering advanced military technologies and doctrines."
+ 
+ SOV_expand_arms_industry:0 "Expand Arms Industry"
+ SOV_expand_arms_industry_desc:0 "The Soviet Union must be self-sufficient in weapons production. New arms factories will be built away from vulnerable border regions, creating a secure industrial base for military production."
+ 
+ SOV_tank_research:0 "Tank Research Programs"
+ SOV_tank_research_desc:0 "Tanks represent the future of warfare, combining firepower, protection, and mobility. By investing in advanced tank research and production facilities, the Soviet Union will develop armored forces capable of decisive offensive operations."
+ 
+ SOV_aviation_advances:0 "Aviation Development"
+ SOV_aviation_advances_desc:0 "Air power is becoming increasingly important in modern warfare. Soviet aviation must advance rapidly to match and exceed the capabilities of potential enemies, focusing on both fighters for air defense and bombers for strategic operations."
+ 
+ SOV_artillery_modernization:0 "Artillery Modernization"
+ SOV_artillery_modernization_desc:0 "Artillery remains the 'god of war' in the Soviet military doctrine. Modernizing our artillery park with improved designs, increased production, and better training will provide the Red Army with essential firepower."
+ 
+ SOV_deep_battle_doctrine:0 "Deep Battle Doctrine"
+ SOV_deep_battle_doctrine_desc:0 "Developed by Soviet military theorists, the Deep Battle doctrine envisions simultaneous attacks throughout the enemy's defensive depth, using combined arms and operational art to achieve decisive breakthroughs and exploitation."
+ 
+ SOV_heavy_tank_production:0 "Heavy Tank Production"
+ SOV_heavy_tank_production_desc:0 "Heavy tanks armed with powerful guns and thick armor will give the Red Army a decisive advantage in breakthrough operations. These machines will become symbols of Soviet military power and industrial capability."
+ 
+ SOV_modernized_red_army:0 "Modernized Red Army"
+ SOV_modernized_red_army_desc:0 "The comprehensive modernization of the Red Army - with improved equipment, doctrine, training, and leadership - has transformed it into a formidable fighting force capable of defending the socialist motherland against any aggressor."
+ 
+ SOV_foreign_policy:0 "Soviet Foreign Policy"
+ SOV_foreign_policy_desc:0 "As the world's only socialist state, the Soviet Union exists in a hostile capitalist environment. Our foreign policy must balance revolutionary principles with pragmatic state interests to ensure our security and advance socialism internationally."
+ 
+ SOV_european_security:0 "European Security Focus"
+ SOV_european_security_desc:0 "Europe remains the center of world politics and the most likely source of threats to the Soviet Union. By focusing our diplomatic efforts on European security arrangements, we can counter the rise of fascism and protect our western borders."
+ 
+ SOV_eastern_europe_claims:0 "Eastern European Territorial Interests"
+ SOV_eastern_europe_claims_desc:0 "The Soviet Union has historical and security interests in Eastern Europe, particularly in territories lost after the Revolution. These regions provide strategic depth for our western defenses and contain populations with ethnic and historical ties to Russia."
+ 
+ SOV_collective_security:0 "Collective Security System"
+ SOV_collective_security_desc:0 "The threat of fascism requires cooperation even with capitalist democracies. By promoting a system of collective security through alliances and mutual defense agreements, we can contain fascist aggression while preparing for the inevitable confrontation."
+ 
+ SOV_far_east_focus:0 "Far East Security Focus"
+ SOV_far_east_focus_desc:0 "Japanese expansionism in Manchuria poses a direct threat to Soviet interests in the Far East. By strengthening our defenses and presence in this region, we can deter Japanese aggression and protect our vulnerable eastern territories."
+ 
+ SOV_trans_siberian_railway:0 "Trans-Siberian Railway Expansion"
+ SOV_trans_siberian_railway_desc:0 "The Trans-Siberian Railway is our strategic lifeline to the Far East. Expanding and improving this vital transportation link will enhance our ability to defend distant territories and develop resources in Siberia and the Far East."
+ 
+ SOV_defend_mongolian_borders:0 "Defend Mongolian Borders"
+ SOV_defend_mongolian_borders_desc:0 "Mongolia serves as a buffer state protecting our southern Siberian regions. By strengthening our military presence in Mongolia and formalizing defense arrangements, we can deter Japanese aggression and protect our influence in Central Asia."
+ 
+ SOV_soviet_leadership:0 "Soviet Global Leadership"
+ SOV_soviet_leadership_desc:0 "Under Stalin's leadership, the Soviet Union has transformed from a backward agricultural society into an industrial powerhouse. This remarkable achievement demonstrates the superiority of the socialist system and positions the USSR as the global leader of progressive forces."
+ 
+ SOV_industrial_might:0 "Soviet Industrial Might"
+ SOV_industrial_might_desc:0 "The achievements of the Five-Year Plans have created an industrial base that rivals the leading capitalist powers. This economic strength provides the foundation for military power, improved living standards, and the eventual triumph of socialism worldwide."
+
+  # Great Depression Era Soviet Ideas
+ SOV_isolated_economy:0 "Isolated Socialist Economy"
+ SOV_isolated_economy_desc:0 "The Soviet planned economy remains largely isolated from the capitalist world system, providing protection from the global economic crisis but limiting access to foreign technology and expertise."
+ 
+ SOV_economic_autarky:0 "Economic Autarky"
+ SOV_economic_autarky_desc:0 "Stalin's policy of 'Socialism in One Country' aims for complete economic self-sufficiency, focusing on internal development with minimal foreign trade or dependency."
+ 
+ SOV_foreign_specialists:0 "Foreign Technical Specialists"
+ SOV_foreign_specialists_desc:0 "Engineers, technicians, and experts from capitalist countries, many unemployed due to the Great Depression, have been hired to assist Soviet industrialization and transfer technical knowledge."
+ 
+ SOV_depression_opportunity:0 "Depression Opportunity"
+ SOV_depression_opportunity_desc:0 "The global economic crisis has created opportunities for the Soviet Union to purchase advanced machinery and hire technical experts at favorable terms from desperate Western businesses and individuals."
+ 
+ SOV_ideological_education:0 "Ideological Education Campaign"
+ SOV_ideological_education_desc:0 "An intensive program of Marxist-Leninist education has been implemented throughout Soviet society, strengthening political loyalty and instilling revolutionary consciousness."
+ 
+ SOV_nkvd_surveillance:0 "NKVD Mass Surveillance"
+ SOV_nkvd_surveillance_desc:0 "The NKVD has established a comprehensive system of surveillance and informants throughout Soviet society, creating an atmosphere where counter-revolutionary activities are quickly detected and suppressed."
+ 
+ SOV_rapid_urbanization:0 "Rapid Urbanization"
+ SOV_rapid_urbanization_desc:0 "Millions of peasants are moving from rural areas to urban industrial centers, creating a large industrial workforce but straining urban infrastructure and causing social dislocation."
+ 
+ SOV_countryside_exodus:0 "Countryside Exodus"
+ SOV_countryside_exodus_desc:0 "The mass migration from rural areas to cities, accelerated by collectivization, has created labor shortages in agriculture and disrupted traditional rural communities."
+ 
+ SOV_militia_training:0 "Worker-Peasant Militia Training"
+ SOV_militia_training_desc:0 "Regular military training for workers and peasants provides a large reserve of semi-trained manpower that can be rapidly mobilized in case of war."
+ 
+ SOV_industrial_relocation:0 "Industrial Relocation Program"
+ SOV_industrial_relocation_desc:0 "New industrial centers are being deliberately established in the Urals, Siberia, and Central Asia, away from vulnerable border regions, creating a secure industrial base that would be difficult for enemies to target."
+ 
+ SOV_defense_industrialization:0 "Defense Industrialization"
+ SOV_defense_industrialization_desc:0 "Significant resources are being directed to defense-related industries, ensuring the Soviet Union can produce modern weapons domestically without reliance on foreign imports."
+ 
+ SOV_agricultural_mechanization:0 "Agricultural Mechanization"
+ SOV_agricultural_mechanization_desc:0 "The introduction of tractors and other modern machinery to collective farms is increasing agricultural productivity while reducing the labor required for farming, freeing up manpower for industry and military service."
+ 
+ SOV_scientific_funding:0 "Scientific Research Funding"
+ SOV_scientific_funding_desc:0 "Increased investment in scientific research institutes and higher education is developing indigenous expertise in key technological fields, reducing dependence on foreign knowledge."
+ 
+ SOV_military_modernization:0 "Military Modernization Program"
+ SOV_military_modernization_desc:0 "A comprehensive program to modernize the Red Army with improved equipment, tactics, and training is transforming it into a modern fighting force capable of standing against the world's leading military powers."
+ 
+ SOV_aviation_research:0 "Soviet Aviation Research"
+ SOV_aviation_research_desc:0 "Special emphasis on aeronautical research and aircraft production is developing Soviet air power from its previously neglected state into a modern air force."
+ 
+ SOV_far_east_militarization:0 "Far East Militarization"
+ SOV_far_east_militarization_desc:0 "Defensive fortifications and military forces in the Soviet Far East have been significantly strengthened to counter Japanese expansionism in Manchuria and protect vulnerable eastern territories."
+ 
+ SOV_revolutionary_diplomacy:0 "Revolutionary Diplomacy"
+ SOV_revolutionary_diplomacy_desc:0 "Soviet diplomatic efforts balance traditional state interests with support for international communism, using both conventional diplomacy and revolutionary subversion as tools of foreign policy."
+ 
+ SOV_international_comintern:0 "International Comintern Activities"
+ SOV_international_comintern_desc:0 "The Communist International serves as an instrument of Soviet foreign policy, coordinating communist parties worldwide and providing a framework for military and political assistance to revolutionary movements and sympathetic governments."
+
+ # National Spirit Localizations
+ SOV_first_five_year_plan:0 "First Five-Year Plan"
+ SOV_first_five_year_plan_desc:0 "This comprehensive program of state-directed development prioritizes rapid industrialization at the cost of consumer goods and agricultural investment, causing significant hardship but rapidly building industrial capacity."
+ 
+ SOV_second_five_year_plan:0 "Second Five-Year Plan"
+ SOV_second_five_year_plan_desc:0 "Building on the foundation of the First Five-Year Plan, this second stage of development continues industrial expansion while addressing some of the social consequences of rapid industrialization."
+ 
+ SOV_forced_industrialization:0 "Forced Industrialization"
+ SOV_forced_industrialization_desc:0 "Resources, labor, and capital are being forcibly redirected to industrial development through state planning and coercion, causing severe hardship but rapidly building industrial capacity."
+ 
+ SOV_consumer_goods_neglect:0 "Consumer Goods Neglect"
+ SOV_consumer_goods_neglect_desc:0 "The Soviet economic model prioritizes heavy industry and defense production at the expense of consumer goods, creating material hardship for ordinary citizens while rapidly building industrial capacity."
+ 
+ SOV_civilian_focus:0 "Civilian Needs Focus"
+ SOV_civilian_focus_desc:0 "Increased attention to housing, food, and basic consumer goods improves living conditions and maintains social stability, though at the cost of slower development of heavy industry."
+ 
+ SOV_stakhanovite_movement:0 "Stakhanovite Movement"
+ SOV_stakhanovite_movement_desc:0 "Workers who dramatically exceed production norms are celebrated as heroes of socialist labor, inspiring increased productivity through competition and recognition rather than material incentives."
+ 
+ SOV_industrial_giant:0 "Industrial Giant"
+ SOV_industrial_giant_desc:0 "The Soviet Union has transformed into one of the world's foremost industrial powers, with massive production capacity in heavy industry, energy, and defense sectors."
+ 
+ SOV_collectivization:0 "Agricultural Collectivization"
+ SOV_collectivization_desc:0 "Individual peasant farms are being forcibly combined into collective farms under state control, disrupting agricultural production but increasing state access to rural resources."
+ 
+ SOV_dekulakization:0 "Dekulakization Campaign"
+ SOV_dekulakization_desc:0 "Wealthy peasants (kulaks) are being eliminated as a class through expropriation, deportation, and execution, causing significant rural unrest and agricultural disruption."
+ 
+ SOV_moderate_collectivization:0 "Moderate Collectivization"
+ SOV_moderate_collectivization_desc:0 "A more measured approach to collectivization reduces disruption to agricultural production while still advancing toward the goal of socialized agriculture."
+ 
+ SOV_expanded_collective_farms:0 "Expanded Collective Farms"
+ SOV_expanded_collective_farms_desc:0 "With initial resistance overcome, the collective farm system is being consolidated and expanded, increasing state control over agriculture."
+ 
+ SOV_agricultural_recovery:0 "Agricultural Recovery"
+ SOV_agricultural_recovery_desc:0 "After the disruptions of collectivization, agricultural production is being stabilized through improvements in farm management, mechanization, and limited incentives for collective farmers."
+ 
+ SOV_military_industry_focus:0 "Military Industry Focus"
+ SOV_military_industry_focus_desc:0 "Significant resources are being directed to arms production, military research, and development of strategic industries to strengthen Soviet defense capabilities."
+ 
+ SOV_military_academies:0 "Military Academies"
+ SOV_military_academies_desc:0 "Expanded military education institutions are developing a professional officer corps capable of mastering modern military technologies and doctrines."
+ 
+ SOV_modernized_army:0 "Modernized Red Army"
+ SOV_modernized_army_desc:0 "The Red Army has been transformed through improved equipment, doctrine, training, and leadership into a formidable fighting force capable of both defense and offensive operations."
+ 
+ SOV_great_purge:0 "The Great Purge"
+ SOV_great_purge_desc:0 "A comprehensive campaign to eliminate 'enemies of the people' from the Party, government, military, and society, strengthening Stalin's personal power but creating an atmosphere of fear and suspicion."
+ 
+ SOV_military_purge:0 "Military Leadership Purge"
+ SOV_military_purge_desc:0 "The officer corps of the Red Army has been decimated through arrests and executions, severely degrading military effectiveness but ensuring absolute loyalty to Stalin."
+ 
+ SOV_limited_purges:0 "Limited Purges"
+ SOV_limited_purges_desc:0 "A more targeted approach to eliminating political opposition, focusing on specific individuals rather than wholesale elimination, preserves military and administrative expertise."
+ 
+ SOV_cult_of_personality:0 "Stalin's Cult of Personality"
+ SOV_cult_of_personality_desc:0 "Extensive propaganda portrays Stalin as an infallible leader and the embodiment of the revolution, strengthening political unity and discipline but stifling initiative and open discussion."
+ 
+ SOV_border_defense:0 "Border Defense Focus"
+ SOV_border_defense_desc:0 "Strengthened defenses along vulnerable borders, particularly with Japan in the Far East, provide protection against potential aggression."
+ 
+ # Event Localizations
+ soviet.1.t:0 "The Great Purge Begins"
+ soviet.2.t:0 "Purge of the Red Army"
+ soviet.3.t:0 "Decimation of Military Leadership"
+ soviet.4.t:0 "Selective Military Purge"
+ soviet.5.t:0 "Results of the First Five-Year Plan"
+ soviet.6.t:0 "Resistance to Collectivization"
+ soviet.7.t:0 "Famine in Ukraine"
+ soviet.8.t:0 "The Stakhanovite Movement"
+ soviet.9.t:0 "Border Clashes with Japanese Forces"
+ 
+ news.201.t:0 "Soviet Union Launches Second Five-Year Plan"
+ news.202.t:0 "Stalin Consolidates Power in Soviet Union"
+ news.203.t:0 "Purge of Soviet Military Leadership"
+
+ # Decision Categories
+ SOV_depression_category:0 "Soviet Economic Development"
+ SOV_depression_category_desc:0 "The capitalist world is in the grip of a severe economic crisis, proving the inherent contradictions of their system. Meanwhile, the Soviet Union continues to build socialism through planned economic development. Our Five-Year Plans represent the future of rational economic organization, though they require tremendous sacrifice and effort from the Soviet people. Through proper management of our resources and continued industrialization, we will demonstrate the superiority of the socialist system."
+ 
+ SOV_foreign_policy_category:0 "Soviet Foreign Policy"
+ SOV_foreign_policy_category_desc:0 "As the world's first socialist state, the Soviet Union exists in a hostile capitalist environment. We must carefully balance revolutionary principles with pragmatic state interests, supporting international communism while securing our borders against imperialist threats. The global economic crisis presents both opportunities and dangers for Soviet foreign policy."
+ 
+ # Economic Decisions
+ SOV_manage_grain_exports:0 "Increase Grain Exports"
+ SOV_manage_grain_exports_desc:0 "Despite agricultural disruptions from collectivization, the Soviet Union must continue exporting grain to finance industrialization. By increasing grain requisitions from collective farms and state farms, we can generate hard currency to purchase foreign machinery and expertise. This may cause hardship in rural areas but will accelerate our industrial development."
+ SOV_grain_export_rewards_tooltip:0 "§GGain industrial resources and development from export earnings§!"
+ SOV_grain_export_failure_tooltip:0 "§RRural unrest damages infrastructure and agricultural output§!"
+ 
+ SOV_expand_heavy_industry:0 "Expand Heavy Industry"
+ SOV_expand_heavy_industry_desc:0 "The development of heavy industry - steel, coal, energy, and machinery - remains our highest priority. By continuing to concentrate resources in these sectors, we lay the foundations for a modern industrial economy and strengthen our defense capabilities, even if it means continued austerity for the population."
+ 
+ SOV_accelerate_tractor_production:0 "Accelerate Tractor Production"
+ SOV_accelerate_tractor_production_desc:0 "Agricultural mechanization is essential for the success of collectivization. By accelerating the production of tractors and other farm machinery, we can increase agricultural productivity while demonstrating the benefits of socialism to the peasantry. The Stalingrad and Kharkov tractor factories will be given priority in resource allocation."
+ 
+ SOV_expand_worker_housing:0 "Expand Worker Housing"
+ SOV_expand_worker_housing_desc:0 "The rapid industrialization and urbanization of the Soviet Union has created severe housing shortages in major cities. While the construction of individual housing is not a priority compared to industrial development, some expansion of standardized apartment buildings is necessary to maintain worker morale and productivity."
+ 
+ SOV_scientific_research_investment:0 "Invest in Scientific Research"
+ SOV_scientific_research_investment_desc:0 "Modern industry requires scientific and technical knowledge. By expanding research institutes and technical education, we can develop indigenous expertise in key industrial and military technologies, reducing our dependence on foreign specialists and accelerating Soviet technological development."
+ 
+ SOV_increase_arms_production:0 "Increase Arms Production"
+ SOV_increase_arms_production_desc:0 "In a world of capitalist encirclement, building our defense industry is essential for survival. By directing additional resources to arms production, we can strengthen the Red Army's capabilities while preparing for the inevitable confrontation with imperialist powers."
+ 
+ SOV_far_east_military_development:0 "Far East Military Development"
+ SOV_far_east_military_development_desc:0 "Japanese expansionism in Manchuria poses a direct threat to Soviet interests in the Far East. By strengthening our defensive infrastructure and military presence in this region, we can deter Japanese aggression and protect our vulnerable eastern territories."
+ 
+ SOV_develop_tank_production:0 "Develop Tank Production"
+ SOV_develop_tank_production_desc:0 "Tanks represent the future of warfare, combining firepower, protection, and mobility. By investing in tank production facilities and accelerating the development of Soviet armored forces, we can build a modern mechanized army capable of both defense and offensive operations."
+ 
+ SOV_political_education_campaign:0 "Political Education Campaign"
+ SOV_political_education_campaign_desc:0 "The building of socialism requires not only material transformation but also ideological development. Through an intensified campaign of political education in factories, collective farms, and educational institutions, we can strengthen class consciousness and loyalty to the Party while combating bourgeois and counter-revolutionary influences."
+ 
+ # Foreign Policy Decisions
+ SOV_fund_foreign_communist_parties:0 "Fund Foreign Communist Parties"
+ SOV_fund_foreign_communist_parties_desc:0 "The Comintern serves as the international organization of communist parties under Soviet leadership. By providing financial support and political guidance to communist parties abroad, we can strengthen revolutionary movements globally and extend Soviet influence in capitalist countries currently destabilized by economic crisis."
+ 
+ SOV_support_chinese_communists:0 "Support Chinese Communists"
+ SOV_support_chinese_communists_desc:0 "The Chinese Communist Party is engaged in a struggle against both the Kuomintang and Japanese imperialism. By providing material and political support to our Chinese comrades, we can strengthen a potential ally in East Asia while advancing the global revolutionary cause. This will anger the Kuomintang government but could establish a crucial buffer against Japanese expansion."
+ 
+ SOV_develop_trade_with_west:0 "Develop Trade with the West"
+ SOV_develop_trade_with_west_desc:0 "Despite ideological differences, the Soviet Union requires trade with capitalist countries to obtain machinery, technology, and expertise necessary for industrialization. The current economic crisis in the West creates opportunities for favorable trade arrangements, as capitalist businesses are desperate for markets and willing to accept Soviet terms. By expanding commercial relations with Western countries, we can accelerate our industrial development while exploiting contradictions within the capitalist system."
+ 
+ SOV_establish_international_prestige:0 "Establish International Prestige"
+ SOV_establish_international_prestige_desc:0 "The Soviet Union's planned economy and rapid industrialization offer an alternative model to capitalism at a time when the latter is experiencing its most severe crisis. By highlighting our economic achievements and stability compared to Western unemployment and depression, we can enhance Soviet prestige internationally while demonstrating the superiority of the socialist system. This may improve relations with capitalist powers who are beginning to view the Soviet Union as a potential counterweight to fascist expansionism."
+ 
+ # Opinion Modifiers
+ SOV_aid_to_communists:0 "Soviet Aid to Communists"
+ SOV_international_prestige:0 "Soviet International Prestige"
+ SOV_interference:0 "Soviet Interference"

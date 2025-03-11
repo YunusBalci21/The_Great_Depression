@@ -1,40 +1,282 @@
-leader_traits = {
-	keynesian_economist = {
-		random = no
+ideas = {
+	country = {
+		# UK-specific Depression Ideas
+		ENG_gold_standard = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			picture = gold_standard
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = -0.10
+				production_speed_buildings_factor = -0.05
+				political_power_gain = -0.10
+			}
+		}
 		
-		political_power_gain = 0.1
-		consumer_goods_factor = -0.05
-		stability_factor = 0.05
-		industrial_capacity_factory = 0.05
+		ENG_national_government_idea = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+				stability_factor = 0.05
+				democratic_drift = 0.01
+				political_power_gain = 0.10
+				drift_defence_factor = 0.10
+			}
+		}
 		
-		ai_will_do = {
-			factor = 1
+		ENG_labour_reforms = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				consumer_goods_factor = 0.10
+				stability_factor = 0.10
+				political_power_gain = -0.10
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		ENG_austerity_measures = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_economic_crisis
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_gain = 0.05
+				stability_factor = -0.10
+				production_speed_buildings_factor = -0.10
+			}
+		}
+		
+		ENG_imperial_preference_idea = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_foreign_capital
+			
+			modifier = {
+				min_export = -0.10
+				trade_opinion_factor = 0.15
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		ENG_public_works = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_production_bonus
+			
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+				production_speed_industrial_complex_factor = 0.10
+				consumer_goods_factor = 0.10
+				political_power_gain = -0.10
+			}
+		}
+		
+		ENG_keynesian_policy = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_economic_deal
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				political_power_gain = 0.05
+				stability_factor = 0.05
+				industrial_capacity_factory = 0.10
+			}
+		}
+		
+		ENG_statute_of_westminster_idea = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_constitutional_guarantee
+			
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.05
+				drift_defence_factor = 0.10
+			}
+		}
+		
+		ENG_colonial_resources_idea = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_exploit_mines
+			
+			modifier = {
+				local_resources_factor = 0.10
+				production_speed_industrial_complex_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+		
+		ENG_imperial_trade_network_idea = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_foreign_trade
+			
+			modifier = {
+				trade_opinion_factor = 0.25
+				min_export = 0.10
+				political_power_gain = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		ENG_limited_rearmament_idea = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_war_preparation
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.10
+				production_speed_dockyard_factor = 0.10
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				war_support_factor = 0.05
+			}
+		}
+		
+		ENG_disarmament_negotiations = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_disarm
+			
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.10
+				war_support_factor = -0.10
+				industrial_capacity_factory = -0.05
+			}
+		}
+		
+		ENG_appeasement_policy_idea = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_deal_with_the_devil
+			
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = 0.10
+				war_support_factor = -0.20
+				justify_war_goal_time = 0.25
+			}
+		}
+		
+		ENG_imperial_defense_idea = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_naval_manufacturer_2
+			
+			modifier = {
+				production_speed_coastal_bunker_factor = 0.15
+				production_speed_naval_base_factor = 0.15
+				naval_speed_factor = 0.05
+				war_support_factor = 0.05
+			}
 		}
 	}
 	
-	fiscal_conservative = {
-		random = no
-		
-		political_power_gain = 0.05
-		trade_laws_cost_factor = -0.1
-		economy_cost_factor = -0.1
-		consumer_goods_factor = -0.03
-		
-		ai_will_do = {
-			factor = 1
+	# Political Advisors section
+	political_advisor = {
+		# Economic Depression advisor
+		ENG_john_maynard_keynes = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			traits = { keynesian_economist }
+			
+			ai_will_do = {
+				factor = 1
+			}
 		}
-	}
-	
-	imperial_advocate = {
-		random = no
 		
-		stability_factor = 0.05
-		political_power_gain = 0.05
-		drift_defence_factor = 0.1
-		war_support_factor = 0.05
+		# Conservative advisor
+		ENG_neville_chamberlain = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			traits = { fiscal_conservative }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
 		
-		ai_will_do = {
-			factor = 1
+		# Imperial advisor
+		ENG_leopold_amery = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			traits = { imperial_advocate }
+			
+			ai_will_do = {
+				factor = 1
+			}
 		}
 	}
 }

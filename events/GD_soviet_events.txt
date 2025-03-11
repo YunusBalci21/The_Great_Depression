@@ -1,0 +1,417 @@
+add_namespace = soviet
+
+# The Great Purge
+country_event = {
+	id = soviet.1
+	title = "The Great Purge Begins"
+	desc = "Comrade Stalin has ordered a comprehensive purge of enemies of the state, both real and perceived. The NKVD has been tasked with rooting out traitors, spies, and counter-revolutionary elements from within the Party, government, and military. Show trials of prominent figures are being prepared to demonstrate the vigilance of the state against internal enemies. While these purges will strengthen Stalin's personal control and eliminate potential opposition, they will also create an atmosphere of fear and suspicion throughout Soviet society."
+	picture = GFX_report_event_soviet_purge
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "No one is above suspicion"
+		ai_chance = { factor = 100 }
+		
+		country_event = { id = soviet.2 days = 30 }
+	}
+}
+
+# Military Purge Decision
+country_event = {
+	id = soviet.2
+	title = "Purge of the Red Army"
+	desc = "The military leadership of the Red Army has come under suspicion. Many senior officers, including some of our most experienced commanders from the Civil War, are now accused of treason, espionage, and counter-revolutionary activities. Comrade Stalin believes that a thorough purge of the military's upper echelons is necessary to ensure loyalty and eliminate potential threats to the revolution. However, removing experienced officers could significantly weaken our military capabilities during this critical period of international tension."
+	picture = GFX_report_event_soviet_generals
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Purge them all - loyalty is paramount"
+		ai_chance = { 
+			factor = 80
+			modifier = {
+				factor = 2
+				has_war_support > 0.6
+			}
+		}
+		add_political_power = 50
+		add_stability = -0.05
+		
+		# Execute Tukhachevsky
+		remove_ideas_with_trait = army_chief_offensive_2
+		
+		country_event = { id = soviet.3 days = 60 }
+	}
+	
+	option = {
+		name = "Target only the genuinely suspicious"
+		ai_chance = { 
+			factor = 20
+			modifier = {
+				factor = 3
+				has_war_support < 0.4
+			}
+		}
+		add_political_power = -50
+		add_stability = 0.05
+		
+		country_event = { id = soviet.4 days = 60 }
+	}
+}
+
+# Consequences of Full Military Purge
+country_event = {
+	id = soviet.3
+	title = "Decimation of Military Leadership"
+	desc = "The purge of military leadership has been thorough and brutal. Thousands of officers have been executed or sent to labor camps, including many of our most experienced commanders. Marshal Tukhachevsky and several other high-ranking officers have been executed after show trials. While this has ensured absolute loyalty to Comrade Stalin, it has left our armed forces with a severe leadership deficit and created a climate of fear that hampers initiative and effective decision-making."
+	picture = GFX_report_event_soviet_military_purge
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "The Party knows best"
+		ai_chance = { factor = 100 }
+		
+		army_experience = -75
+		
+		news_event = { id = news.203 days = 1 }
+	}
+}
+
+# Consequences of Limited Military Purge
+country_event = {
+	id = soviet.4
+	title = "Selective Military Purge"
+	desc = "The purge of military leadership has been carried out with some restraint, targeting only those with genuine suspicions against them. While some experienced officers have been removed, the core leadership of the Red Army remains intact. This measured approach has avoided the worst disruptions to our military capabilities, though some within the Party question whether enough has been done to ensure absolute loyalty to Comrade Stalin."
+	picture = GFX_report_event_soviet_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Competence and loyalty must coexist"
+		ai_chance = { factor = 100 }
+		
+		army_experience = -25
+		add_war_support = 0.05
+	}
+}
+
+# First Five-Year Plan Results
+country_event = {
+	id = soviet.5
+	title = "Results of the First Five-Year Plan"
+	desc = "The First Five-Year Plan has officially concluded, with dramatic changes to Soviet industry and society. Industrial output has increased significantly, with new factories, mines, and power plants constructed across the country. Heavy industry, particularly steel production, has seen remarkable growth. However, these achievements have come at a tremendous human cost. Millions of peasants have been forcibly collectivized, leading to significant resistance and food shortages. Urban workers have endured harsh conditions and strict labor discipline. Despite these hardships, the Soviet Union has taken a major step toward becoming an industrial power."
+	picture = GFX_report_event_soviet_factory
+	
+	trigger = {
+		tag = SOV
+		has_idea = SOV_first_five_year_plan
+		date > 1932.12.1
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "A great victory for socialism"
+		ai_chance = { factor = 100 }
+		
+		add_political_power = 50
+		add_stability = 0.05
+		add_war_support = 0.05
+	}
+}
+
+# Collectivization Resistance
+country_event = {
+	id = soviet.6
+	title = "Resistance to Collectivization"
+	desc = "The forced collectivization of agriculture has met with significant resistance from peasants across the Soviet Union, particularly from the kulaks (wealthy peasants). Many have slaughtered their livestock and destroyed crops rather than surrender them to collective farms. In some regions, armed resistance has broken out against Soviet authorities. This resistance threatens grain procurement targets and urban food supplies. The situation demands a response from Moscow."
+	picture = GFX_report_event_soviet_agriculture
+	
+	trigger = {
+		tag = SOV
+		has_idea = SOV_collectivization
+		date > 1930.6.1
+		date < 1931.6.1
+	}
+	
+	mean_time_to_happen = {
+		days = 90
+	}
+	
+	option = {
+		name = "Crush the kulak resistance with full force"
+		ai_chance = { 
+			factor = 70
+			modifier = {
+				factor = 2
+				has_idea = SOV_dekulakization
+			}
+		}
+		add_political_power = 25
+		add_stability = -0.10
+		add_war_support = 0.05
+		add_manpower = -25000
+	}
+	
+	option = {
+		name = "Slow the pace of collectivization temporarily"
+		ai_chance = { 
+			factor = 30
+			modifier = {
+				factor = 2
+				has_idea = SOV_moderate_collectivization
+			}
+		}
+		add_political_power = -25
+		add_stability = 0.05
+		add_manpower = 10000
+	}
+}
+
+# Ukrainian Famine
+country_event = {
+	id = soviet.7
+	title = "Famine in Ukraine"
+	desc = "A severe famine has struck Ukraine and other grain-producing regions of the Soviet Union. The combination of forced collectivization, unrealistic grain procurement quotas, and poor harvests has created a catastrophic situation. Millions are starving, with entire villages devastated. Party officials report that kulak sabotage and local nationalist elements are exacerbating the situation, though there are indications that government policies are the primary cause. The famine threatens to undermine collectivization efforts and political stability in affected regions."
+	picture = GFX_report_event_famine
+	
+	trigger = {
+		tag = SOV
+		OR = {
+			has_idea = SOV_collectivization
+			has_idea = SOV_dekulakization
+		}
+		date > 1932.8.1
+		date < 1933.8.1
+	}
+	
+	mean_time_to_happen = {
+		days = 60
+	}
+	
+	option = {
+		name = "Maintain grain procurement quotas at all costs"
+		ai_chance = { 
+			factor = 60
+			modifier = {
+				factor = 2
+				has_idea = SOV_dekulakization
+			}
+		}
+		add_political_power = 25
+		add_stability = -0.15
+		add_manpower = -50000
+	}
+	
+	option = {
+		name = "Reduce quotas and provide limited relief"
+		ai_chance = { 
+			factor = 40
+			modifier = {
+				factor = 2
+				has_idea = SOV_moderate_collectivization
+			}
+		}
+		add_political_power = -25
+		add_stability = 0.05
+		add_manpower = 15000
+	}
+}
+
+# Stakhanovite Movement
+country_event = {
+	id = soviet.8
+	title = "The Stakhanovite Movement"
+	desc = "A coal miner named Alexei Stakhanov has reportedly extracted 14 times his quota of coal in a single shift, setting a new record for productivity. The Party has seized upon this achievement to launch the Stakhanovite movement, encouraging workers to dramatically increase their productivity through innovation and determination. Stakhanovites are being celebrated as heroes of socialist labor, receiving rewards and privileges. This movement aims to drive industrial growth without additional capital investment, though critics quietly note that Stakhanov's feat was carefully staged with substantial support."
+	picture = GFX_report_event_soviet_worker
+	
+	trigger = {
+		tag = SOV
+		date > 1935.9.1
+		date < 1935.10.1
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	option = {
+		name = "A triumph of socialist competition!"
+		ai_chance = { factor = 100 }
+		
+		add_timed_idea = {
+			idea = SOV_stakhanovite_movement
+			days = 730
+		}
+		add_political_power = 25
+		add_stability = 0.05
+	}
+}
+
+# Border Conflict with Japan
+country_event = {
+	id = soviet.9
+	title = "Border Clashes with Japanese Forces"
+	desc = "Armed clashes have erupted between Soviet and Japanese forces along the Manchurian border. The Japanese Kwantung Army has engaged our border guards in several skirmishes, testing our resolve and defenses. While neither side has formally declared war, these incidents represent a significant escalation of tensions in the Far East. Our military commanders await orders on how to respond to these provocations."
+	picture = GFX_report_event_japanese_imperial_army
+	
+	trigger = {
+		tag = SOV
+		has_idea = SOV_border_defense
+		date > 1938.7.1
+		date < 1939.7.1
+	}
+	
+	mean_time_to_happen = {
+		days = 120
+	}
+	
+	option = {
+		name = "Respond with overwhelming force"
+		ai_chance = { 
+			factor = 60
+			modifier = {
+				factor = 2
+				has_idea = SOV_modernized_army
+			}
+		}
+		add_political_power = 25
+		add_war_support = 0.10
+		add_stability = -0.05
+		army_experience = 25
+		
+		JAP = {
+			add_opinion_modifier = {
+				target = SOV
+				modifier = large_decrease
+			}
+		}
+	}
+	
+	option = {
+		name = "Limited military response while seeking diplomatic resolution"
+		ai_chance = { 
+			factor = 40
+			modifier = {
+				factor = 2
+				has_idea = SOV_military_purge
+			}
+		}
+		add_political_power = -25
+		add_war_support = 0.05
+		add_stability = 0.05
+		army_experience = 10
+		
+		JAP = {
+			add_opinion_modifier = {
+				target = SOV
+				modifier = medium_decrease
+			}
+		}
+	}
+}
+
+# The Second Five-Year Plan
+news_event = {
+	id = news.201
+	title = "Soviet Union Launches Second Five-Year Plan"
+	desc = "The Soviet Union has officially announced the beginning of its Second Five-Year Plan for economic development. Building on the industrialization achieved under the First Five-Year Plan, this new program aims to further expand Soviet industrial capacity while addressing some of the social costs of rapid development. The plan emphasizes continued growth in heavy industry and defense production, though with somewhat greater attention to consumer goods and housing construction. Soviet leaders claim that, unlike capitalist nations struggling with economic depression, socialism has proven its superiority through planned economic growth. However, foreign observers note the enormous human cost of Soviet industrialization, which has resulted in millions of deaths from famine and harsh labor conditions."
+	picture = GFX_news_event_generic_rally_3
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "Socialism marches forward!"
+		trigger = {
+			tag = SOV
+		}
+	}
+	
+	option = {
+		name = "An impressive achievement, whatever the cost"
+		trigger = {
+			NOT = { tag = SOV }
+			OR = {
+				has_government = communism
+				has_government = fascism
+			}
+		}
+	}
+	
+	option = {
+		name = "At what horrific human cost?"
+		trigger = {
+			NOT = { tag = SOV }
+			NOT = { has_government = communism }
+			NOT = { has_government = fascism }
+		}
+	}
+}
+
+# Stalin's Purges News
+news_event = {
+	id = news.202
+	title = "Stalin Consolidates Power in Soviet Union"
+	desc = "Reports from Moscow indicate that Joseph Stalin has completed a sweeping consolidation of power within the Soviet Union. Following a series of purges that eliminated potential rivals within the Communist Party, government, and military, Stalin now holds unprecedented personal authority. The purges have claimed thousands of lives, with many prominent Bolsheviks and heroes of the Revolution executed after show trials or dispatched to labor camps. Foreign observers note that virtually the entire Leninist old guard has been eliminated, replaced by Stalin loyalists. While the Soviet propaganda machine portrays these events as the rooting out of traitors and foreign agents, it seems clear that Stalin has transformed the Soviet system into a personal dictatorship."
+	picture = GFX_news_event_generic_rally
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "The revolution is secure under Comrade Stalin's leadership"
+		trigger = {
+			tag = SOV
+		}
+	}
+	
+	option = {
+		name = "A concerning development"
+		trigger = {
+			NOT = { tag = SOV }
+		}
+	}
+}
+
+# Tukhachevsky Executed News
+news_event = {
+	id = news.203
+	title = "Purge of Soviet Military Leadership"
+	desc = "The Soviet Union has executed several of its highest-ranking military officers, including Marshal Mikhail Tukhachevsky, on charges of treason and conspiracy with foreign powers. Tukhachevsky, considered one of the Red Army's most brilliant commanders and a leading military theorist, was among eight generals executed after a secret trial. Soviet newspapers claim the officers were plotting with Germany and Japan to overthrow the Soviet government. The purge extends far beyond these high-profile cases, with thousands of officers reportedly arrested or discharged. Military experts abroad express concern that this decimation of leadership will significantly weaken Soviet military capabilities at a time of growing international tension."
+	picture = GFX_news_event_soviet_purge
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "Traitors have been unmasked and eliminated"
+		trigger = {
+			tag = SOV
+		}
+	}
+	
+	option = {
+		name = "The Soviets have crippled their own military"
+		trigger = {
+			NOT = { tag = SOV }
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+	}
+	
+	option = {
+		name = "A troubling development"
+		trigger = {
+			NOT = { tag = SOV }
+			NOT = { has_government = fascism }
+			NOT = { has_government = neutrality }
+		}
+	}
+}
