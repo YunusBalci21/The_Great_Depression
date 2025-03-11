@@ -1,5 +1,5 @@
 name="The Great Depression: 1929-1939"
-path="mod/The Great Depression"
+path="mod/The_Great_Depression"
 picture="thumbnail.png"
 version="0.1"
 tags={
@@ -12,6 +12,4 @@ tags={
 	"Economy"
 	"Alternate Start Date"
 }
-name="The Great Depression: 1929-1939"
 supported_version="1.16.0"
-remote_file_id="3441473914"

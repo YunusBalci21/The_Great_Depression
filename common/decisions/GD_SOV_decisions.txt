@@ -2,6 +2,15 @@
 # Path: common/decisions/SOV_decisions.txt
 
 SOV_economic_recovery_category = {
+	icon = generic_economy
+	
+	allowed = {
+		original_tag = SOV
+	}
+	
+	visible = {
+		always = yes
+	}
 	
 	SOV_intensify_industrial_production = {
 		icon = generic_industry
@@ -178,6 +187,15 @@ SOV_economic_recovery_category = {
 }
 
 SOV_military_buildup_category = {
+	icon = generic_army
+	
+	allowed = {
+		original_tag = SOV
+	}
+	
+	visible = {
+		always = yes
+	}
 	
 	SOV_increase_military_budget = {
 		icon = generic_army
@@ -370,6 +388,15 @@ SOV_military_buildup_category = {
 }
 
 SOV_political_repression_category = {
+	icon = generic_political_discourse
+	
+	allowed = {
+		original_tag = SOV
+	}
+	
+	visible = {
+		always = yes
+	}
 	
 	SOV_suppress_kulak_resistance = {
 		icon = generic_political_discourse

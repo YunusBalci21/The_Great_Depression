@@ -1,0 +1,542 @@
+ideas = {
+	country = {
+		# Fascist Regime
+		ITA_fascist_regime = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.10
+				drift_defence_factor = 0.50
+				political_power_gain = 0.10
+				fascism_drift = 0.02
+			}
+		}
+		
+		# Economic Crisis Response
+		ITA_battle_for_grain = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_agrarian_reform
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				local_resources_factor = 0.10
+				industrial_capacity_factory = -0.05
+				production_speed_industrial_complex_factor = -0.10
+			}
+		}
+		
+		ITA_corporate_state = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_political_support
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+				stability_factor = 0.05
+				min_export = -0.05
+			}
+		}
+		
+		ITA_depression_economic_controls = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_economic_crisis
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = -0.10
+				industrial_capacity_factory = -0.10
+				political_power_gain = -0.10
+				stability_factor = -0.05
+			}
+		}
+		
+		# Military Ideas
+		ITA_army_reform_effort = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				training_time_army_factor = -0.10
+				army_morale_factor = 0.05
+				experience_gain_army = 0.05
+				army_org_factor = 0.05
+			}
+		}
+		
+		ITA_naval_expansion = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_navy_bonus
+			
+			modifier = {
+				production_speed_dockyard_factor = 0.10
+				navy_max_range_factor = 0.10
+				naval_coordination = 0.05
+				spotting_chance = 0.05
+			}
+		}
+		
+		ITA_air_innovation = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_air_bonus
+			
+			# Fixed equipment_bonus to use standard air categories
+			modifier = {
+				air_attack_factor = 0.10
+				air_defence_factor = 0.10
+				air_agility_factor = 0.10
+			}
+		}
+		
+		# Colonial Ideas
+		ITA_colonial_ambitions = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_victors_of_ww1
+			
+			modifier = {
+				justify_war_goal_time = -0.25
+				war_support_factor = 0.05
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+		
+		ITA_ethiopian_war_preparation = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_war_preparation
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.10
+				production_speed_industrial_complex_factor = -0.05
+				consumer_goods_factor = 0.05
+				political_power_gain = 0.05
+				war_support_factor = 0.10
+			}
+		}
+		
+		# Recovery Ideas
+		ITA_industrial_expansion = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_production_bonus
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_infrastructure_factor = 0.15
+				industrial_capacity_factory = 0.10
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		ITA_economic_autarky = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_foreign_capital
+			
+			modifier = {
+				local_resources_factor = 0.15
+				production_speed_synthetic_refinery_factor = 0.15
+				min_export = -0.10
+				consumer_goods_factor = 0.05
+			}
+		}
+		
+		ITA_militarized_economy = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_army_war_college
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				production_speed_dockyard_factor = 0.15
+				industrial_capacity_factory = 0.10
+				industrial_capacity_dockyard = 0.10
+				consumer_goods_factor = 0.05
+			}
+		}
+		
+		# New ideas for the Italian focus tree additions
+		ITA_corporative_system_idea = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				stability_factor = 0.05
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = -0.05
+				political_power_gain = 0.05
+			}
+		}
+		
+		ITA_social_security_idea = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_social_science
+			
+			modifier = {
+				stability_factor = 0.10
+				consumer_goods_factor = 0.05
+				monthly_population = 0.05
+				political_power_gain = -0.05
+			}
+		}
+		
+		ITA_youth_organizations = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription = 0.01
+				training_time_army_factor = -0.10
+				war_support_factor = 0.05
+				fascism_drift = 0.01
+			}
+		}
+		
+		ITA_spanish_intervention_idea = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_volunteer_expedition_bonus
+			
+			modifier = {
+				send_volunteer_size = 1
+				send_volunteer_divisions_required = -0.25
+				political_power_gain = -0.05
+				war_support_factor = 0.05
+			}
+		}
+		
+		ITA_complete_autarky = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_exploit_mines
+			
+			modifier = {
+				local_resources_factor = 0.20
+				min_export = -0.15
+				production_speed_synthetic_refinery_factor = 0.15
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		ITA_trade_expansion = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_foreign_trade
+			
+			modifier = {
+				trade_opinion_factor = 0.25
+				min_export = 0.10
+				min_export = -0.10   # Changed from global_import
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		ITA_war_preparation = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_war_preparation
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				production_speed_dockyard_factor = 0.10
+				industrial_capacity_factory = 0.10
+				industrial_capacity_dockyard = 0.10
+				war_support_factor = 0.10
+			}
+		}
+	}
+	
+	# Political Advisors - Using standard traits that already exist in vanilla
+	political_advisor = {
+		ITA_air_theorist = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			traits = { air_warfare_theorist }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		ITA_nationalist_supporter = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			traits = { fascist_demagogue }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		ITA_colonial_minister = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			traits = { ideological_crusader }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		ITA_economic_reformer = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			traits = { captain_of_industry }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	# Army Chief
+	army_chief = {
+		ITA_pietro_badoglio = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			traits = { army_chief_morale_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		ITA_emilio_de_bono = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			traits = { army_chief_organizational_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	# Navy Chief
+	navy_chief = {
+		ITA_domenico_cavagnari = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	# Air Chief
+	air_chief = {
+		ITA_giuseppe_valle = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	# Industrial Concern
+	industrial_concern = {
+		ITA_fiat = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			traits = { industrial_concern }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		ITA_pirelli = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			traits = { electronics_concern }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	# Tank Manufacturer
+	tank_manufacturer = {
+		designer = yes
+		
+		ITA_ansaldo = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			traits = { tank_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	# Ship Designer
+	naval_manufacturer = {
+		designer = yes
+		
+		ITA_crda = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	# Aircraft Designer
+	aircraft_manufacturer = {
+		designer = yes
+		
+		ITA_macchi = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	# Weapons Manufacturer
+	materiel_manufacturer = {
+		designer = yes
+		
+		ITA_beretta = {
+			allowed = {
+				original_tag = ITA
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

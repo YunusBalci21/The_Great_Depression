@@ -1,7 +1,9 @@
+# Economic Recovery Decisions for "The Great Depression: 1929-1939" mod
+
 GD_economic_recovery_path = {
     icon = generic_economy
 
-    # New Deal Style - Government Intervention
+    # Individual decisions can have complex visibility conditions
     new_deal_stimulus = {
         icon = generic_construction
         cost = 75

@@ -1,0 +1,62 @@
+# United States Navy - 1929 MTG Version
+
+units = {
+    # Atlantic Fleet
+    fleet = {
+        name = "Atlantic Fleet"
+        naval_base = 6845 # Norfolk
+        
+        task_force = {
+            name = "Atlantic Battleship Division"
+            location = 6845
+            
+            # USS New York
+            ship = { 
+                name = "USS New York"
+                pride_of_the_fleet = yes
+                definition = battleship
+                equipment = { battleship_1 = { amount = 1 owner = USA } }
+            }
+            
+            # Add other battleships
+            ship = { name = "USS Texas" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+            ship = { name = "USS Arkansas" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+        }
+        
+        # Cruiser Division
+        task_force = {
+            name = "Atlantic Cruiser Division"
+            location = 6845 # Norfolk
+            
+            ship = { name = "USS Pensacola" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = USA } } }
+            ship = { name = "USS Northampton" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = USA } } }
+            ship = { name = "USS Omaha" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }
+            ship = { name = "USS Milwaukee" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }
+        }
+    }
+
+    # Pacific Fleet
+    fleet = {
+        name = "Pacific Fleet"
+        naval_base = 12616 # Pearl Harbor
+        
+        task_force = {
+            name = "Pacific Battleship Division"
+            location = 12616 # Pearl Harbor
+            
+            ship = { name = "USS Arizona" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+            ship = { name = "USS Pennsylvania" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+            ship = { name = "USS Nevada" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
+        }
+        
+        task_force = {
+            name = "Pacific Cruiser Division"
+            location = 12616 # Pearl Harbor
+            
+            ship = { name = "USS Portland" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = USA } } }
+            ship = { name = "USS Indianapolis" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = USA } } }
+            ship = { name = "USS Richmond" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }
+            ship = { name = "USS Cincinnati" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }
+        }
+    }
+}

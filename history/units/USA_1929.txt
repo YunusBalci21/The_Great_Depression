@@ -130,42 +130,6 @@ instant_effect = {
 	}
 }
 
-##### Naval Units #####
-# Simplified naval OOB for 1929
-# Full naval OOB will be added in future updates
-fleet = {
-	name = "United States Fleet"
-	naval_base = 4860 # Hampton Roads, Virginia
-	task_force = {
-		name = "Battle Fleet"
-		location = 4860 # Hampton Roads, Virginia
-		ship = { name = "USS Pennsylvania" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
-		ship = { name = "USS Arizona" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
-		ship = { name = "USS New York" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
-		ship = { name = "USS Texas" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
-		ship = { name = "USS Arkansas" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
-		ship = { name = "USS Nevada" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
-		ship = { name = "USS Oklahoma" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
-	}
-	task_force = {
-		name = "Scouting Fleet"
-		location = 4860 # Hampton Roads, Virginia
-		ship = { name = "USS Lexington" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA } } }
-		ship = { name = "USS Saratoga" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA } } }
-		ship = { name = "USS Salt Lake City" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = USA } } }
-		ship = { name = "USS Pensacola" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = USA } } }
-	}
-	task_force = {
-		name = "Pacific Fleet"
-		location = 12251 # San Diego, California
-		ship = { name = "USS California" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
-		ship = { name = "USS Tennessee" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
-		ship = { name = "USS Colorado" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
-		ship = { name = "USS West Virginia" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
-		ship = { name = "USS Maryland" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }
-	}
-}
-
 # Naval Production
 instant_effect = {
 	add_equipment_production = {

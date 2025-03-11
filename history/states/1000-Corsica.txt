@@ -1,5 +1,5 @@
 state={
-	id=1
+	id=1000
 	name="STATE_CORSICA" # Corsica
 	manpower = 322900
 	

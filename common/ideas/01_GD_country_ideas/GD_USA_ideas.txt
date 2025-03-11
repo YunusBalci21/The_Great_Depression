@@ -1,0 +1,104 @@
+ideas = {
+	country = {
+		# USA-specific Great Depression Effects - NOT duplicating shared ideas
+		USA_gold_standard = {
+			allowed = {
+				original_tag = USA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_foreign_capital
+			
+			modifier = {
+				consumer_goods_factor = 0.10
+				industrial_capacity_factory = -0.15
+				production_speed_buildings_factor = -0.10
+				political_power_gain = -0.10
+			}
+		}
+	}
+	
+	# Political Advisors section
+	political_advisor = {
+		# Great Depression Reformer
+		great_depression_reformer_advisor = {
+			allowed = {
+				original_tag = USA
+			}
+			
+			traits = { great_depression_reformer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		# Economic Advisor
+		economic_recovery_specialist = {
+			allowed = {
+				original_tag = USA
+			}
+			
+			traits = { captain_of_industry }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		# Industrial Advisor
+		industrial_revival_expert = {
+			allowed = {
+				original_tag = USA
+			}
+			
+			traits = { industrial_concern }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	# Industrial Concerns
+	industrial_concern = {
+		depression_era_industry = {
+			allowed = {
+				original_tag = USA
+			}
+			
+			traits = { industrial_concern }
+			
+			modifier = {
+				industrial_capacity_factory = 0.10
+				production_speed_industrial_complex_factor = 0.10
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	# Theorists
+	theorist = {
+		economic_recovery_theorist = {
+			ledger = civilian
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+			traits = { economic_reformer }
+			
+			research_bonus = {
+				industry = 0.10
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

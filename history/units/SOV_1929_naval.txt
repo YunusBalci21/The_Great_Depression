@@ -1,0 +1,61 @@
+# Soviet Union 1929 Naval Order of Battle
+# Path: history/units/SOV_1929_naval.txt
+
+units = {
+	# Baltic Fleet
+	fleet = {
+		name = "Baltiyskiy Flot"
+		naval_base = 3151 # Leningrad
+		task_force = {
+			name = "Baltiyskiy Flot"
+			location = 3151 # Leningrad
+			# Cruisers
+			ship = { name = "Krasny Kavkaz" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SOV } } }
+			ship = { name = "Profintern" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SOV } } }
+			# Destroyers
+			ship = { name = "Karl Marx" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+			ship = { name = "Lenin" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+			ship = { name = "Voykov" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+			ship = { name = "Rykov" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+			# Submarines
+			ship = { name = "D-1" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }
+			ship = { name = "D-2" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }
+		}
+	}
+
+	# Black Sea Fleet
+	fleet = {
+		name = "Chernomorskiy Flot"
+		naval_base = 3686 # Sevastopol
+		task_force = {
+			name = "Chernomorskiy Flot"
+			location = 3686 # Sevastopol
+			# Cruisers
+			ship = { name = "Chervona Ukraina" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SOV } } }
+			# Destroyers
+			ship = { name = "Frunze" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+			ship = { name = "Kalinin" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+			ship = { name = "Dzerzhinskiy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+			# Submarines
+			ship = { name = "AG-21" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }
+			ship = { name = "AG-22" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }
+			ship = { name = "AG-23" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }
+		}
+	}
+
+	# Pacific Fleet
+	fleet = {
+		name = "Tikhookeanskiy Flot"
+		naval_base = 957 # Vladivostok
+		task_force = {
+			name = "Tikhookeanskiy Flot"
+			location = 957 # Vladivostok
+			# Destroyers
+			ship = { name = "Silnyy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+			ship = { name = "Smerch" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+			# Submarines
+			ship = { name = "Shch-11" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }
+			ship = { name = "Shch-12" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }
+		}
+	}
+}
