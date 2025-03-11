@@ -1,0 +1,745 @@
+focus_tree = {
+	id = italian_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ITA
+		}
+	}
+	
+	default = no
+	
+	#########################
+	### STARTING FOCUSES ###
+	#########################
+	
+	# Starting Focus - Italy in the Depression
+	focus = {
+		id = ITA_depression_crisis
+		icon = GFX_goal_generic_demand_territory
+		x = 10
+		y = 0
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.05
+			add_ideas = ITA_depression_economic_controls
+		}
+	}
+	
+	# Fascist Security
+	focus = {
+		id = ITA_strengthen_fascist_state
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = ITA_depression_crisis }
+		x = 10
+		y = 1
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_ideas = ITA_fascist_regime
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.10
+			}
+		}
+	}
+	
+	#########################
+	### ECONOMIC BRANCH ###
+	#########################
+	
+	# Economic Response
+	focus = {
+		id = ITA_economic_response
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = ITA_strengthen_fascist_state }
+		x = 3
+		y = 2
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	# Battle for Grain
+	focus = {
+		id = ITA_battle_for_grain
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = ITA_economic_response }
+		x = 2
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = ITA_battle_for_grain
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_resource = {
+					type = food
+					amount = 8
+				}
+			}
+		}
+	}
+	
+	# Corporate State
+	focus = {
+		id = ITA_corporate_state
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = ITA_economic_response }
+		x = 4
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = ITA_corporate_state
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	# Industrial Expansion
+	focus = {
+		id = ITA_industrial_expansion
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = ITA_corporate_state }
+		x = 4
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			remove_ideas = ITA_depression_economic_controls
+			add_ideas = ITA_industrial_expansion
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	# Economic Autarky
+	focus = {
+		id = ITA_economic_autarky
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = ITA_battle_for_grain }
+		x = 2
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = ITA_economic_autarky
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
+		}
+	}
+	
+	# Economic Recovery
+	focus = {
+		id = ITA_economic_recovery
+		icon = GFX_goal_generic_economic_deal
+		prerequisite = { focus = ITA_economic_autarky }
+		prerequisite = { focus = ITA_industrial_expansion }
+		x = 3
+		y = 5
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			remove_ideas = great_depression
+			add_stability = 0.10
+			add_political_power = 50
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+		}
+	}
+	
+	#########################
+	### MILITARY BRANCH ###
+	#########################
+	
+	# Military Reform
+	focus = {
+		id = ITA_military_reform
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = ITA_strengthen_fascist_state }
+		x = 7
+		y = 2
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			army_experience = 25
+			navy_experience = 25
+			air_experience = 25
+			add_political_power = 25
+		}
+	}
+	
+	# Army Reorganization
+	focus = {
+		id = ITA_army_reorganization
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = ITA_military_reform }
+		x = 6
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = ITA_army_reform_effort
+			army_experience = 50
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	
+	# Naval Expansion
+	focus = {
+		id = ITA_naval_expansion
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = ITA_military_reform }
+		x = 8
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = ITA_naval_expansion
+			navy_experience = 50
+			add_tech_bonus = {
+				name = naval_bonus
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+	
+	# Alpine Troops Focus
+	focus = {
+		id = ITA_elite_alpine_troops
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = ITA_army_reorganization }
+		x = 6
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.5
+				uses = 1
+				category = mountaineers_tech
+			}
+			custom_effect_tooltip = alpine_training_effect_tt
+		}
+	}
+	
+	# Expand Regia Marina
+	focus = {
+		id = ITA_expand_regia_marina
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = ITA_naval_expansion }
+		x = 8
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			navy_experience = 25
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	# Regia Aeronautica
+	focus = {
+		id = ITA_regia_aeronautica
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = ITA_military_reform }
+		x = 7
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = ITA_air_innovation
+			air_experience = 50
+			add_tech_bonus = {
+				name = air_bonus
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+	
+	# Military Industrial Complex
+	focus = {
+		id = ITA_military_industrial_complex
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = ITA_elite_alpine_troops }
+		prerequisite = { focus = ITA_regia_aeronautica }
+		prerequisite = { focus = ITA_expand_regia_marina }
+		x = 7
+		y = 5
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = ITA_militarized_economy
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	#########################
+	### COLONIAL BRANCH ###
+	#########################
+	
+	# Colonial Ambitions
+	focus = {
+		id = ITA_colonial_ambitions
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = ITA_strengthen_fascist_state }
+		x = 13
+		y = 2
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = ITA_colonial_ambitions
+			add_war_support = 0.05
+			add_political_power = 25
+		}
+	}
+	
+	# Libyan Development
+	focus = {
+		id = ITA_libyan_development
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = ITA_colonial_ambitions }
+		x = 12
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			448 = { # Tripoli
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			add_political_power = 25
+		}
+	}
+	
+	# Secure East Africa
+	focus = {
+		id = ITA_secure_east_africa
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = ITA_colonial_ambitions }
+		x = 14
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			550 = { # Eritrea
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			add_political_power = 25
+		}
+	}
+	
+	# Ethiopian Border Incidents
+	focus = {
+		id = ITA_ethiopian_border_incidents
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = ITA_secure_east_africa }
+		x = 14
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_war_support = 0.05
+			add_opinion_modifier = {
+				target = ETH
+				modifier = hostile_status
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = ETH
+			}
+		}
+	}
+	
+	# Colonial Military Bases
+	focus = {
+		id = ITA_colonial_military_bases
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = ITA_libyan_development }
+		x = 12
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			448 = { # Tripoli
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = {
+						all_provinces = yes
+					}
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = {
+						limit_to_coastal = yes
+					}
+					instant_build = yes
+				}
+			}
+			550 = { # Eritrea
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = {
+						all_provinces = yes
+					}
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	# Ethiopian War Preparation
+	focus = {
+		id = ITA_ethiopian_war_preparation
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = ITA_colonial_military_bases }
+		prerequisite = { focus = ITA_ethiopian_border_incidents }
+		x = 13
+		y = 5
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = ITA_ethiopian_war_preparation
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 5000
+				producer = ITA
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 200
+				producer = ITA
+			}
+		}
+	}
+	
+	#########################
+	### DIPLOMACY BRANCH ###
+	#########################
+	
+	# Diplomatic Position
+	focus = {
+		id = ITA_diplomatic_position
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = ITA_strengthen_fascist_state }
+		x = 17
+		y = 2
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+		}
+	}
+	
+	# Align with Germany
+	focus = {
+		id = ITA_align_with_germany
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = ITA_diplomatic_position }
+		mutually_exclusive = { focus = ITA_maintain_locarno }
+		x = 16
+		y = 3
+		cost = 10
+		ai_will_do = { 
+			factor = 10
+			modifier = {
+				factor = 0.1
+				GER = { has_government = democratic }
+			}
+		}
+		completion_reward = {
+			GER = {
+				add_opinion_modifier = {
+					target = ITA
+					modifier = large_increase
+				}
+			}
+			ITA = {
+				add_opinion_modifier = {
+					target = GER
+					modifier = large_increase
+				}
+			}
+			add_political_power = 25
+		}
+	}
+	
+	# Maintain Locarno System
+	focus = {
+		id = ITA_maintain_locarno
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = ITA_diplomatic_position }
+		mutually_exclusive = { focus = ITA_align_with_germany }
+		x = 18
+		y = 3
+		cost = 10
+		ai_will_do = { 
+			factor = 10
+			modifier = {
+				factor = 0.1
+				GER = { has_government = fascism }
+			}
+		}
+		completion_reward = {
+			ENG = {
+				add_opinion_modifier = {
+					target = ITA
+					modifier = medium_increase
+				}
+			}
+			FRA = {
+				add_opinion_modifier = {
+					target = ITA
+					modifier = medium_increase
+				}
+			}
+			add_political_power = 25
+		}
+	}
+	
+	# Austrian Question
+	focus = {
+		id = ITA_austrian_question
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = ITA_align_with_germany }
+		x = 16
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			GER = {
+				add_opinion_modifier = {
+					target = ITA
+					modifier = medium_increase
+				}
+			}
+			add_opinion_modifier = {
+				target = AUS
+				modifier = large_increase
+			}
+			custom_effect_tooltip = ITA_austrian_protection_tooltip
+		}
+	}
+	
+	# Stresa Front
+	focus = {
+		id = ITA_stresa_front
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = ITA_maintain_locarno }
+		x = 18
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.05
+			ENG = {
+				add_opinion_modifier = {
+					target = ITA
+					modifier = large_increase
+				}
+			}
+			FRA = {
+				add_opinion_modifier = {
+					target = ITA
+					modifier = large_increase
+				}
+			}
+		}
+	}
+	
+	# Pact of Steel
+	focus = {
+		id = ITA_pact_of_steel
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = ITA_austrian_question }
+		x = 16
+		y = 5
+		cost = 10
+		ai_will_do = { 
+			factor = 10
+			modifier = {
+				factor = 0.1
+				GER = { has_government = democratic }
+			}
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_war_support = 0.10
+			if = {
+				limit = {
+					GER = {
+						is_in_faction = no
+					}
+					is_in_faction = no
+				}
+				GER = {
+					create_faction = "axis"
+					add_to_faction = ITA
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						is_in_faction = yes
+						is_faction_leader = yes
+					}
+					is_in_faction = no
+				}
+				GER = {
+					add_to_faction = ITA
+				}
+			}
+		}
+	}
+	
+	# Mediterranean Ambitions
+	focus = {
+		id = ITA_mediterranean_ambitions
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = ITA_stresa_front }
+		x = 18
+		y = 5
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			navy_experience = 25
+			add_war_support = 0.05
+			add_political_power = 25
+			add_tech_bonus = {
+				name = naval_bonus
+				bonus = 0.5
+				uses = 1
+				technology = battleship_2
+			}
+		}
+	}
+	
+	#########################
+	### FINAL FOCUSES ###
+	#########################
+	
+	# New Roman Empire
+	focus = {
+		id = ITA_new_roman_empire
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = ITA_economic_recovery }
+		prerequisite = { focus = ITA_military_industrial_complex }
+		prerequisite = { focus = ITA_ethiopian_war_preparation }
+		prerequisite = { focus = ITA_pact_of_steel focus = ITA_mediterranean_ambitions }
+		x = 10
+		y = 6
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+			add_war_support = 0.20
+			custom_effect_tooltip = ITA_empire_ascendant
+		}
+	}
+}

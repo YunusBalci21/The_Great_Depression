@@ -295,8 +295,30 @@ ideas = {
 				political_power_gain = 0.10
 			}
 		}
+		
+		# Munich Agreement - MOVED INSIDE COUNTRY SECTION
+		FRA_munich_agreement = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_foreign_policy
+			
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = -0.10
+				foreign_subversive_activites = -0.25
+				democratic_drift = 0.01
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
 	}
-	
+
 	# Political Advisors section
 	political_advisor = {
 		# Popular Front advisor
