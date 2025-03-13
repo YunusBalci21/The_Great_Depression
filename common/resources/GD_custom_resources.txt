@@ -4,14 +4,43 @@ resources = {
 		icon_frame = 8
 		
 		# Production cost factors
+		cic = 0.1
 		convoys = 0.05
+	}
+	
+	manufactured_goods = {
+		# Visual information
+		icon_frame = 9
 		
-		# Make it visible in the UI
-		visible_in_interface = yes
+		# Production cost factors
+		cic = 0.15
+		convoys = 0.1
+	}
+	
+	financial_services = {
+		# Visual information
+		icon_frame = 10
 		
-		# State modifier 
-		state = {
-			local_building_slots_factor = 0.05
-		}
+		# Production cost factors
+		cic = 0.2
+		convoys = 0.01
+	}
+	
+	labor_force = {
+		# Visual information
+		icon_frame = 11
+		
+		# Production cost factors
+		cic = 0.05
+		convoys = 0.03
+	}
+	
+	construction_materials = {
+		# Visual information
+		icon_frame = 12
+		
+		# Production cost factors
+		cic = 0.25
+		convoys = 0.08
 	}
 }
