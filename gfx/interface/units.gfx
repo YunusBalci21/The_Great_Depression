@@ -1,234 +1,209 @@
 spriteTypes = {
-	# Infantry Category
-	spriteType = {
-		name = "GFX_unit_category_all_infantry"
-		texturefile = "gfx/interface/category_infantry.dds"
-		noOfFrames = 1
-	}
-	
-	spriteType = {
-		name = "GFX_unit_category_light_infantry"
-		texturefile = "gfx/interface/category_light_infantry.dds"
-		noOfFrames = 1
-	}
-	
-	# Armor Category
-	spriteType = {
-		name = "GFX_unit_category_tanks"
-		texturefile = "gfx/interface/category_tanks.dds"
-		noOfFrames = 1
-	}
-	
-	spriteType = {
-		name = "GFX_unit_category_light_armor"
-		texturefile = "gfx/interface/category_light_armor.dds"
-		noOfFrames = 1
-	}
-	
-	spriteType = {
-		name = "GFX_unit_category_medium_armor"
-		texturefile = "gfx/interface/category_medium_armor.dds"
-		noOfFrames = 1
-	}
-	
-	spriteType = {
-		name = "GFX_unit_category_heavy_armor"
-		texturefile = "gfx/interface/category_heavy_armor.dds"
-		noOfFrames = 1
-	}
-	
-	# Artillery Category
-	spriteType = {
-		name = "GFX_unit_category_artillery"
-		texturefile = "gfx/interface/category_artillery.dds"
-		noOfFrames = 1
-	}
-	
-	spriteType = {
-		name = "GFX_unit_category_line_artillery"
-		texturefile = "gfx/interface/category_line_artillery.dds"
-		noOfFrames = 1
-	}
-	
-	# Air Category
-	spriteType = {
-		name = "GFX_unit_category_fighter"
-		texturefile = "gfx/interface/category_fighter.dds"
-		noOfFrames = 1
-	}
-	
-	spriteType = {
-		name = "GFX_unit_category_cas"
-		texturefile = "gfx/interface/category_cas.dds"
-		noOfFrames = 1
-	}
-	
-	spriteType = {
-		name = "GFX_unit_category_nav_bomber"
-		texturefile = "gfx/interface/category_nav_bomber.dds"
-		noOfFrames = 1
-	}
-	
-	spriteType = {
-		name = "GFX_unit_category_tactical_bomber"
-		texturefile = "gfx/interface/category_tactical_bomber.dds"
-		noOfFrames = 1
-	}
-	
-	spriteType = {
-		name = "GFX_unit_category_strategic_bomber"
-		texturefile = "gfx/interface/category_strategic_bomber.dds"
-		noOfFrames = 1
-	}
-	
-	# Naval Category
-	spriteType = {
-		name = "GFX_unit_category_all_naval"
-		texturefile = "gfx/interface/category_naval.dds"
-		noOfFrames = 1
-	}
-	
-	spriteType = {
-		name = "GFX_unit_category_battleship"
-		texturefile = "gfx/interface/category_battleship.dds"
-		noOfFrames = 1
-	}
-	
-	spriteType = {
-		name = "GFX_unit_category_carrier"
-		texturefile = "gfx/interface/category_carrier.dds"
-		noOfFrames = 1
-	}
-	
-	spriteType = {
-		name = "GFX_unit_category_cruiser"
-		texturefile = "gfx/interface/category_cruiser.dds"
-		noOfFrames = 1
-	}
-	
-	spriteType = {
-		name = "GFX_unit_category_destroyer"
-		texturefile = "gfx/interface/category_destroyer.dds"
-		noOfFrames = 1
-	}
-	
-	spriteType = {
-		name = "GFX_unit_category_submarine"
-		texturefile = "gfx/interface/category_submarine.dds"
-		noOfFrames = 1
-	}
-	
-	# Support Category
-	spriteType = {
-		name = "GFX_unit_category_support_battalions"
-		texturefile = "gfx/interface/category_support_battalions.dds"
-		noOfFrames = 1
-	}
-	
-	# Army/Division Category
-	spriteType = {
-		name = "GFX_unit_category_all_infantry"
-		texturefile = "gfx/interface/category_army.dds"
-		noOfFrames = 1
-	}
-	
-	# Nation-specific infantry equipment
-	spriteType = { 
-		name = "GFX_USA_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/USA_infantry_equipment_1.dds"
-	}
-	
-	spriteType = { 
-		name = "GFX_GER_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/GER_infantry_equipment_1.dds"
-	}
-	
-	spriteType = { 
-		name = "GFX_ENG_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/ENG_infantry_equipment_1.dds"
-	}
-	
-	spriteType = { 
-		name = "GFX_FRA_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/FRA_infantry_equipment_1.dds"
-	}
-	
-	spriteType = { 
-		name = "GFX_ITA_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/ITA_infantry_equipment_1.dds"
-	}
-	
-	spriteType = { 
-		name = "GFX_SOV_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/SOV_infantry_equipment_1.dds"
-	}
-	
-	spriteType = { 
-		name = "GFX_JAP_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/JAP_infantry_equipment_1.dds"
-	}
-	
-	# Mexican infantry equipment (was causing errors in your log)
-	spriteType = { 
-		name = "GFX_MEX_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/MEX_infantry_equipment_1.dds"
-	}
-	
-	# Generic infantry sprites used for nations without custom graphics
-	spriteType = { 
-		name = "GFX_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/infantry_equipment_1.dds"
-	}
-	
-	spriteType = { 
-		name = "GFX_infantry_weapons1_medium"
-		texturefile = "gfx/interface/technologies/infantry_equipment_2.dds"
-	}
-	
-	# Interface elements for the Great Depression mod
-	spriteType = { 
-		name = "GFX_bookmark_great_depression"
-		texturefile = "gfx/interface/bookmarks/the_great_depression_bookmark.dds"
-	}
-	
-	spriteType = { 
-		name = "GFX_report_event_wall_street_crash"
-		texturefile = "gfx/event_pictures/report_event_wall_street_crash.dds"
-	}
-	
-	spriteType = { 
-		name = "GFX_report_event_depression_breadline"
-		texturefile = "gfx/event_pictures/report_event_depression_breadline.dds"
-	}
-	
-	# Idea icons
-	spriteType = { 
-		name = "GFX_idea_great_depression"
-		texturefile = "gfx/interface/ideas/idea_great_depression.dds"
-	}
-	
-	spriteType = { 
-		name = "GFX_idea_unemployment"
-		texturefile = "gfx/interface/ideas/idea_unemployment.dds"
-	}
-	
-	spriteType = { 
-		name = "GFX_idea_bank_runs"
-		texturefile = "gfx/interface/ideas/idea_bank_runs.dds"
-	}
-	
-	spriteType = { 
-		name = "GFX_idea_new_deal_programs"
-		texturefile = "gfx/interface/ideas/idea_new_deal.dds"
-	}
-	
-	spriteType = { 
-		name = "GFX_idea_free_market_recovery"
-		texturefile = "gfx/interface/ideas/idea_free_market.dds"
-	}
-	
-	spriteType = { 
-		name = "GFX_idea_gold_standard"
-		texturefile = "gfx/interface/ideas/idea_gold_standard.dds"
-	}
+    #####################
+    ### UNIT CATEGORIES
+    #####################
+    
+    ## Infantry Categories
+    spriteType = {
+        name = "GFX_unit_category_all_infantry"
+        texturefile = "gfx/interface/category_infantry.dds"
+        noOfFrames = 1
+    }
+    spriteType = {
+        name = "GFX_unit_category_light_infantry"
+        texturefile = "gfx/interface/category_light_infantry.dds"
+        noOfFrames = 1
+    }
+    
+    ## Armor Categories
+    spriteType = {
+        name = "GFX_unit_category_tanks"
+        texturefile = "gfx/interface/category_tanks.dds"
+        noOfFrames = 1
+    }
+    spriteType = {
+        name = "GFX_unit_category_light_armor"
+        texturefile = "gfx/interface/category_light_armor.dds"
+        noOfFrames = 1
+    }
+    spriteType = {
+        name = "GFX_unit_category_medium_armor"
+        texturefile = "gfx/interface/category_medium_armor.dds"
+        noOfFrames = 1
+    }
+    spriteType = {
+        name = "GFX_unit_category_heavy_armor"
+        texturefile = "gfx/interface/category_heavy_armor.dds"
+        noOfFrames = 1
+    }
+    
+    ## Artillery Categories
+    spriteType = {
+        name = "GFX_unit_category_artillery"
+        texturefile = "gfx/interface/category_artillery.dds"
+        noOfFrames = 1
+    }
+    spriteType = {
+        name = "GFX_unit_category_line_artillery"
+        texturefile = "gfx/interface/category_line_artillery.dds"
+        noOfFrames = 1
+    }
+    
+    ## Air Categories
+    spriteType = {
+        name = "GFX_unit_category_fighter"
+        texturefile = "gfx/interface/category_fighter.dds"
+        noOfFrames = 1
+    }
+    spriteType = {
+        name = "GFX_unit_category_cas"
+        texturefile = "gfx/interface/category_cas.dds"
+        noOfFrames = 1
+    }
+    spriteType = {
+        name = "GFX_unit_category_nav_bomber"
+        texturefile = "gfx/interface/category_nav_bomber.dds"
+        noOfFrames = 1
+    }
+    spriteType = {
+        name = "GFX_unit_category_tactical_bomber"
+        texturefile = "gfx/interface/category_tactical_bomber.dds"
+        noOfFrames = 1
+    }
+    spriteType = {
+        name = "GFX_unit_category_strategic_bomber"
+        texturefile = "gfx/interface/category_strategic_bomber.dds"
+        noOfFrames = 1
+    }
+    
+    ## Naval Categories
+    spriteType = {
+        name = "GFX_unit_category_all_naval"
+        texturefile = "gfx/interface/category_naval.dds"
+        noOfFrames = 1
+    }
+    spriteType = {
+        name = "GFX_unit_category_battleship"
+        texturefile = "gfx/interface/category_battleship.dds"
+        noOfFrames = 1
+    }
+    spriteType = {
+        name = "GFX_unit_category_carrier"
+        texturefile = "gfx/interface/category_carrier.dds"
+        noOfFrames = 1
+    }
+    spriteType = {
+        name = "GFX_unit_category_cruiser"
+        texturefile = "gfx/interface/category_cruiser.dds"
+        noOfFrames = 1
+    }
+    spriteType = {
+        name = "GFX_unit_category_destroyer"
+        texturefile = "gfx/interface/category_destroyer.dds"
+        noOfFrames = 1
+    }
+    spriteType = {
+        name = "GFX_unit_category_submarine"
+        texturefile = "gfx/interface/category_submarine.dds"
+        noOfFrames = 1
+    }
+    
+    ## Support Categories
+    spriteType = {
+        name = "GFX_unit_category_support_battalions"
+        texturefile = "gfx/interface/category_support_battalions.dds"
+        noOfFrames = 1
+    }
+    
+    #####################
+    ### INFANTRY EQUIPMENT
+    #####################
+    
+    ## Nation-Specific Infantry
+    spriteType = { 
+        name = "GFX_USA_infantry_weapons_medium"
+        texturefile = "gfx/interface/technologies/USA_infantry_equipment_1.dds"
+    }
+    spriteType = { 
+        name = "GFX_GER_infantry_weapons_medium"
+        texturefile = "gfx/interface/technologies/GER_infantry_equipment_1.dds"
+    }
+    spriteType = { 
+        name = "GFX_ENG_infantry_weapons_medium"
+        texturefile = "gfx/interface/technologies/ENG_infantry_equipment_1.dds"
+    }
+    spriteType = { 
+        name = "GFX_FRA_infantry_weapons_medium"
+        texturefile = "gfx/interface/technologies/FRA_infantry_equipment_1.dds"
+    }
+    spriteType = { 
+        name = "GFX_ITA_infantry_weapons_medium"
+        texturefile = "gfx/interface/technologies/ITA_infantry_equipment_1.dds"
+    }
+    spriteType = { 
+        name = "GFX_SOV_infantry_weapons_medium"
+        texturefile = "gfx/interface/technologies/SOV_infantry_equipment_1.dds"
+    }
+    spriteType = { 
+        name = "GFX_JAP_infantry_weapons_medium"
+        texturefile = "gfx/interface/technologies/generic_infantry_equipment_1.dds"
+    }
+    spriteType = { 
+        name = "GFX_MEX_infantry_weapons_medium"
+        texturefile = "gfx/interface/technologies/MEX_infantry_equipment_1.dds"
+    }
+    
+    ## Generic Infantry Equipment
+    spriteType = { 
+        name = "GFX_infantry_weapons_medium"
+        texturefile = "gfx/interface/technologies/infantry_equipment_1.dds"
+    }
+    spriteType = { 
+        name = "GFX_infantry_weapons1_medium"
+        texturefile = "gfx/interface/technologies/infantry_equipment_2.dds"
+    }
+    
+    #####################
+    ### MOD-SPECIFIC INTERFACE
+    #####################
+    
+    ## Bookmarks and Events
+    spriteType = { 
+        name = "GFX_bookmark_great_depression"
+        texturefile = "gfx/interface/bookmarks/the_great_depression_bookmark.dds"
+    }
+    spriteType = { 
+        name = "GFX_report_event_wall_street_crash"
+        texturefile = "gfx/event_pictures/report_event_wall_street_crash.dds"
+    }
+    spriteType = { 
+        name = "GFX_report_event_depression_breadline"
+        texturefile = "gfx/event_pictures/report_event_depression_breadline.dds"
+    }
+    
+    ## Idea Icons
+    spriteType = { 
+        name = "GFX_idea_great_depression"
+        texturefile = "gfx/interface/ideas/idea_great_depression.dds"
+    }
+    spriteType = { 
+        name = "GFX_idea_unemployment"
+        texturefile = "gfx/interface/ideas/idea_unemployment.dds"
+    }
+    spriteType = { 
+        name = "GFX_idea_bank_runs"
+        texturefile = "gfx/interface/ideas/idea_bank_runs.dds"
+    }
+    spriteType = { 
+        name = "GFX_idea_new_deal_programs"
+        texturefile = "gfx/interface/ideas/idea_new_deal.dds"
+    }
+    spriteType = { 
+        name = "GFX_idea_free_market_recovery"
+        texturefile = "gfx/interface/ideas/idea_free_market.dds"
+    }
+    spriteType = { 
+        name = "GFX_idea_gold_standard"
+        texturefile = "gfx/interface/ideas/idea_gold_standard.dds"
+    }
 }

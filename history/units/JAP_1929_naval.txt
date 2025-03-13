@@ -11,14 +11,14 @@ units = {
             location = 1182 # Yokosuka/Tokyo
             
             # Nagato-class battleships
-            ship = { name = "Nagato" pride_of_the_fleet = yes definition = battleship equipment = { battleship_1 = { amount = 1 owner = JAP } } }
-            ship = { name = "Mutsu" definition = battleship equipment = { battleship_1 = { amount = 1 owner = JAP } } }
+            ship = { name = "Nagato" pride_of_the_fleet = yes definition = battleship equipment = { battleship_equipment_1 = { amount = 1 owner = JAP } } }
+            ship = { name = "Mutsu" definition = battleship equipment = { battleship_equipment_1 = { amount = 1 owner = JAP } } }
             
             # Older battleships
-            ship = { name = "Fuso" definition = battleship equipment = { battleship_1 = { amount = 1 owner = JAP } } }
-            ship = { name = "Yamashiro" definition = battleship equipment = { battleship_1 = { amount = 1 owner = JAP } } }
-            ship = { name = "Ise" definition = battleship equipment = { battleship_1 = { amount = 1 owner = JAP } } }
-            ship = { name = "Hyuga" definition = battleship equipment = { battleship_1 = { amount = 1 owner = JAP } } }
+            ship = { name = "Fuso" definition = battleship equipment = { battleship_equipment_1 = { amount = 1 owner = JAP } } }
+            ship = { name = "Yamashiro" definition = battleship equipment = { battleship_equipment_1 = { amount = 1 owner = JAP } } }
+            ship = { name = "Ise" definition = battleship equipment = { battleship_equipment_1 = { amount = 1 owner = JAP } } }
+            ship = { name = "Hyuga" definition = battleship equipment = { battleship_equipment_1 = { amount = 1 owner = JAP } } }
         }
         
         task_force = {
@@ -26,8 +26,8 @@ units = {
             location = 1182 # Yokosuka/Tokyo
             
             # Carriers - Japan only had Hosho and Akagi operational in 1929
-            ship = { name = "Hosho" definition = carrier equipment = { carrier_1 = { amount = 1 owner = JAP } } }
-            ship = { name = "Akagi" definition = carrier equipment = { carrier_1 = { amount = 1 owner = JAP } } }
+            ship = { name = "Hosho" definition = carrier equipment = { carrier_equipment_1 = { amount = 1 owner = JAP } } }
+            ship = { name = "Akagi" definition = carrier equipment = { carrier_equipment_1 = { amount = 1 owner = JAP } } }
         }
     }
     
@@ -41,10 +41,10 @@ units = {
             location = 1182 # Yokosuka/Tokyo
             
             # Heavy Cruisers
-            ship = { name = "Furutaka" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = JAP } } }
-            ship = { name = "Kako" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = JAP } } }
-            ship = { name = "Aoba" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = JAP } } }
-            ship = { name = "Kinugasa" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = JAP } } }
+            ship = { name = "Furutaka" definition = heavy_cruiser equipment = { heavy_cruiser_equipment_1 = { amount = 1 owner = JAP } } }
+            ship = { name = "Kako" definition = heavy_cruiser equipment = { heavy_cruiser_equipment_1 = { amount = 1 owner = JAP } } }
+            ship = { name = "Aoba" definition = heavy_cruiser equipment = { heavy_cruiser_equipment_1 = { amount = 1 owner = JAP } } }
+            ship = { name = "Kinugasa" definition = heavy_cruiser equipment = { heavy_cruiser_equipment_1 = { amount = 1 owner = JAP } } }
         }
         
         task_force = {
@@ -52,10 +52,10 @@ units = {
             location = 1182 # Yokosuka/Tokyo
             
             # Light Cruisers
-            ship = { name = "Kuma" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = JAP } } }
-            ship = { name = "Tama" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = JAP } } }
-            ship = { name = "Kitakami" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = JAP } } }
-            ship = { name = "Kiso" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = JAP } } }
+            ship = { name = "Kuma" definition = light_cruiser equipment = { light_cruiser_equipment_1 = { amount = 1 owner = JAP } } }
+            ship = { name = "Tama" definition = light_cruiser equipment = { light_cruiser_equipment_1 = { amount = 1 owner = JAP } } }
+            ship = { name = "Kitakami" definition = light_cruiser equipment = { light_cruiser_equipment_1 = { amount = 1 owner = JAP } } }
+            ship = { name = "Kiso" definition = light_cruiser equipment = { light_cruiser_equipment_1 = { amount = 1 owner = JAP } } }
         }
     }
     
@@ -69,14 +69,14 @@ units = {
             location = 10124 # Shanghai
             
             # Light Cruisers
-            ship = { name = "Nagara" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = JAP } } }
-            ship = { name = "Yura" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = JAP } } }
+            ship = { name = "Nagara" definition = light_cruiser equipment = { light_cruiser_equipment_1 = { amount = 1 owner = JAP } } }
+            ship = { name = "Yura" definition = light_cruiser equipment = { light_cruiser_equipment_1 = { amount = 1 owner = JAP } } }
             
             # Destroyers
-            ship = { name = "Urakaze" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = JAP } } }
-            ship = { name = "Isokaze" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = JAP } } }
-            ship = { name = "Hamakaze" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = JAP } } }
-            ship = { name = "Tanikaze" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = JAP } } }
+            ship = { name = "Urakaze" definition = destroyer equipment = { destroyer_equipment_1 = { amount = 1 owner = JAP } } }
+            ship = { name = "Isokaze" definition = destroyer equipment = { destroyer_equipment_1 = { amount = 1 owner = JAP } } }
+            ship = { name = "Hamakaze" definition = destroyer equipment = { destroyer_equipment_1 = { amount = 1 owner = JAP } } }
+            ship = { name = "Tanikaze" definition = destroyer equipment = { destroyer_equipment_1 = { amount = 1 owner = JAP } } }
         }
     }
     
@@ -90,11 +90,11 @@ units = {
             location = 1182 # Yokosuka/Tokyo
             
             # Submarines (just representative entries)
-            ship = { name = "I-1" definition = submarine equipment = { submarine_1 = { amount = 1 owner = JAP } } }
-            ship = { name = "I-2" definition = submarine equipment = { submarine_1 = { amount = 1 owner = JAP } } }
-            ship = { name = "I-3" definition = submarine equipment = { submarine_1 = { amount = 1 owner = JAP } } }
-            ship = { name = "I-4" definition = submarine equipment = { submarine_1 = { amount = 1 owner = JAP } } }
-            ship = { name = "I-5" definition = submarine equipment = { submarine_1 = { amount = 1 owner = JAP } } }
+            ship = { name = "I-1" definition = submarine equipment = { submarine_equipment_1 = { amount = 1 owner = JAP } } }
+            ship = { name = "I-2" definition = submarine equipment = { submarine_equipment_1 = { amount = 1 owner = JAP } } }
+            ship = { name = "I-3" definition = submarine equipment = { submarine_equipment_1 = { amount = 1 owner = JAP } } }
+            ship = { name = "I-4" definition = submarine equipment = { submarine_equipment_1 = { amount = 1 owner = JAP } } }
+            ship = { name = "I-5" definition = submarine equipment = { submarine_equipment_1 = { amount = 1 owner = JAP } } }
         }
     }
 }
@@ -103,7 +103,7 @@ units = {
 instant_effect = {
     add_equipment_production = {
         equipment = {
-            type = carrier_1
+            type = carrier_equipment_1
             creator = "JAP"
         }
         requested_factories = 1
@@ -113,7 +113,7 @@ instant_effect = {
     
     add_equipment_production = {
         equipment = {
-            type = heavy_cruiser_1
+            type = heavy_cruiser_equipment_1
             creator = "JAP"
         }
         requested_factories = 1
@@ -123,7 +123,7 @@ instant_effect = {
     
     add_equipment_production = {
         equipment = {
-            type = destroyer_1
+            type = destroyer_equipment_1
             creator = "JAP"
         }
         requested_factories = 1

@@ -31,7 +31,21 @@ country_event = {
 		add_war_support = 0.10
 		add_stability = 0.05
 		
-		# No news event for now - we just set the flag
-		# Can add news events later when other issues are fixed
+		# Add more consequences
+		swap_ideas = {
+			remove_idea = JAP_resource_scarcity
+			add_idea = JAP_partial_resource_security
+		}
+		
+		# Add wargoal against China for Manchurian states
+		create_wargoal = {
+			type = take_state
+			target = CHI
+			state = 716 # Liaoning
+			generator = { 716 328 } # Manchurian states
+		}
+		
+		# News event
+		news_event = { id = japan_depression.100 days = 1 }
 	}
 }

@@ -63,7 +63,7 @@ create_country_leader = {
 	expire = "1989.1.7"
 	ideology = despotism
 	traits = {
-		reluctant_military_leader
+		imperial_symbol # Changed from 'reluctant_military_leader'
 	}
 }
 
@@ -74,8 +74,8 @@ create_country_leader = {
 	expire = "1931.4.26"
 	ideology = liberalism
 	traits = {
-		fiscal_conservative
-		economist_leader
+		silent_workhorse # Changed from 'fiscal_conservative'
+		captain_of_industry # Changed from 'economist_leader'
 	}
 }
 
@@ -127,7 +127,7 @@ create_corps_commander = {
 create_navy_leader = {
 	name = "Isoroku Yamamoto"
 	picture = "gfx/leaders/JAP/Portrait_Japan_Isoroku_Yamamoto.dds"
-	traits = { naval_lineage aviation_enthusiast }
+	traits = { naval_lineage naval_aviation_expert } # Changed 'aviation_enthusiast' to 'naval_aviation_expert'
 	skill = 5
 	attack_skill = 5
 	defense_skill = 4
