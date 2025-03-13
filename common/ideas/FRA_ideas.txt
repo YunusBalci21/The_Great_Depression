@@ -1,0 +1,304 @@
+ideas = {
+	country = {
+		# Political Instability
+		FRA_political_instability = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = GFX_idea_generic_political_crisis
+			
+			modifier = {
+				political_power_gain = -0.25
+				stability_factor = -0.15
+				drift_defence_factor = -0.20
+			}
+		}
+		
+		# Popular Front Path
+		FRA_nationalization_program = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = GFX_idea_generic_production_bonus
+			
+			modifier = {
+				industrial_capacity_factory = 0.10
+				consumer_goods_factor = 0.05
+				stability_factor = -0.05
+			}
+		}
+		
+		FRA_social_reforms = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = GFX_idea_generic_social_reform
+			
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = -0.15
+				consumer_goods_factor = 0.05
+			}
+		}
+		
+		FRA_matignon_agreements = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = GFX_idea_generic_national_unity
+			
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = -0.10
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		# Democratic Status Quo Path
+		FRA_economic_orthodoxy = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = GFX_idea_generic_foreign_capital
+			
+			modifier = {
+				political_power_gain = 0.10
+				consumer_goods_factor = -0.05
+				stability_factor = 0.05
+			}
+		}
+		
+		FRA_gold_standard = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = GFX_idea_generic_foreign_exchange
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				trade_opinion_factor = 0.10
+				stability_factor = 0.05
+			}
+		}
+		
+		# National Unity Path
+		FRA_nationalist_influence = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = GFX_idea_generic_fascist_influence
+			
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.10
+				fascism_drift = 0.02
+				neutrality_drift = 0.01
+			}
+		}
+		
+		FRA_business_leaders = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = GFX_idea_generic_industrial_concern_1
+			
+			modifier = {
+				industrial_capacity_factory = 0.10
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.05
+			}
+		}
+		
+		FRA_national_recovery = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = GFX_idea_generic_economic_deal
+			
+			modifier = {
+				stability_factor = 0.10
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		FRA_covert_nationalist_support = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = GFX_idea_generic_secret_police
+			
+			modifier = {
+				war_support_factor = 0.10
+				subversive_activities_upkeep = -0.25
+				political_power_gain = -0.10
+			}
+		}
+		
+		# Colonial Path
+		FRA_colonial_exposition = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = GFX_idea_generic_colonial_influence
+			
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.10
+				non_core_manpower = 0.02
+			}
+		}
+		
+		FRA_colonial_resources = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = GFX_idea_generic_exploit_mines
+			
+			modifier = {
+				local_resources_factor = 0.10
+				global_building_slots_factor = 0.05
+			}
+		}
+		
+		FRA_imperial_centralization = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = GFX_idea_generic_colonial_integration
+			
+			modifier = {
+				stability_factor = 0.05
+				compliance_growth = 0.10
+				resistance_damage_to_garrison = -0.15
+				non_core_manpower = 0.05
+			}
+		}
+		
+		FRA_colonial_troops = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = GFX_idea_generic_colonial_army
+			
+			modifier = {
+				conscription = 0.02
+				training_time_army_factor = -0.10
+				army_org_factor = 0.05
+			}
+		}
+		
+		# Military Path
+		FRA_defensive_focus = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = GFX_idea_generic_defense_bonus
+			
+			modifier = {
+				army_defence_factor = 0.10
+				production_speed_bunker_factor = 0.20
+				dig_in_speed_factor = 0.25
+				production_speed_coastal_bunker_factor = 0.10
+			}
+		}
+		
+		FRA_offensive_focus = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = GFX_idea_generic_offense_bonus
+			
+			modifier = {
+				army_attack_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				army_speed_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+		
+		# Economic Recovery 
+		FRA_economic_revival = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = GFX_idea_generic_economic_deal
+			
+			modifier = {
+				consumer_goods_factor = -0.10
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = 0.10
+				stability_factor = 0.10
+			}
+		}
+	}
+	
+	# Diplomatic Ideas
+	FRA_munich_agreement = {
+		allowed = {
+			original_tag = FRA
+		}
+		
+		removal_cost = -1
+		
+		picture = GFX_idea_generic_foreign_treaty
+		
+		modifier = {
+			stability_factor = 0.05
+			war_support_factor = -0.15
+			justify_war_goal_time = 0.25
+			political_power_gain = -0.10
+		}
+	}
+}

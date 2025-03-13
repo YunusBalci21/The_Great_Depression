@@ -11,7 +11,7 @@ units = {
             location = 1182 # Yokosuka/Tokyo
             
             # Nagato-class battleships
-            ship = { name = "Nagato" pride_of_the_fleet = yes definition = battleship equipment = { battleship_equipment_1 = { amount = 1 owner = JAP } } }
+            ship = { name = "Nagato" pride_of_the_fleet = yes definition = battleship equipment = { battleship_1 = { amount = 1 owner = JAP } } }
             ship = { name = "Mutsu" definition = battleship equipment = { battleship_equipment_1 = { amount = 1 owner = JAP } } }
             
             # Older battleships

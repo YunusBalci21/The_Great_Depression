@@ -1,0 +1,242 @@
+##### French Army 1929 OOB #####
+
+##### Division Templates #####
+
+division_template = {
+	name = "Division d'Infanterie"
+	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Division de Cavalerie"
+	
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Division Coloniale"
+	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Brigade de Chars"
+	
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 1 y = 0 }
+	}
+	
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+}
+
+##### Land Units #####
+units = {
+	# Regular Infantry Divisions
+	division = {
+		name = "1ère Division d'Infanterie"
+		location = 11506 # Paris
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2ème Division d'Infanterie"
+		location = 6613 # Lyon
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3ème Division d'Infanterie"
+		location = 9642 # Bordeaux
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4ème Division d'Infanterie"
+		location = 9559 # Lille
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "5ème Division d'Infanterie"
+		location = 9490 # Strasbourg
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "6ème Division d'Infanterie"
+		location = 11516 # Nancy
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "7ème Division d'Infanterie"
+		location = 9434 # Marseille
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "8ème Division d'Infanterie"
+		location = 3552 # Nantes
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.3
+	}
+	
+	# Cavalry Divisions
+	division = {
+		name = "1ère Division de Cavalerie"
+		location = 11506 # Paris
+		division_template = "Division de Cavalerie"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2ème Division de Cavalerie"
+		location = 11483 # Reims
+		division_template = "Division de Cavalerie"
+		start_experience_factor = 0.3
+	}
+	
+	# Colonial Divisions
+	division = {
+		name = "1ère Division Coloniale"
+		location = 5034 # Algiers
+		division_template = "Division Coloniale"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "2ème Division Coloniale"
+		location = 7036 # Casablanca
+		division_template = "Division Coloniale"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "3ème Division Coloniale"
+		location = 4948 # Tunis
+		division_template = "Division Coloniale"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "4ème Division Coloniale"
+		location = 7959 # Dakar
+		division_template = "Division Coloniale"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "5ème Division Coloniale"
+		location = 4397 # Hanoi
+		division_template = "Division Coloniale"
+		start_experience_factor = 0.2
+	}
+	
+	# Tank Brigade - Experimental tank unit with light FT-17 tanks
+	division = {
+		name = "1ère Brigade de Chars"
+		location = 11506 # Paris
+		division_template = "Brigade de Chars"
+		start_equipment_factor = 0.7
+		start_experience_factor = 0.3
+	}
+}
+
+# Starting Production
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_equipment_1
+		amount = 25000
+		producer = FRA
+	}
+	add_equipment_to_stockpile = {
+		type = support_equipment_1
+		amount = 1000
+		producer = FRA
+	}
+	add_equipment_to_stockpile = {
+		type = artillery_equipment_1
+		amount = 500
+		producer = FRA
+	}
+	add_equipment_to_stockpile = {
+		type = gw_tank_equipment
+		amount = 120
+		producer = FRA
+	}
+	
+	# Manufacturing capacity
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "FRA"
+		}
+		requested_factories = 3
+		progress = 0.5
+		efficiency = 50
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "FRA"
+		}
+		requested_factories = 1
+		progress = 0.5
+		efficiency = 50
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "FRA"
+		}
+		requested_factories = 1
+		progress = 0.5
+		efficiency = 50
+	}
+	add_equipment_production = {
+		equipment = {
+			type = gw_tank_equipment
+			creator = "FRA"
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 40
+	}
+}

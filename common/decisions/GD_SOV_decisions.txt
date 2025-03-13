@@ -4,18 +4,15 @@
 SOV_economic_recovery_category = {
 	icon = generic_economy
 	
-	allowed = {
-		original_tag = SOV
-	}
+	# No allowed section with nested conditions
 	
-	visible = {
-		always = yes
-	}
+	visible = yes
 	
 	SOV_intensify_industrial_production = {
 		icon = generic_industry
 		
 		available = {
+			tag = SOV
 			has_idea = SOV_economic_depression
 			has_political_power > 50
 		}
@@ -64,6 +61,7 @@ SOV_economic_recovery_category = {
 		icon = generic_construction
 		
 		available = {
+			tag = SOV
 			has_idea = SOV_economic_depression
 			has_political_power > 75
 			has_completed_focus = SOV_heavy_industrialization
@@ -129,6 +127,7 @@ SOV_economic_recovery_category = {
 		icon = generic_forced_labor
 		
 		available = {
+			tag = SOV
 			has_political_power > 100
 			has_idea = SOV_nkvd_control
 		}
@@ -189,18 +188,15 @@ SOV_economic_recovery_category = {
 SOV_military_buildup_category = {
 	icon = generic_army
 	
-	allowed = {
-		original_tag = SOV
-	}
+	# No allowed section with nested conditions
 	
-	visible = {
-		always = yes
-	}
+	visible = yes
 	
 	SOV_increase_military_budget = {
 		icon = generic_army
 		
 		available = {
+			tag = SOV
 			has_political_power > 50
 			has_war_support > 0.2
 		}
@@ -236,6 +232,7 @@ SOV_military_buildup_category = {
 		icon = generic_tank
 		
 		available = {
+			tag = SOV
 			has_political_power > 75
 			has_completed_focus = SOV_tank_production
 			has_tech = basic_medium_tank
@@ -283,6 +280,7 @@ SOV_military_buildup_category = {
 		icon = generic_fortify_the_borders
 		
 		available = {
+			tag = SOV
 			has_political_power > 75
 			has_war_support > 0.3
 			OR = {
@@ -390,18 +388,15 @@ SOV_military_buildup_category = {
 SOV_political_repression_category = {
 	icon = generic_political_discourse
 	
-	allowed = {
-		original_tag = SOV
-	}
+	# No allowed section with nested conditions
 	
-	visible = {
-		always = yes
-	}
+	visible = yes
 	
 	SOV_suppress_kulak_resistance = {
 		icon = generic_political_discourse
 		
 		available = {
+			tag = SOV
 			has_political_power > 25
 			has_idea = SOV_agricultural_collectivization
 		}
@@ -440,6 +435,7 @@ SOV_political_repression_category = {
 		icon = generic_political_prison
 		
 		available = {
+			tag = SOV
 			has_political_power > 50
 			has_idea = SOV_nkvd_control
 		}
@@ -474,6 +470,7 @@ SOV_political_repression_category = {
 		icon = generic_army
 		
 		available = {
+			tag = SOV
 			has_political_power > 100
 			has_completed_focus = SOV_purge_opposition
 			NOT = { has_completed_focus = SOV_great_purge }

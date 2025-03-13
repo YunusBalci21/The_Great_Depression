@@ -419,8 +419,8 @@ country_event = {
 	
 	trigger = {
 		tag = JAP
-		has_completed_focus = JAP_soviet_border_tensions
-		has_completed_focus = JAP_kwantung_army_buildup
+		has_country_flag = JAP_soviet_border_tensions
+		has_country_flag = JAP_kwantung_army_buildup
 		NOT = { has_country_flag = jap_border_clash_happened }
 		date > 1933.1.1
 	}
