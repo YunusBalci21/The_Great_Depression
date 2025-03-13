@@ -282,23 +282,23 @@ ideas = {
 				stability_factor = 0.10
 			}
 		}
-	}
-	
-	# Diplomatic Ideas
-	FRA_munich_agreement = {
-		allowed = {
-			original_tag = FRA
-		}
 		
-		removal_cost = -1
-		
-		picture = GFX_idea_generic_foreign_treaty
-		
-		modifier = {
-			stability_factor = 0.05
-			war_support_factor = -0.15
-			justify_war_goal_time = 0.25
-			political_power_gain = -0.10
+		# Diplomatic Ideas
+		FRA_munich_agreement = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			picture = GFX_idea_generic_foreign_treaty
+			
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = -0.15
+				justify_war_goal_time = 0.25
+				political_power_gain = -0.10
+			}
 		}
 	}
 }
