@@ -1,0 +1,429 @@
+ideas = {
+	country = {
+		# Resource Scarcity - A major driver of expansion
+		JAP_resource_scarcity = {
+			allowed = {
+				original_tag = JAP
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_foreign_capital
+			
+			modifier = {
+				industrial_capacity_factory = -0.15
+				production_speed_arms_factory_factor = -0.15
+				production_speed_dockyard_factor = -0.15
+				consumer_goods_factor = 0.05
+				political_power_gain = -0.10
+			}
+		}
+		
+		# Partial Resource Security - After Manchuria
+		JAP_partial_resource_security = {
+			allowed = {
+				original_tag = JAP
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_foreign_capital
+			
+			modifier = {
+				industrial_capacity_factory = -0.05
+				production_speed_arms_factory_factor = -0.05
+				production_speed_dockyard_factor = -0.05
+				consumer_goods_factor = 0.02
+			}
+		}
+		
+		# Economic Policy Ideas
+		JAP_civilian_economic_reforms = {
+			allowed = {
+				original_tag = JAP
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_economic_deal
+			
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.10
+				political_power_gain = 0.05
+			}
+		}
+		
+		JAP_military_industrial_focus = {
+			allowed = {
+				original_tag = JAP
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_production_bonus
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				production_speed_dockyard_factor = 0.10
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = 0.05
+				political_power_gain = -0.05
+			}
+		}
+		
+		JAP_international_trade_focus = {
+			allowed = {
+				original_tag = JAP
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_foreign_trade
+			
+			modifier = {
+				trade_opinion_factor = 0.25
+				consumer_goods_factor = -0.03
+				stability_factor = 0.05
+			}
+		}
+		
+		JAP_military_industrial_complex = {
+			allowed = {
+				original_tag = JAP
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_war_preparation
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				industrial_capacity_factory = 0.10
+				industrial_capacity_dockyard = 0.10
+				consumer_goods_factor = 0.05
+				war_support_factor = 0.10
+			}
+		}
+		
+		# Political Crisis Ideas
+		JAP_civilian_political_crisis = {
+			allowed = {
+				original_tag = JAP
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_political_discussion
+			
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.10
+				drift_defence_factor = -0.15
+			}
+		}
+		
+		JAP_military_political_crisis = {
+			allowed = {
+				original_tag = JAP
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_political_discussion
+			
+			modifier = {
+				stability_factor = -0.10
+				war_support_factor = 0.05
+				political_power_gain = -0.15
+				drift_defence_factor = -0.15
+			}
+		}
+		
+		JAP_military_influence_growing = {
+			allowed = {
+				original_tag = JAP
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = 0.10
+				political_power_gain = 0.05
+				fascism_drift = 0.01
+			}
+		}
+		
+		JAP_militarist_influence = {
+			allowed = {
+				original_tag = JAP
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.15
+				political_power_gain = 0.10
+				fascism_drift = 0.03
+			}
+		}
+		
+		# Government Type Ideas
+		JAP_civilian_government = {
+			allowed = {
+				original_tag = JAP
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = 0.05
+				war_support_factor = -0.10
+				democratic_drift = 0.01
+			}
+		}
+		
+		JAP_militarist_government = {
+			allowed = {
+				original_tag = JAP
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.10
+				war_support_factor = 0.15
+				fascism_drift = 0.03
+				justify_war_goal_time = -0.25
+			}
+		}
+		
+		# Colonial Resources
+		JAP_manchurian_resource_exploitation = {
+			allowed = {
+				original_tag = JAP
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_exploit_mines
+			
+			modifier = {
+				local_resources_factor = 0.10
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+			}
+		}
+		
+		# Naval Expansion
+		JAP_naval_expansion = {
+			allowed = {
+				original_tag = JAP
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_navy_bonus
+			
+			modifier = {
+				production_speed_dockyard_factor = 0.15
+				industrial_capacity_dockyard = 0.10
+				naval_speed_factor = 0.05
+				naval_coordination = 0.05
+			}
+		}
+		
+		JAP_southern_expansion_doctrine = {
+			allowed = {
+				original_tag = JAP
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_naval_manufacturer_2
+			
+			modifier = {
+				justify_war_goal_time = -0.10
+				war_support_factor = 0.05
+				convoy_escort_efficiency = 0.10
+				naval_speed_factor = 0.05
+			}
+		}
+	}
+	
+	# Political Advisors
+	political_advisor = {
+		JAP_koki_hirota = {
+			allowed = {
+				original_tag = JAP
+			}
+			
+			traits = { silent_workhorse }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		JAP_mitsumasa_yonai = {
+			allowed = {
+				original_tag = JAP
+			}
+			
+			traits = { democratic_reformer }
+			
+			ai_will_do = {
+				factor = 0.5
+			}
+		}
+		
+		JAP_kingoro_hashimoto = {
+			allowed = {
+				original_tag = JAP
+			}
+			
+			traits = { fascist_demagogue }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	# Military Advisors
+	army_chief = {
+		JAP_hajime_sugiyama = {
+			allowed = {
+				original_tag = JAP
+			}
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		JAP_hideki_tojo = {
+			allowed = {
+				original_tag = JAP
+			}
+			
+			traits = { army_chief_drill_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	navy_chief = {
+		JAP_osami_nagano = {
+			allowed = {
+				original_tag = JAP
+			}
+			
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		JAP_isoroku_yamamoto = {
+			allowed = {
+				original_tag = JAP
+			}
+			
+			traits = { navy_chief_naval_aviation_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	air_chief = {
+		JAP_torashiro_kawabe = {
+			allowed = {
+				original_tag = JAP
+			}
+			
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		JAP_korechika_anami = {
+			allowed = {
+				original_tag = JAP
+			}
+			
+			traits = { air_chief_all_weather_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	# Military Theorists
+	theorist = {
+		JAP_tomoyuki_yamashita = {
+			ledger = army
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+			traits = { military_theorist }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		JAP_mineichi_koga = {
+			ledger = navy
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+			traits = { naval_theorist }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		JAP_hideo_itokawa = {
+			ledger = air
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+			traits = { air_warfare_theorist }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

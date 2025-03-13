@@ -1,0 +1,574 @@
+focus_tree = {
+	id = japan_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = JAP
+		}
+	}
+	
+	default = no
+	
+	# Economic Crisis Response
+	focus = {
+		id = JAP_economic_crisis
+		icon = GFX_goal_generic_demand_territory
+		x = 10
+		y = 0
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.05
+			add_ideas = {
+				great_depression
+				JAP_resource_scarcity
+			}
+		}
+	}
+	
+	# Economic Response Paths
+	focus = {
+		id = JAP_economic_response
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = JAP_economic_crisis }
+		x = 10
+		y = 1
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+	
+	# Civilian Economic Path
+	focus = {
+		id = JAP_civilian_economic_policy
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = JAP_economic_response }
+		mutually_exclusive = { focus = JAP_military_economic_policy }
+		x = 8
+		y = 2
+		cost = 10
+		ai_will_do = { factor = 6 }
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 25
+			add_ideas = JAP_civilian_economic_reforms
+		}
+	}
+	
+	# Military Economic Path
+	focus = {
+		id = JAP_military_economic_policy
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = JAP_economic_response }
+		mutually_exclusive = { focus = JAP_civilian_economic_policy }
+		x = 12
+		y = 2
+		cost = 10
+		ai_will_do = { factor = 4 }
+		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = -25
+			add_ideas = JAP_military_industrial_focus
+		}
+	}
+	
+	# Civilian Path Continuation
+	focus = {
+		id = JAP_zaibatsu_cooperation
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = JAP_civilian_economic_policy }
+		x = 7
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.05
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = JAP_trade_expansion
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = JAP_civilian_economic_policy }
+		x = 9
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = JAP_international_trade_focus
+			add_opinion_modifier = {
+				target = USA
+				modifier = medium_increase
+			}
+			add_opinion_modifier = {
+				target = ENG
+				modifier = medium_increase
+			}
+		}
+	}
+	
+	# Military Path Continuation
+	focus = {
+		id = JAP_expand_military_industry
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = JAP_military_economic_policy }
+		x = 11
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_war_support = 0.05
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = JAP_military_industrial_complex
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = JAP_military_economic_policy }
+		x = 13
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_war_support = 0.05
+			add_ideas = JAP_military_industrial_complex
+		}
+	}
+	
+	# Political Crisis Path
+	focus = {
+		id = JAP_political_crisis
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = JAP_economic_crisis }
+		x = 3
+		y = 1
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = -25
+			add_stability = -0.05
+			country_event = { id = japan_depression.10 days = 5 }
+		}
+	}
+	
+	# Military Faction Rise
+	focus = {
+		id = JAP_may_15_incident
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = JAP_political_crisis }
+		x = 2
+		y = 2
+		cost = 10
+		ai_will_do = { factor = 1 }
+		available = {
+			date > 1932.5.1
+		}
+		completion_reward = {
+			add_political_power = -50
+			add_stability = -0.10
+			add_war_support = 0.10
+			country_event = { id = japan_depression.11 days = 5 }
+		}
+	}
+	
+	focus = {
+		id = JAP_february_26_incident
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = JAP_may_15_incident }
+		x = 2
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 1 }
+		available = {
+			date > 1936.2.1
+		}
+		completion_reward = {
+			add_political_power = -50
+			add_stability = -0.15
+			add_war_support = 0.15
+			country_event = { id = japan_depression.12 days = 5 }
+		}
+	}
+	
+	# Civilian Government Path
+	focus = {
+		id = JAP_maintain_civilian_control
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = JAP_political_crisis }
+		mutually_exclusive = { focus = JAP_military_control }
+		x = 4
+		y = 2
+		cost = 10
+		ai_will_do = { factor = 4 }
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.10
+			add_ideas = JAP_civilian_government
+		}
+	}
+	
+	# Military Control Path
+	focus = {
+		id = JAP_military_control
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = JAP_february_26_incident focus = JAP_political_crisis }
+		mutually_exclusive = { focus = JAP_maintain_civilian_control }
+		x = 2
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 6 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			add_war_support = 0.10
+			add_ideas = JAP_militarist_government
+		}
+	}
+	
+	# Manchurian Incident Path
+	focus = {
+		id = JAP_manchurian_incident
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = JAP_economic_crisis }
+		x = 17
+		y = 1
+		cost = 10
+		ai_will_do = { factor = 1 }
+		available = {
+			date > 1931.9.1
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.10
+			set_country_flag = manchuria_invaded
+			country_event = { id = japan_depression.2 days = 1 }
+		}
+	}
+	
+	# Create Manchukuo
+	focus = {
+		id = JAP_establish_manchukuo
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = JAP_manchurian_incident }
+		x = 17
+		y = 2
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.05
+			custom_effect_tooltip = JAP_create_manchukuo
+			hidden_effect = {
+				country_event = { id = japan_depression.3 days = 1 }
+			}
+		}
+	}
+	
+	# Resource Exploitation
+	focus = {
+		id = JAP_manchurian_resources
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = JAP_establish_manchukuo }
+		x = 16
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			716 = { # Liaoning (proxy for Manchuria)
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+				add_resource = {
+					type = oil
+					amount = 4
+				}
+			}
+			add_ideas = {
+				JAP_manchurian_resource_exploitation
+			}
+			swap_ideas = {
+				remove_idea = JAP_resource_scarcity
+				add_idea = JAP_partial_resource_security
+			}
+		}
+	}
+	
+	# Industrial Development
+	focus = {
+		id = JAP_manchurian_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = JAP_establish_manchukuo }
+		x = 18
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			716 = { # Liaoning
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	# Border Conflicts with USSR
+	focus = {
+		id = JAP_soviet_border_tensions
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = JAP_manchurian_resources focus = JAP_manchurian_industry }
+		x = 17
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = 25
+			add_opinion_modifier = {
+				target = SOV
+				modifier = hostile_status
+			}
+			country_event = { id = japan_depression.4 days = 1 }
+		}
+	}
+	
+	focus = {
+		id = JAP_kwantung_army_buildup
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = JAP_soviet_border_tensions }
+		x = 16
+		y = 5
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 5000
+				producer = JAP
+			}
+			716 = { # Liaoning
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+					instant_build = yes
+				}
+			}
+			country_event = { id = japan_depression.5 days = 1 }
+		}
+	}
+	
+	focus = {
+		id = JAP_prepare_for_war
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = JAP_kwantung_army_buildup }
+		x = 17
+		y = 6
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_war_support = 0.10
+			add_stability = -0.05
+			create_wargoal = {
+				type = annex_everything
+				target = SOV
+				expire = 0
+			}
+		}
+	}
+	
+	# Naval Expansion
+	focus = {
+		id = JAP_naval_expansion
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = JAP_economic_crisis }
+		x = 22
+		y = 1
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			navy_experience = 50
+			add_ideas = JAP_naval_expansion
+		}
+	}
+	
+	focus = {
+		id = JAP_naval_rivalry_usa
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = JAP_naval_expansion }
+		x = 22
+		y = 2
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_war_support = 0.05
+			add_opinion_modifier = {
+				target = USA
+				modifier = medium_decrease
+			}
+			add_tech_bonus = {
+				name = naval_bonus
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = JAP_expand_naval_industry
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = JAP_naval_rivalry_usa }
+		x = 21
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = { 
+					is_coastal = yes
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = JAP_carrier_focus
+		icon = GFX_goal_generic_navy
+		prerequisite = { focus = JAP_naval_rivalry_usa }
+		x = 23
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+				name = carrier_bonus
+				bonus = 0.5
+				uses = 1
+				category = carrier_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = JAP_southern_resources_strategy
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = JAP_expand_naval_industry focus = JAP_carrier_focus }
+		x = 22
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = JAP_southern_expansion_doctrine
+			677 = { # Johore (representing British Malaya)
+				add_claim_by = JAP
+			}
+			669 = { # Dutch East Indies - Java
+				add_claim_by = JAP
+			}
+		}
+	}
+	
+	# China Policy
+	focus = {
+		id = JAP_china_policy
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = JAP_establish_manchukuo }
+		x = 19
+		y = 3
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = 25
+			608 = { # Beijing
+				add_claim_by = JAP
+			}
+			country_event = { id = japan_depression.6 days = 1 }
+		}
+	}
+	
+	focus = {
+		id = JAP_marco_polo_bridge
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = JAP_china_policy }
+		x = 19
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 1 }
+		available = {
+			date > 1937.7.1
+		}
+		completion_reward = {
+			add_war_support = 0.10
+			create_wargoal = {
+				type = annex_everything
+				target = CHI
+				expire = 0
+			}
+			country_event = { id = japan_depression.7 days = 1 }
+		}
+	}
+	
+	# Final Recovery Focus
+	focus = {
+		id = JAP_economic_recovery
+		icon = GFX_goal_generic_economic_deals
+		prerequisite = { 
+			focus = JAP_zaibatsu_cooperation
+			focus = JAP_trade_expansion
+			focus = JAP_military_industrial_complex
+			focus = JAP_expand_military_industry
+		}
+		prerequisite = {
+			focus = JAP_maintain_civilian_control
+			focus = JAP_military_control
+		}
+		x = 10
+		y = 6
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			remove_ideas = great_depression
+			add_stability = 0.10
+			add_war_support = 0.05
+			add_political_power = 100
+		}
+	}
+}

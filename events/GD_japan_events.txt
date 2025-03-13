@@ -1,0 +1,627 @@
+add_namespace = japan_depression
+
+# Initial Great Depression Impact on Japan
+country_event = {
+	id = japan_depression.1
+	title = japan_depression.1.t
+	desc = japan_depression.1.d
+	picture = GFX_report_event_japanese_economy
+	
+	trigger = {
+		tag = JAP
+		date > 1929.10.29
+		date < 1929.11.15
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = japan_depression.1.a # Japan's economy is vulnerable
+		add_political_power = -50
+		add_stability = -0.10
+		add_war_support = -0.05
+		add_ideas = {
+			great_depression
+			JAP_resource_scarcity
+		}
+	}
+}
+
+# Manchurian Incident
+country_event = {
+	id = japan_depression.2
+	title = japan_depression.2.t
+	desc = japan_depression.2.d
+	picture = GFX_report_event_japanese_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = japan_depression.2.a # The Kwantung Army acts
+		add_political_power = 50
+		add_stability = 0.05
+		add_war_support = 0.10
+		
+		# Create wargoal against China/Manchuria
+		create_wargoal = {
+			type = take_state_focus
+			target = CHI
+			generator = { 716 328 } # Liaoning, Jilin (Manchurian states)
+		}
+		
+		# News event for all countries
+		hidden_effect = {
+			news_event = { id = japan_depression.100 days = 1 }
+		}
+	}
+}
+
+# Establish Manchukuo
+country_event = {
+	id = japan_depression.3
+	title = japan_depression.3.t
+	desc = japan_depression.3.d
+	picture = GFX_report_event_japanese_officials
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = japan_depression.3.a # Establish the puppet state
+		add_political_power = 25
+		add_stability = 0.05
+		
+		# Release Manchukuo as puppet
+		# This is simplified - would need proper release mechanics
+		custom_effect_tooltip = JAP_create_manchukuo_effect
+		hidden_effect = {
+			# Logic to create Manchukuo would go here
+			# As a placeholder:
+			set_country_flag = manchukuo_created
+			news_event = { id = japan_depression.101 days = 1 }
+		}
+	}
+}
+
+# Soviet Border Tensions
+country_event = {
+	id = japan_depression.4
+	title = japan_depression.4.t
+	desc = japan_depression.4.d
+	picture = GFX_report_event_soldiers_marching
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = japan_depression.4.a # Assert our claims
+		add_political_power = 25
+		add_war_support = 0.05
+		SOV = {
+			country_event = { id = japan_depression.20 days = 3 }
+		}
+	}
+	
+	option = {
+		name = japan_depression.4.b # Take a cautious approach
+		add_political_power = -25
+		add_stability = 0.05
+		add_war_support = -0.05
+		SOV = {
+			country_event = { id = japan_depression.21 days = 3 }
+		}
+	}
+}
+
+# Kwantung Army Buildup
+country_event = {
+	id = japan_depression.5
+	title = japan_depression.5.t
+	desc = japan_depression.5.d
+	picture = GFX_report_event_japanese_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = japan_depression.5.a # Strengthen our position
+		add_war_support = 0.05
+		add_political_power = 25
+		SOV = {
+			country_event = { id = japan_depression.22 days = 3 }
+		}
+	}
+}
+
+# China Policy
+country_event = {
+	id = japan_depression.6
+	title = japan_depression.6.t
+	desc = japan_depression.6.d
+	picture = GFX_report_event_chinese_city
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = japan_depression.6.a # Push for dominance
+		add_war_support = 0.05
+		add_stability = -0.05
+		CHI = {
+			add_opinion_modifier = {
+				target = JAP
+				modifier = large_decrease
+			}
+		}
+	}
+	
+	option = {
+		name = japan_depression.6.b # Diplomatic approach
+		add_political_power = -25
+		add_war_support = -0.05
+		add_stability = 0.05
+		CHI = {
+			add_opinion_modifier = {
+				target = JAP
+				modifier = medium_decrease
+			}
+		}
+	}
+}
+
+# Marco Polo Bridge Incident
+country_event = {
+	id = japan_depression.7
+	title = japan_depression.7.t
+	desc = japan_depression.7.d
+	picture = GFX_report_event_chinese_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = japan_depression.7.a # To war!
+		add_war_support = 0.15
+		add_stability = -0.05
+		# Logic for war with China would go here
+		hidden_effect = {
+			news_event = { id = japan_depression.102 days = 1 }
+		}
+	}
+}
+
+# Political Crisis Events
+country_event = {
+	id = japan_depression.10
+	title = japan_depression.10.t
+	desc = japan_depression.10.d
+	picture = GFX_report_event_japanese_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = japan_depression.10.a # Support civilian government
+		add_political_power = 25
+		add_stability = 0.05
+		add_war_support = -0.05
+		add_ideas = JAP_civilian_political_crisis
+	}
+	
+	option = {
+		name = japan_depression.10.b # Military deserves more influence
+		add_political_power = -25
+		add_stability = -0.05
+		add_war_support = 0.10
+		add_ideas = JAP_military_political_crisis
+	}
+}
+
+# May 15 Incident
+country_event = {
+	id = japan_depression.11
+	title = japan_depression.11.t
+	desc = japan_depression.11.d
+	picture = GFX_report_event_japanese_military
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = japan_depression.11.a # Suppress the conspirators
+		add_political_power = -25
+		add_stability = 0.05
+		add_war_support = -0.05
+	}
+	
+	option = {
+		name = japan_depression.11.b # The military has legitimate concerns
+		add_political_power = 25
+		add_stability = -0.05
+		add_war_support = 0.10
+		add_ideas = JAP_military_influence_growing
+	}
+}
+
+# February 26 Incident
+country_event = {
+	id = japan_depression.12
+	title = japan_depression.12.t
+	desc = japan_depression.12.d
+	picture = GFX_report_event_japanese_military
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = japan_depression.12.a # Crush the rebellion
+		add_political_power = -50
+		add_stability = -0.05
+		add_war_support = 0.05
+	}
+	
+	option = {
+		name = japan_depression.12.b # Give in to military demands
+		add_political_power = 50
+		add_stability = 0.05
+		add_war_support = 0.10
+		add_ideas = JAP_militarist_influence
+	}
+}
+
+# Soviet Events for Border Conflicts
+
+# Japan Tensions on Border
+country_event = {
+	id = japan_depression.20
+	title = japan_depression.20.t
+	desc = japan_depression.20.d
+	picture = GFX_report_event_soviet_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = japan_depression.20.a # Strong response
+		add_political_power = 25
+		add_war_support = 0.05
+		add_opinion_modifier = {
+			target = JAP
+			modifier = hostile_status
+		}
+		JAP = {
+			country_event = { id = japan_depression.23 days = 3 }
+		}
+	}
+	
+	option = {
+		name = japan_depression.20.b # Diplomatic protest
+		add_political_power = -25
+		add_stability = 0.05
+		add_war_support = -0.05
+		JAP = {
+			country_event = { id = japan_depression.24 days = 3 }
+		}
+	}
+}
+
+# Japan Taking Cautious Approach
+country_event = {
+	id = japan_depression.21
+	title = japan_depression.21.t
+	desc = japan_depression.21.d
+	picture = GFX_report_event_soviet_border
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = japan_depression.21.a # We remain vigilant
+		add_political_power = 25
+		add_stability = 0.05
+	}
+}
+
+# Japan Building Up Forces
+country_event = {
+	id = japan_depression.22
+	title = japan_depression.22.t
+	desc = japan_depression.22.d
+	picture = GFX_report_event_soviet_military
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = japan_depression.22.a # We must counter this
+		add_political_power = 25
+		add_war_support = 0.05
+		
+		529 = { # Vladivostok
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = {
+					all_provinces = yes
+					limit_to_border = yes
+				}
+				instant_build = yes
+			}
+		}
+		
+		JAP = {
+			country_event = { id = japan_depression.25 days = 3 }
+		}
+	}
+	
+	option = {
+		name = japan_depression.22.b # Avoid escalation
+		add_political_power = -25
+		add_war_support = -0.05
+		add_stability = 0.05
+	}
+}
+
+# Soviet Strong Response
+country_event = {
+	id = japan_depression.23
+	title = japan_depression.23.t
+	desc = japan_depression.23.d
+	picture = GFX_report_event_japanese_military
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = japan_depression.23.a # Back down for now
+		add_political_power = -25
+		add_stability = -0.05
+		add_war_support = -0.05
+	}
+	
+	option = {
+		name = japan_depression.23.b # Stand firm
+		add_political_power = 25
+		add_stability = -0.05
+		add_war_support = 0.10
+		# Potential for border clash logic here
+	}
+}
+
+# Soviet Diplomatic Protest
+country_event = {
+	id = japan_depression.24
+	title = japan_depression.24.t
+	desc = japan_depression.24.d
+	picture = GFX_report_event_japanese_military
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = japan_depression.24.a # Continue strengthening position
+		add_political_power = 25
+		add_war_support = 0.05
+		# Potential escalation logic
+	}
+}
+
+# Soviet Border Buildup
+country_event = {
+	id = japan_depression.25
+	title = japan_depression.25.t
+	desc = japan_depression.25.d
+	picture = GFX_report_event_japanese_military
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = japan_depression.25.a # Prepare for possible conflict
+		add_political_power = 25
+		add_war_support = 0.10
+		# Could lead to border clash event
+	}
+}
+
+# Border Clash Event
+country_event = {
+	id = japan_depression.30
+	title = japan_depression.30.t
+	desc = japan_depression.30.d
+	picture = GFX_report_event_soldiers_fighting
+	
+	trigger = {
+		tag = JAP
+		has_completed_focus = JAP_soviet_border_tensions
+		has_completed_focus = JAP_kwantung_army_buildup
+		NOT = { has_country_flag = jap_border_clash_happened }
+		date > 1933.1.1
+	}
+	
+	mean_time_to_happen = {
+		days = 180
+	}
+	
+	immediate = {
+		set_country_flag = jap_border_clash_happened
+	}
+	
+	option = {
+		name = japan_depression.30.a # Attack!
+		add_war_support = 0.10
+		add_stability = -0.05
+		SOV = {
+			country_event = { id = japan_depression.31 days = 1 }
+		}
+	}
+	
+	option = {
+		name = japan_depression.30.b # Show restraint
+		add_political_power = -25
+		add_stability = 0.05
+		add_war_support = -0.05
+		SOV = {
+			country_event = { id = japan_depression.32 days = 1 }
+		}
+	}
+}
+
+# Soviet Response to Border Clash (Attacked)
+country_event = {
+	id = japan_depression.31
+	title = japan_depression.31.t
+	desc = japan_depression.31.d
+	picture = GFX_report_event_soviet_military
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = japan_depression.31.a # Strike back hard
+		add_war_support = 0.15
+		add_stability = -0.05
+		JAP = {
+			country_event = { id = japan_depression.33 days = 1 }
+		}
+	}
+	
+	option = {
+		name = japan_depression.31.b # Measured response
+		add_political_power = -25
+		add_stability = 0.05
+		add_war_support = 0.05
+		JAP = {
+			country_event = { id = japan_depression.34 days = 1 }
+		}
+	}
+}
+
+# Soviet Response to Japanese Restraint
+country_event = {
+	id = japan_depression.32
+	title = japan_depression.32.t
+	desc = japan_depression.32.d
+	picture = GFX_report_event_soviet_border
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = japan_depression.32.a # This shows weakness
+		add_political_power = 25
+		add_war_support = 0.05
+	}
+}
+
+# Major Clash Outcome
+country_event = {
+	id = japan_depression.33
+	title = japan_depression.33.t
+	desc = japan_depression.33.d
+	picture = GFX_report_event_japanese_military
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = japan_depression.33.a # This means war
+		add_war_support = 0.15
+		add_stability = -0.05
+		# Logic for potential war or escalation
+	}
+	
+	option = {
+		name = japan_depression.33.b # Back down for now
+		add_political_power = -50
+		add_stability = -0.10
+		add_war_support = -0.05
+	}
+}
+
+# Minor Clash Outcome
+country_event = {
+	id = japan_depression.34
+	title = japan_depression.34.t
+	desc = japan_depression.34.d
+	picture = GFX_report_event_japanese_military
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = japan_depression.34.a # Our position is stronger
+		add_political_power = 25
+		add_war_support = 0.05
+	}
+}
+
+# World News Events
+
+# Manchurian Incident News
+news_event = {
+	id = japan_depression.100
+	title = japan_depression.100.t
+	desc = japan_depression.100.d
+	picture = GFX_news_event_manchurian_incident
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = japan_depression.100.a
+		trigger = { tag = JAP }
+	}
+	
+	option = {
+		name = japan_depression.100.b
+		trigger = { tag = CHI }
+	}
+	
+	option = {
+		name = japan_depression.100.c
+		trigger = { NOT = { tag = JAP tag = CHI } }
+	}
+}
+
+# Manchukuo Creation News
+news_event = {
+	id = japan_depression.101
+	title = japan_depression.101.t
+	desc = japan_depression.101.d
+	picture = GFX_news_event_manchukuo_creation
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = japan_depression.101.a
+		trigger = { tag = JAP }
+	}
+	
+	option = {
+		name = japan_depression.101.b
+		trigger = { tag = CHI }
+	}
+	
+	option = {
+		name = japan_depression.101.c
+		trigger = { tag = SOV }
+	}
+	
+	option = {
+		name = japan_depression.101.d
+		trigger = { NOT = { tag = JAP tag = CHI tag = SOV } }
+	}
+}
+
+# Marco Polo Bridge Incident News
+news_event = {
+	id = japan_depression.102
+	title = japan_depression.102.t
+	desc = japan_depression.102.d
+	picture = GFX_news_event_marco_polo_bridge
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = japan_depression.102.a
+		trigger = { tag = JAP }
+	}
+	
+	option = {
+		name = japan_depression.102.b
+		trigger = { tag = CHI }
+	}
+	
+	option = {
+		name = japan_depression.102.c
+		trigger = { NOT = { tag = JAP tag = CHI } }
+	}
+}

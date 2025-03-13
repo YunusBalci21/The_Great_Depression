@@ -1,0 +1,193 @@
+##### Imperial Japanese Army 1929 OOB #####
+
+##### Division Templates #####
+division_template = {
+	name = "Hohei Shidan"			# Infantry Division
+	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Kihei Shidan"			# Cavalry Division
+	
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Rentai Shidan"			# Colonial/Garrison Division
+	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+##### Land Units #####
+units = {
+	# Home Island Divisions
+	division = {
+		name = "1. Hohei Shidan"
+		location = 1182 # Tokyo
+		division_template = "Hohei Shidan"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2. Hohei Shidan"
+		location = 7169 # Nagoya
+		division_template = "Hohei Shidan"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3. Hohei Shidan"
+		location = 7072 # Osaka
+		division_template = "Hohei Shidan"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4. Hohei Shidan"
+		location = 9950 # Fukuoka
+		division_template = "Hohei Shidan"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "5. Hohei Shidan"
+		location = 4102 # Sapporo
+		division_template = "Hohei Shidan"
+		start_experience_factor = 0.3
+	}
+	
+	# Cavalry Divisions
+	division = {
+		name = "1. Kihei Shidan"
+		location = 1182 # Tokyo
+		division_template = "Kihei Shidan"
+		start_experience_factor = 0.3
+	}
+	
+	# Korea Divisions
+	division = {
+		name = "6. Hohei Shidan"
+		location = 4056 # Seoul
+		division_template = "Hohei Shidan"
+		start_experience_factor = 0.3
+	}
+	
+	# Taiwan Division
+	division = {
+		name = "7. Hohei Shidan"
+		location = 7186 # Taipei
+		division_template = "Hohei Shidan"
+		start_experience_factor = 0.3
+	}
+	
+	# Kwantung Army - Manchurian Border
+	division = {
+		name = "8. Hohei Shidan"
+		location = 10433 # Liaoning
+		division_template = "Hohei Shidan"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "9. Hohei Shidan"
+		location = 11771 # Jilin
+		division_template = "Hohei Shidan"
+		start_experience_factor = 0.3
+	}
+	
+	# Colonial Garrisons
+	division = {
+		name = "Chosen Rentai"
+		location = 12085 # Pyongyang
+		division_template = "Rentai Shidan"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Taiwan Rentai"
+		location = 4180 # Kaohsiung
+		division_template = "Rentai Shidan"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Karafuto Rentai"
+		location = 12446 # Toyohara (Southern Sakhalin)
+		division_template = "Rentai Shidan"
+		start_experience_factor = 0.2
+	}
+}
+
+# Starting Production
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_equipment_1
+		amount = 25000
+		producer = JAP
+	}
+	add_equipment_to_stockpile = {
+		type = support_equipment_1
+		amount = 1000
+		producer = JAP
+	}
+	add_equipment_to_stockpile = {
+		type = artillery_equipment_1
+		amount = 500
+		producer = JAP
+	}
+	
+	# Current military production - limited due to economic troubles
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "JAP"
+		}
+		requested_factories = 3
+		progress = 0.5
+		efficiency = 50
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "JAP"
+		}
+		requested_factories = 1
+		progress = 0.5
+		efficiency = 50
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "JAP"
+		}
+		requested_factories = 1
+		progress = 0.5
+		efficiency = 50
+	}
+}

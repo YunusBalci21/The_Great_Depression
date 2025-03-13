@@ -1,0 +1,200 @@
+﻿l_english:
+ # Focus Tree Localization
+ JAP_economic_crisis:0 "The Economic Crisis"
+ JAP_economic_crisis_desc:0 "The Wall Street Crash has sent shockwaves through the global economy. Japan, with its export-oriented economy and reliance on American markets, is especially vulnerable. We must respond to this crisis swiftly."
+ 
+ JAP_economic_response:0 "Economic Response Measures"
+ JAP_economic_response_desc:0 "We must implement measures to counter the economic downturn. The cabinet debates whether to prioritize civilian recovery or military-industrial development."
+ 
+ JAP_civilian_economic_policy:0 "Civilian Economic Focus"
+ JAP_civilian_economic_policy_desc:0 "We will focus on stabilizing the civilian economy first, believing that a strong domestic market is the foundation for recovery. This approach may slow military expansion but will strengthen our economic base."
+ 
+ JAP_military_economic_policy:0 "Military-Industrial Focus"
+ JAP_military_economic_policy_desc:0 "By prioritizing military-industrial development, we can both strengthen national defense and stimulate key industrial sectors. This will accelerate our path toward self-sufficiency."
+ 
+ JAP_zaibatsu_cooperation:0 "Zaibatsu Cooperation"
+ JAP_zaibatsu_cooperation_desc:0 "The large industrial conglomerates known as Zaibatsu control much of Japan's economy. By working closely with them, we can coordinate economic recovery and ensure industrial growth."
+ 
+ JAP_trade_expansion:0 "Expand International Trade"
+ JAP_trade_expansion_desc:0 "Despite the global depression, we must seek new trade opportunities abroad. By expanding our trade networks, we can obtain the resources we need and find markets for our manufactured goods."
+ 
+ JAP_expand_military_industry:0 "Expand Military Industry"
+ JAP_expand_military_industry_desc:0 "By expanding our military industry, we can both strengthen our armed forces and stimulate economic recovery through industrial production."
+ 
+ JAP_military_industrial_complex:0 "Military-Industrial Complex"
+ JAP_military_industrial_complex_desc:0 "Creating a robust military-industrial complex will ensure our ability to sustain and expand our armed forces while providing a reliable economic engine for national growth."
+ 
+ JAP_political_crisis:0 "Political Crisis"
+ JAP_political_crisis_desc:0 "The economic downturn has intensified political tensions within Japan. Military factions are increasingly challenging the authority of civilian government, arguing that only a stronger military can secure Japan's future."
+ 
+ JAP_may_15_incident:0 "May 15 Incident"
+ JAP_may_15_incident_desc:0 "Young naval officers and Army cadets, dissatisfied with the government's response to the economic crisis, have assassinated Prime Minister Inukai Tsuyoshi. This marks a significant escalation in the struggle between military and civilian power."
+ 
+ JAP_february_26_incident:0 "February 26 Incident"
+ JAP_february_26_incident_desc:0 "A group of young Army officers have staged a rebellion in Tokyo, assassinating several political figures and attempting to seize control of the government. Though the rebellion was suppressed, it highlights the growing power of militarist factions."
+ 
+ JAP_maintain_civilian_control:0 "Maintain Civilian Control"
+ JAP_maintain_civilian_control_desc:0 "We must strengthen the civilian government against the growing influence of military factions. Only civilian leadership can guide Japan through these troubled times without risking international isolation."
+ 
+ JAP_military_control:0 "Military Control"
+ JAP_military_control_desc:0 "The military leadership has demonstrated its commitment to national strength. Only by giving them greater influence over government policy can we overcome our economic and resource challenges."
+ 
+ JAP_manchurian_incident:0 "Manchurian Incident"
+ JAP_manchurian_incident_desc:0 "On September 18, 1931, an explosion occurred on the Japanese-owned South Manchurian Railway. The Kwantung Army has used this as a pretext to seize control of the entire region of Manchuria from China."
+ 
+ JAP_establish_manchukuo:0 "Establish Manchukuo"
+ JAP_establish_manchukuo_desc:0 "To legitimize our control over Manchuria, we will establish the puppet state of Manchukuo, ostensibly ruled by the last Qing emperor, Puyi, but effectively under Japanese control."
+ 
+ JAP_manchurian_resources:0 "Manchurian Resources"
+ JAP_manchurian_resources_desc:0 "Manchuria contains valuable resources including coal, iron ore, and agricultural land. By exploiting these resources, we can reduce our dependence on foreign imports and strengthen our economy."
+ 
+ JAP_manchurian_industry:0 "Manchurian Industrial Development"
+ JAP_manchurian_industry_desc:0 "We will develop heavy industry in Manchuria, creating a manufacturing base free from the economic pressures of the home islands. This will further strengthen our military-industrial capacity."
+ 
+ JAP_soviet_border_tensions:0 "Soviet Border Tensions"
+ JAP_soviet_border_tensions_desc:0 "Our expansion into Manchuria has created tensions with the Soviet Union along the Manchurian-Siberian border. We must prepare for possible confrontation with this powerful neighbor."
+ 
+ JAP_kwantung_army_buildup:0 "Kwantung Army Buildup"
+ JAP_kwantung_army_buildup_desc:0 "We will strengthen the Kwantung Army stationed in Manchuria, enhancing our ability to defend our new territory and possibly expand further."
+ 
+ JAP_prepare_for_war:0 "Prepare for War with USSR"
+ JAP_prepare_for_war_desc:0 "The Soviet threat to our northern territories and interests in Manchuria cannot be ignored. We must prepare for possible conflict to secure our position in Northeast Asia."
+ 
+ JAP_naval_expansion:0 "Naval Expansion"
+ JAP_naval_expansion_desc:0 "As an island nation, Japan's security and prosperity depend on naval power. We must continue expanding our navy to protect our sea lanes and project power across the Pacific."
+ 
+ JAP_naval_rivalry_usa:0 "Naval Rivalry with USA"
+ JAP_naval_rivalry_usa_desc:0 "The United States poses the greatest challenge to our naval dominance in the Pacific. We must prepare for this rivalry by developing advanced naval technology and doctrines."
+ 
+ JAP_expand_naval_industry:0 "Expand Naval Industry"
+ JAP_expand_naval_industry_desc:0 "Our naval expansion requires significant industrial support. We will expand shipyards and related industries to sustain our growing fleet."
+ 
+ JAP_carrier_focus:0 "Carrier Development Focus"
+ JAP_carrier_focus_desc:0 "The future of naval warfare lies in aircraft carriers. By focusing on carrier development, we will maintain our technological edge and create a truly modern navy."
+ 
+ JAP_southern_resources_strategy:0 "Southern Resources Strategy"
+ JAP_southern_resources_strategy_desc:0 "The resource-rich territories of Southeast Asia offer a solution to our resource scarcity. We must develop plans to secure these vital resources if diplomatic means fail."
+ 
+ JAP_china_policy:0 "China Policy"
+ JAP_china_policy_desc:0 "With our position in Manchuria secured, we must determine our broader policy toward China. The fractured Chinese government presents both opportunities and challenges for Japanese influence."
+ 
+ JAP_marco_polo_bridge:0 "Marco Polo Bridge Incident"
+ JAP_marco_polo_bridge_desc:0 "An incident at the Marco Polo Bridge near Beijing has provided a pretext for military action against China proper. This could be the beginning of a broader war to secure Japanese dominance in East Asia."
+ 
+ JAP_economic_recovery:0 "Economic Recovery"
+ JAP_economic_recovery_desc:0 "Our economic policies have finally begun to show results. Japan is emerging from the Great Depression, with industrial production rising and confidence returning to the markets."
+ 
+ # Ideas Localization
+ JAP_resource_scarcity:0 "Resource Scarcity"
+ JAP_resource_scarcity_desc:0 "Japan lacks many essential raw materials, including oil, rubber, and key minerals. This severe resource scarcity constrains our industrial capacity and creates strategic vulnerability."
+ 
+ JAP_partial_resource_security:0 "Partial Resource Security"
+ JAP_partial_resource_security_desc:0 "Our expansion into Manchuria has secured valuable resources, partially alleviating our resource scarcity. However, we still lack key materials like oil and rubber."
+ 
+ JAP_civilian_economic_reforms:0 "Civilian Economic Reforms"
+ JAP_civilian_economic_reforms_desc:0 "Our government has implemented civilian-focused economic reforms to stabilize the economy and improve living standards."
+ 
+ JAP_military_industrial_focus:0 "Military-Industrial Focus"
+ JAP_military_industrial_focus_desc:0 "Our economic policy prioritizes military production and heavy industry, diverting resources from consumer goods but strengthening our defense capacity."
+ 
+ JAP_international_trade_focus:0 "International Trade Focus"
+ JAP_international_trade_focus_desc:0 "We are emphasizing international trade to secure resources and markets, maintaining better relations with potential trading partners."
+ 
+ JAP_military_industrial_complex:0 "Military-Industrial Complex"
+ JAP_military_industrial_complex_desc:0 "A strong relationship between our military and industrial sectors ensures efficient production of war materials and promotes technological innovation."
+ 
+ JAP_civilian_political_crisis:0 "Civilian Political Crisis"
+ JAP_civilian_political_crisis_desc:0 "Our civilian government faces challenges from military factions, creating political instability and weakening democratic institutions."
+ 
+ JAP_military_political_crisis:0 "Military Political Crisis"
+ JAP_military_political_crisis_desc:0 "The growing influence of military factions in government has created a political crisis, with civilian authority increasingly undermined."
+ 
+ JAP_military_influence_growing:0 "Growing Military Influence"
+ JAP_military_influence_growing_desc:0 "Military leaders are gaining increasing influence over government policy, pushing for more aggressive foreign policy and greater military spending."
+ 
+ JAP_militarist_influence:0 "Militarist Influence"
+ JAP_militarist_influence_desc:0 "Militarist factions now hold significant power within the government, advocating expansion abroad and strict control at home."
+ 
+ JAP_civilian_government:0 "Civilian Government"
+ JAP_civilian_government_desc:0 "Despite pressure from military factions, civilian leaders maintain control of the government, focusing on diplomatic solutions and economic development."
+ 
+ JAP_militarist_government:0 "Militarist Government"
+ JAP_militarist_government_desc:0 "Military leaders now hold significant influence in the government, directing policy toward expansion and confrontation with potential enemies."
+ 
+ JAP_manchurian_resource_exploitation:0 "Manchurian Resource Exploitation"
+ JAP_manchurian_resource_exploitation_desc:0 "We are systematically exploiting Manchuria's rich natural resources, including coal, iron, and agricultural products."
+ 
+ JAP_naval_expansion:0 "Naval Expansion Program"
+ JAP_naval_expansion_desc:0 "Our naval expansion program is enhancing Japan's maritime capabilities, with particular focus on creating a fleet capable of challenging any power in the Pacific."
+ 
+ JAP_southern_expansion_doctrine:0 "Southern Expansion Doctrine"
+ JAP_southern_expansion_doctrine_desc:0 "The Southern Expansion Doctrine envisions Japanese control over the resource-rich territories of Southeast Asia, providing the raw materials necessary for our industry and military."
+ 
+ # Event Localization
+ japan_depression.1.t:0 "The Wall Street Crash Hits Japan"
+ japan_depression.1.d:0 "News of the Wall Street Crash has reached Tokyo, sending shockwaves through our export-dependent economy. The value of the yen has plummeted, and businesses across Japan are reporting massive losses as American demand for Japanese goods collapses. Our silk industry, which relies heavily on American consumers, has been particularly devastated. Government officials and business leaders are gathering in emergency meetings to determine how to respond to what may become the worst economic crisis in modern Japanese history."
+ japan_depression.1.a:0 "This will have grave consequences for Japan."
+ 
+ japan_depression.2.t:0 "The Manchurian Incident"
+ japan_depression.2.d:0 "On September 18, 1931, an explosion occurred on the Japanese-owned South Manchurian Railway near Mukden (now Shenyang). Although likely staged by Japanese officers, our Kwantung Army has blamed Chinese saboteurs and used this incident as justification to seize control of key points throughout Manchuria. This bold move, executed without authorization from Tokyo, presents the government with a fait accompli. While condemned internationally, the action has broad support among the Japanese public, who see it as a necessary step to secure vital resources and strategic depth."
+ japan_depression.2.a:0 "The Kwantung Army secures our future!"
+ 
+ japan_depression.3.t:0 "Establishment of Manchukuo"
+ japan_depression.3.d:0 "To legitimize our control over Manchuria, we have established the puppet state of Manchukuo, with the last Qing emperor, Puyi, as its nominal ruler. While presented as an independent nation, Manchukuo will be effectively controlled by Japanese advisors and the Kwantung Army. This arrangement allows us to exploit Manchuria's abundant resources while maintaining a façade of Chinese sovereignty. The new state has already been recognized by Japan and will serve as a buffer against Soviet influence and a base for further operations in China."
+ japan_depression.3.a:0 "A new nation under our guidance!"
+ 
+ japan_depression.4.t:0 "Soviet Border Tensions"
+ japan_depression.4.d:0 "Our expansion into Manchuria has created significant tensions with the Soviet Union along the Manchurian-Siberian border. Soviet forces have been reinforcing their positions, and both sides have engaged in provocative patrols and minor skirmishes. The Kwantung Army commanders are eager to test Soviet resolve, while Moscow has made it clear they will defend their territory vigorously. This situation could easily escalate into a larger conflict if not carefully managed."
+ japan_depression.4.a:0 "Assert our claims aggressively."
+ japan_depression.4.b:0 "Take a cautious diplomatic approach."
+ 
+ japan_depression.5.t:0 "Kwantung Army Buildup"
+ japan_depression.5.d:0 "Following increased tensions with the Soviet Union, we have approved a significant buildup of the Kwantung Army in Manchuria. Additional infantry divisions, artillery units, and air squadrons are being deployed to strengthen our position. Fortifications are being constructed along potential invasion routes, and military infrastructure is being expanded throughout Manchukuo. This buildup serves both defensive purposes and creates options for offensive operations should the strategic situation warrant them."
+ japan_depression.5.a:0 "Our position must be unassailable."
+ 
+ japan_depression.6.t:0 "Formulating China Policy"
+ japan_depression.6.d:0 "With our position in Manchuria secured, we must determine our broader policy toward China. The Nationalist government under Chiang Kai-shek has been consolidating power but remains challenged by Communist forces and regional warlords. This fractured political landscape presents both opportunities and risks for Japanese influence. Military leaders advocate for a more aggressive approach to secure Japanese interests, while others caution that further military action could provoke international opposition and overextend our resources."
+ japan_depression.6.a:0 "Push for dominance in North China."
+ japan_depression.6.b:0 "Pursue diplomatic and economic influence."
+ 
+ japan_depression.7.t:0 "Marco Polo Bridge Incident"
+ japan_depression.7.d:0 "On July 7, 1937, Japanese and Chinese troops clashed at the Marco Polo Bridge (Lugou Bridge) near Beijing. What began as a minor skirmish during night maneuvers has rapidly escalated, with Japanese troops using the incident as justification to occupy Beijing and Tianjin. The Nationalist government has mobilized its forces, and what started as a localized incident now threatens to expand into full-scale war. Military leaders argue this is the perfect opportunity to resolve the 'China problem' once and for all."
+ japan_depression.7.a:0 "This means war with China!"
+ 
+ japan_depression.10.t:0 "Growing Political Crisis"
+ japan_depression.10.d:0 "The economic downturn has intensified political tensions within Japan. Military factions, particularly within the Army, are increasingly challenging the authority of civilian government. They argue that only a stronger military and expansion abroad can secure the resources Japan needs for economic recovery and national security. Civilian politicians are struggling to maintain control over policy, while ultranationalist societies are gaining influence. The fundamental direction of Japan's national policy hangs in the balance."
+ japan_depression.10.a:0 "Support the civilian government."
+ japan_depression.10.b:0 "The military deserves more influence."
+ 
+ japan_depression.11.t:0 "The May 15 Incident"
+ japan_depression.11.d:0 "On May 15, 1932, a group of young naval officers and Army cadets assassinated Prime Minister Inukai Tsuyoshi in his official residence. The assassins, motivated by ultranationalist ideals, were dissatisfied with the government's moderate approach to foreign policy and economic issues. This shocking act of political violence marks a significant escalation in the struggle between military and civilian power. The assassins have surrendered willingly, believing their actions serve a higher patriotic purpose."
+ japan_depression.11.a:0 "Suppress these dangerous radicals."
+ japan_depression.11.b:0 "Their concerns have merit, despite their methods."
+ 
+ japan_depression.12.t:0 "The February 26 Incident"
+ japan_depression.12.d:0 "On February 26, 1936, a group of young Army officers led over 1,400 troops in an attempt to seize control of Tokyo. They have assassinated several senior government officials and occupied key government buildings, demanding a 'Showa Restoration' that would purge the government of corrupt influences and give the military greater control. The rebels claim to be acting in the Emperor's name, though His Majesty has denounced their actions. The Army leadership is divided on how to respond to this rebellion by their own ranks."
+ japan_depression.12.a:0 "Crush the rebellion without mercy."
+ japan_depression.12.b:0 "Negotiate and accommodate their demands."
+ 
+ # Soviet event localization excerpts
+ japan_depression.20.t:0 "Japanese Border Provocation"
+ japan_depression.20.d:0 "Reports from our Far Eastern Military District indicate increasing Japanese provocations along the Manchurian-Siberian border. The Japanese Kwantung Army has been conducting aggressive patrols, sometimes crossing into Soviet territory, and building up forces in the region. Intelligence suggests they may be testing our resolve or preparing for more significant aggression. Our local commanders are requesting guidance on how to respond to these provocations."
+ japan_depression.20.a:0 "Respond forcefully - we will not be intimidated."
+ japan_depression.20.b:0 "Lodge a diplomatic protest but avoid escalation."
+ 
+ # Border conflict events
+ japan_depression.30.t:0 "Border Clash with Soviet Forces"
+ japan_depression.30.d:0 "Kwantung Army units have engaged Soviet forces along the Manchurian-Siberian border. What began as a patrol confrontation has escalated into a significant skirmish involving artillery and several hundred troops on both sides. Casualties have been reported, and both sides are reinforcing their positions. This incident could either be contained as a localized border clash or could escalate into a larger conflict depending on our response and that of Moscow."
+ japan_depression.30.a:0 "Launch a larger attack to teach them a lesson!"
+ japan_depression.30.b:0 "Contain the incident and avoid escalation."
+ 
+ # News events
+ japan_depression.100.t:0 "Japanese Forces Seize Manchuria"
+ japan_depression.100.d:0 "Following an alleged attack on the Japanese-owned South Manchurian Railway, Imperial Japanese Army forces have launched a full-scale military operation in Manchuria. Within days, major cities including Mukden, Changchun, and Harbin have fallen under Japanese control. The Chinese authorities, already weakened by internal conflicts, have been unable to mount effective resistance. Japan claims this action is necessary to protect Japanese lives and property, but international observers widely see it as a brazen land grab motivated by Japan's need for resources and strategic depth."
+ japan_depression.100.a:0 "Our security demands these measures."
+ japan_depression.100.b:0 "This Japanese aggression cannot stand!"
+ japan_depression.100.c:0 "Concerning developments in the Far East..."
+ 
+ # Tooltips
+ JAP_create_manchukuo:0 "Create the puppet state of Manchukuo"
+ JAP_create_manchukuo_effect:0 "Manchukuo will be established as our puppet state"
