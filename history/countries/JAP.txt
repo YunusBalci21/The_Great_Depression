@@ -1,7 +1,6 @@
 capital = 282 # Tokyo
 
 oob = "JAP_1929"  # 1929 Order of Battle
-oob = "JAP_1929_naval"  # 1929 Naval Order of Battle
 
 set_research_slots = 3
 set_stability = 0.65 # Relatively stable but facing economic issues
@@ -63,7 +62,7 @@ create_country_leader = {
 	expire = "1989.1.7"
 	ideology = despotism
 	traits = {
-		imperial_symbol # Changed from 'reluctant_military_leader'
+		reluctant_leader
 	}
 }
 
@@ -74,8 +73,8 @@ create_country_leader = {
 	expire = "1931.4.26"
 	ideology = liberalism
 	traits = {
-		silent_workhorse # Changed from 'fiscal_conservative'
-		captain_of_industry # Changed from 'economist_leader'
+		silent_workhorse
+		captain_of_industry
 	}
 }
 
@@ -127,7 +126,7 @@ create_corps_commander = {
 create_navy_leader = {
 	name = "Isoroku Yamamoto"
 	picture = "gfx/leaders/JAP/Portrait_Japan_Isoroku_Yamamoto.dds"
-	traits = { naval_lineage naval_aviation_expert } # Changed 'aviation_enthusiast' to 'naval_aviation_expert'
+	traits = { naval_lineage aviation_enthusiast }
 	skill = 5
 	attack_skill = 5
 	defense_skill = 4

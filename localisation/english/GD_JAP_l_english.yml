@@ -1,4 +1,7 @@
 ﻿l_english:
+ # Focus Tree Name
+ japan_focus:0 "Japanese Great Depression Focus Tree"
+ 
  # Focus Tree Localization
  JAP_economic_crisis:0 "The Economic Crisis"
  JAP_economic_crisis_desc:0 "The Wall Street Crash has sent shockwaves through the global economy. Japan, with its export-oriented economy and reliance on American markets, is especially vulnerable. We must respond to this crisis swiftly."
@@ -84,7 +87,14 @@
  JAP_economic_recovery:0 "Economic Recovery"
  JAP_economic_recovery_desc:0 "Our economic policies have finally begun to show results. Japan is emerging from the Great Depression, with industrial production rising and confidence returning to the markets."
  
+ # Tech Bonus Names
+ naval_bonus:0 "Naval Development Initiative"
+ carrier_bonus:0 "Carrier Research Program"
+ 
  # Ideas Localization
+ great_depression:0 "The Great Depression"
+ great_depression_desc:0 "The worldwide economic depression has severely impacted our economy, reducing industrial output, causing high unemployment, and creating social unrest."
+ 
  JAP_resource_scarcity:0 "Resource Scarcity"
  JAP_resource_scarcity_desc:0 "Japan lacks many essential raw materials, including oil, rubber, and key minerals. This severe resource scarcity constrains our industrial capacity and creates strategic vulnerability."
  
@@ -176,7 +186,7 @@
  japan_depression.12.a:0 "Crush the rebellion without mercy."
  japan_depression.12.b:0 "Negotiate and accommodate their demands."
  
- # Soviet event localization excerpts
+ # Soviet event localization
  japan_depression.20.t:0 "Japanese Border Provocation"
  japan_depression.20.d:0 "Reports from our Far Eastern Military District indicate increasing Japanese provocations along the Manchurian-Siberian border. The Japanese Kwantung Army has been conducting aggressive patrols, sometimes crossing into Soviet territory, and building up forces in the region. Intelligence suggests they may be testing our resolve or preparing for more significant aggression. Our local commanders are requesting guidance on how to respond to these provocations."
  japan_depression.20.a:0 "Respond forcefully - we will not be intimidated."
@@ -195,6 +205,6 @@
  japan_depression.100.b:0 "This Japanese aggression cannot stand!"
  japan_depression.100.c:0 "Concerning developments in the Far East..."
  
- # Tooltips
+ # Custom Effect Tooltips
  JAP_create_manchukuo:0 "Create the puppet state of Manchukuo"
  JAP_create_manchukuo_effect:0 "Manchukuo will be established as our puppet state"

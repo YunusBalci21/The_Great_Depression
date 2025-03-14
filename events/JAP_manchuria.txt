@@ -7,7 +7,7 @@ country_event = {
 	id = japan_depression.1
 	title = japan_depression.1.t
 	desc = japan_depression.1.d
-	picture = GFX_report_event_japanese_soldiers
+	picture = GFX_report_event_japanese_invasion 
 	
 	trigger = {
 		tag = JAP
@@ -41,7 +41,6 @@ country_event = {
 		create_wargoal = {
 			type = take_state
 			target = CHI
-			state = 716 # Liaoning
 			generator = { 716 328 } # Manchurian states
 		}
 		

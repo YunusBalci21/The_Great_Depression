@@ -1,0 +1,277 @@
+characters = {
+	JAP_koki_hirota = {
+		name = "Koki Hirota"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Koki_Hirota.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = JAP_koki_hirota
+			allowed = {
+				original_tag = JAP
+			}
+			traits = { 
+				silent_workhorse 
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	JAP_mitsumasa_yonai = {
+		name = "Mitsumasa Yonai"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Mitsumasa_Yonai.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = JAP_mitsumasa_yonai
+			allowed = {
+				original_tag = JAP
+			}
+			traits = { 
+				naval_reformer 
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	JAP_kingoro_hashimoto = {
+		name = "Kingoro Hashimoto"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JAP/Portrait_Japan_Kingoro_Hashimoto.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = JAP_kingoro_hashimoto
+			allowed = {
+				original_tag = JAP
+			}
+			traits = { 
+				fascist_demagogue 
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	JAP_hajime_sugiyama = {
+		name = "Hajime Sugiyama"
+		portraits = {
+			army = {
+				small = "GFX_idea_jap_hajime_sugiyama"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = JAP_hajime_sugiyama
+			allowed = {
+				original_tag = JAP
+			}
+			traits = { 
+				army_chief_offensive_2 
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	JAP_hideki_tojo = {
+		name = "Hideki Tojo"
+		portraits = {
+			army = {
+				small = "GFX_idea_jap_hideki_tojo"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = JAP_hideki_tojo
+			allowed = {
+				original_tag = JAP
+			}
+			traits = { 
+				army_infantry_2 
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	JAP_osami_nagano = {
+		name = "Osami Nagano"
+		portraits = {
+			navy = {
+				small = "GFX_idea_jap_osami_nagano"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = JAP_osami_nagano
+			allowed = {
+				original_tag = JAP
+			}
+			traits = { 
+				navy_chief_decisive_battle_2 
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	JAP_isoroku_yamamoto = {
+		name = "Isoroku Yamamoto"
+		portraits = {
+			navy = {
+				small = "GFX_idea_jap_isoroku_yamamoto"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = JAP_isoroku_yamamoto
+			allowed = {
+				original_tag = JAP
+			}
+			traits = { 
+				navy_carrier_2 
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	JAP_torashiro_kawabe = {
+		name = "Torashiro Kawabe"
+		portraits = {
+			army = {
+				small = "GFX_idea_jap_torashiro_kawabe"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = JAP_torashiro_kawabe
+			allowed = {
+				original_tag = JAP
+			}
+			traits = { 
+				air_chief_ground_support_2 
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	JAP_korechika_anami = {
+		name = "Korechika Anami"
+		portraits = {
+			army = {
+				small = "GFX_idea_jap_korechika_anami"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = JAP_korechika_anami
+			allowed = {
+				original_tag = JAP
+			}
+			traits = { 
+				army_armored_2 
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	JAP_tomoyuki_yamashita = {
+		name = "Tomoyuki Yamashita"
+		portraits = {
+			army = {
+				small = "GFX_idea_jap_tomoyuki_yamashita"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = JAP_tomoyuki_yamashita
+			allowed = {
+				original_tag = JAP
+			}
+			traits = { 
+				army_commando_2 
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	JAP_mineichi_koga = {
+		name = "Mineichi Koga"
+		portraits = {
+			navy = {
+				small = "GFX_idea_jap_mineichi_koga"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = JAP_mineichi_koga
+			allowed = {
+				original_tag = JAP
+			}
+			traits = { 
+				navy_fleet_logistics_2 
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	JAP_hideo_itokawa = {
+		name = "Hideo Itokawa"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_jap_hideo_itokawa"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = JAP_hideo_itokawa
+			allowed = {
+				original_tag = JAP
+			}
+			traits = { 
+				rocket_scientist 
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}
